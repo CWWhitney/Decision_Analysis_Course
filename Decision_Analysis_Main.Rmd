@@ -1,0 +1,15 @@
+---
+title: "Decision Analysis for agricultural development"
+author: "Cory Whitney, Eike Luedeling et al."
+output:
+  rmdformats::readthedown
+---
+
+```{r child="1_Introduction/Intro.Rmd"}
+```
+
+# Impressum und Datenschutzerklärung {-#impressum}
+
+[Impressum und Datenschutzerklärung](https://www.inres.uni-bonn.de/impressum)
+
+# References
