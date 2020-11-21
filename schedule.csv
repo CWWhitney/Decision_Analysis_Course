@@ -1,0 +1,15 @@
+Week,Date,Title,Assignments,Literature
+1,26 Oct,Introduction and tools,"set up github account, make project for class, get markdown document started","Supplementary materials of Buerkert et al., 2020"
+2,2 Nov,Tree phenology,Summarize lecture,Fadon et al. 2020
+3,9 Nov,Climate change and impact projection,Summarize lecture,"Luedeling 2020; Luedeling et al. 2014; Benmoussa et al., 2018"
+4,16 Nov,Winter chill projections,See exercises below lesson content,
+5,23 Nov,Manual chill analysis,"Model chilling hours manually, save script",Luedeling 2012
+6,30 Nov,Chill models,"Model chill with multiple models, save script",
+7,7 Dec,"Making hourly temperatures, getting data and filling gaps",See exercises below the lessons,Luedeling 2018
+8,14 Dec,Historic chill assessment,"Download data, do historic chill assessment",
+9,21 Dec,Chill scenarios,Produce weather generator scenario,Luedeling et al. 2009
+10,11 Jan,Future chill assessment,"Download projections, produce scenarios",Fernandez et al. 2020
+11,18 Jan,Evaluating bloom data,Run PLS analysis on bloom dataset,Luedeling and Gassner 2012
+12,25 Jan,Illustrating PLS results,Make illustrations of PLS outputs,Luedeling et al. 2013
+13,1 Feb,Interpreting PLS results,Write interpretation of PLS outputs,Guo et al. 2015
+14,8 Feb,The PhenoFlex model,Parametrize the PhenoFlex phenology model (maybe),Urbach et al. (in prep.)
