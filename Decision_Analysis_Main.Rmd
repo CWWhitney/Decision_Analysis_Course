@@ -5,8 +5,36 @@ output:
   rmdformats::readthedown
 ---
 
-```{r child="1_Introduction.Rmd"}
+```{r child="Lecture_1_Introduction.Rmd"}
 ```
+
+```{r child="Seminar_1_R_RStudio.Rmd"}
+```
+
+```{r child="Lecture_2_Decision_Analysis.Rmd"}
+```
+
+```{r child="Seminar_2_Git_Github.Rmd"}
+```
+
+```{r child="Lecture_3_Decision_Models.Rmd"}
+```
+
+```{r child="Seminar_3_Model_Programming.Rmd"}
+```
+
+```{r child="Lecture_4_Biases.Rmd"}
+```
+
+```{r child="Seminar_4_Calibration_Training.Rmd"}
+```
+
+```{r child="Lecture_5_Bayesian_Thinking.Rmd"}
+```
+
+```{r child="Lecture_6_Academic_Writing.Rmd"}
+```
+
 
 # Impressum und Datenschutzerklärung {-#impressum}
 

@@ -1,15 +1,15 @@
 Week ,Date,Title
-1,,Lecture: Introduction and tools / Group work overview 
-2,,"Seminar: Collaboration: How to use RStudio, R / How to use GitHub, git, Rmarkdown "
-3,,Lecture: Decision Analysis
-4,,"Seminar continued: Collaboration: How to use RStudio, R / How to use GitHub, git, Rmarkdown "
-5,,Lecture: Decision Models
+1,,Lecture 1: Introduction and tools / Group work overview 
+2,,"Seminar: Collaboration: How to use RStudio, R"
+3,,Lecture 2: Decision Analysis
+4,,"Seminar continued: How to use GitHub, git, Rmarkdown "
+5,,Lecture 3: Decision Models
 6,,Seminar:  Model Programming (Coding and programming in R) / R packages decisionSupport 
-7,,Lecture: Biases
+7,,Lecture 4: Biases
 8,,Seminar: Calibration Training (lead by team)
-9,,Lecture: Bayesian thinking
+9,,Lecture 5: Bayesian thinking
 10,,Seminar: Group project report with decision overview
-11,,Lecture: Academic writing & Citation management software / Literature sources / Scientific process / publications / careers 
+11,,Lecture 6: Academic writing & Citation management software / Literature sources / Scientific process / publications / careers 
 12,,Seminar: Follow up on group projects
 13,,Group presentations and discuss final model 
-14,,Presentations (Continued)
+14,,Group presentations (Continued)

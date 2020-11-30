@@ -1,0 +1,17 @@
+# Lecture 5: Bayesian Thinking
+
+Welcome to lecture 5 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_5]%20Decision%20Analysis%20Lecture) or the course tutor.
+
+
+-	All follow ‘Learning Bayesian Statistics’ podcast
+-	Selected reading from ‘The theory that would not die’
+-	R. McElreath (selected reading from ‘Statistical Rethinking’)
+-	Betancourt’s work (selected blogs, talks, git repos, Stan, HCMC)
+
+### Reading assignments: 
+
+-	Greenland, Sander, Judea Pearl, and James M. Robins. [Causal Diagrams for Epidemiologic Research](https://pubmed.ncbi.nlm.nih.gov/9888278/). Epidemiology 10, no. 1 (1999): 37–48.
+
+### Further reading (and watching)
+
+-	NOVA: [Prediction by the Numbers. 2018. With the science of forecasting flourishing, this documentary explores how predictions inform our lives and statistics and algorithms' reliability. 52m video ](https://www.dailymotion.com/video/x6fi9b3)

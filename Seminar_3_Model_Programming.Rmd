@@ -1,0 +1,12 @@
+# Seminar 3: Model Programming
+
+Welcome to the third seminar of **Decision Analysis and Forecasting for Agricultural Development**. ... . Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
+
+Causal model / diagram / Impact pathway / Theory of change
+
+-	R packages decisionSupport (walk through a vignette or two)
+-	RSTAN, Other modeling programs - Betancourt’s work (selected blogs, talks, git repos, Stan, HCMC)
+-	Yihui (markdown etc.)
+-	Assignments: 
+-	1. “episode 3, with Colin Carroll. He mentions Tom Rainforth's thesis.”  – Alex Andorra (about his interview with Colin Carol on the podcast Learning Bayesian Statistics)
+-	Rainforth, Tom. “Automating Inference, Learning, and Design Using Probabilistic Programming.” Doctor of Philosophy, University of Oxford, 2017.

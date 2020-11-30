@@ -1,0 +1,86 @@
+# Lecture 1: Introduction
+
+## Overview
+
+# ![decisionSupport](figures/decisionSupport_hex_sticker.png){width=40%} {-#header}
+
+Welcome to the introduction lecture for **Decision Analysis and Forecasting for Agricultural Development**. We are excited to deliver you this course content and to train a new generation of experts in applying these tools. We see enormous scope for application of these methods in agriculture and the need for more practitioners.  
+
+Decisions in agriculture are often risky, meaning that decision makers have uncertainty about how their decision will influence the intended outcomes. Farming systems are dynamic and the impact of any intervention, policy or management decision is likely to be influenced by many factors ranging from soil and crop dynamics to social dynamics such as farmer and community perceptions. In order to provide scientific support for decision making it is important that our models and forecasts attempt to include these interactions. Decision Analysis provides a set of approaches that are aimed at capturing what is known and applying this knowledge to generate forecasts of decision outcomes. The theoretical body of approaches has been formally applied in business and economics for more than 50 years (Howard and Abbas 2015) and have been gaining ground in agriculture since the 70s (Anderson et al. 1978). Our mission is to normalize these holistic approaches and move agricultural science from the lab bench and field trials to real world application and decision support for farmers and agricultural decision makers such as those in government ministries and aid organizations.  
+
+-	*What?* This is an experiential course. You (students) will be leading discussions and projects. 
+-	*So What?* The aim is for you to become a critical thinker and generating useful forecasts for decision makers in agricultural development.
+-	*Now What?* You will build a working model of an agricultural development decision.
+
+## Course content
+
+In this course, we will provide an overview of methods we can use to study agricultural development decisions and generate forecasts of decision outcomes. If you do not have a clear idea what that is you've come to the right place. This course was developed for MSc. students in [Crop Sciences](https://www.lf.uni-bonn.de/en/studying/master/npw) at the [University of Bonn](https://www.uni-bonn.de/startpage?set_language=en), but the materials are also intended for a general audience interested in applying these tools. The main parts of the course include:
+
+- Introduction to Decision Analysis
+- Forecasting and cognitive biases
+- Calibration training
+- Participatory modeling building
+- Decision modeling in R
+- Group project on decision analysis
+
+After some introduction of the subject matter much of this course will consist of practical application of the [`decisionSupport`](https://cran.r-project.org/web/packages/decisionSupport/index.html) package in the [R](https://www.r-project.org/) programming language. 
+
+### Intended learning outcomes
+
+In this course, we aim to provide you with the skills and experiences in decision modeling. By the end of this course you will be able to: 
+
+- develop decision models and comprehensively evaluate the findings using `R` and `decisionSupport` functions. 
+
+- recognize your own biases and provide accurate range estimates for uncertain variables. 
+
+- analyze a decision context. You will be able to draw conclusions from a decision model and recommend steps forward. 
+
+- develop decision models, comprehensively evaluate your findings and compose a report about the model you developed.
+
+## Lecture schedule
+
+```{r echo = FALSE, results = 'asis'}
+library(knitr)
+library(pander)
+schedule<-read.csv("schedule.csv")
+kable(schedule)
+```
+
+## Performance assessment
+
+In this module, there will be no exam, but you'll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, yoou'll be developing an [Rmarkdown](https://rmarkdown.rstudio.com/) document ([here's an example of what this is](https://static-content.springer.com/esm/art%3A10.1007%2Fs10584-020-02862-8/MediaObjects/10584_2020_2862_MOESM1_ESM.pdf)), where you'll record your learning and your coding work. This document will contain short thematic chapters on the lecture contents, as well as the code you'll produce and the outputs you'll generate. The final chapters will contain some discussion of the results you'll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).
+
+### What we expect from you
+
+Class participation will be about 50% of the work in this course.	We will expect you to show up in class and may have short weekly tests for seeing how up to speed you are. We will track your project activity (follow your git repositories etc.). 
+
+Group work will make up the rest of the required work for this course. You will put together a report, build a repository with code and a working RMarkdown file. You will also do weekly reading/listening assignments and your teams will lead short related discussions.
+
+## House rules
+
+In this course, we'll gradually work our way into the `decisionSupport` package. At the end of the semester, you should be able to apply state-of-the-art Decision Analysis. Yet even if it's not your ambition to become a  decision analyst, you'll have picked up a bunch of useful skills along the way. We'll try to teach you how to use some staple programming tools and techniques that can be used for all kinds of programming challenges. These will include the use of github and Rmarkdown, as well the the ability to create, manipulate and use R functions and packages.
+
+What is expected of you is to be engaged in this class, and to diligently complete the assignments you receive. Learning things in R requires practice, through which many things that seem cumbersome at first eventually become almost automatic. We are hopeful that the things you'll get exposed to in this class will be assets in your scientific (or other) career. So please take the materials seriously!
+
+## The tools we use
+
+This course not only aims to teach you things about Decision Analysis and related topics - it also provides hands-on exercises to illustrate the functions of the `decisionSupport` package. You should also document everything you learn in a `learning logbook`. For all of these practical components, we need tools. `decisionSupport` is an R package, so we'll need [R](https://www.r-project.org/), which is most comfortably operated through the [RStudio](https://rstudio.com/) interface.
+
+We could simply start running [RStudio](https://rstudio.com/) on our local computer, save our files somewhere on our hard drive and generally operate the way we usually work with our computer. But this is not how real programmers work, and since this is what we're trying to be, we should familiarize ourselves with some code development tools that such people use. We'll therefore introduce you to [git](https://git-scm.com/) and [github](https://github.com/), which are very useful for keeping code organized and secure and for sharing with collaborators and wider audiences. 
+
+Finally, we want to show you how to properly document what you do in R, and how to compile professional-looking reports of your work. This is what [Rmarkdown](https://rmarkdown.rstudio.com/) helps us do. Some of this may be a bit confusing in the beginning, but you'll probably learn to appreciate the value of these tools, as we keep using them in this module.
+
+# Group Work
+
+The course will be largely based on group work. Please take some time to choose a group to work with and begin to think about a decision. Over the next few weeks you will be responsible for the following milestones: 
+
+-	Identify a decision
+-	Collaborate with decision makers on decision model development (qualitative)
+-	Generate model code from qualitative model and parameterize (quantitative step)
+-	Generate a git repo with code and documentation
+-	~ 5,000 word paper written in RMarkdown, see this report on [plotting high-dimensional data](github.com/hortibonn/Plotting-High-Dimensional-Data) for example
+
+### Further reading
+
+Anderson, Jock, John Dillon, and Brian Hardaker. 1978. Agricultural Decision Analysis. Ames, Iowa: Iowa State University Press.
+Howard, Ronald A., and Ali E. Abbas. 2015. Foundations of Decision Analysis. NY, NY: Prentice Hall.

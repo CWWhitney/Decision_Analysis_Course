@@ -1,0 +1,13 @@
+# Seminar 1: Using git and Github
+
+Welcome to the second seminar of **Decision Analysis and Forecasting for Agricultural Development**. All your programming and project work for this course should take place in the git environment and this seminar is intended to show you how to make that happen. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
+
+## git and Github
+
+Now we look at the programming version control environment [git](https://git-scm.com/) and the interface [github](https://github.com/), which we use to share our scripts and changes to our work.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S98XJTyIVaY" frameborder="0" allowfullscreen></iframe>
+
+-	Step 1 is to start simple with own repository only and work on it alone. For the first part of this course we expect you to keep a working document in git and to share this with us through that platform.
+-	STEP 2 is to start to collaborate on something in git. For the latter part of this course you will work in collective repository and work together to generate the final working document.
+
