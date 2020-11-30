@@ -48,7 +48,9 @@ kable(schedule)
 
 ## Performance assessment
 
-In this module, there will be no exam, but you'll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, yoou'll be developing an [Rmarkdown](https://rmarkdown.rstudio.com/) document ([here's an example of what this is](https://static-content.springer.com/esm/art%3A10.1007%2Fs10584-020-02862-8/MediaObjects/10584_2020_2862_MOESM1_ESM.pdf)), where you'll record your learning and your coding work. This document will contain short thematic chapters on the lecture contents, as well as the code you'll produce and the outputs you'll generate. The final chapters will contain some discussion of the results you'll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).
+In this module, there will be no exam, but you'll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, you'll be developing an [Rmarkdown](https://rmarkdown.rstudio.com/) document ([here's an example of what this is](https://static-content.springer.com/esm/art%3A10.1007%2Fs10584-020-02862-8/MediaObjects/10584_2020_2862_MOESM1_ESM.pdf)), where you'll record your learning and your coding work. This document will contain short thematic chapters on the lecture contents, as well as the code you'll produce and the outputs you'll generate. The final chapters will contain some discussion of the results you'll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).
+
+There will be about 60 hours of formal in-class time (15 ~ 4 hour lectures and seminars) and 120 hours of work outside the class.
 
 ### What we expect from you
 
