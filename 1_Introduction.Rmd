@@ -1,21 +1,44 @@
-# ![chillR](figures/decisionSupport_hex_sticker.png){width=40%} {-#header}
-
 **Welcome to Decision Analysis and Forecasting for Agricultural Development**
 
-# This course
+# ![chillR](figures/decisionSupport_hex_sticker.png){width=40%} {-#header}
+
+Decisions in agriculture are often risky, meaning that decision makers have uncertainty about how their decision will influence the intended outcomes. Farming systems are dynamic and the impact of any intervention, policy or management decision is likely to be influenced by many factors ranging from soil and crop dynamics to social dynamics such as farmer and community perceptions. In order to provide scientific support for decision making it is important that our models and forecasts attempt to include these interactions. Decision Analysis provides a set of approaches that are aimed at capturing what is known and applying this knowledge to generate forecasts of decision outcomes. The theoretical body of approaches has been formally applied in business and economics for more than 50 years (Howard and Abbas 2015) and have been gaining ground in agriculture since the 70s (Anderson et al. 1978). Our mission is to normalize these holistic approaches and move agricultural science from the lab bench and field trials to real world application and decision support for farmers and agricultural decision makers such as those in government ministries and aid organizations.  
+
+## This course
 
 In this course, we will provide an overview of methods we can use to study ... . If you do not know what that is you've come to the right place. This course was developed for M.Sc. students in [Crop Sciences](https://www.lf.uni-bonn.de/en/studying/master/npw) at the [University of Bonn](https://www.uni-bonn.de/startpage?set_language=en), but the materials are also intended for a general audience interested in applying these tools.
 
-After some introduction of the subject matter, i.e. ... , much of this course will consist of practical application of the [`decisionSupport`](https://cran.r-project.org/web/packages/decisionSupport/index.html) package in the [R](https://www.r-project.org/) programming language.
+
+### Content 
+
+- Introduction to decision analysis
+- Forecasting and cognitive biases
+- Calibration training
+- Participatory modeling building
+- Decision modeling in R
+- Group project on decision analysis
+
+After some introduction of the subject matter much of this course will consist of practical application of the [`decisionSupport`](https://cran.r-project.org/web/packages/decisionSupport/index.html) package in the [R](https://www.r-project.org/) programming language. 
 
 ## Objectives
 
 In this course, we aim to provide you with the following skills and experiences:
 
-* ...
-* Understanding of how to use some staple tools of R code development
-* Ability to use `R` for ...
-* Ability to use `decisionSupport` functions for generating and running decision simulations ...
+- Understanding of how to use some staple tools of R code development
+- Ability to use `R` for ...
+- Ability to use `decisionSupport` functions for generating and running decision simulations
+
+### Intended learning outcomes
+
+By the end of this course you will be able to: 
+
+- develop decision models, comprehensively evaluate the findings and compose a report about the model you developed. 
+
+- recognize their own biases and provide accurate range estimates for uncertain variables. 
+
+- analyze a decision context. You will be able to draw conclusions from a decision model and recommend steps forward. 
+
+- develop decision models, comprehensively evaluate their findings and compose a report about the model you developed.
 
 ## Lecture schedule
 
