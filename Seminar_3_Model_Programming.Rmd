@@ -5,6 +5,34 @@ Welcome to the third seminar of **Decision Analysis and Forecasting for Agricult
 Causal model / diagram / Impact pathway / Theory of change
 
 -	R packages decisionSupport (walk through a vignette or two)
+
+# decisionSupport
+
+We load the library
+```{r}
+library(decisionSupport)
+```
+
+Here is a simple model
+```{r}
+example_decision_model <- function(x, varnames)
+{
+  profit <- benefits-costs
+  
+  final_profits <- profit+500
+  
+  return(final_profits)
+  
+}
+
+decisionSupport(inputFilePath = "data/example_decision_inputs.csv", 
+                outputPath = "data/outputs", 
+                write_table = TRUE, 
+                welfareFunction = example_decision_model, 
+                numberOfModelRuns = 10000, 
+                functionSyntax = "plainNames")
+```
+
 -	RSTAN, Other modeling programs - Betancourt’s work (selected blogs, talks, git repos, Stan, HCMC)
 -	Yihui (markdown etc.)
 -	Assignments: 
