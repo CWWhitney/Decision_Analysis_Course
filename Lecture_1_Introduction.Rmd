@@ -1,4 +1,5 @@
-# Lecture 1: Introduction
+# Lecture 1: Introduction {#introduction} 
+<!-- use the {#introduction} syntax to create a label that can be referenced with [Introduction](#introduction) -->
 
 ## Overview
 
@@ -64,7 +65,8 @@ In this course, we'll gradually work our way into the `decisionSupport` package.
 
 What is expected of you is to be engaged in this class, and to diligently complete the assignments you receive. Learning things in R requires practice, through which many things that seem cumbersome at first eventually become almost automatic. We are hopeful that the things you'll get exposed to in this class will be assets in your scientific (or other) career. So please take the materials seriously!
 
-## The tools we use
+## The tools we use {#tools} 
+<!-- use the {#tools} syntax to create a label that can be referenced with [Tools we use](#tools) -->
 
 This course not only aims to teach you things about Decision Analysis and related topics - it also provides hands-on exercises to illustrate the functions of the `decisionSupport` package. You should also document everything you learn in a `learning logbook`. For all of these practical components, we need tools. `decisionSupport` is an R package, so we'll need [R](https://www.r-project.org/), which is most comfortably operated through the [RStudio](https://rstudio.com/) interface.
 

@@ -1496,6 +1496,74 @@ border-bottom: 1px solid #fcfcfc;
 </script>
 
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+</style>
 
 
 </head>
@@ -1528,7 +1596,7 @@ $(document).ready(function () {
     <h2><a href="#content">Decision Analysis and Forecasting for Agricultural Development</a></h2>
     <div id="table-of-contents">
       <ul>
-      <li><a href="#lecture-1-introduction">Lecture 1: Introduction</a>
+      <li><a href="#introduction">Lecture 1: Introduction</a>
       <ul>
       <li><a href="#overview">Overview</a></li>
       </ul></li>
@@ -1553,6 +1621,7 @@ $(document).ready(function () {
       </ul></li>
       <li><a href="#lecture-3-decision-models">Lecture 3: Decision Models</a></li>
       <li><a href="#seminar-3-model-programming">Seminar 3: Model Programming</a></li>
+      <li><a href="#decisionsupport">decisionSupport</a></li>
       <li><a href="#lecture-4-biases">Lecture 4: Biases</a></li>
       <li><a href="#seminar-4-calibration-training">Seminar 4: Calibration Training</a></li>
       <li><a href="#lecture-5-bayesian-thinking">Lecture 5: Bayesian Thinking</a></li>
@@ -1568,8 +1637,9 @@ $(document).ready(function () {
 </div>
 
 <div id="main">
-<div id="lecture-1-introduction" class="section level1">
+<div id="introduction" class="section level1">
 <h1>Lecture 1: Introduction</h1>
+<!-- use the {#name} syntax to create a label that can be referenced with \@ref(name) -->
 <div id="overview" class="section level2">
 <h2>Overview</h2>
 </div>
@@ -1697,7 +1767,8 @@ $(document).ready(function () {
 </div>
 <div id="performance-assessment" class="section level2">
 <h2>Performance assessment</h2>
-<p>In this module, there will be no exam, but you’ll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, yoou’ll be developing an <a href="https://rmarkdown.rstudio.com/">Rmarkdown</a> document (<a href="https://static-content.springer.com/esm/art%3A10.1007%2Fs10584-020-02862-8/MediaObjects/10584_2020_2862_MOESM1_ESM.pdf">here’s an example of what this is</a>), where you’ll record your learning and your coding work. This document will contain short thematic chapters on the lecture contents, as well as the code you’ll produce and the outputs you’ll generate. The final chapters will contain some discussion of the results you’ll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).</p>
+<p>In this module, there will be no exam, but you’ll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, you’ll be developing an <a href="https://rmarkdown.rstudio.com/">Rmarkdown</a> document (<a href="hortibonn.de/Methodology_outline.html">here is an example from Hoa Do with an overview that includes the main modeling procedures with the decisionSupport package in R</a>), where you’ll record your learning and your coding work. This document will contain short thematic chapters on the lecture contents, as well as the code you’ll produce and the outputs you’ll generate. The final chapters will contain some discussion of the results you’ll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).</p>
+<p>There will be about 60 hours of formal in-class time (15 ~ 4 hour lectures and seminars) and 120 hours of work outside the class.</p>
 <div id="what-we-expect-from-you" class="section level3">
 <h3>What we expect from you</h3>
 <p>Class participation will be about 50% of the work in this course. We will expect you to show up in class and may have short weekly tests for seeing how up to speed you are. We will track your project activity (follow your git repositories etc.).</p>
@@ -1753,7 +1824,7 @@ $(document).ready(function () {
 <h1>Lecture 2: Decision Analysis</h1>
 <p>Welcome to the second seminar of <strong>Decision Analysis and Forecasting for Agricultural Development</strong>. In this lecture we will follow a <a href="https://www.youtube.com/playlist?list=PLe1C9W5AtEiBzmXFf-XzmXH8NNJjqs0IY">six-part micro-series of videos</a> and use the Lecture 2 Slack channel and Zoom meeting to follow up. This will allow us all to have a chance to see your progress, provide feedback. It will be encouraging to others to see activity from colleagues. Feel free to bring up any questions or concerns in the Slack or to <a href="mailto:cory.whitney@uni-bonn.de?subject=%5BSeminar_2%5D%20Decision%20Analysis%20Lecture">Dr. Cory Whitney</a> or the course tutor.</p>
 <p>Please take a few minutes to watch these six short videos before our meeting.</p>
-<div id="introduction" class="section level3">
+<div id="introduction-1" class="section level3">
 <h3>Introduction</h3>
 <p>The introduction outlines the general theory and application of Decision Analysis tools. At the end of the video please take a moment to think about decisions that are made in agricultural development, ideally decisions that are relevant to your research interests. Please share these with us in the Slack channel.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7P2YI9-smfU" frameborder="0" allowfullscreen>
@@ -1841,18 +1912,54 @@ $(document).ready(function () {
 </div>
 <div id="seminar-3-model-programming" class="section level1">
 <h1>Seminar 3: Model Programming</h1>
-<p>Welcome to the third seminar of <strong>Decision Analysis and Forecasting for Agricultural Development</strong>. … . Feel free to bring up any questions or concerns in the Slack or to <a href="mailto:cory.whitney@uni-bonn.de?subject=%5BSeminar_4%5D%20Decision%20Analysis%20Lecture">Dr. Cory Whitney</a> or the course tutor.</p>
-<p>Causal model / diagram / Impact pathway / Theory of change</p>
-<ul>
-<li>R packages decisionSupport (walk through a vignette or two)</li>
-<li>RSTAN, Other modeling programs - Betancourt’s work (selected blogs, talks, git repos, Stan, HCMC)</li>
-<li>Yihui (markdown etc.)</li>
-<li>Assignments:</li>
-<li><ol style="list-style-type: decimal">
-<li>“episode 3, with Colin Carroll. He mentions Tom Rainforth’s thesis.” – Alex Andorra (about his interview with Colin Carol on the podcast Learning Bayesian Statistics)</li>
-</ol></li>
-<li>Rainforth, Tom. “Automating Inference, Learning, and Design Using Probabilistic Programming.” Doctor of Philosophy, University of Oxford, 2017.</li>
-</ul>
+<p>Welcome to the third seminar of <strong>Decision Analysis and Forecasting for Agricultural Development</strong>. In this seminar we will look into different options for model programming in the <code>R</code> programming environment. if you have not already installed <code>R</code> and <code>RStudio</code> you may want to go back to the <a href="#introduction">Introduction</a> and follow the instructions there. Feel free to bring up any questions or concerns in the Slack or to <a href="mailto:cory.whitney@uni-bonn.de?subject=%5BSeminar_4%5D%20Decision%20Analysis%20Lecture">Dr. Cory Whitney</a> or the course tutor.</p>
+<!-- Causal model / diagram / Impact pathway / Theory of change -->
+<p>Here we can explore some of the packages that we commonly use in <code>R</code>. The main package that out team uses for simulations is the <code>decisionSupport</code>. Let’s take some time to walk through a vignette or two.</p>
+</div>
+<div id="decisionsupport" class="section level1">
+<h1>decisionSupport</h1>
+<p>In order to use the standard tools for running these models in the R environment we load the <code>decisionSupport</code> library.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">library</span>(decisionSupport)</span></code></pre></div>
+<p>Here we define a simple model function that we call <code>example_decision_model</code>. It calculates profits as benefits minus costs and arbitrarily adds 500 to the result to arrive at ‘final_profits’. This simple example shows us how to use <code>function</code>, the results of which can be applied elsewhere.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>example_decision_model &lt;-<span class="st"> </span><span class="cf">function</span>(x, varnames)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>{</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>  profit &lt;-<span class="st"> </span>benefits<span class="op">-</span>costs</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>  </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>  final_profits &lt;-<span class="st"> </span>profit<span class="op">+</span><span class="dv">500</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>  </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>  <span class="kw">return</span>(final_profits)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>  </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Here we use the <code>decisionSupport</code> function to run our <code>example_decision_model</code> function 10,000 times using inputs from a comma separated values file we named ‘example_decision_inputs.csv’ and stored in the ‘data’ folder. We also store the outpts of the</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">decisionSupport</span>(<span class="dt">inputFilePath =</span> <span class="st">&quot;data/example_decision_inputs.csv&quot;</span>, </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>                <span class="dt">outputPath =</span> <span class="st">&quot;data/outputs&quot;</span>, </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>                <span class="dt">write_table =</span> <span class="ot">TRUE</span>, </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>                <span class="dt">welfareFunction =</span> example_decision_model, </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>                <span class="dt">numberOfModelRuns =</span> <span class="dv">10000</span>, </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>                <span class="dt">functionSyntax =</span> <span class="st">&quot;plainNames&quot;</span>)</span></code></pre></div>
+<pre><code>## Estimate read from file:  data/example_decision_inputs.csv 
+## Performing Monte Carlo Simulation for the Welfare Decision Analysis:</code></pre>
+<pre><code>## Warning: Variable: costs  distribution: posnorm
+## Calculated value of 5%-quantile: 53.3791903068959
+##   Target value of 5%-quantile:     30
+##   Calculated cumulative probability at value 30 : 0.0289226319595083
+##   Target  cumulative probability at value 30 : 0.05
+##   Mean scaled difference: 0.4215474</code></pre>
+<pre><code>## Warning in paramtnormci_numeric(p = p, ci = ci, lowerTrunc = lowerTrunc, : Calculated value of 5%-quantile: 53.3791903068959
+##   Target value of 5%-quantile:     30
+##   Calculated cumulative probability at value 30 : 0.0289226319595083
+##   Target  cumulative probability at value 30 : 0.05
+##   Mean scaled difference: 0.4215474</code></pre>
+<pre><code>## Monte Carlo Simulation for Welfare Decision Analysis done.
+## Monte Carlo results written into file:  data/outputs/mcSimulationResults.csv</code></pre>
+<pre><code>## Monte Carlo summary written into file:  data/outputs/mcSummary.csv 
+## Welfare Decision Analysis summary written into file:  data/outputs/welfareDecisionSummary.csv</code></pre>
+<pre><code>## VIP PLSR results written into directory:  data/outputs</code></pre>
+<!-- -  RSTAN, Other modeling programs - Betancourt’s work (selected blogs, talks, git repos, Stan, HCMC) -->
+<!-- -  Yihui (markdown etc.) -->
+<!-- -  Assignments:  -->
+<!-- -  1. “episode 3, with Colin Carroll. He mentions Tom Rainforth's thesis.”  – Alex Andorra (about his interview with Colin Carol on the podcast Learning Bayesian Statistics) -->
+<!-- -  Rainforth, Tom. “Automating Inference, Learning, and Design Using Probabilistic Programming.” Doctor of Philosophy, University of Oxford, 2017. -->
 </div>
 <div id="lecture-4-biases" class="section level1">
 <h1>Lecture 4: Biases</h1>
