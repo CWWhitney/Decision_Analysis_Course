@@ -1,4 +1,4 @@
-# Seminar 3: Model Programming
+## Seminar 3: Model Programming
 
 Welcome to the third seminar of **Decision Analysis and Forecasting for Agricultural Development**. In this seminar we will look into different options for model programming in the `R` programming environment. if you have not already installed `R` and `RStudio` you may want to go back to the [Tools we use](#tools) section and follow the instructions there. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
@@ -6,7 +6,7 @@ Welcome to the third seminar of **Decision Analysis and Forecasting for Agricult
 
 Here we can explore some of the packages that we commonly use in `R`. The main package that out team uses for simulations is the `decisionSupport`. Let's take some time to walk through a vignette or two.
 
-# decisionSupport
+## decisionSupport
 
 In order to use the standard tools for running these models in the R environment we need to load the `decisionSupport` library. To get this on your machine you will need to use the `install.packages` function, i.e. `install.packages("decisionSupport")`. 
 
@@ -21,14 +21,14 @@ example_decision_model <- function(x, varnames)
 {
   profit <- benefits-costs
   
-  final_profits <- profit+500
+  final_profits <- profit + additional_benefits
   
   return(final_profits)
   
 }
 ```
 
-Here we use the `decisionSupport` function to run our `example_decision_model` function 10,000 times using inputs from a comma separated values file we named 'example_decision_inputs.csv' and stored in the 'data' folder. We also store the outpts of the 
+Here we use the `decisionSupport` function to run our `example_decision_model` function 10,000 times using inputs from a comma separated values file we named 'example_decision_inputs.csv' and stored in the 'data' folder. We also store the outputs of the model in a folder we are calling 'outputs'. 
 
 ```{r}
 decisionSupport(inputFilePath = "data/example_decision_inputs.csv", 

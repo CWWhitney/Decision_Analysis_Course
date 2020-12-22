@@ -9,7 +9,7 @@ Welcome to lecture 3 of **Decision Analysis and Forecasting for Agricultural Dev
 
 Causal model / diagram / Impact pathway / Theory of change
 
- ## Brief examples
+## Brief examples
  
  - Vietnam
  - Uganda

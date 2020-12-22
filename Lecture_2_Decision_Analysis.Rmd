@@ -46,7 +46,7 @@ Parts 5 and 6 offer some brief Decision Analysis case studies and conclusions. A
 
 - Introduction: Anderson, Jock, John Dillon, and Brian Hardaker. Agricultural Decision Analysis. Ames, Iowa: Iowa State University Press, 1978.
 
-## Further reaading
+## Further reading
 
 -	Overview of DA (Hubbard, Anderson, Howard)
 -	Brief examples (Vietnam…, Uganda, Calluna…)

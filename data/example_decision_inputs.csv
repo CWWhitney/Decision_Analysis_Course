@@ -1,3 +1,4 @@
 description,variable,lower,upper,distribution
-These are the benefits,benefits,100,2000,norm
-These are the costs,costs,30,3000,posnorm
+These are the estimated benefits,benefits,200,2000,norm
+These are the estimated costs,costs,300,3000,posnorm
+These are the estimated additional benefits,additional_benefits,10,100,posnorm
