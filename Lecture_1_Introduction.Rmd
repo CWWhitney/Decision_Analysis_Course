@@ -1,7 +1,6 @@
 # Lecture 1: Introduction {#introduction} 
 <!-- use the {#introduction} syntax to create a label that can be referenced with [Introduction](#introduction) -->
 
-![decisionSupport](figures/decisionSupport_hex_sticker.png){width=40%}
 
 Welcome to the introduction lecture for **Decision Analysis and Forecasting for Agricultural Development**. We are excited to deliver you this course content and to train a new generation of experts in applying these tools. We see enormous scope for application of these methods in agriculture and the need for more practitioners.  
 
@@ -51,7 +50,7 @@ kable(schedule)
 
 ## Performance assessment
 
-In this module, there will be no exam, but you'll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, you'll be developing an [Rmarkdown](https://rmarkdown.rstudio.com/) document ([here is an example from Hoa Do with an overview that includes the main modeling procedures with the decisionSupport package in R](hortibonn.de/Methodology_outline.html)), where you'll record your learning and your coding work. This document will contain short thematic chapters on the lecture contents, as well as the code you'll produce and the outputs you'll generate. The final chapters will contain some discussion of the results you'll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).
+In this module, there will be no exam, but you'll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, you'll be developing an [Rmarkdown](https://rmarkdown.rstudio.com/) document ([here is an example from Hoa Do with an overview that includes the main modeling procedures with the decisionSupport package in R](http://inresgb-lehre.iaas.uni-bonn.de/Methodology_outline.html)), where you'll record your learning and your coding work. This document will contain short thematic chapters on the lecture contents, as well as the code you'll produce and the outputs you'll generate. The final chapters will contain some discussion of the results you'll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).
 
 There will be about 60 hours of formal in-class time (15 ~ 4 hour lectures and seminars) and 120 hours of work outside the class.
 

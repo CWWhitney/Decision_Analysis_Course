@@ -5,6 +5,8 @@ output:
   rmdformats::material
 ---
 
+![](figures/decisionSupport_hex_sticker.png){width=40%}
+
 ```{r child="Lecture_1_Introduction.Rmd"}
 ```
 
