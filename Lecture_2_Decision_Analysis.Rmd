@@ -1,4 +1,5 @@
-# Lecture 2: Decision Analysis
+# Lecture 2: Decision Analysis{#decision_analysis} 
+<!-- reference with [Decision Analysis](#decision_analysis) -->
 
 Welcome to the second seminar of **Decision Analysis and Forecasting for Agricultural Development**. In this lecture we will follow a [six-part micro-series of videos](https://www.youtube.com/playlist?list=PLe1C9W5AtEiBzmXFf-XzmXH8NNJjqs0IY) and use the Lecture 2 Slack channel and Zoom meeting to follow up. This will allow us all to have a chance to see your progress, provide feedback. It will be encouraging to others to see activity from colleagues. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_2]%20Decision%20Analysis%20Lecture) or the course tutor.
 
@@ -42,16 +43,18 @@ Parts 5 and 6 offer some brief Decision Analysis case studies and conclusions. A
 
 ## Please come prepared for the meeting. one of your groups will be responsible for presenting and leading a discussion on the reading: 
 
-- Chapter 1: Hubbard, Douglas W. [How To Measure Anything: Finding the Value of Intangibles in Business](https://www.howtomeasureanything.com/3rd-edition/)
+- Anderson, Jock, John Dillon, and Brian Hardaker. Agricultural Decision Analysis. Ames, Iowa: Iowa State University Press, 1978. [Introduction, pages 1-16](reading/Anderson_Agriculture_Decision_Analysis.pdf)
 
-- Introduction: Anderson, Jock, John Dillon, and Brian Hardaker. Agricultural Decision Analysis. Ames, Iowa: Iowa State University Press, 1978.
+# Invited Lecture 2: : (on decision analysis [speaker TBA])
 
-## Further reading
+Speaker TBA
 
--	Overview of DA (Hubbard, Anderson, Howard)
--	Brief examples (Vietnam…, Uganda, Calluna…)
--	Hubbard (selected chapters from ‘How to Measure Anything’)
--	Howard (selected chapters from ‘Decision Analysis’ and recorded talks)
+<!-- ## Further reading -->
+
+<!-- -	Overview of DA (Hubbard, Anderson, Howard) -->
+<!-- -	Brief examples (Vietnam…, Uganda, Calluna…) -->
+<!-- -	Hubbard (selected chapters from ‘How to Measure Anything’) -->
+<!-- -	Howard (selected chapters from ‘Decision Analysis’ and recorded talks) -->
 
 
 

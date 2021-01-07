@@ -18,11 +18,11 @@ Decisions in agriculture are often risky, meaning that decision makers have unce
 
 In this course, we will provide an overview of methods we can use to study agricultural development decisions and generate forecasts of decision outcomes. If you do not have a clear idea what that is you've come to the right place. This course was developed for MSc. students in [Crop Sciences](https://www.lf.uni-bonn.de/en/studying/master/npw) at the [University of Bonn](https://www.uni-bonn.de/startpage?set_language=en), but the materials are also intended for a general audience interested in applying these tools. The main parts of the course include:
 
-- Introduction to Decision Analysis
-- Forecasting and cognitive biases
-- Calibration training
+- [Introduction to Decision Analysis](#decision_analysis)
+- [Forecasting and cognitive biases](#biases)
+- [Calibration training](#calibration)
 - Participatory modeling building
-- Decision modeling in R
+- [Decision modeling in R](#model_programming)
 - Group project on decision analysis
 
 After some introduction of the subject matter much of this course will consist of practical application of the [`decisionSupport`](https://cran.r-project.org/web/packages/decisionSupport/index.html) package in the [R](https://www.r-project.org/) programming language. 
@@ -44,9 +44,19 @@ In this course, we aim to provide you with the skills and experiences in decisio
 ```{r echo = FALSE, results = 'asis'}
 library(knitr)
 library(pander)
-schedule<-read.csv("schedule.csv")
-kable(schedule)
+lecture_schedule<-read.csv("lecture_schedule.csv")
+kable(lecture_schedule)
 ```
+
+## Seminar schedule
+
+```{r echo = FALSE, results = 'asis'}
+library(knitr)
+library(pander)
+seminar_schedule<-read.csv("seminar_schedule.csv")
+kable(seminar_schedule)
+```
+
 
 ## Performance assessment
 
@@ -83,10 +93,17 @@ The course will be largely based on group work. Please take some time to choose 
 -	Collaborate with decision makers on decision model development (qualitative)
 -	Generate model code from qualitative model and parameterize (quantitative step)
 -	Generate a git repo with code and documentation
--	~ 5,000 word paper written in RMarkdown, see this report on [plotting high-dimensional data](github.com/hortibonn/Plotting-High-Dimensional-Data) for example
+-	Write a ~ 5,000 word paper in RMarkdown, see this report on [plotting high-dimensional data](github.com/hortibonn/Plotting-High-Dimensional-Data) for a useful example of how this can be done
 
 ### Further reading
 
 Anderson, Jock, John Dillon, and Brian Hardaker. 1978. Agricultural Decision Analysis. Ames, Iowa: Iowa State University Press.
 
 Howard, Ronald A., and Ali E. Abbas. 2015. Foundations of Decision Analysis. NY, NY: Prentice Hall.
+
+# Invited Lecture 1: (on Ag. Dev. Project [speaker TBA])
+
+Speaker TBA
+
+## Please come prepared for the meeting. one of your groups will be responsible for presenting and leading a discussion on the reading: 
+- Hubbard, Douglas W. How To Measure Anything: Finding the Value of Intangibles in Business. 2nd ed. Vol. Second Edition. Hoboken, New Jersey: John Wiley & Sons, 2014.[Chapter 1: The Challenge of Intangibles, pages 3-13](reading/How to Measure Anything_ Finding the Value of Intangibles in Business.pdf)

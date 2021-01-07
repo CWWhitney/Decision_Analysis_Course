@@ -1,4 +1,5 @@
-# Lecture 4: Biases
+# Lecture 4: Biases {#biases} 
+<!-- reference with [Biases](#biases) -->
 
 Welcome to lecture 4 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 

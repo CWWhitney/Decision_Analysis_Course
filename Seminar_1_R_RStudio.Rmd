@@ -1,4 +1,4 @@
-## Seminar 1: Using R and RStudio
+# Seminar 1: Using R and RStudio
 
 Welcome to the first seminar of **Decision Analysis and Forecasting for Agricultural Development**. You should already be familiar with the idea that we intend to have group work form a major part of this course. If you have not already it is important that you choose a group to work with and begin to think about an agricultural decision that you intend to work on through this course. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
