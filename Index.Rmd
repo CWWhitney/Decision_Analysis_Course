@@ -4,37 +4,75 @@ title: |
   Decision Analysis and Forecasting for Agricultural Development
 author: "Cory Whitney, Eike Luedeling et al."
 output:
-  rmdformats::html_clean
+  rmdformats::material
 ---
 
+<!-- List of Lecture RMD files to be compiled -->
 ```{r child="Lecture_1_Introduction.Rmd"}
-```
-
-```{r child="Seminar_1_R_RStudio.Rmd"}
 ```
 
 ```{r child="Lecture_2_Decision_Analysis.Rmd"}
 ```
 
-```{r child="Seminar_2_Git_Github.Rmd"}
+```{r child="Lecture_3_Case_Studies.Rmd"}
 ```
 
 ```{r child="Lecture_3_Decision_Models.Rmd"}
 ```
 
-```{r child="Seminar_3_Model_Programming.Rmd"}
-```
-
 ```{r child="Lecture_4_Biases.Rmd"}
-```
-
-```{r child="Seminar_4_Calibration_Training.Rmd"}
 ```
 
 ```{r child="Lecture_5_Bayesian_Thinking.Rmd"}
 ```
 
-```{r child="Lecture_6_Academic_Writing.Rmd"}
+```{r child="Lecture_11_Academic_Writing.Rmd"}
+```
+
+<!-- List of Seminar RMD files to be compiled -->
+
+<!-- Seminar 1	Introduction and tools / Group work overview 	Install R and Rstudio (other tools for the course) -->
+```{r child="Seminar_1_Tools_we_use.Rmd"}
+```
+<!-- Seminar 2	How to use RStudio, R	Share R scripts (part 1) -->
+```{r child="Seminar_2_R_RStudio_1.Rmd"}
+```
+<!-- Seminar 3	RStudio, R continued	Share R scripts (part 2) -->
+```{r child="Seminar_3_R_RStudio_2.Rmd"}
+```
+
+<!-- Seminar 4	How to use GitHub, git 	Start a Github repo and share it -->
+
+```{r child="Seminar_4_Git_Github.Rmd"}
+```
+<!-- Seminar 5	Rmarkdown  	Your first markdown file -->
+```{r child="Seminar_5_RMarkdown.Rmd"}
+```
+<!-- Seminar 6	Model Programming (Coding and programming in R)	Share R scripts (part 3) -->
+```{r child="Seminar_6_Model_Programming.Rmd"}
+```
+<!-- Seminar 7	R packages decisionSupport 	Share initial model -->
+```{r child="Seminar_7_decisionSupport.Rmd"}
+```
+
+<!-- Seminar 8	Calibration Training	Fill calibration tests (short forms) -->
+```{r child="Seminar_8_Calibration_short.Rmd"}
+```
+
+<!-- Seminar 9	Calibration Training continued	Fill calibration tests (long forms) -->
+```{r child="Seminar_9_Calibration_long.Rmd"}
+```
+
+<!-- Seminar 10	Group project report with decision overview	Share updated model -->
+```{r child="Seminar_10_Report.Rmd"}
+```
+
+<!-- Seminar 11	Academic writing / Scientific process / publications / careers 	Abstract for peer review -->
+```{r child="Seminar_11_Writing.Rmd"}
+```
+
+<!-- Seminar 12	Citation management software / Literature sources	Join Decision Analysis Zotero Group -->
+```{r child="Seminar_12_citations.Rmd"}
 ```
 
 
