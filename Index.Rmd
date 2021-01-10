@@ -2,6 +2,7 @@
 title:  Decision Analysis and Forecasting for Agricultural Development
   ![](figures/decisionSupport_hex_sticker.png){width=1in}  
 author: "Cory Whitney, Eike Luedeling et al."
+github: "CWWhitney"
 logo: "figures/decisionSupport_hex_sticker.png"
 output:
   epuRate::epurate:
@@ -9,6 +10,16 @@ output:
     number_sections: FALSE
     code_folding: "show"
 ---
+
+<style>
+#TOC {
+  top: 1%;
+  opacity: 0.5;
+}
+#TOC:hover {
+  opacity: 1;
+}
+</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -23,6 +34,9 @@ library(rmarkdown)
 ```
 
 ```{r child="Lecture_Schedule.Rmd"}
+```
+
+```{r child="Seminar_Schedule.Rmd"}
 ```
 
 ```{r child="Lecture_2_Decision_Analysis.Rmd"}
@@ -49,9 +63,6 @@ library(rmarkdown)
 ```
 
 <!-- List of Seminar RMD files to be compiled -->
-
-```{r child="Seminar_Schedule.Rmd"}
-```
 
 ```{r child="Seminar_1_Tools_we_use.Rmd"}
 ```

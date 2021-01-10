@@ -1,4 +1,4 @@
-# Seminar 6: Model Programming (Coding and programming in R) {#model_programming} 
+# Seminar 6: Model Programming {#model_programming} 
 <!-- reference with [Model programming](#model_programming) -->
 
 Welcome to the sixth seminar of **Decision Analysis and Forecasting for Agricultural Development**. In this seminar we will look into different options for model programming in the `R` programming environment. if you have not already installed `R` and `RStudio` you may want to go back to the [Tools we use](#tools) section and follow the instructions there. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.

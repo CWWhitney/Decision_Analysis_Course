@@ -1,4 +1,4 @@
-# Lecture 1: Introduction and group work overview {#introduction} 
+# Lecture 1: Introduction {#introduction} 
 <!-- use the {#introduction} syntax to create a label that can be referenced with [Introduction](#introduction) -->
 
 Welcome to the introduction lecture for **Decision Analysis and Forecasting for Agricultural Development**. We are excited to deliver you this course content and to train a new generation of experts in applying these tools. We see enormous scope for application of these methods in agriculture and the need for more practitioners.  
@@ -20,7 +20,7 @@ In this course, we will provide an overview of methods we can use to study agric
 - [Introduction to Decision Analysis](#decision_analysis)
 - [Forecasting and cognitive biases](#biases)
 - [Calibration training](#calibration)
-- Participatory modeling building
+- [Participatory modeling building](#participatory_methods)
 - [Decision modeling in R](#model_programming)
 - Group project on decision analysis
 

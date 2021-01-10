@@ -9,6 +9,7 @@
 <meta name="generator" content="pandoc" />
 
 <!-- Github Logo -->
+<a href="https://github.com/CWWhitney/" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#69b3a2; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
 
 
@@ -2983,9 +2984,18 @@ div.tocify {
 </div>
 
 
+<style>
+#TOC {
+  top: 1%;
+  opacity: 0.5;
+}
+#TOC:hover {
+  opacity: 1;
+}
+</style>
 <!-- List of Lecture RMD files to be compiled -->
 <div id="introduction" class="section level1">
-<h1>Lecture 1: Introduction and group work overview</h1>
+<h1>Lecture 1: Introduction</h1>
 <!-- use the {#introduction} syntax to create a label that can be referenced with [Introduction](#introduction) -->
 <p>Welcome to the introduction lecture for <strong>Decision Analysis and Forecasting for Agricultural Development</strong>. We are excited to deliver you this course content and to train a new generation of experts in applying these tools. We see enormous scope for application of these methods in agriculture and the need for more practitioners.</p>
 <p>Decisions in agriculture are often risky, meaning that decision makers have uncertainty about how their decision will influence the intended outcomes. Farming systems are dynamic and the impact of any intervention, policy or management decision is likely to be influenced by many factors ranging from soil and crop dynamics to social dynamics such as farmer and community perceptions. In order to provide scientific support for decision making it is important that our models and forecasts attempt to include these interactions. Decision Analysis provides a set of approaches that are aimed at capturing what is known and applying this knowledge to generate forecasts of decision outcomes. The theoretical body of approaches has been formally applied in business and economics for more than 50 years (Howard and Abbas 2015) and have been gaining ground in agriculture since the 70s (Anderson et al. 1978). Our mission is to normalize these holistic approaches and move agricultural science from the lab bench and field trials to real world application and decision support for farmers and agricultural decision makers such as those in government ministries and aid organizations.</p>
@@ -3002,7 +3012,7 @@ div.tocify {
 <li><a href="#decision_analysis">Introduction to Decision Analysis</a></li>
 <li><a href="#biases">Forecasting and cognitive biases</a></li>
 <li><a href="#calibration">Calibration training</a></li>
-<li>Participatory modeling building</li>
+<li><a href="#participatory_methods">Participatory modeling building</a></li>
 <li><a href="#model_programming">Decision modeling in R</a></li>
 <li>Group project on decision analysis</li>
 </ul>
@@ -3176,6 +3186,127 @@ div.tocify {
 </tbody>
 </table>
 </div>
+<div id="seminar_schedule" class="section level1">
+<h1>Seminar schedule</h1>
+<table>
+<colgroup>
+<col width="3%" />
+<col width="7%" />
+<col width="14%" />
+<col width="49%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right">Week</th>
+<th align="left">Date</th>
+<th align="left">Seminar…Lecture</th>
+<th align="left">Title</th>
+<th align="left">Assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">15-Apr-21</td>
+<td align="left">Seminar 1</td>
+<td align="left">Introduction and tools / Group work overview</td>
+<td align="left">Install R and Rstudio</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">22-Apr-21</td>
+<td align="left">Seminar 2</td>
+<td align="left">How to use RStudio, R</td>
+<td align="left">Share R scripts (part 1)</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">29-Apr-21</td>
+<td align="left">Seminar 3</td>
+<td align="left">RStudio, R continued</td>
+<td align="left">Share R scripts (part 2)</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">6-May-21</td>
+<td align="left">Seminar 4</td>
+<td align="left">How to use GitHub, git</td>
+<td align="left">Start a Github repo</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">13-May-21</td>
+<td align="left">Seminar 5</td>
+<td align="left">Rmarkdown</td>
+<td align="left">Create Rmarkdown file</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">20-May-21</td>
+<td align="left">Seminar 6</td>
+<td align="left">Model Programming (Coding and programming in R)</td>
+<td align="left">Share R scripts (part 3)</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">27-May-21</td>
+<td align="left">Seminar 7</td>
+<td align="left">R package decisionSupport</td>
+<td align="left">Share initial model</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">3-Jun-21</td>
+<td align="left">Seminar 8</td>
+<td align="left">Calibration Training</td>
+<td align="left">Calibration tests (short forms)</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">10-Jun-21</td>
+<td align="left">Seminar 9</td>
+<td align="left">Calibration Training continued</td>
+<td align="left">Calibration tests (long forms)</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">17-Jun-21</td>
+<td align="left">Seminar 10</td>
+<td align="left">Group project report with decision overview</td>
+<td align="left">Share updated model</td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="left">24-Jun-21</td>
+<td align="left">Seminar 11</td>
+<td align="left">Academic writing / Scientific process / publications / careers</td>
+<td align="left">Abstract for peer review</td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="left">1-Jul-21</td>
+<td align="left">Seminar 12</td>
+<td align="left">Citation management software / Literature sources</td>
+<td align="left">Join Zotero Group</td>
+</tr>
+<tr class="odd">
+<td align="right">13</td>
+<td align="left">8-Jul-21</td>
+<td align="left">Seminar 13</td>
+<td align="left">Group presentations and discuss final model</td>
+<td align="left">Prepare final model</td>
+</tr>
+<tr class="even">
+<td align="right">14</td>
+<td align="left">15-Jul-21</td>
+<td align="left">Seminar 14</td>
+<td align="left">Group presentations (Continued)</td>
+<td align="left">Present</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="decision_analysis" class="section level1">
 <h1>Lecture 2: Decision Analysis Overview</h1>
 <!-- reference with [Decision Analysis](#decision_analysis) -->
@@ -3306,7 +3437,8 @@ div.tocify {
 <h1>Lecture 10:</h1>
 </div>
 <div id="academic_writing" class="section level1">
-<h1>Lecture 11: Academic writing &amp; Citation management software / Literature sources / Scientific process / publications / careers</h1>
+<h1>Lecture 11: Academic writing</h1>
+<!-- & Citation management software / Literature sources / Scientific process / publications / careers -->
 <p>Welcome to lecture 11 of <strong>Decision Analysis and Forecasting for Agricultural Development</strong>. Feel free to bring up any questions or concerns in the Slack or to <a href="mailto:cory.whitney@uni-bonn.de?subject=%5BLecture_6%5D%20Decision%20Analysis%20Lecture">Dr. Cory Whitney</a> or the course tutor.</p>
 </div>
 <div id="writing" class="section level1">
@@ -3314,129 +3446,8 @@ div.tocify {
 <p>Welcome to lecture 12 of <strong>Decision Analysis and Forecasting for Agricultural Development</strong>. Feel free to bring up any questions or concerns in the Slack or to <a href="mailto:cory.whitney@uni-bonn.de?subject=%5BLecture_6%5D%20Decision%20Analysis%20Lecture">Dr. Cory Whitney</a> or the course tutor.</p>
 <!-- List of Seminar RMD files to be compiled -->
 </div>
-<div id="seminar_schedule" class="section level1">
-<h1>Seminar schedule</h1>
-<table>
-<colgroup>
-<col width="3%" />
-<col width="6%" />
-<col width="12%" />
-<col width="42%" />
-<col width="34%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="right">Week</th>
-<th align="left">Date</th>
-<th align="left">Seminar…Lecture</th>
-<th align="left">Title</th>
-<th align="left">Assignment</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">15-Apr-21</td>
-<td align="left">Seminar 1</td>
-<td align="left">Introduction and tools / Group work overview</td>
-<td align="left">Install R and Rstudio (other tools for the course)</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">22-Apr-21</td>
-<td align="left">Seminar 2</td>
-<td align="left">How to use RStudio, R</td>
-<td align="left">Share R scripts (part 1)</td>
-</tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">29-Apr-21</td>
-<td align="left">Seminar 3</td>
-<td align="left">RStudio, R continued</td>
-<td align="left">Share R scripts (part 2)</td>
-</tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left">6-May-21</td>
-<td align="left">Seminar 4</td>
-<td align="left">How to use GitHub, git</td>
-<td align="left">Start a Github repo and share it</td>
-</tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="left">13-May-21</td>
-<td align="left">Seminar 5</td>
-<td align="left">Rmarkdown</td>
-<td align="left">Your first markdown file</td>
-</tr>
-<tr class="even">
-<td align="right">6</td>
-<td align="left">20-May-21</td>
-<td align="left">Seminar 6</td>
-<td align="left">Model Programming (Coding and programming in R)</td>
-<td align="left">Share R scripts (part 3)</td>
-</tr>
-<tr class="odd">
-<td align="right">7</td>
-<td align="left">27-May-21</td>
-<td align="left">Seminar 7</td>
-<td align="left">R package decisionSupport</td>
-<td align="left">Share initial model</td>
-</tr>
-<tr class="even">
-<td align="right">8</td>
-<td align="left">3-Jun-21</td>
-<td align="left">Seminar 8</td>
-<td align="left">Calibration Training</td>
-<td align="left">Fill calibration tests (short forms)</td>
-</tr>
-<tr class="odd">
-<td align="right">9</td>
-<td align="left">10-Jun-21</td>
-<td align="left">Seminar 9</td>
-<td align="left">Calibration Training continued</td>
-<td align="left">Fill calibration tests (long forms)</td>
-</tr>
-<tr class="even">
-<td align="right">10</td>
-<td align="left">17-Jun-21</td>
-<td align="left">Seminar 10</td>
-<td align="left">Group project report with decision overview</td>
-<td align="left">Share updated model</td>
-</tr>
-<tr class="odd">
-<td align="right">11</td>
-<td align="left">24-Jun-21</td>
-<td align="left">Seminar 11</td>
-<td align="left">Academic writing / Scientific process / publications / careers</td>
-<td align="left">Abstract for peer review</td>
-</tr>
-<tr class="even">
-<td align="right">12</td>
-<td align="left">1-Jul-21</td>
-<td align="left">Seminar 12</td>
-<td align="left">Citation management software / Literature sources</td>
-<td align="left">Join Decision Analysis Zotero Group</td>
-</tr>
-<tr class="odd">
-<td align="right">13</td>
-<td align="left">8-Jul-21</td>
-<td align="left">Seminar 13</td>
-<td align="left">Group presentations and discuss final model</td>
-<td align="left">Prepare final model</td>
-</tr>
-<tr class="even">
-<td align="right">14</td>
-<td align="left">15-Jul-21</td>
-<td align="left">Seminar 14</td>
-<td align="left">Group presentations (Continued)</td>
-<td align="left">Present</td>
-</tr>
-</tbody>
-</table>
-</div>
 <div id="tools" class="section level1">
-<h1>Seminar 1: ## The tools we use</h1>
+<h1>Seminar 1: The tools we use</h1>
 <!-- use the {#tools} syntax to create a label that can be referenced with [Tools we use](#tools) -->
 <p>Welcome to the first seminar of <strong>Decision Analysis and Forecasting for Agricultural Development</strong>. You should already be familiar with the idea that we intend to have group work form a major part of this course. If you have not already it is important that you choose a group to work with and begin to think about an agricultural decision that you intend to work on through this course. Feel free to bring up any questions or concerns in the Slack or to <a href="mailto:cory.whitney@uni-bonn.de?subject=%5BSeminar_4%5D%20Decision%20Analysis%20Lecture">Dr. Cory Whitney</a> or the course tutor.</p>
 <p>Remember that this is an experiential course and will be based largely on work from your side that is supported by us, rather than passive learning where we deliver content. In order to work with us in this course you will need to have some basic tools.</p>
@@ -3493,7 +3504,7 @@ div.tocify {
 <p>Now we’re equipped with all the basic tools for this course. We’ll start using them pretty soon. Throughout the course you’ll find occasional references to your RMarkdown file. This is supposed to be produced with Rmarkdown, with subsequent versions of it stored on github.</p>
 </div>
 <div id="model_programming" class="section level1">
-<h1>Seminar 6: Model Programming (Coding and programming in R)</h1>
+<h1>Seminar 6: Model Programming</h1>
 <!-- reference with [Model programming](#model_programming) -->
 <p>Welcome to the sixth seminar of <strong>Decision Analysis and Forecasting for Agricultural Development</strong>. In this seminar we will look into different options for model programming in the <code>R</code> programming environment. if you have not already installed <code>R</code> and <code>RStudio</code> you may want to go back to the <a href="#tools">Tools we use</a> section and follow the instructions there. Feel free to bring up any questions or concerns in the Slack or to <a href="mailto:cory.whitney@uni-bonn.de?subject=%5BSeminar_4%5D%20Decision%20Analysis%20Lecture">Dr. Cory Whitney</a> or the course tutor.</p>
 <!-- Causal model / diagram / Impact pathway / Theory of change -->
@@ -3548,14 +3559,17 @@ div.tocify {
 <div id="calibration_long" class="section level1">
 <h1>Seminar 9: Calibration Training (long form)</h1>
 </div>
-<div id="seminar-10-group-project-report-with-decision-overview" class="section level1">
-<h1>Seminar 10: Group project report with decision overview</h1>
+<div id="seminar-10-group-project-report" class="section level1">
+<h1>Seminar 10: Group project report</h1>
+<p>Provide an overview of the decision identified and the process thus far of generating a model.</p>
 </div>
-<div id="seminar-11-academic-writing-scientific-process-publications-careers" class="section level1">
-<h1>Seminar 11: Academic writing / Scientific process / publications / careers</h1>
+<div id="seminar-11-academic-writing" class="section level1">
+<h1>Seminar 11: Academic writing</h1>
+<p>Follow up on the main lecture with inputs about some of the specifics of the academic writing process.</p>
 </div>
-<div id="seminar-12-citation-management-software-literature-sources" class="section level1">
-<h1>Seminar 12: Citation management software / Literature sources</h1>
+<div id="seminar-12-citation-management" class="section level1">
+<h1>Seminar 12: Citation management</h1>
+<p>Software and literature sources</p>
 </div>
 <div id="impressum" class="section level1 unnumbered">
 <h1 class="unnumbered">Impressum und Datenschutzerklärung</h1>
@@ -3570,7 +3584,7 @@ div.tocify {
  
 <br><br><br><br>
 <hr />
-<p style="text-align: center;">A work by <a href="https://github.com/">Cory Whitney, Eike Luedeling et al.</a></p>
+<p style="text-align: center;">A work by <a href="https://github.com/CWWhitney">Cory Whitney, Eike Luedeling et al.</a></p>
 <p style="text-align: center;"><span style="color: #808080;"><em></em></span></p>
 
 <!-- Add icon library -->
@@ -3579,7 +3593,8 @@ div.tocify {
 
 <!-- Add font awesome icons -->
 <p style="text-align: center;">
-        </p>
+      	<a href="https://github.com/CWWhitney" class="fa fa-github"></a>
+    </p>
 
  
 

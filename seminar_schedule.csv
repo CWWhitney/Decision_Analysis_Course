@@ -1,15 +1,15 @@
 ﻿Week ,Date,Seminar / Lecture,Title,Assignment
-1,15-Apr-21,Seminar 1,Introduction and tools / Group work overview ,Install R and Rstudio (other tools for the course)
+1,15-Apr-21,Seminar 1,Introduction and tools / Group work overview ,Install R and Rstudio
 2,22-Apr-21,Seminar 2,"How to use RStudio, R",Share R scripts (part 1)
 3,29-Apr-21,Seminar 3,"RStudio, R continued",Share R scripts (part 2)
-4,6-May-21,Seminar 4,"How to use GitHub, git ",Start a Github repo and share it
-5,13-May-21,Seminar 5,Rmarkdown  ,Your first markdown file
+4,6-May-21,Seminar 4,"How to use GitHub, git ",Start a Github repo
+5,13-May-21,Seminar 5,Rmarkdown  ,Create Rmarkdown file
 6,20-May-21,Seminar 6,Model Programming (Coding and programming in R),Share R scripts (part 3)
 7,27-May-21,Seminar 7,R package decisionSupport ,Share initial model
-8,3-Jun-21,Seminar 8,Calibration Training,Fill calibration tests (short forms)
-9,10-Jun-21,Seminar 9,Calibration Training continued,Fill calibration tests (long forms)
+8,3-Jun-21,Seminar 8,Calibration Training,Calibration tests (short forms)
+9,10-Jun-21,Seminar 9,Calibration Training continued,Calibration tests (long forms)
 10,17-Jun-21,Seminar 10,Group project report with decision overview,Share updated model
 11,24-Jun-21,Seminar 11,Academic writing / Scientific process / publications / careers ,Abstract for peer review
-12,1-Jul-21,Seminar 12,Citation management software / Literature sources,Join Decision Analysis Zotero Group
+12,1-Jul-21,Seminar 12,Citation management software / Literature sources,Join Zotero Group
 13,8-Jul-21,Seminar 13,Group presentations and discuss final model ,Prepare final model
 14,15-Jul-21,Seminar 14,Group presentations (Continued),Present

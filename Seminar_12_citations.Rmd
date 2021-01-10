@@ -1,1 +1,3 @@
-# Seminar 12: Citation management software / Literature sources
+# Seminar 12: Citation management
+
+Software and literature sources
