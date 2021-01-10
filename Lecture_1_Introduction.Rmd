@@ -38,30 +38,11 @@ In this course, we aim to provide you with the skills and experiences in decisio
 
 - develop decision models, comprehensively evaluate your findings and compose a report about the model you developed.
 
-## Lecture schedule
-
-```{r echo = FALSE, results = 'asis'}
-library(knitr)
-library(pander)
-lecture_schedule<-read.csv("lecture_schedule.csv")
-kable(lecture_schedule)
-```
-
-## Seminar schedule
-
-```{r echo = FALSE, results = 'asis'}
-library(knitr)
-library(pander)
-seminar_schedule<-read.csv("seminar_schedule.csv")
-kable(seminar_schedule)
-```
-
-
 ## Performance assessment
 
 In this module, there will be no exam, but you'll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, you'll be developing an [Rmarkdown](https://rmarkdown.rstudio.com/) document ([here is an example from Hoa Do with an overview that includes the main modeling procedures with the decisionSupport package in R](http://inresgb-lehre.iaas.uni-bonn.de/Methodology_outline.html)), where you'll record your learning and your coding work. This document will contain short thematic chapters on the lecture contents, as well as the code you'll produce and the outputs you'll generate. The final chapters will contain some discussion of the results you'll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).
 
-There will be about 60 hours of formal in-class time (15 ~ 4 hour lectures and seminars) and 120 hours of work outside the class.
+There will be about 60 hours of formal in-class time (15 ~ 4 hour [lectures](#lecture_schedule) and [seminars](#seminar_schedule)) and 120 hours of work outside the class.
 
 ### What we expect from you
 
@@ -79,7 +60,7 @@ This course not only aims to teach you things about Decision Analysis and relate
 
 We could simply start running [RStudio](https://rstudio.com/) on our local computer, save our files somewhere on our hard drive and generally operate the way we usually work with our computer. But this is not how real programmers work, and since this is what we're trying to be, we should familiarize ourselves with some code development tools that such people use. We'll therefore introduce you to [git](https://git-scm.com/) and [github](https://github.com/), which are very useful for keeping code organized and secure and for sharing with collaborators and wider audiences. 
 
-Finally, we want to show you how to properly document what you do in R, and how to compile professional-looking reports of your work. This is what [Rmarkdown](https://rmarkdown.rstudio.com/) helps us do. Some of this may be a bit confusing in the beginning, but you'll probably learn to appreciate the value of these tools, as we keep using them in this module. The [seminar](#(#tools)) this week we will cover all the [tools we will be using in this course](#tools).
+Finally, we want to show you how to properly document what you do in R, and how to compile professional-looking reports of your work. This is what [Rmarkdown](https://rmarkdown.rstudio.com/) helps us do. Some of this may be a bit confusing in the beginning, but you'll probably learn to appreciate the value of these tools, as we keep using them in this module. The [seminar](#tools) this week we will cover all the [tools we will be using in this course](#tools).
 
 ## Group Work
 

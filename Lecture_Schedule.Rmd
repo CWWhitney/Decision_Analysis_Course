@@ -1,0 +1,8 @@
+# Lecture schedule {#lecture_schedule}
+
+```{r echo = FALSE, results = 'asis'}
+library(knitr)
+library(pander)
+lecture_schedule<-read.csv("lecture_schedule.csv")
+kable(lecture_schedule)
+```
