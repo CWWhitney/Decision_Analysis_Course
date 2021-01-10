@@ -1,47 +1,7 @@
-# Seminar 3: Model Programming {#model_programming} 
-<!-- reference with [Model programming](#model_programming) -->
+# Seminar 5: RMarkdown {#rmarkdown}
 
-Welcome to the third seminar of **Decision Analysis and Forecasting for Agricultural Development**. In this seminar we will look into different options for model programming in the `R` programming environment. if you have not already installed `R` and `RStudio` you may want to go back to the [Tools we use](#tools) section and follow the instructions there. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
+Now let's check out [Rmarkdown](https://rmarkdown.rstudio.com/), a powerful tool that allows making fancy reports, websites etc. out of our R code. You're already looking at an example, by the way. This website was produced with Rmarkdown (and it wasn't hard at all)!
 
-<!-- Causal model / diagram / Impact pathway / Theory of change -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hh4wyP8tvkI" frameborder="0" allowfullscreen></iframe>
 
-Here we can explore some of the packages that we commonly use in `R`. The main package that out team uses for simulations is the `decisionSupport`. Let's take some time to walk through a vignette or two.
-
-## decisionSupport
-
-In order to use the standard tools for running these models in the R environment we need to load the `decisionSupport` library. To get this on your machine you will need to use the `install.packages` function, i.e. `install.packages("decisionSupport")`. 
-
-```{r}
-library(decisionSupport)
-```
-
-Here we define a simple model function that we call `example_decision_model`. It calculates profits as benefits minus costs and arbitrarily adds 500 to the result to arrive at 'final_profits'. This simple example shows us how to use `function`, the results of which can be applied elsewhere. 
-
-```{r}
-example_decision_model <- function(x, varnames)
-{
-  profit <- benefits-costs
-  
-  final_profits <- profit + additional_benefits
-  
-  return(final_profits)
-  
-}
-```
-
-Here we use the `decisionSupport` function to run our `example_decision_model` function 10,000 times using inputs from a comma separated values file we named 'example_decision_inputs.csv' and stored in the 'data' folder. We also store the outputs of the model in a folder we are calling 'outputs'. 
-
-```{r}
-decisionSupport(inputFilePath = "data/example_decision_inputs.csv", 
-                outputPath = "data/outputs", 
-                write_table = TRUE, 
-                welfareFunction = example_decision_model, 
-                numberOfModelRuns = 10000, 
-                functionSyntax = "plainNames")
-```
-
-<!-- -	RSTAN, Other modeling programs - Betancourt’s work (selected blogs, talks, git repos, Stan, HCMC) -->
-<!-- -	Yihui (markdown etc.) -->
-<!-- -	Assignments:  -->
-<!-- -	1. “episode 3, with Colin Carroll. He mentions Tom Rainforth's thesis.”  – Alex Andorra (about his interview with Colin Carol on the podcast Learning Bayesian Statistics) -->
-<!-- -	Rainforth, Tom. “Automating Inference, Learning, and Design Using Probabilistic Programming.” Doctor of Philosophy, University of Oxford, 2017. -->
+Now we're equipped with all the basic tools for this course. We'll start using them pretty soon. Throughout the course you'll find occasional references to your RMarkdown file. This is supposed to be produced with Rmarkdown, with subsequent versions of it stored on github.

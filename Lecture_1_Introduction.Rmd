@@ -1,6 +1,5 @@
-# Lecture 1: Introduction {#introduction} 
+# Lecture 1: Introduction and group work overview {#introduction} 
 <!-- use the {#introduction} syntax to create a label that can be referenced with [Introduction](#introduction) -->
-
 
 Welcome to the introduction lecture for **Decision Analysis and Forecasting for Agricultural Development**. We are excited to deliver you this course content and to train a new generation of experts in applying these tools. We see enormous scope for application of these methods in agriculture and the need for more practitioners.  
 
@@ -76,26 +75,30 @@ In this course, we'll gradually work our way into the `decisionSupport` package.
 
 What is expected of you is to be engaged in this class, and to diligently complete the assignments you receive. Learning things in R requires practice, through which many things that seem cumbersome at first eventually become almost automatic. We are hopeful that the things you'll get exposed to in this class will be assets in your scientific (or other) career. So please take the materials seriously!
 
-## The tools we use {#tools} 
-<!-- use the {#tools} syntax to create a label that can be referenced with [Tools we use](#tools) -->
-
 This course not only aims to teach you things about Decision Analysis and related topics - it also provides hands-on exercises to illustrate the functions of the `decisionSupport` package. You should also document everything you learn in a `learning logbook`. For all of these practical components, we need tools. `decisionSupport` is an R package, so we'll need [R](https://www.r-project.org/), which is most comfortably operated through the [RStudio](https://rstudio.com/) interface.
 
 We could simply start running [RStudio](https://rstudio.com/) on our local computer, save our files somewhere on our hard drive and generally operate the way we usually work with our computer. But this is not how real programmers work, and since this is what we're trying to be, we should familiarize ourselves with some code development tools that such people use. We'll therefore introduce you to [git](https://git-scm.com/) and [github](https://github.com/), which are very useful for keeping code organized and secure and for sharing with collaborators and wider audiences. 
 
-Finally, we want to show you how to properly document what you do in R, and how to compile professional-looking reports of your work. This is what [Rmarkdown](https://rmarkdown.rstudio.com/) helps us do. Some of this may be a bit confusing in the beginning, but you'll probably learn to appreciate the value of these tools, as we keep using them in this module.
+Finally, we want to show you how to properly document what you do in R, and how to compile professional-looking reports of your work. This is what [Rmarkdown](https://rmarkdown.rstudio.com/) helps us do. Some of this may be a bit confusing in the beginning, but you'll probably learn to appreciate the value of these tools, as we keep using them in this module. The [seminar](#(#tools)) this week we will cover all the [tools we will be using in this course](#tools).
 
 ## Group Work
 
 The course will be largely based on group work. Please take some time to choose a group to work with and begin to think about a decision. Over the next few weeks you will be responsible for the following milestones: 
 
 -	Identify a decision
+
 -	Collaborate with decision makers on decision model development (qualitative)
+
 -	Generate model code from qualitative model and parameterize (quantitative step)
+
 -	Generate a git repo with code and documentation
+
 -	Write a ~ 5,000 word paper in RMarkdown, see this report on [plotting high-dimensional data](github.com/hortibonn/Plotting-High-Dimensional-Data) for a useful example of how this can be done
 
 ### Further reading
+
+<!-- Come prepared: Watch TED Talks: Sir Ken Robinson and Hans Rosling -	Rosling (TED Talks / selected work from ‘Factfulness’) 
+-	Ken Robinson (TED Talks / selected work from ‘Out of Our Minds’) -->
 
 Anderson, Jock, John Dillon, and Brian Hardaker. 1978. Agricultural Decision Analysis. Ames, Iowa: Iowa State University Press.
 

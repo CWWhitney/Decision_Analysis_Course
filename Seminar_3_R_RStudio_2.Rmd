@@ -1,19 +1,3 @@
-# Seminar 1: Using R and RStudio
+# Seminar 3: Using R and RStudio continued
 
-Welcome to the first seminar of **Decision Analysis and Forecasting for Agricultural Development**. You should already be familiar with the idea that we intend to have group work form a major part of this course. If you have not already it is important that you choose a group to work with and begin to think about an agricultural decision that you intend to work on through this course. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
-
-Remember that this is an experiential course and will be based largely on work from your side that is supported by us, rather than passive learning where we deliver content. In order to work with us in this course you will need to have some basic tools.
-
-### R and RStudio
-
-the first step in getting ready for the work of this course is to install and run [R](https://www.r-project.org/) and [RStudio](https://rstudio.com/).
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WT3tKlzCZgo" frameborder="0" allowfullscreen></iframe>
-
-### Rmarkdown
-
-Now let's check out [Rmarkdown](https://rmarkdown.rstudio.com/), a powerful tool that allows making fancy reports, websites etc. out of our R code. You're already looking at an example, by the way. This website was produced with Rmarkdown (and it wasn't hard at all)!
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hh4wyP8tvkI" frameborder="0" allowfullscreen></iframe>
-
-Now we're equipped with all the basic tools for this course. We'll start using them pretty soon. Throughout the course you'll find occasional references to your RMarkdown file. This is supposed to be produced with Rmarkdown, with subsequent versions of it stored on github.
+<!-- embed the wrangling / plotting youtube video -->
