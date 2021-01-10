@@ -4,7 +4,7 @@ title: |
   Decision Analysis and Forecasting for Agricultural Development
 author: "Cory Whitney, Eike Luedeling et al."
 output:
-  rmdformats::material
+  rmdformats::html_clean
 ---
 
 ```{r child="Lecture_1_Introduction.Rmd"}

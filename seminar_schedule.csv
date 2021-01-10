@@ -1,15 +1,15 @@
-﻿Week ,Date,Title
-1,15-Apr-21,  1: Introduction and tools / Group work overview 
-2,22-Apr-21,"Seminar: Collaboration: How to use RStudio, R"
-3,29-Apr-21,  2: Decision Analysis
-4,6-May-21,"Seminar continued: How to use GitHub, git, Rmarkdown "
-5,13-May-21,  3: Decision Models
-6,20-May-21,Seminar:  Model Programming (Coding and programming in R) / R packages decisionSupport 
-7,27-May-21,  4: Biases
-8,3-Jun-21,Seminar: Calibration Training (lead by team)
-9,10-Jun-21,  5: Bayesian thinking
-10,17-Jun-21,Seminar: Group project report with decision overview
-11,24-Jun-21,  6: Academic writing & Citation management software / Literature sources / Scientific process / publications / careers 
-12,1-Jul-21,Seminar:  group projects
-13,8-Jul-21,Group presentations and discuss final model 
-14,15-Jul-21,Group presentations (Continued)
+﻿Week ,Date,Seminar / Lecture,Title,Assignment
+1,15-Apr-21,Seminar 1,Introduction and tools / Group work overview ,
+2,22-Apr-21,Seminar 2,"Collaboration How to use RStudio, R",test 1
+3,29-Apr-21,Seminar 3,Decision Analysis,test 2
+4,6-May-21,Seminar 4,"How to use GitHub, git, Rmarkdown ",test 3
+5,13-May-21,Seminar 5,Decision Models,test 4
+6,20-May-21,Seminar 6,Model Programming (Coding and programming in R) / R packages decisionSupport ,test 5
+7,27-May-21,Seminar 7,Biases,test 6
+8,3-Jun-21,Seminar 8,Calibration Training (lead by team),test 7
+9,10-Jun-21,Seminar 9,Bayesian thinking,test 8
+10,17-Jun-21,Seminar 10,Group project report with decision overview,test 9
+11,24-Jun-21,Seminar 11,Academic writing & Citation management software / Literature sources / Scientific process / publications / careers ,test 10
+12,1-Jul-21,Seminar 12,Group projects,test 11
+13,8-Jul-21,Seminar 13,Group presentations and discuss final model ,
+14,15-Jul-21,Seminar 14,Group presentations (Continued),

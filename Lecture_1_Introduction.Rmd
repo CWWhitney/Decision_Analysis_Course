@@ -6,13 +6,13 @@ Welcome to the introduction lecture for **Decision Analysis and Forecasting for 
 
 Decisions in agriculture are often risky, meaning that decision makers have uncertainty about how their decision will influence the intended outcomes. Farming systems are dynamic and the impact of any intervention, policy or management decision is likely to be influenced by many factors ranging from soil and crop dynamics to social dynamics such as farmer and community perceptions. In order to provide scientific support for decision making it is important that our models and forecasts attempt to include these interactions. Decision Analysis provides a set of approaches that are aimed at capturing what is known and applying this knowledge to generate forecasts of decision outcomes. The theoretical body of approaches has been formally applied in business and economics for more than 50 years (Howard and Abbas 2015) and have been gaining ground in agriculture since the 70s (Anderson et al. 1978). Our mission is to normalize these holistic approaches and move agricultural science from the lab bench and field trials to real world application and decision support for farmers and agricultural decision makers such as those in government ministries and aid organizations.  
 
-*A student is not a vessel to be filled, but a lamp to be lighted…* - Plutarch
+**A student is not a vessel to be filled, but a lamp to be lighted…** - Plutarch
 
--	*What?* This is an experiential course. You (students) will be leading discussions and projects. 
+-	**What?** This is an experiential course. You (students) will be leading discussions and projects. 
 
--	*So What?* The aim is for you to become a critical thinker and lead the process in generating useful forecasts for decision makers in agricultural development.
+-	**So What?** The aim is for you to become a critical thinker and lead the process in generating useful forecasts for decision makers in agricultural development.
 
--	*Now What?* You will build a working model of an agricultural development decision.
+-	**Now What?** You will build a working model of an agricultural development decision.
 
 ## Course content
 
@@ -101,9 +101,3 @@ Anderson, Jock, John Dillon, and Brian Hardaker. 1978. Agricultural Decision Ana
 
 Howard, Ronald A., and Ali E. Abbas. 2015. Foundations of Decision Analysis. NY, NY: Prentice Hall.
 
-# Invited Lecture 1: (on Ag. Dev. Project [speaker TBA])
-
-Speaker TBA
-
-## Please come prepared for the meeting. one of your groups will be responsible for presenting and leading a discussion on the reading: 
-- Hubbard, Douglas W. How To Measure Anything: Finding the Value of Intangibles in Business. 2nd ed. Vol. Second Edition. Hoboken, New Jersey: John Wiley & Sons, 2014.[Chapter 1: The Challenge of Intangibles, pages 3-13](reading/How to Measure Anything_ Finding the Value of Intangibles in Business.pdf)
