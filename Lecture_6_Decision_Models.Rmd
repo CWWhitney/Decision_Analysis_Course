@@ -2,9 +2,9 @@
 
 Welcome to lecture 6 of **Decision Analysis and Forecasting for Agricultural Development**. We will walk through brief examples and offer the scripts. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_3]%20Decision%20Analysis%20Lecture) or the course tutor.
 
--	Making a solid business case for the model before programming
+- Making a solid business case for the model before programming
 
--	Step1. Start simple i.e. with a skateboard … then move on to other steps
+- Step1. Start simple i.e. with a skateboard … then move on to other steps
 
 ![From MetaLab 'Skateboard, Bike, Car'](figures/Model_stages_car_analogy.png)
 
@@ -16,7 +16,9 @@ Causal model / diagram / Impact pathway / Theory of change
  - Uganda
  - Calluna
  
- ## Further Reading 
- 
--  The Flaw of Averages: https://hbr.org/2002/11/the-flaw-of-averages
+## Please come prepared for the meeting. one of your groups will be responsible for presenting and leading a discussion on the reading: 
+
+-Savage, Sam L., and Harry M. Markowitz. The Flaw of Averages: Why We Underestimate Risk in the Face of Uncertainty. John Wiley & Sons, 2009. [Cahpter 1. The Flaw of Averages](reading/Flaw_AVERAGES_Why_We_Underestimate_Risk.pdf)
+
+You can also find it at [The Flaw of Averages](https://hbr.org/2002/11/the-flaw-of-averages).
  
