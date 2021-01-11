@@ -1,5 +1,5 @@
 # Lecture 4: Decision Analysis Case Studies {#case_studies}
 
-## Please come prepared for the meeting. one of your groups will be responsible for presenting and leading a discussion on the reading: 
+### Please come prepared for the meeting. one of your groups will be responsible for presenting and leading a discussion on the reading: 
 
 - Shepherd, Keith, Douglas Hubbard, Norman Fenton, Karl Claxton, Eike Luedeling, and Jan de Leeuw. “Development Goals Should Enable Decision-Making.” Nature 523, no. 7559 (2015): 152–54. [](reading/DA_NAture_Shepherd et al 2015.png)

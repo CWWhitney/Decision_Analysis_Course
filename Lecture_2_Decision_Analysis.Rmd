@@ -41,7 +41,7 @@ Parts 5 and 6 offer some brief Decision Analysis case studies and conclusions. A
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_Yq4E85a7xM" frameborder="0" allowfullscreen></iframe>
 
-## Please come prepared for the meeting. one of your groups will be responsible for presenting and leading a discussion on the reading: 
+### Please come prepared for the meeting. one of your groups will be responsible for presenting and leading a discussion on the reading: 
 
 - Anderson, Jock, John Dillon, and Brian Hardaker. Agricultural Decision Analysis. Ames, Iowa: Iowa State University Press, 1978. [Introduction, pages 1-16](reading/Anderson_Agriculture_Decision_Analysis.pdf)
 

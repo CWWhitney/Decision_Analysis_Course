@@ -1,5 +1,5 @@
 # Lecture 3: Defining a decision {#define_decision}
 
-## Please come prepared for the meeting. one of your groups will be responsible for presenting and leading a discussion on the reading: 
+### Please come prepared for the meeting. one of your groups will be responsible for presenting and leading a discussion on the reading: 
 
 - Anderson [Chapter 1](reading/Anderson_Agriculture_Decision_Analysis.pdf)
