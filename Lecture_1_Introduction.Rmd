@@ -60,7 +60,7 @@ This course not only aims to teach you things about Decision Analysis and relate
 
 We could simply start running [RStudio](https://rstudio.com/) on our local computer, save our files somewhere on our hard drive and generally operate the way we usually work with our computer. But this is not how real programmers work, and since this is what we're trying to be, we should familiarize ourselves with some code development tools that such people use. We'll therefore introduce you to [git](https://git-scm.com/) and [github](https://github.com/), which are very useful for keeping code organized and secure and for sharing with collaborators and wider audiences. 
 
-Finally, we want to show you how to properly document what you do in R, and how to compile professional-looking reports of your work. This is what [Rmarkdown](https://rmarkdown.rstudio.com/) helps us do. Some of this may be a bit confusing in the beginning, but you'll probably learn to appreciate the value of these tools, as we keep using them in this module. The [seminar](#tools) this week we will cover all the [tools we will be using in this course](#tools).
+Finally, we want to show you how to properly document what you do in R, and how to compile professional-looking reports of your work. This is what [Rmarkdown](https://rmarkdown.rstudio.com/) helps us do. Some of this may be a bit confusing in the beginning, but you'll probably learn to appreciate the value of these tools, as we keep using them in this module. The [seminar](#tools) this week  will cover all the [tools we will be using in this course](#tools).
 
 ## Group Work
 
@@ -74,14 +74,10 @@ The course will be largely based on group work. Please take some time to choose 
 
 -	Generate a git repo with code and documentation
 
--	Write a ~ 5,000 word paper in RMarkdown, see this report on [plotting high-dimensional data](github.com/hortibonn/Plotting-High-Dimensional-Data) for a useful example of how this can be done
+-	Write a ~ 5,000 word paper in RMarkdown, see this report on [plotting high-dimensional data](http://htmlpreview.github.io/?https://github.com/hortibonn/Plotting-High-Dimensional-Data/blob/master/HighDimensionalData.html) for a useful example of how this can be done.
 
-### Further reading
+In addition, each week small teams (groups of two or three) will be responsible for presenting and leading a discussion on a short paper or chapter. We expect everyone in the course to read the work and come prepared for the meeting. Please contact us if you cannot find the readings in the library or elsewhere. We will help you get a copy. 
 
 <!-- Come prepared: Watch TED Talks: Sir Ken Robinson and Hans Rosling -	Rosling (TED Talks / selected work from ‘Factfulness’) 
 -	Ken Robinson (TED Talks / selected work from ‘Out of Our Minds’) -->
-
-Anderson, Jock, John Dillon, and Brian Hardaker. 1978. Agricultural Decision Analysis. Ames, Iowa: Iowa State University Press.
-
-Howard, Ronald A., and Ali E. Abbas. 2015. Foundations of Decision Analysis. NY, NY: Prentice Hall.
 

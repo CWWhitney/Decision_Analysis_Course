@@ -12,7 +12,7 @@ Now we look at the programming version control environment [git](https://git-scm
 
 -	STEP 2 is to start to collaborate on something in git. For the latter part of this course you will work in collective repository and work together to generate the final working document.
 
-## Further Reading 
+### Further Reading 
 
 -	Happy Git with R by Jenny Bryan (https://happygitwithr.com/)
 

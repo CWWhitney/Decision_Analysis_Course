@@ -39,52 +39,62 @@ library(rmarkdown)
 ```{r child="Seminar_Schedule.Rmd"}
 ```
 
-```{r child="Lecture_2_Decision_Analysis.Rmd"}
-```
-```{r child="Lecture_3_Define_Decision.Rmd"}
-```
-```{r child="Lecture_4_Case_Studies.Rmd"}
-```
-```{r child="Lecture_5_Participatory_Methods.Rmd"}
-```
-```{r child="Lecture_6_Decision_Models.Rmd"}
-```
-```{r child="Lecture_7_Biases.Rmd"}
-```
-```{r child="Lecture_8_TBA.Rmd"}
-```
-```{r child="Lecture_9_Bayesian_Thinking.Rmd"}
-```
-```{r child="Lecture_10_TBA.Rmd"}
-```
-```{r child="Lecture_11_Writing.Rmd"}
-```
-```{r child="Lecture_12_Communicating.Rmd"}
-```
-
-<!-- List of Seminar RMD files to be compiled -->
-
 ```{r child="Seminar_1_Tools_we_use.Rmd"}
+```
+
+```{r child="Lecture_2_Decision_Analysis.Rmd"}
 ```
 ```{r child="Seminar_2_R_RStudio_1.Rmd"}
 ```
+
+
+```{r child="Lecture_3_Define_Decision.Rmd"}
+```
 ```{r child="Seminar_3_R_RStudio_2.Rmd"}
+```
+
+
+```{r child="Lecture_4_Case_Studies.Rmd"}
 ```
 ```{r child="Seminar_4_Git_Github.Rmd"}
 ```
+
+```{r child="Lecture_5_Participatory_Methods.Rmd"}
+```
 ```{r child="Seminar_5_RMarkdown.Rmd"}
+```
+
+```{r child="Lecture_6_Decision_Models.Rmd"}
 ```
 ```{r child="Seminar_6_Model_Programming.Rmd"}
 ```
+
+```{r child="Lecture_7_Biases.Rmd"}
+```
 ```{r child="Seminar_7_decisionSupport.Rmd"}
+```
+
+```{r child="Lecture_8_TBA.Rmd"}
 ```
 ```{r child="Seminar_8_Calibration_short.Rmd"}
 ```
+
+```{r child="Lecture_9_Bayesian_Thinking.Rmd"}
+```
 ```{r child="Seminar_9_Calibration_long.Rmd"}
+```
+
+```{r child="Lecture_10_TBA.Rmd"}
 ```
 ```{r child="Seminar_10_Report.Rmd"}
 ```
+
+```{r child="Lecture_11_Writing.Rmd"}
+```
 ```{r child="Seminar_11_Writing.Rmd"}
+```
+
+```{r child="Lecture_12_Communicating.Rmd"}
 ```
 ```{r child="Seminar_12_citations.Rmd"}
 ```

@@ -12,6 +12,6 @@ The first step in getting ready for the work of this course is to install and ru
 
 <!-- remake and embed R course materials -->
 
-## Further Reading 
+### Further Reading 
 
 - R Studio Tidyverse style guide: https://style.tidyverse.org/index.html

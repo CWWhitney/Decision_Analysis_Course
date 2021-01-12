@@ -3,6 +3,6 @@
 
 Welcome to lecture 7 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-### Please come prepared for the meeting. one of your groups will be responsible for presenting and leading a discussion on the reading: 
+### Group discussion reading: 
 
-- Kahneman, Daniel, and Patrick Egan. Thinking, Fast and Slow. Vol. 1. New York: Farrar, Straus and Giroux, 2011.[](reading/Thinking Fast and Slow.pdf)
+- **Chapter 2.** Kahneman, Daniel, and Patrick Egan. Thinking, Fast and Slow. Vol. 1. New York: Farrar, Straus and Giroux, 2011.
