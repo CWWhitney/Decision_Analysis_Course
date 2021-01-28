@@ -52,6 +52,5 @@ Parts 5 and 6 offer some brief Decision Analysis case studies and conclusions. A
 <!-- -	Hubbard (selected chapters from ‘How to Measure Anything’) -->
 <!-- -	Howard (selected chapters from ‘Decision Analysis’ and recorded talks) -->
 
-
-
+Watch '[Lessons from applying decision science in the public health sector](https://www.youtube.com/watch?v=f1E3Iv8juC0)' by Professor Karl Claxton in the Constructing a Digital Environment Webinar Series.
 
