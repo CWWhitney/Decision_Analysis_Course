@@ -17,7 +17,7 @@ library(decisionSupport)
 
 Here we define a simple model function that we call `example_decision_model`. It calculates profits as benefits minus costs and arbitrarily adds 500 to the result to arrive at 'final_profits'. This simple example shows us how to use `function`, the results of which can be applied elsewhere. 
 
-```{r}
+```{r, eval=FALSE}
 example_decision_model <- function(x, varnames)
 {
   profit <- benefits-costs
@@ -29,9 +29,9 @@ example_decision_model <- function(x, varnames)
 }
 ```
 
-Here we use the `decisionSupport` function to run our `example_decision_model` function 10,000 times using inputs from a comma separated values file we named 'example_decision_inputs.csv' and stored in the 'data' folder. We also store the outputs of the model in a folder we are calling 'outputs'. 
+The most basic way to apply the library is to use the `decisionSupport` function to run our `example_decision_model` function. Here we run it 10,000 times using inputs from a comma separated values file we named 'example_decision_inputs.csv' and stored in the 'data' folder. We also store the outputs of the model in a folder we are calling 'outputs'. 
 
-```{r}
+```{r, eval=FALSE}
 decisionSupport(inputFilePath = "data/example_decision_inputs.csv", 
                 outputPath = "data/outputs", 
                 write_table = TRUE, 
@@ -39,6 +39,8 @@ decisionSupport(inputFilePath = "data/example_decision_inputs.csv",
                 numberOfModelRuns = 10000, 
                 functionSyntax = "plainNames")
 ```
+
+Let's run through a few of the vignettes on the Comprehensive R Archive Network (CRAN) page for [decisionSupport](https://cran.r-project.org/web/packages/decisionSupport/index.html).
 
 <!-- -	RSTAN, Other modeling programs - Betancourt’s work (selected blogs, talks, git repos, Stan, HCMC) -->
 <!-- -	Yihui (markdown etc.) -->
