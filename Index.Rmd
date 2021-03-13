@@ -4,12 +4,17 @@ title:  Decision Analysis and Forecasting for Agricultural Development
 author: "Cory Whitney, Eike Luedeling et al."
 github: "CWWhitney"
 logo: "figures/decisionSupport_hex_sticker.png"
+bibliography: references.bib  
 output:
   epuRate::epurate:
     toc: TRUE
     number_sections: FALSE
     code_folding: "show"
 ---
+
+  <!-- Formal book layout by replacing the epurate with -->
+  <!-- bookdown::tufte_html_book: -->
+  <!--   split_by: chapter -->
 
 <style>
 #TOC {
@@ -99,8 +104,6 @@ library(rmarkdown)
 ```{r child="Seminar_12_citations.Rmd"}
 ```
 
-# Impressum und Datenschutzerklärung {-#impressum}
-
-[Impressum und Datenschutzerklärung](https://www.inres.uni-bonn.de/impressum)
+# [Impressum und Datenschutzerklärung](https://www.inres.uni-bonn.de/impressum)
 
 # References
