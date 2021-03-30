@@ -11,6 +11,7 @@ The introduction outlines the general theory and application of Decision Analysi
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7P2YI9-smfU" frameborder="0" allowfullscreen></iframe>
 
+
 ### Part 1: Approaches
 
 Part 1 gives an overview of various approaches in agricultural research and of the Decision Analysis paradigm. At the end of the video please take a moment to think about a situation where Decision Analysis might be applicable. Try and identify a decision maker with a choice between different options and with uncertainty about the outcome.
