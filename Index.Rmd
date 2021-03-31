@@ -28,10 +28,9 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-# install_github("holtzy/epuRate")
-# library(epuRate)
 library(rmarkdown)
 library(learnr)
+library(tidyverse)
 ```
 
 <!-- List of Lecture RMD files to be compiled -->

@@ -18,14 +18,6 @@ Part 1 gives an overview of various approaches in agricultural research and of t
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IRZZokPD3GU" frameborder="0" allowfullscreen></iframe>
 
-```{r filter, exercise=TRUE}
-# Change the filter to select February rather than January
-nycflights <- filter(nycflights, month == 1)
-```
-
-```{r filter-solution}
-nycflights <- filter(nycflights, month == 2)
-```
 
 ### Part 2: Decision Analysis
 
