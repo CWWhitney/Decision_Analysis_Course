@@ -1,3 +1,3 @@
-# Lecture 9: Bayesian thinking {#bayes}
+## Lecture 9: Bayesian thinking {#bayes}
 
 Welcome to lecture 6 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_6]%20Decision%20Analysis%20Lecture) or the course tutor.

@@ -1,4 +1,4 @@
-# Lecture 4: Decision Analysis Case Studies {#case_studies}
+## Lecture 4: Decision Analysis Case Studies {#case_studies}
 
 ### Group discussion reading:
 

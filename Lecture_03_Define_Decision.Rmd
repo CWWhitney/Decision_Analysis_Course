@@ -1,4 +1,4 @@
-# Lecture 3: Defining a decision {#define_decision}
+## Lecture 3: Defining a decision {#define_decision}
 
 ### Group discussion reading: 
 

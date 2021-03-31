@@ -1,4 +1,4 @@
-# Lecture 1: Introduction {#introduction} 
+## Lecture 1: Introduction {#introduction} 
 <!-- use the {#introduction} syntax to create a label that can be referenced with [Introduction](#introduction) -->
 
 Welcome to [**Decision Analysis and Forecasting for Agricultural Development**](https://www.lf.uni-bonn.de/en/studying/downloads/coursebook2020/module-msc-npw2020). We are excited to deliver you this course content and to train a new generation of experts in applying these tools. We see enormous scope for application of these methods in agriculture and the need for more practitioners.  

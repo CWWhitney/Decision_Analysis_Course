@@ -1,3 +1,3 @@
-# Seminar 3: Using R and RStudio continued
+## Seminar 3: Using R and RStudio continued
 
 <!-- embed the wrangling / plotting youtube video -->

@@ -5,11 +5,8 @@ author: "Cory Whitney, Eike Luedeling et al."
 github: "CWWhitney"
 logo: "figures/decisionSupport_hex_sticker.png"
 bibliography: references.bib  
-output:
-  epuRate::epurate:
-    toc: TRUE
-    number_sections: FALSE
-    code_folding: "show"
+output: learnr::tutorial
+runtime: shiny_prerendered
 ---
 
   <!-- Formal book layout by replacing the epurate with -->
@@ -26,11 +23,14 @@ output:
 }
 </style>
 
+![](figures/decisionSupport_hex_sticker.png){width=1in}
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 # install_github("holtzy/epuRate")
 library(epuRate)
 library(rmarkdown)
+library(learnr)
 ```
 
 <!-- List of Lecture RMD files to be compiled -->

@@ -1,4 +1,4 @@
-# Lecture 2: Decision Analysis Overview {#decision_analysis}
+## Lecture 2: Decision Analysis Overview {#decision_analysis}
 <!-- reference with [Decision Analysis](#decision_analysis) -->
 
 Welcome to lecture 2 of **Decision Analysis and Forecasting for Agricultural Development**. In this lecture we will follow a [six-part micro-series of videos](https://www.youtube.com/playlist?list=PLe1C9W5AtEiBzmXFf-XzmXH8NNJjqs0IY) and use the Lecture 2 Slack channel and Zoom meeting to follow up. This will allow us all to have a chance to see your progress, provide feedback. It will be encouraging to others to see activity from colleagues. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_2]%20Decision%20Analysis%20Lecture) or the course tutor.
@@ -17,6 +17,15 @@ The introduction outlines the general theory and application of Decision Analysi
 Part 1 gives an overview of various approaches in agricultural research and of the Decision Analysis paradigm. At the end of the video please take a moment to think about a situation where Decision Analysis might be applicable. Try and identify a decision maker with a choice between different options and with uncertainty about the outcome.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IRZZokPD3GU" frameborder="0" allowfullscreen></iframe>
+
+```{r filter, exercise=TRUE}
+# Change the filter to select February rather than January
+nycflights <- filter(nycflights, month == 1)
+```
+
+```{r filter-solution}
+nycflights <- filter(nycflights, month == 2)
+```
 
 ### Part 2: Decision Analysis
 
