@@ -105,6 +105,8 @@ library(learnr)
 ```{r child="Seminar_12_citations.Rmd"}
 ```
 
-# [Impressum und Datenschutzerklärung](https://www.inres.uni-bonn.de/impressum)
+```{r child="Impressum.Rmd"}
+```
 
-# References
+```{r child="References.Rmd"}
+```
