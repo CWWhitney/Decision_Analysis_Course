@@ -1,6 +1,6 @@
-# Seminar schedule {#seminar_schedule}
+## Seminar schedule {#seminar_schedule}
 
-```{r echo = FALSE, results = 'asis'}
+```{r echo = FALSE, results = 'asis', warning=FALSE}
 library(knitr)
 library(pander)
 seminar_schedule<-read.csv("seminar_schedule.csv")

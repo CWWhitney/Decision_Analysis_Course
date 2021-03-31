@@ -1,7 +1,7 @@
 ## Lecture 1: Introduction {#introduction} 
 <!-- use the {#introduction} syntax to create a label that can be referenced with [Introduction](#introduction) -->
 
-Welcome to [**Decision Analysis and Forecasting for Agricultural Development**](https://www.lf.uni-bonn.de/en/studying/downloads/coursebook2020/module-msc-npw2020). We are excited to deliver you this course content and to train a new generation of experts in applying these tools. We see enormous scope for application of these methods in agriculture and the need for more practitioners.  
+Welcome to **Decision Analysis and Forecasting for Agricultural Development**. We are excited to deliver you this course content and to train a new generation of experts in applying these tools. We see enormous scope for application of these methods in agriculture and the need for more practitioners.  
 
 Decisions in agriculture are often risky, meaning that decision makers have uncertainty about how their decision will influence the intended outcomes. Farming systems are dynamic and the impact of any intervention, policy or management decision is likely to be influenced by many factors ranging from soil and crop dynamics to social dynamics such as farmer and community perceptions. In order to provide scientific support for decision making it is important that our models and forecasts attempt to include these interactions. Decision Analysis provides a set of approaches that are aimed at capturing what is known and applying this knowledge to generate forecasts of decision outcomes. The theoretical body of approaches has been formally applied in business and economics for more than 50 years @howard_foundations_2015 and have been gaining ground in agriculture since the 70s @anderson_agricultural_1978. Our mission is to normalize these holistic approaches and move agricultural science from the lab bench and field trials to real world application and decision support for farmers and agricultural decision makers such as those in government ministries and aid organizations.  
 
@@ -23,6 +23,8 @@ In this course, we will provide an overview of methods we can use to study agric
 - [Participatory modeling building](#participatory_methods)
 - [Decision modeling in R](#model_programming)
 - Group project on decision analysis
+
+See the official pages in the coursebook here [**Decision Analysis and Forecasting for Agricultural Development**](https://www.lf.uni-bonn.de/en/studying/downloads/coursebook2020/module-msc-npw2020).
 
 After some introduction of the subject matter much of this course will consist of practical application of the [`decisionSupport`](https://cran.r-project.org/web/packages/decisionSupport/index.html) package in the [R](https://www.r-project.org/) programming language. 
 
