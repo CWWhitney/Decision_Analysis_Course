@@ -6,7 +6,7 @@ Welcome to lecture 6 of **Decision Analysis and Forecasting for Agricultural Dev
 
 - Step1. Start simple i.e. with a skateboard … then move on to other steps
 
-![From MetaLab 'Skateboard, Bike, Car'](figures/Model_stages_car_analogy.png)
+![From MetaLab 'Skateboard, Bike, Car'](images/Model_stages_car_analogy.png)
 
 Causal model / diagram / Impact pathway / Theory of change
 

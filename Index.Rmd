@@ -1,9 +1,9 @@
 ---
 title:  Decision Analysis and Forecasting for Agricultural Development
-  ![](figures/decisionSupport_hex_sticker.png){width=1in}  
+  ![](images/decisionSupport_hex_sticker.png){width=1in}  
 author: "Cory Whitney, Eike Luedeling et al."
 github: "CWWhitney"
-logo: "figures/decisionSupport_hex_sticker.png"
+logo: "images/decisionSupport_hex_sticker.png"
 bibliography: references.bib  
 output: learnr::tutorial
 runtime: shiny_prerendered
@@ -23,12 +23,13 @@ runtime: shiny_prerendered
 }
 </style>
 
-![](figures/decisionSupport_hex_sticker.png){width=1in}
+![](images/decisionSupport_hex_sticker.png){width=1in}
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 # install_github("holtzy/epuRate")
-library(epuRate)
+# library(epuRate)
 library(rmarkdown)
 library(learnr)
 ```
