@@ -32,7 +32,7 @@ After some introduction of the subject matter much of this course will consist o
 
 In this course, we aim to provide you with the skills and experiences in decision modeling. By the end of this course you will be able to: 
 
-- develop decision models and comprehensively evaluate the findings using the `R` programming language with functions from the `decisionSupport` package. 
+- develop decision models and comprehensively evaluate the findings using the `R` programming language with functions from the `decisionSupport` package @luedeling_decisionsupport_2021. 
 
 - recognize your own biases and provide accurate range estimates for uncertain variables. 
 
@@ -54,11 +54,11 @@ Group work will make up the rest of the required work for this course. You will 
 
 ## House rules
 
-In this course, we'll gradually work our way into the `decisionSupport` package. At the end of the semester, you should be able to apply state-of-the-art Decision Analysis. Yet even if it's not your ambition to become a  decision analyst, you'll have picked up a bunch of useful skills along the way. We'll try to teach you how to use some staple programming tools and techniques that can be used for all kinds of programming challenges. These will include the use of github and Rmarkdown, as well the the ability to create, manipulate and use R functions and packages.
+In this course, we'll gradually work our way into the `decisionSupport` package @luedeling_decisionsupport_2021. At the end of the semester, you should be able to apply state-of-the-art Decision Analysis. Yet even if it's not your ambition to become a  decision analyst, you'll have picked up a bunch of useful skills along the way. We'll try to teach you how to use some staple programming tools and techniques that can be used for all kinds of programming challenges. These will include the use of git and [github](github.com) and[Rmarkdown](rmarkdown.com), as well the the ability to create, manipulate and use R functions and packages.
 
 What is expected of you is to be engaged in this class, and to diligently complete the assignments you receive. Learning things in R requires practice, through which many things that seem cumbersome at first eventually become almost automatic. We are hopeful that the things you'll get exposed to in this class will be assets in your scientific (or other) career. So please take the materials seriously!
 
-This course not only aims to teach you things about Decision Analysis and related topics - it also provides hands-on exercises to illustrate the functions of the `decisionSupport` package. For all of these practical components, we need tools. `decisionSupport` is an R package, so we'll need [R](https://www.r-project.org/), which is most comfortably operated through the [RStudio](https://rstudio.com/) interface.
+This course not only aims to teach you things about Decision Analysis and related topics - it also provides hands-on exercises to illustrate the functions of the `decisionSupport` package @luedeling_decisionsupport_2021. For all of these practical components, we need tools. `decisionSupport` is an R package, so we'll need [R](https://www.r-project.org/), which is most comfortably operated through the [RStudio](https://rstudio.com/) interface.
 
 We could simply start running [RStudio](https://rstudio.com/) on our local computer, save our files somewhere on our hard drive and generally operate the way we usually work with our computer. But this is not how real programmers work, and since this is what we're trying to be, we should familiarize ourselves with some code development tools that such people use. We'll therefore introduce you to [git](https://git-scm.com/) and [github](https://github.com/), which are very useful for keeping code organized and secure and for sharing with collaborators and wider audiences. 
 
@@ -76,10 +76,9 @@ The course will be largely based on group work. Please take some time to choose 
 
 -	Generate a git repo with code and documentation
 
--	Write a ~ 5,000 word paper in RMarkdown, see this report on [plotting high-dimensional data](http://htmlpreview.github.io/?https://github.com/hortibonn/Plotting-High-Dimensional-Data/blob/master/HighDimensionalData.html) for a useful example of how this can be done.
+-	Write a ~ 5,000 word paper in RMarkdown, see this report on [plotting high-dimensional data](http://htmlpreview.github.io/?https://github.com/hortibonn/Plotting-High-Dimensional-Data/blob/master/HighDimensionalData.html) for a useful example of how this can be done @do_decision_2020.
 
 In addition, each week small teams (groups of two or three) will be responsible for presenting and leading a discussion on a short paper or chapter. We expect everyone in the course to read the work and come prepared for the meeting. Please contact us if you cannot find the readings in the library or elsewhere. We will help you get a copy. 
 
-<!-- Come prepared: Watch TED Talks: Sir Ken Robinson and Hans Rosling -	Rosling (TED Talks / selected work from ‘Factfulness’) 
--	Ken Robinson (TED Talks / selected work from ‘Out of Our Minds’) -->
+Bonus: to get more background on the teaching methods that inspire this course watch	[Sir Ken Robinson's talk on Ted.com](https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity). If you like it please consider reading his book ‘Out of Our Minds’@robinson_out_2011.  
 

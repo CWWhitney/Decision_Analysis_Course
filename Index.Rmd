@@ -4,7 +4,7 @@ title:  Decision Analysis and Forecasting for Agricultural Development
 author: "Cory Whitney, Eike Luedeling et al."
 github: "CWWhitney"
 logo: "images/decisionSupport_hex_sticker.png"
-bibliography: references.bib  
+bibliography: bib/references.bib  
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
