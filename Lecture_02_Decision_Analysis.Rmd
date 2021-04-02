@@ -11,6 +11,14 @@ The introduction outlines the general theory and application of Decision Analysi
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7P2YI9-smfU" frameborder="0" allowfullscreen></iframe>
 
+```{r letter-a, echo=FALSE}
+question("What is the main concern of Decision Analysis for Agricultural Development?",
+  answer("How do people make decisions?"),
+  answer("What does the data tell us about development?"),
+  answer("How will decisions influence future sustainability?", correct = TRUE),
+  answer("How can we perform analyses of big data for policy advice?")
+)
+```
 
 ### Part 1: Approaches
 
