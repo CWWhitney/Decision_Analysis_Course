@@ -9,19 +9,6 @@ output: learnr::tutorial
 runtime: shiny_prerendered
 ---
 
-  <!-- Formal book layout by replacing the epurate with -->
-  <!-- bookdown::tufte_html_book: -->
-  <!--   split_by: chapter -->
-
-<style>
-#TOC {
-  top: 1%;
-  opacity: 0.5;
-}
-#TOC:hover {
-  opacity: 1;
-}
-</style>
 
 ![](images/decisionSupport_hex_sticker.png){width=1in}
 
@@ -44,7 +31,7 @@ library(tidyverse)
 ```{r child="Seminar_Schedule.Rmd"}
 ```
 
-```{r child="Seminar_01_Tools_we_use.Rmd"}
+```{r child="Seminar_01_Experiential.Rmd"}
 ```
 
 ```{r child="Lecture_02_Decision_Analysis.Rmd"}
@@ -52,12 +39,10 @@ library(tidyverse)
 ```{r child="Seminar_02_R_RStudio_1.Rmd"}
 ```
 
-
 ```{r child="Lecture_03_Define_Decision.Rmd"}
 ```
 ```{r child="Seminar_03_R_RStudio_2.Rmd"}
 ```
-
 
 ```{r child="Lecture_04_Case_Studies.Rmd"}
 ```

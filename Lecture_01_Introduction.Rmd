@@ -54,7 +54,7 @@ Group work will make up the rest of the required work for this course. You will 
 
 ## House rules
 
-In this course, we'll gradually work our way into the `decisionSupport` package @luedeling_decisionsupport_2021. At the end of the semester, you should be able to apply state-of-the-art Decision Analysis. Yet even if it's not your ambition to become a  decision analyst, you'll have picked up a bunch of useful skills along the way. We'll try to teach you how to use some staple programming tools and techniques that can be used for all kinds of programming challenges. These will include the use of git and [github](github.com) and[Rmarkdown](rmarkdown.com), as well the the ability to create, manipulate and use R functions and packages.
+In this course, we'll gradually work our way into the `decisionSupport` package @luedeling_decisionsupport_2021. At the end of the semester, you should be able to apply state-of-the-art Decision Analysis. Yet even if it's not your ambition to become a  decision analyst, you'll have picked up a bunch of useful skills along the way. We'll try to teach you how to use some staple programming tools and techniques that can be used for all kinds of programming challenges. These will include the use of git and [github](github.com) and [Rmarkdown](rmarkdown.com), as well the the ability to create, manipulate and use R functions and packages.
 
 What is expected of you is to be engaged in this class, and to diligently complete the assignments you receive. Learning things in R requires practice, through which many things that seem cumbersome at first eventually become almost automatic. We are hopeful that the things you'll get exposed to in this class will be assets in your scientific (or other) career. So please take the materials seriously!
 
@@ -62,7 +62,7 @@ This course not only aims to teach you things about Decision Analysis and relate
 
 We could simply start running [RStudio](https://rstudio.com/) on our local computer, save our files somewhere on our hard drive and generally operate the way we usually work with our computer. But this is not how real programmers work, and since this is what we're trying to be, we should familiarize ourselves with some code development tools that such people use. We'll therefore introduce you to [git](https://git-scm.com/) and [github](https://github.com/), which are very useful for keeping code organized and secure and for sharing with collaborators and wider audiences. 
 
-Finally, we want to show you how to properly document what you do in R, and how to compile professional-looking reports of your work. This is what [Rmarkdown](https://rmarkdown.rstudio.com/) helps us do. Some of this may be a bit confusing in the beginning, but you'll probably learn to appreciate the value of these tools, as we keep using them in this module. The [seminar](#tools) this week  will cover all the [tools we will be using in this course](#tools).
+Finally, we want to show you how to properly document what you do in R, and how to compile professional-looking reports of your work. This is what [Rmarkdown](https://rmarkdown.rstudio.com/) helps us do. Some of this may be a bit confusing in the beginning, but you'll probably learn to appreciate the value of these tools, as we keep using them in this module. 
 
 ## Group Work
 
@@ -76,7 +76,7 @@ The course will be largely based on group work. Please take some time to choose 
 
 -	Generate a git repo with code and documentation
 
--	Write a ~ 5,000 word paper in RMarkdown, see this report on [plotting high-dimensional data](http://htmlpreview.github.io/?https://github.com/hortibonn/Plotting-High-Dimensional-Data/blob/master/HighDimensionalData.html) for a useful example of how this can be done @do_decision_2020.
+-	Write a ~ 5,000 word paper in RMarkdown, see this report on [plotting high-dimensional data](http://htmlpreview.github.io/?https://github.com/hortibonn/Plotting-High-Dimensional-Data/blob/master/HighDimensionalData.html) for a useful example of how this can be done.
 
 In addition, each week small teams (groups of two or three) will be responsible for presenting and leading a discussion on a short paper or chapter. We expect everyone in the course to read the work and come prepared for the meeting. Please contact us if you cannot find the readings in the library or elsewhere. We will help you get a copy. 
 

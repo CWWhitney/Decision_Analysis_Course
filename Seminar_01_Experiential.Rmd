@@ -1,8 +1,6 @@
-## Seminar 1: The tools we use {#tools} 
+## Seminar 1: Experiential learning {#tools} 
 <!-- use the {#tools} syntax to create a label that can be referenced with [Tools we use](#tools) -->
 
 Welcome to the first seminar of **Decision Analysis and Forecasting for Agricultural Development**. You should already be familiar with the idea that we intend to have group work form a major part of this course. If you have not already it is important that you choose a group to work with and begin to think about an agricultural decision that you intend to work on through this course. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-Remember that this is an experiential course and will be based largely on work from your side that is supported by us, rather than passive learning where we deliver content. In order to work with us in this course you will need to have some basic tools.
-
-<!-- remake and embed youtube video on tools from the R course -->
+To see an example of the result we will be aiming to create see the @do_decision_2020 and the [supplementary materials](https://zenodo.org/record/3727576).
