@@ -4,20 +4,30 @@ title:  Decision Analysis and Forecasting for Agricultural Development
 author: "Cory Whitney, Eike Luedeling et al."
 github: "CWWhitney"
 logo: "images/decisionSupport_hex_sticker.png"
-bibliography: bib/references.bib  
-output: learnr::tutorial
+bibliography: 
+  - bib/references.bib
+  - packages.bib
+output: 
+  learnr::tutorial:
+    progressive: true
 runtime: shiny_prerendered
 ---
 
-
 ![](images/decisionSupport_hex_sticker.png){width=1in}
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(rmarkdown)
 library(learnr)
 library(tidyverse)
+```
+
+```{r, warning=FALSE, include = FALSE}
+#Automatically write R package citation entries to a .bib file
+knitr::write_bib(c(.packages(), 
+                   'rmarkdown', 
+                   'learnr',
+                   'tidyverse'), 'packages.bib')
 ```
 
 <!-- List of Lecture RMD files to be compiled -->

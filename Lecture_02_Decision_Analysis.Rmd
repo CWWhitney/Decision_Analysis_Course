@@ -1,6 +1,10 @@
 ## Lecture 2: Decision Analysis Overview {#decision_analysis}
 <!-- reference with [Decision Analysis](#decision_analysis) -->
 
+![](images/INRES_Logo.png){width=1in}
+![](images/Uni_Bonn_Picture.png){width=2in}
+![](images/decisionSupport_hex_sticker.png){width=1in}
+
 Welcome to lecture 2 of **Decision Analysis and Forecasting for Agricultural Development**. In this lecture we will follow a [six-part micro-series of videos](https://www.youtube.com/playlist?list=PLe1C9W5AtEiBzmXFf-XzmXH8NNJjqs0IY) and use the Lecture 2 Slack channel and Zoom meeting to follow up. This will allow us all to have a chance to see your progress, provide feedback. It will be encouraging to others to see activity from colleagues. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_2]%20Decision%20Analysis%20Lecture) or the course tutor.
 
 Please take a few minutes to watch these six short videos before our meeting. 

@@ -1,3 +1,7 @@
 ## Seminar 3: Using R and RStudio continued
 
+This tutorial walks through the process of loading and working with R. 
+Some of the steps (loading R and RStudio) should already be familiar to you. If not then please also follow those. If you already have R and RStudio loaded then you should be able to follow the wrangling and visualization sections of this tutorial. 
+https://cory-whitney.shinyapps.io/teaching_R/
+
 <!-- embed the wrangling / plotting youtube video -->
