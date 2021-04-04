@@ -1,3 +1,3 @@
-# Seminar 10: Group project report 
+## Seminar 10: Group project report 
 
 Provide an overview of the decision identified and the process thus far of generating a model. 

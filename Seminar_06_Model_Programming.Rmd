@@ -1,11 +1,11 @@
-# Seminar 6: Model Programming {#model_programming} 
+## Seminar 6: Model Programming {#model_programming} 
 <!-- reference with [Model programming](#model_programming) -->
 
-Welcome to the sixth seminar of **Decision Analysis and Forecasting for Agricultural Development**. In this seminar we will look into different options for model programming in the `R` programming environment. if you have not already installed `R` and `RStudio` you may want to go back to the [Tools we use](#tools) section and follow the instructions there. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to the sixth seminar of **Decision Analysis and Forecasting for Agricultural Development**. In this seminar we will look into different options for model programming in the `R` programming environment. if you have not already installed `R` and `RStudio` you may want to go back to the [Using R and Rstudio](#r_rstudio) seminar and follow the instructions there. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
 <!-- Causal model / diagram / Impact pathway / Theory of change -->
 
-Here we can explore some of the packages that we commonly use in `R`. The main package that out team uses for simulations is the `decisionSupport`. Let's take some time to walk through a vignette or two.
+Here we can explore some of the packages that we commonly use in `R`. The main package that out team uses for simulations is the `decisionSupport`. 
 
 ## decisionSupport
 
@@ -14,6 +14,10 @@ In order to use the standard tools for running these models in the R environment
 ```{r}
 library(decisionSupport)
 ```
+
+Let's take some time to walk through a vignette or two.
+
+### Create a simple function
 
 Here we define a simple model function that we call `example_decision_model`. It calculates profits as benefits minus costs and arbitrarily adds 500 to the result to arrive at 'final_profits'. This simple example shows us how to use `function`, the results of which can be applied elsewhere. 
 

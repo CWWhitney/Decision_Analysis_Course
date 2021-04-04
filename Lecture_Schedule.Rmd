@@ -1,6 +1,6 @@
-# Lecture schedule {#lecture_schedule}
+## Lecture schedule {#lecture_schedule}
 
-```{r echo = FALSE, results = 'asis'}
+```{r echo = FALSE, results = 'asis', message=FALSE, warning=FALSE}
 library(knitr)
 library(pander)
 lecture_schedule<-read.csv("lecture_schedule.csv")

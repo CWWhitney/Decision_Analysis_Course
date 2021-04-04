@@ -1,36 +1,33 @@
 ---
 title:  Decision Analysis and Forecasting for Agricultural Development
-  ![](figures/decisionSupport_hex_sticker.png){width=1in}  
+  ![](images/decisionSupport_hex_sticker.png){width=1in}  
 author: "Cory Whitney, Eike Luedeling et al."
 github: "CWWhitney"
-logo: "figures/decisionSupport_hex_sticker.png"
-bibliography: references.bib  
-output:
-  epuRate::epurate:
-    toc: TRUE
-    number_sections: FALSE
-    code_folding: "show"
+logo: "images/decisionSupport_hex_sticker.png"
+bibliography: 
+  - bib/references.bib
+  - packages.bib
+output: 
+  learnr::tutorial:
+    progressive: true
+runtime: shiny_prerendered
 ---
 
-  <!-- Formal book layout by replacing the epurate with -->
-  <!-- bookdown::tufte_html_book: -->
-  <!--   split_by: chapter -->
-
-<style>
-#TOC {
-  top: 1%;
-  opacity: 0.5;
-}
-#TOC:hover {
-  opacity: 1;
-}
-</style>
+![](images/decisionSupport_hex_sticker.png){width=1in}
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-# install_github("holtzy/epuRate")
-library(epuRate)
 library(rmarkdown)
+library(learnr)
+library(tidyverse)
+```
+
+```{r, warning=FALSE, include = FALSE}
+#Automatically write R package citation entries to a .bib file
+knitr::write_bib(c(.packages(), 
+                   'rmarkdown', 
+                   'learnr',
+                   'tidyverse'), 'packages.bib')
 ```
 
 <!-- List of Lecture RMD files to be compiled -->
@@ -44,7 +41,7 @@ library(rmarkdown)
 ```{r child="Seminar_Schedule.Rmd"}
 ```
 
-```{r child="Seminar_01_Tools_we_use.Rmd"}
+```{r child="Seminar_01_Experiential.Rmd"}
 ```
 
 ```{r child="Lecture_02_Decision_Analysis.Rmd"}
@@ -52,12 +49,10 @@ library(rmarkdown)
 ```{r child="Seminar_02_R_RStudio_1.Rmd"}
 ```
 
-
 ```{r child="Lecture_03_Define_Decision.Rmd"}
 ```
 ```{r child="Seminar_03_R_RStudio_2.Rmd"}
 ```
-
 
 ```{r child="Lecture_04_Case_Studies.Rmd"}
 ```
@@ -104,6 +99,8 @@ library(rmarkdown)
 ```{r child="Seminar_12_citations.Rmd"}
 ```
 
-# [Impressum und Datenschutzerklärung](https://www.inres.uni-bonn.de/impressum)
+```{r child="Impressum.Rmd"}
+```
 
-# References
+```{r child="References.Rmd"}
+```

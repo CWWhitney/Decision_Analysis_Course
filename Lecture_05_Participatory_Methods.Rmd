@@ -1,4 +1,4 @@
-# Lecture 5: Participatory methods for qualitative model development {#participatory_methods}
+## Lecture 5: Participatory methods for qualitative model development {#participatory_methods}
 
 ### Group discussion reading: 
 

@@ -1,4 +1,4 @@
-# Lecture 6: Building Decision Models {#decision_models}
+## Lecture 6: Building Decision Models {#decision_models}
 
 Welcome to lecture 6 of **Decision Analysis and Forecasting for Agricultural Development**. We will walk through brief examples and offer the scripts. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_3]%20Decision%20Analysis%20Lecture) or the course tutor.
 
@@ -6,19 +6,19 @@ Welcome to lecture 6 of **Decision Analysis and Forecasting for Agricultural Dev
 
 - Step1. Start simple i.e. with a skateboard … then move on to other steps
 
-![From MetaLab 'Skateboard, Bike, Car'](figures/Model_stages_car_analogy.png)
+![From MetaLab 'Skateboard, Bike, Car'](images/Model_stages_car_analogy.png)
 
 Causal model / diagram / Impact pathway / Theory of change
 
 ## Brief examples
  
- - Vietnam
- - Uganda
- - Calluna
+ - Vietnam @do_decision_2020
+ - Uganda @whitney_probabilistic_2018-1
+ - Calluna @ruett_model-based_2020
  
 ### Group discussion reading:
 
--Savage, Sam L., and Harry M. Markowitz. The Flaw of Averages: Why We Underestimate Risk in the Face of Uncertainty. John Wiley & Sons, 2009. [Cahpter 1. The Flaw of Averages](reading/Flaw_AVERAGES_Why_We_Underestimate_Risk.pdf)
+-Savage, Sam L., and Harry M. Markowitz. The Flaw of Averages: Why We Underestimate Risk in the Face of Uncertainty. John Wiley & Sons, 2009. [Chapter 1. The Flaw of Averages](reading/Flaw_AVERAGES_Why_We_Underestimate_Risk.pdf)
 
 You can also find it at [The Flaw of Averages](https://hbr.org/2002/11/the-flaw-of-averages).
  

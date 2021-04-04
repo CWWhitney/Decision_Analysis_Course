@@ -1,4 +1,8 @@
-# Lecture 3: Defining a decision {#define_decision}
+## Lecture 3: Defining a decision {#define_decision}
+
+![](images/INRES_Logo.png){width=1in}
+![](images/Uni_Bonn_Picture.png){width=1in}
+![](images/decisionSupport_hex_sticker.png){width=1in}
 
 ### Group discussion reading: 
 

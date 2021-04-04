@@ -1,3 +1,3 @@
-# Seminar 7: R package decisionSupport  {#decisionSupport} 
+## Seminar 7: R package decisionSupport  {#decisionSupport} 
 
-![](figures/decisionSupport_hex_sticker.png){width=3in} 
+![](images/decisionSupport_hex_sticker.png){width=3in} 
