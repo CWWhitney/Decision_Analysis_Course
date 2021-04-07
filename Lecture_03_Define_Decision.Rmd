@@ -1,8 +1,10 @@
 ## Lecture 3: Defining a decision {#define_decision}
+<!-- use the {#define_decision} syntax to create a label that can be referenced with [Introduction](#define_decision) -->
 
 ![](images/INRES_Logo.png){width=1in}
-![](images/Uni_Bonn_Picture.png){width=1in}
+![](images/Uni_Bonn_Picture.png){width=3in}
 ![](images/decisionSupport_hex_sticker.png){width=1in}
+<!-- Neuman and Morgenstern etc. -->
 
 ### Group discussion reading: 
 

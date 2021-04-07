@@ -75,7 +75,7 @@ question("What is the underlying idea in transdisciplinary approaches for agricu
 )
 ```
 
-Remember to watch [Hans Rosling's talk on Ted.com](https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen) and to share a specific decision that might be supported through the Decision Analysis approaches might be useful. Share your ideas with us in Slack.
+Remember to watch [Hans Rosling's talk on Ted.com](https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen) (if you have not already). Also remember to share a specific risky decision that might be supported with these tools. Share your ideas with us in Slack.
 
 ### Part 2: Decision Analysis
 
@@ -91,7 +91,7 @@ Part 3 gives an overview of model building processes and approaches.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fikoVbnoNOQ" frameborder="0" allowfullscreen></iframe>
 
-At the end of this video take some time to draw a decision impact pathway. Draw a conceptual diagram of an agricultural development decision. Include the major factors that would influence the decision, no matter how difficult they might be to measure. Feel free to use any program you like to make this drawing. I like to draw digital diagrams with Power point, [Google Slides](https://www.google.com/slides/about/), [Biorender](https://app.biorender.com/biorender-templates). [Loopy](https://ncase.me/loopy/) is also good. For the more advance R users you might like the [igraph library](https://igraph.org/r/). For those who prefer analog, a photo or scan of a hand drawn diagram is also welcome. Be sure to save your work and share it with us in Slack, a screen shot is fine, a working link is even better.
+At the end of this video take some time to draw a decision impact pathway. Draw a conceptual diagram of an agricultural development decision. Include the major factors that would influence the decision, no matter how difficult they might be to measure. Feel free to use any program you like to make this drawing. [Loopy](https://ncase.me/loopy/) is a very nice interface. [Google Slides](https://www.google.com/slides/about/), [Biorender](https://app.biorender.com/biorender-templates) are also good options. For the more advance R users you might like the [igraph library](https://igraph.org/r/). For those who prefer analog, a photo or scan of a hand drawn diagram is also welcome. Be sure to save your work and share it with us in Slack, a screen shot is fine, a working link is even better.
 
 
 ### Part 4: Overcoming Bias

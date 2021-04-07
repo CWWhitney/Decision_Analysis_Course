@@ -2,7 +2,7 @@
 <!-- use the {#introduction} syntax to create a label that can be referenced with [Introduction](#introduction) -->
 
 ![](images/INRES_Logo.png){width=1in}
-![](images/Uni_Bonn_Picture.png){width=2in}
+![](images/Uni_Bonn_Picture.png){width=2.5in}
 ![](images/decisionSupport_hex_sticker.png){width=1in}
 
 Welcome to **Decision Analysis and Forecasting for Agricultural Development**. We are excited to deliver you this course content and to train a new generation of experts in applying these tools. We see enormous scope for application of these methods in agriculture and the need for more practitioners.  
