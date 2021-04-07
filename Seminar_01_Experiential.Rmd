@@ -3,7 +3,7 @@
 
 Welcome to the first seminar of **Decision Analysis and Forecasting for Agricultural Development**. 
 
-You should already be familiar with the idea that we intend to have group work form a major part of this course. If you have not already it is important that you choose a group to work with and begin to think about a topic (ideally an agricultural decision) that you intend to work on through this course. In this seminar we will share the general motivation behind the experiential nature of this course and talk about effective group work techniques and tools. The lecture in week three [Defining a decision](#define_decision) will provide a detailed exploration of how decisions are defined and what kinds of steps we may need to go through to help decision makers define decisions.
+You should already be familiar with the idea that we intend to have group work form a major part of this course. If you have not already it is important that you choose a group to work with and begin to think about a topic (ideally an agricultural decision) that you intend to work on through this course. In this seminar we will share the general motivation behind the experiential nature of this course and talk about effective group work techniques and tools. The lecture in week three [Defining a decision](#define_decision) will provide a detailed exploration of how decisions are defined / steps we may need to go through to help decision makers define decisions.
 
 Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
