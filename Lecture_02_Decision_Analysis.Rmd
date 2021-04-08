@@ -61,7 +61,7 @@ question("How do we define a decision in the context of Decision Analysis?",
 
 ```{r question-5, echo=FALSE}
 question("Why do we use impact pathways?",
-  answer("To think beforehand what might occur and what the outcomes might be to expose weak links.", correct = TRUE),
+  answer("To think beforehand what might occur and what the outcomes might be, to expose weak links.", correct = TRUE),
   answer("To make sense of the processes that we have already carried out."),
   answer("To generate new data sets.")
 )
@@ -93,7 +93,6 @@ Part 3 gives an overview of model building processes and approaches.
 
 At the end of this video take some time to draw a decision impact pathway. Draw a conceptual diagram of an agricultural development decision. Include the major factors that would influence the decision, no matter how difficult they might be to measure. Feel free to use any program you like to make this drawing. [Loopy](https://ncase.me/loopy/) is a very nice interface. [Google Slides](https://www.google.com/slides/about/), [Biorender](https://app.biorender.com/biorender-templates) are also good options. For the more advance R users you might like the [igraph library](https://igraph.org/r/). For those who prefer analog, a photo or scan of a hand drawn diagram is also welcome. Be sure to save your work and share it with us in Slack, a screen shot is fine, a working link is even better.
 
-
 ### Part 4: Overcoming Bias
 
 Part 4 gives an overview of various types of cognitive biases and outlines how these can interfere with the definition of and parameterization of models. The session ends with a number of approaches that can be applied to help in overcoming these biases and outlines the calibration training process whereby experts are trained to give accurate estimates of their own uncertainty. 
@@ -119,5 +118,16 @@ Parts 5 and 6 offer some brief Decision Analysis case studies and conclusions. A
 <!-- -	Hubbard (selected chapters from ‘How to Measure Anything’) -->
 <!-- -	Howard (selected chapters from ‘Decision Analysis’ and recorded talks) -->
 
-Watch '[Lessons from applying decision science in the public health sector](https://www.youtube.com/watch?v=f1E3Iv8juC0)' by Professor Karl Claxton in the Constructing a Digital Environment Webinar Series.
+### Bonus video by Professor Karl Claxton
+
+Bonus: to get an economist's perspective on the Decision Analysis approaches watch '[Lessons from applying decision science in the public health sector](https://www.youtube.com/watch?v=f1E3Iv8juC0)' by Professor Karl Claxton in the Constructing a Digital Environment Webinar Series. The talk gets really interesting at around eight minutes in.
+
+```{r question-karl-claxton, echo=FALSE}
+question("What is the premise of Karl Claxton's Talk?",
+  answer("We need to use all available evidence.", correct = TRUE),
+  answer("We assign distributions to the parameters and sample randomly with Monte Carlo.", correct = TRUE),
+  answer("We need to characterize decision uncertainty.", correct = TRUE),
+  answer("We need to get a lot of data and do analysis of these data sets.")
+)
+```
 

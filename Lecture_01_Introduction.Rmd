@@ -84,5 +84,16 @@ The course will be largely based on group work. Please take some time to choose 
 
 In addition, each week small teams (groups of two or three) will be responsible for presenting and leading a discussion on a short paper or chapter. We expect everyone in the course to read the work and come prepared for the meeting. Please contact us if you cannot find the readings in the library or elsewhere. We will help you get a copy. 
 
-Bonus: to get more background on the teaching methods that inspire this course watch	[Sir Ken Robinson's talk on Ted.com](https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity). If you like it please consider reading his book ‘Out of Our Minds’@robinson_out_2011.  
+### Bonus video from Sir Ken Robinson
+
+Bonus: to get more background on the teaching methods that inspire this course watch	[Sir Ken Robinson's talk on Ted.com](https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity). If you like it please consider reading his book ‘Out of Our Minds’ @robinson_out_2011.  
+
+```{r question-ken-robinson, echo=FALSE}
+question("What is the premise of Sir Ken Robinson's TED Talk?",
+  answer("We need more sciences and maths in education."),
+  answer("Creativity is as important as literacy in education.", correct = TRUE),
+  answer("We are educating people out of their creative capacities.", correct = TRUE),
+  answer("Teachers are often invited to dinner parties.")
+)
+```
 
