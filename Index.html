@@ -118,7 +118,8 @@ $(document).ready(function () {
 <div class="topics">
 
 <p><img src="images/decisionSupport_hex_sticker.png" style="width:1in" /></p>
-<!-- List of Lecture RMD files to be compiled -->
+<!-- <!-- List of Lecture RMD files to be compiled -->
+<p>–&gt;</p>
 <div id="section-introduction" class="section level2">
 <h2>Lecture 1: Introduction</h2>
 <!-- use the {#introduction} syntax to create a label that can be referenced with [Introduction](#introduction) -->
@@ -149,7 +150,7 @@ $(document).ready(function () {
 <h3>Intended learning outcomes</h3>
 <p>In this course, we aim to provide you with the skills and experiences in decision modeling. By the end of this course you will be able to:</p>
 <ul>
-<li><p>develop decision models and comprehensively evaluate the findings using the <code>R</code> programming language with functions from the <code>decisionSupport</code> package <span class="citation">(Luedeling et al. 2021b)</span>.</p></li>
+<li><p>develop decision models and comprehensively evaluate the findings using the <code>R</code> programming language with functions from the <code>decisionSupport</code> package <span class="citation">(Luedeling et al. 2021)</span>.</p></li>
 <li><p>recognize your own biases and provide accurate range estimates for uncertain variables.</p></li>
 <li><p>analyze a decision context. You will be able to draw conclusions from a decision model and recommend steps forward.</p></li>
 <li><p>develop decision models, comprehensively evaluate your findings and compose a report about the model you developed.</p></li>
@@ -158,7 +159,7 @@ $(document).ready(function () {
 </div>
 <div id="section-performance-assessment" class="section level2">
 <h2>Performance assessment</h2>
-<p>In this module, there will be no exam, but you’ll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, you’ll be developing an <a href="https://rmarkdown.rstudio.com/">Rmarkdown</a> document, where you’ll record your learning and your coding work (<a href="http://inresgb-lehre.iaas.uni-bonn.de/Methodology_outline.html">here is an example from Hoa Do with an overview that includes the main modeling procedures with the decisionSupport package in R</a>) <span class="citation">(Luedeling et al. 2021b)</span>. This document will contain short thematic chapters on the lecture contents, as well as the code you’ll produce and the outputs you’ll generate. The final chapters will contain some discussion of the results you’ll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).</p>
+<p>In this module, there will be no exam, but you’ll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, you’ll be developing an <a href="https://rmarkdown.rstudio.com/">Rmarkdown</a> document, where you’ll record your learning and your coding work (<a href="http://inresgb-lehre.iaas.uni-bonn.de/Methodology_outline.html">here is an example from Hoa Do with an overview that includes the main modeling procedures with the decisionSupport package in R</a>) <span class="citation">(Luedeling et al. 2021)</span>. This document will contain short thematic chapters on the lecture contents, as well as the code you’ll produce and the outputs you’ll generate. The final chapters will contain some discussion of the results you’ll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).</p>
 <p>There will be about 60 hours of formal in-class time (15 ~ 4 hour <a href="#section-lecture_schedule">lectures</a> and <a href="#section-seminar_schedule">seminars</a>) and 120 hours of work outside the class.</p>
 <div id="section-what-we-expect-from-you" class="section level3">
 <h3>What we expect from you</h3>
@@ -168,9 +169,9 @@ $(document).ready(function () {
 </div>
 <div id="section-house-rules" class="section level2">
 <h2>House rules</h2>
-<p>In this course, we’ll gradually work our way into the <code>decisionSupport</code> package <span class="citation">(Luedeling et al. 2021a)</span>. At the end of the semester, you should be able to apply state-of-the-art Decision Analysis. Yet even if it’s not your ambition to become a decision analyst, you’ll have picked up a bunch of useful skills along the way. We’ll try to teach you how to use some staple programming tools and techniques that can be used for all kinds of programming challenges. These will include the use of git and <a href="github.com">github</a> and <a href="rmarkdown.com">Rmarkdown</a>, as well the the ability to create, manipulate and use R functions and packages.</p>
+<p>In this course, we’ll gradually work our way into the <code>decisionSupport</code> package <span class="citation">(Luedeling et al. 2021)</span>. At the end of the semester, you should be able to apply state-of-the-art Decision Analysis. Yet even if it’s not your ambition to become a decision analyst, you’ll have picked up a bunch of useful skills along the way. We’ll try to teach you how to use some staple programming tools and techniques that can be used for all kinds of programming challenges. These will include the use of git and <a href="github.com">github</a> and <a href="rmarkdown.com">Rmarkdown</a>, as well the the ability to create, manipulate and use R functions and packages.</p>
 <p>What is expected of you is to be engaged in this class, and to diligently complete the assignments you receive. Learning things in R requires practice, through which many things that seem cumbersome at first eventually become almost automatic. We are hopeful that the things you’ll get exposed to in this class will be assets in your scientific (or other) career. So please take the materials seriously!</p>
-<p>This course not only aims to teach you things about Decision Analysis and related topics - it also provides hands-on exercises to illustrate the functions of the <code>decisionSupport</code> package <span class="citation">Luedeling et al. (2021b)</span>. For all of these practical components, we need tools. <code>decisionSupport</code> is an R package, so we’ll need <a href="https://www.r-project.org/">R</a>, which is most comfortably operated through the <a href="https://rstudio.com/">RStudio</a> interface.</p>
+<p>This course not only aims to teach you things about Decision Analysis and related topics - it also provides hands-on exercises to illustrate the functions of the <code>decisionSupport</code> package <span class="citation">Luedeling et al. (2021)</span>. For all of these practical components, we need tools. <code>decisionSupport</code> is an R package, so we’ll need <a href="https://www.r-project.org/">R</a>, which is most comfortably operated through the <a href="https://rstudio.com/">RStudio</a> interface.</p>
 <p>We could simply start running <a href="https://rstudio.com/">RStudio</a> on our local computer, save our files somewhere on our hard drive and generally operate the way we usually work with our computer. But this is not how real programmers work, and since this is what we’re trying to be, we should familiarize ourselves with some code development tools that such people use. We’ll therefore introduce you to <a href="https://git-scm.com/">git</a> and <a href="https://github.com/">github</a>, which are very useful for keeping code organized and secure and for sharing with collaborators and wider audiences.</p>
 <p>Finally, we want to show you how to properly document what you do in R, and how to compile professional-looking reports of your work. This is what <a href="https://rmarkdown.rstudio.com/">Rmarkdown</a> helps us do. Some of this may be a bit confusing in the beginning, but you’ll probably learn to appreciate the value of these tools, as we keep using them in this module.</p>
 </div>
@@ -439,118 +440,58 @@ $(document).ready(function () {
 </tr>
 </tbody>
 </table>
+<!-- ```{r child="Seminar_01_Experiential.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Lecture_02_Decision_Analysis.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_02_R_RStudio_1.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Lecture_03_Define_Decision.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_03_R_RStudio_2.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Lecture_04_Case_Studies.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_04_Git_Github.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Lecture_05_Participatory_Methods.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_05_RMarkdown.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Lecture_06_Decision_Models.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_06_Model_Programming.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Lecture_07_Biases.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_07_decisionSupport.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Lecture_08_TBA.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_08_Calibration_short.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Lecture_09_Bayesian_Thinking.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_09_Calibration_long.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Lecture_10_TBA.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_10_Report.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Lecture_11_Writing.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_11_Writing.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Lecture_12_Communicating.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_12_citations.Rmd"} -->
+<!-- ``` -->
 </div>
-<div id="section-tools" class="section level2">
-<h2>Seminar 1: Group work overview</h2>
-<!-- use the {#tools} syntax to create a label that can be referenced with [Tools we use](#tools) -->
-<p>Welcome to the first seminar of <strong>Decision Analysis and Forecasting for Agricultural Development</strong>.</p>
-<p>You should already be familiar with the idea that we intend to have group work form a major part of this course. If you have not already it is important that you choose a group to work with and begin to think about a topic (ideally an agricultural decision) that you intend to work on through this course. In this seminar we will share the general motivation behind the experiential nature of this course and talk about effective group work techniques and tools. The lecture in week three <a href="#section-define_decision">Defining a decision</a> will provide a detailed exploration of how decisions are defined / steps we may need to go through to help decision makers define decisions.</p>
-<p>Feel free to bring up any questions or concerns in the Slack or to <a href="mailto:cory.whitney@uni-bonn.de?subject=%5BSeminar_4%5D%20Decision%20Analysis%20Lecture">Dr. Cory Whitney</a> or the course tutor.</p>
-<p>To see an example of the result we will be aiming to create see the <span class="citation">Do, Luedeling, and Whitney (2020)</span> and the <a href="https://zenodo.org/record/3727576">supplementary materials</a>.</p>
-<!-- comment out those lectures / seminars not yet ready -->
-<!-- release as the time approaches -->
-</div>
-<div id="section-r-childlecture_02_decision_analysis.rmd" class="section level1">
-<h1><code>{r child="Lecture_02_Decision_Analysis.Rmd"} #</code></h1>
-</div>
-<div id="section-r-childseminar_02_r_rstudio_1.rmd" class="section level1">
-<h1><code>{r child="Seminar_02_R_RStudio_1.Rmd"} #</code></h1>
-</div>
-<div id="section-section" class="section level1">
-<h1></h1>
-</div>
-<div id="section-r-childlecture_03_define_decision.rmd" class="section level1">
-<h1><code>{r child="Lecture_03_Define_Decision.Rmd"} #</code></h1>
-</div>
-<div id="section-r-childseminar_03_r_rstudio_2.rmd" class="section level1">
-<h1><code>{r child="Seminar_03_R_RStudio_2.Rmd"} #</code></h1>
-</div>
-<div id="section-section-1" class="section level1">
-<h1></h1>
-</div>
-<div id="section-r-childlecture_04_case_studies.rmd" class="section level1">
-<h1><code>{r child="Lecture_04_Case_Studies.Rmd"} #</code></h1>
-</div>
-<div id="section-r-childseminar_04_git_github.rmd" class="section level1">
-<h1><code>{r child="Seminar_04_Git_Github.Rmd"} #</code></h1>
-</div>
-<div id="section-section-2" class="section level1">
-<h1></h1>
-</div>
-<div id="section-r-childlecture_05_participatory_methods.rmd" class="section level1">
-<h1><code>{r child="Lecture_05_Participatory_Methods.Rmd"} #</code></h1>
-</div>
-<div id="section-r-childseminar_05_rmarkdown.rmd" class="section level1">
-<h1><code>{r child="Seminar_05_RMarkdown.Rmd"} #</code></h1>
-</div>
-<div id="section-section-3" class="section level1">
-<h1></h1>
-</div>
-<div id="section-r-childlecture_06_decision_models.rmd" class="section level1">
-<h1><code>{r child="Lecture_06_Decision_Models.Rmd"} #</code></h1>
-</div>
-<div id="section-r-childseminar_06_model_programming.rmd" class="section level1">
-<h1><code>{r child="Seminar_06_Model_Programming.Rmd"} #</code></h1>
-</div>
-<div id="section-section-4" class="section level1">
-<h1></h1>
-</div>
-<div id="section-r-childlecture_07_biases.rmd" class="section level1">
-<h1><code>{r child="Lecture_07_Biases.Rmd"} #</code></h1>
-</div>
-<div id="section-r-childseminar_07_decisionsupport.rmd" class="section level1">
-<h1><code>{r child="Seminar_07_decisionSupport.Rmd"} #</code></h1>
-</div>
-<div id="section-section-5" class="section level1">
-<h1></h1>
-</div>
-<div id="section-r-childlecture_08_tba.rmd" class="section level1">
-<h1><code>{r child="Lecture_08_TBA.Rmd"} #</code></h1>
-</div>
-<div id="section-r-childseminar_08_calibration_short.rmd" class="section level1">
-<h1><code>{r child="Seminar_08_Calibration_short.Rmd"} #</code></h1>
-</div>
-<div id="section-section-6" class="section level1">
-<h1></h1>
-</div>
-<div id="section-r-childlecture_09_bayesian_thinking.rmd" class="section level1">
-<h1><code>{r child="Lecture_09_Bayesian_Thinking.Rmd"} #</code></h1>
-</div>
-<div id="section-r-childseminar_09_calibration_long.rmd" class="section level1">
-<h1><code>{r child="Seminar_09_Calibration_long.Rmd"} #</code></h1>
-</div>
-<div id="section-section-7" class="section level1">
-<h1></h1>
-</div>
-<div id="section-r-childlecture_10_tba.rmd" class="section level1">
-<h1><code>{r child="Lecture_10_TBA.Rmd"} #</code></h1>
-</div>
-<div id="section-r-childseminar_10_report.rmd" class="section level1">
-<h1><code>{r child="Seminar_10_Report.Rmd"} #</code></h1>
-</div>
-<div id="section-section-8" class="section level1">
-<h1></h1>
-</div>
-<div id="section-r-childlecture_11_writing.rmd" class="section level1">
-<h1><code>{r child="Lecture_11_Writing.Rmd"} #</code></h1>
-</div>
-<div id="section-r-childseminar_11_writing.rmd" class="section level1">
-<h1><code>{r child="Seminar_11_Writing.Rmd"} #</code></h1>
-</div>
-<div id="section-section-9" class="section level1">
-<h1></h1>
-</div>
-<div id="section-r-childlecture_12_communicating.rmd" class="section level1">
-<h1><code>{r child="Lecture_12_Communicating.Rmd"} #</code></h1>
-</div>
-<div id="section-r-childseminar_12_citations.rmd" class="section level1">
-<h1><code>{r child="Seminar_12_citations.Rmd"} #</code></h1>
 <div id="section-impressum-und-datenschutzerklärung" class="section level2">
 <h2><a href="https://www.inres.uni-bonn.de/impressum">Impressum und Datenschutzerklärung</a></h2>
 </div>
 <div id="section-bibliography" class="section level2">
 <h2>Bibliography</h2>
-</div>
 </div>
 <div id="section-references" class="section level1">
 <h1>References</h1>
@@ -573,7 +514,7 @@ session$onSessionEnded(function() {
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-ken-robinson",     question = structure("What is the premise of Sir Ken Robinson&#39;s TED Talk?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_239b031",         option = "We need more sciences and maths in education.",         value = "We need more sciences and maths in education.",         label = structure("We need more sciences and maths in education.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_fe6fe3",         option = "Creativity is as important as literacy in education.",         value = "Creativity is as important as literacy in education.",         label = structure("Creativity is as important as literacy in education.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_18589e4",         option = "We are educating people out of their creative capacities.",         value = "We are educating people out of their creative capacities.",         label = structure("We are educating people out of their creative capacities.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_aaacaff",         option = "Teachers are often invited to dinner parties.",         value = "Teachers are often invited to dinner parties.",         label = structure("Teachers are often invited to dinner parties.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("Incorrect", html = TRUE, class = c("html",     "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "question-ken-robinson-answer", question = "question-ken-robinson"),     loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the premise of Sir Ken Robinson&#39;s TED Talk?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = FALSE,     seed = 368528890.32839, options = list()), class = c("learnr_checkbox", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-ken-robinson",     question = structure("What is the premise of Sir Ken Robinson&#39;s TED Talk?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_8cb2a7e",         option = "We need more sciences and maths in education.",         value = "We need more sciences and maths in education.",         label = structure("We need more sciences and maths in education.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_dd1490f",         option = "Creativity is as important as literacy in education.",         value = "Creativity is as important as literacy in education.",         label = structure("Creativity is as important as literacy in education.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_de08eb2",         option = "We are educating people out of their creative capacities.",         value = "We are educating people out of their creative capacities.",         label = structure("We are educating people out of their creative capacities.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_4f6cc3c",         option = "Teachers are often invited to dinner parties.",         value = "Teachers are often invited to dinner parties.",         label = structure("Teachers are often invited to dinner parties.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("Incorrect", html = TRUE, class = c("html",     "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "question-ken-robinson-answer", question = "question-ken-robinson"),     loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the premise of Sir Ken Robinson&#39;s TED Talk?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = FALSE,     seed = 1337973357.87696, options = list()), class = c("learnr_checkbox", "tutorial_question")))
 </script>
  <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="dependencies">
@@ -589,9 +530,6 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <div id="section-ref-bertsch_mcgrayne_theory_2011" class="csl-entry">
 Bertsch McGrayne, Sharon. 2011. <em>The Theory That Would Not Die: How <span>Bayes</span>’ Rule Cracked the Enigma Code, Hunted down <span>Russian</span> Submarines, &amp; Emerged Triumphant from Two Centuries of Controversy</em>. Yale University Press.
 </div>
-<div id="section-ref-do_decision_2020" class="csl-entry">
-Do, Hoa, Eike Luedeling, and Cory Whitney. 2020. <span>“Decision Analysis of Agroforestry Options Reveals Adoption Risks for Resource-Poor Farmers.”</span> <em>Agronomy for Sustainable Development</em> 40 (3): 20. <a href="https://doi.org/10.1007/s13593-020-00624-5">https://doi.org/10.1007/s13593-020-00624-5</a>.
-</div>
 <div id="section-ref-howard_foundations_2015" class="csl-entry">
 Howard, Ronald A., and Ali E. Abbas. 2015. <em>Foundations of <span>Decision</span> <span>Analysis</span></em>. NY, NY: Prentice Hall.
 </div>
@@ -602,10 +540,7 @@ Hubbard, Douglas W. 2014. <em>How <span>To</span> <span>Measure</span> <span>Any
 Kahneman, Daniel, and Patrick Egan. 2011. <em>Thinking, Fast and Slow</em>. Vol. 1. New York: Farrar, Straus; Giroux.
 </div>
 <div id="section-ref-R-decisionSupport" class="csl-entry">
-Luedeling, Eike, Lutz Goehring, Katja Schiffers, Cory Whitney, and Eduardo Fernandez. 2021a. <em>decisionSupport: Quantitative Support of Decision Making Under Uncertainty</em>. <a href="http://www.worldagroforestry.org/">http://www.worldagroforestry.org/</a>.
-</div>
-<div id="section-ref-luedeling_decisionsupport_2021" class="csl-entry">
-———. 2021b. <span>“<span class="nocase">decisionSupport</span> – <span>Quantitative</span> <span>Support</span> of <span>Decision</span> <span>Making</span> Under <span>Uncertainty</span>. <span>Contributed</span> Package to the <span>R</span> Programming Language. <span>Version</span> 1.106.”</span> <a href="https://cran.r-project.org/web/packages/decisionSupport/index.html">https://cran.r-project.org/web/packages/decisionSupport/index.html</a>.
+Luedeling, Eike, Lutz Goehring, Katja Schiffers, Cory Whitney, and Eduardo Fernandez. 2021. <em>decisionSupport: Quantitative Support of Decision Making Under Uncertainty</em>. <a href="http://www.worldagroforestry.org/">http://www.worldagroforestry.org/</a>.
 </div>
 <div id="section-ref-luedeling_decision-focused_2016" class="csl-entry">
 Luedeling, Eike, and Keith Shepherd. 2016. <span>“Decision-<span>Focused</span> <span>Agricultural</span> <span>Research</span>.”</span> <em>Solutions</em> 7 (5): 46–54. https://doi.org/<a href="https://www.thesolutionsjournal.com/article/decision-focused-agricultural-research/">https://www.thesolutionsjournal.com/article/decision-focused-agricultural-research/</a>.

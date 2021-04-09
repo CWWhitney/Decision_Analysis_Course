@@ -36,7 +36,7 @@ After some introduction of the subject matter much of this course will consist o
 
 In this course, we aim to provide you with the skills and experiences in decision modeling. By the end of this course you will be able to: 
 
-- develop decision models and comprehensively evaluate the findings using the `R` programming language with functions from the `decisionSupport` package [@luedeling_decisionsupport_2021]. 
+- develop decision models and comprehensively evaluate the findings using the `R` programming language with functions from the `decisionSupport` package [@R-decisionSupport]. 
 
 - recognize your own biases and provide accurate range estimates for uncertain variables. 
 
@@ -46,7 +46,7 @@ In this course, we aim to provide you with the skills and experiences in decisio
 
 ## Performance assessment
 
-In this module, there will be no exam, but you'll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, you'll be developing an [Rmarkdown](https://rmarkdown.rstudio.com/) document, where you'll record your learning and your coding work ([here is an example from Hoa Do with an overview that includes the main modeling procedures with the decisionSupport package in R](http://inresgb-lehre.iaas.uni-bonn.de/Methodology_outline.html)) [@luedeling_decisionsupport_2021]. This document will contain short thematic chapters on the lecture contents, as well as the code you'll produce and the outputs you'll generate. The final chapters will contain some discussion of the results you'll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).
+In this module, there will be no exam, but you'll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, you'll be developing an [Rmarkdown](https://rmarkdown.rstudio.com/) document, where you'll record your learning and your coding work ([here is an example from Hoa Do with an overview that includes the main modeling procedures with the decisionSupport package in R](http://inresgb-lehre.iaas.uni-bonn.de/Methodology_outline.html)) [@R-decisionSupport]. This document will contain short thematic chapters on the lecture contents, as well as the code you'll produce and the outputs you'll generate. The final chapters will contain some discussion of the results you'll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).
 
 There will be about 60 hours of formal in-class time (15 ~ 4 hour [lectures](#lecture_schedule) and [seminars](#seminar_schedule)) and 120 hours of work outside the class.
 
@@ -62,7 +62,7 @@ In this course, we'll gradually work our way into the `decisionSupport` package 
 
 What is expected of you is to be engaged in this class, and to diligently complete the assignments you receive. Learning things in R requires practice, through which many things that seem cumbersome at first eventually become almost automatic. We are hopeful that the things you'll get exposed to in this class will be assets in your scientific (or other) career. So please take the materials seriously!
 
-This course not only aims to teach you things about Decision Analysis and related topics - it also provides hands-on exercises to illustrate the functions of the `decisionSupport` package @luedeling_decisionsupport_2021. For all of these practical components, we need tools. `decisionSupport` is an R package, so we'll need [R](https://www.r-project.org/), which is most comfortably operated through the [RStudio](https://rstudio.com/) interface.
+This course not only aims to teach you things about Decision Analysis and related topics - it also provides hands-on exercises to illustrate the functions of the `decisionSupport` package @R-decisionSupport. For all of these practical components, we need tools. `decisionSupport` is an R package, so we'll need [R](https://www.r-project.org/), which is most comfortably operated through the [RStudio](https://rstudio.com/) interface.
 
 We could simply start running [RStudio](https://rstudio.com/) on our local computer, save our files somewhere on our hard drive and generally operate the way we usually work with our computer. But this is not how real programmers work, and since this is what we're trying to be, we should familiarize ourselves with some code development tools that such people use. We'll therefore introduce you to [git](https://git-scm.com/) and [github](https://github.com/), which are very useful for keeping code organized and secure and for sharing with collaborators and wider audiences. 
 
