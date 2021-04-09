@@ -8,4 +8,7 @@
 
 ### Group discussion reading: 
 
-- **Chapter 1, pages 3-16** Anderson, Jock, John Dillon, and Brian Hardaker. Agricultural Decision Analysis. Ames, Iowa: Iowa State University Press, 1978.
+This week you will all read @howard_foundations_2015 (Chapter 1. Introduction to Quality Decision Making). One group will lead a discussion on the reading.
+
+- Howard, Ronald A., and Ali E. Abbas. Foundations of Decision Analysis. NY, NY: Prentice Hall, 2015.
+

@@ -109,11 +109,13 @@ Parts 5 and 6 offer some brief Decision Analysis case studies and conclusions. A
 
 ### Group discussion reading: 
 
+This week you will all read @hubbard_how_2014 (Introduction, pp 3-13). The first group will lead a discussion on the reading during our weekly call.
+
 - Hubbard, Douglas W. How To Measure Anything: Finding the Value of Intangibles in Business. 2nd ed. Vol. Second Edition. Hoboken, New Jersey: John Wiley & Sons, 2014. *Introduction, pages 3-13*
 
 <!-- ## Further reading -->
 
-<!-- -	Overview of DA (Hubbard, Anderson, Howard) -->
+<!-- -	Overview of DA (Hubbard, Shepherd, Howard) -->
 <!-- -	Brief examples (Vietnam…, Uganda, Calluna…) -->
 <!-- -	Hubbard (selected chapters from ‘How to Measure Anything’) -->
 <!-- -	Howard (selected chapters from ‘Decision Analysis’ and recorded talks) -->

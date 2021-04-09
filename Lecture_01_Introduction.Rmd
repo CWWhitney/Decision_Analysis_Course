@@ -7,7 +7,7 @@
 
 Welcome to **Decision Analysis and Forecasting for Agricultural Development**. We are excited to deliver you this course content and to train a new generation of experts in applying these tools. We see enormous scope for application of these methods in agriculture and the need for more practitioners.  
 
-Decisions in agriculture are often risky, meaning that decision makers have uncertainty about how their decision will influence the intended outcomes. Farming systems are dynamic and the impact of any intervention, policy or management decision is likely to be influenced by many factors ranging from soil and crop dynamics to social dynamics such as farmer and community perceptions. In order to provide scientific support for decision making it is important that our models and forecasts attempt to include these interactions. Decision Analysis provides a set of approaches that are aimed at capturing what is known and applying this knowledge to generate forecasts of decision outcomes. The theoretical body of approaches has been formally applied in business and economics for more than 50 years @howard_foundations_2015 and have been gaining ground in agriculture since the 70s @anderson_agricultural_1978. Our mission is to normalize these holistic approaches and move agricultural science from the lab bench and field trials to real world application and decision support for farmers and agricultural decision makers such as those in government ministries and aid organizations.  
+Decisions in agriculture are often risky, meaning that decision makers have uncertainty about how their decision will influence the intended outcomes. Farming systems are dynamic and the impact of any intervention, policy or management decision is likely to be influenced by many factors ranging from soil and crop dynamics to social dynamics such as farmer and community perceptions. In order to provide scientific support for decision making it is important that our models and forecasts attempt to include these interactions. Decision Analysis provides a set of approaches that are aimed at capturing what is known and applying this knowledge to generate forecasts of decision outcomes. The theoretical body of approaches have been formally applied in business and economics for more than 50 years @howard_foundations_2015 and have been gaining ground in agricultural development research more recently [@shepherd_development_2015, @luedeling_decision-focused_2016]. Our mission is to normalize these holistic approaches and move agricultural science from the lab bench and field trials to real world application and decision support for farmers and agricultural decision makers such as those in government ministries and aid organizations.  
 
 **A student is not a vessel to be filled, but a lamp to be lighted…** - Plutarch
 
@@ -36,7 +36,7 @@ After some introduction of the subject matter much of this course will consist o
 
 In this course, we aim to provide you with the skills and experiences in decision modeling. By the end of this course you will be able to: 
 
-- develop decision models and comprehensively evaluate the findings using the `R` programming language with functions from the `decisionSupport` package @luedeling_decisionsupport_2021. 
+- develop decision models and comprehensively evaluate the findings using the `R` programming language with functions from the `decisionSupport` package [@luedeling_decisionsupport_2021]. 
 
 - recognize your own biases and provide accurate range estimates for uncertain variables. 
 
@@ -46,19 +46,19 @@ In this course, we aim to provide you with the skills and experiences in decisio
 
 ## Performance assessment
 
-In this module, there will be no exam, but you'll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, you'll be developing an [Rmarkdown](https://rmarkdown.rstudio.com/) document, where you'll record your learning and your coding work ([here is an example from Hoa Do with an overview that includes the main modeling procedures with the decisionSupport package in R](http://inresgb-lehre.iaas.uni-bonn.de/Methodology_outline.html)). This document will contain short thematic chapters on the lecture contents, as well as the code you'll produce and the outputs you'll generate. The final chapters will contain some discussion of the results you'll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).
+In this module, there will be no exam, but you'll still have to put in a bit of effort to pass and get a good grade here. Over the course of the semester, you'll be developing an [Rmarkdown](https://rmarkdown.rstudio.com/) document, where you'll record your learning and your coding work ([here is an example from Hoa Do with an overview that includes the main modeling procedures with the decisionSupport package in R](http://inresgb-lehre.iaas.uni-bonn.de/Methodology_outline.html)) [@luedeling_decisionsupport_2021]. This document will contain short thematic chapters on the lecture contents, as well as the code you'll produce and the outputs you'll generate. The final chapters will contain some discussion of the results you'll have obtained. This document will be evaluated, and it will be the major determinant of your final grade (participation in class will also count for some of the grade).
 
 There will be about 60 hours of formal in-class time (15 ~ 4 hour [lectures](#lecture_schedule) and [seminars](#seminar_schedule)) and 120 hours of work outside the class.
 
 ### What we expect from you
 
-Class participation will be about 50% of the work in this course.	We will expect you to show up in class and may have short weekly tests for seeing how up to speed you are. We will track your project activity (follow your [git](github.com) repositories etc.). 
+Class participation will be about 50% of the work in this course.	We will expect you to show up in class and be an active participant in discussions. We may also have short weekly tests for seeing how up to speed you are and we will track your project activity (follow your [git](github.com) repositories etc.). 
 
-Group work will make up the rest of the required work for this course. You will put together a report, build a repository with code and a working RMarkdown file. You will also do weekly reading/listening assignments and your teams will lead short related discussions.
+Group work will make up the rest of the required work for this course. You will put together a report, build a repository with code and a working RMarkdown file. You will also do weekly reading/listening assignments and lead short related discussions.
 
 ## House rules
 
-In this course, we'll gradually work our way into the `decisionSupport` package @luedeling_decisionsupport_2021. At the end of the semester, you should be able to apply state-of-the-art Decision Analysis. Yet even if it's not your ambition to become a  decision analyst, you'll have picked up a bunch of useful skills along the way. We'll try to teach you how to use some staple programming tools and techniques that can be used for all kinds of programming challenges. These will include the use of git and [github](github.com) and [Rmarkdown](rmarkdown.com), as well the the ability to create, manipulate and use R functions and packages.
+In this course, we'll gradually work our way into the `decisionSupport` package [@R-decisionSupport]. At the end of the semester, you should be able to apply state-of-the-art Decision Analysis. Yet even if it's not your ambition to become a  decision analyst, you'll have picked up a bunch of useful skills along the way. We'll try to teach you how to use some staple programming tools and techniques that can be used for all kinds of programming challenges. These will include the use of git and [github](github.com) and [Rmarkdown](rmarkdown.com), as well the the ability to create, manipulate and use R functions and packages.
 
 What is expected of you is to be engaged in this class, and to diligently complete the assignments you receive. Learning things in R requires practice, through which many things that seem cumbersome at first eventually become almost automatic. We are hopeful that the things you'll get exposed to in this class will be assets in your scientific (or other) career. So please take the materials seriously!
 
@@ -86,7 +86,7 @@ In addition, each week small teams (groups of two or three) will be responsible 
 
 ### Bonus video from Sir Ken Robinson
 
-Bonus: to get more background on the teaching methods that inspire this course watch	[Sir Ken Robinson's talk on Ted.com](https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity). If you like it please consider reading his book ‘Out of Our Minds’ @robinson_out_2011.  
+Bonus: to get more background on the teaching methods that inspire this course watch	[Sir Ken Robinson's talk on Ted.com](https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity). If you like it please consider reading his book ‘Out of Our Minds’ [@robinson_out_2017].  
 
 ```{r question-ken-robinson, echo=FALSE}
 question("What is the premise of Sir Ken Robinson's TED Talk?",

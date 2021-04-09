@@ -6,7 +6,7 @@ Welcome to lecture 6 of **Decision Analysis and Forecasting for Agricultural Dev
 
 - Step1. Start simple i.e. with a skateboard … then move on to other steps
 
-![From MetaLab 'Skateboard, Bike, Car'](images/Model_stages_car_analogy.png)
+!['Skateboard, Bike, Car'](images/Model_stages_car_analogy.png) [From MetaLab](https://twitter.com/metalab) 
 
 Causal model / diagram / Impact pathway / Theory of change
 
@@ -18,7 +18,7 @@ Causal model / diagram / Impact pathway / Theory of change
  
 ### Group discussion reading:
 
--Savage, Sam L., and Harry M. Markowitz. The Flaw of Averages: Why We Underestimate Risk in the Face of Uncertainty. John Wiley & Sons, 2009. [Chapter 1. The Flaw of Averages](reading/Flaw_AVERAGES_Why_We_Underestimate_Risk.pdf)
+This week you will read @savage_flaw_2009 [Chapter 1](https://hbr.org/2002/11/the-flaw-of-averages). 
 
-You can also find it at [The Flaw of Averages](https://hbr.org/2002/11/the-flaw-of-averages).
+-Savage, Sam L., and Harry M. Markowitz. The Flaw of Averages: Why We Underestimate Risk in the Face of Uncertainty. John Wiley & Sons, 2009.
  
