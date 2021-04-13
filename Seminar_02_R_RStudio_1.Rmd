@@ -4,9 +4,9 @@ Welcome to the second seminar of **Decision Analysis and Forecasting for Agricul
 
 Remember that this is an experiential course and will be based largely on work from your side that is supported by us, rather than passive learning where we deliver content. In order to work with us in this course you will need to have some basic tools.
 
-The first step in getting ready for the work of this course is to install and run [R](https://www.r-project.org/) and [RStudio](https://rstudio.com/).
+You should already have installed R and RStudio. If not, please check out the [tools we use](#tools) in this course. If you already have R and RStudio loaded then you should be able to follow the wrangling section of this tutorial. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WT3tKlzCZgo" frameborder="0" allowfullscreen></iframe>
+https://cory-whitney.shinyapps.io/teaching_R/
 
 <!-- remake and embed R course materials -->
 

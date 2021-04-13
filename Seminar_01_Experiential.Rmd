@@ -7,4 +7,9 @@ You should already be familiar with the idea that we intend to have group work f
 
 Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-To see an example of the result we will be aiming to create see the @do_decision_2020 and the [supplementary materials](https://zenodo.org/record/3727576).
+To see an example of the result we will be aiming to create see the paper by @do_decision_2020 and the associated [supplementary materials](https://zenodo.org/record/3727576).
+
+The first step in getting ready for the work of this course is to install and run [R](https://www.r-project.org/) [@R-base] and [RStudio](https://rstudio.com/). 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT3tKlzCZgo" frameborder="0" allowfullscreen></iframe>
+
