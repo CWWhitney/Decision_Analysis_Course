@@ -13,14 +13,16 @@ Please take a few minutes to watch these six short videos before our meeting.
 
 The introduction outlines the general theory and application of Decision Analysis tools. At the end of the video please take a moment to think about decisions that are made in agricultural development, ideally decisions that are relevant to your research interests. Please share these with us in the Slack channel.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7P2YI9-smfU" frameborder="0" allowfullscreen></iframe>
+![](https://youtu.be/7P2YI9-smfU)
 
 ```{r question-1, echo=FALSE}
 question("What is the main concern of Decision Analysis for agricultural development?",
   answer("How do people make decisions?"),
   answer("What does the data tell us about development?"),
   answer("How will decisions influence future sustainability?", correct = TRUE),
-  answer("How can we perform analyses of big data for policy advice?")
+  answer("How can we perform analyses of big data for policy advice?"),
+  incorrect = "Watch [the talk](https://youtu.be/7P2YI9-smfU) and try again.",
+allow_retry = TRUE
 )
 ```
 
@@ -29,7 +31,9 @@ question("Why do we apply Decision Analysis in agricultural development research
   answer("To make sense of large data sets."),
   answer("To better understand how decisions are made."),
   answer("To offer support in decision making under uncertainty.", correct = TRUE),
-  answer("To generate new data sets.")
+  answer("To generate new data sets."),
+  incorrect = "Watch [the talk](https://youtu.be/7P2YI9-smfU) and try again.",
+allow_retry = TRUE
 )
 ```
 
@@ -38,7 +42,9 @@ question("What is one of the main benefits of Decision Analysis approaches?",
   answer("Making use of existing knowledge to build forecasts.", correct = TRUE),
   answer("Helping to better understand how and why decisions are made."),
   answer("Making use of big data to generate models."),
-  answer("Support decisions by using existing measurements and evidence for which we have high certainty.")
+  answer("Support decisions by using existing measurements and evidence for which we have high certainty."),
+  incorrect = "Watch [the talk](https://youtu.be/7P2YI9-smfU) and try again.",
+allow_retry = TRUE
 )
 ```
 
@@ -48,30 +54,36 @@ Remember to take a moment to gather your thoughts so far and share with us in Sl
 
 Part 1 gives an overview of various approaches in agricultural research and of the Decision Analysis paradigm. At the end of the video please take a moment to think about a situation where Decision Analysis might be applicable. Try and identify a decision maker with a choice between different options and with uncertainty about the outcome.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IRZZokPD3GU" frameborder="0" allowfullscreen></iframe>
+![](https://youtu.be/IRZZokPD3GU)
 
 
-```{r question-4, echo=FALSE}
+```{r question-DA-approaches_define, echo=FALSE}
 question("How do we define a decision in the context of Decision Analysis?",
   answer("A irrevocable allocation of resources.", correct = TRUE),
   answer("Something that can be reversed."),
-  answer("A logical choice between different options", correct = TRUE)
+  answer("A logical choice between different options", correct = TRUE),
+  incorrect = "Watch [the talk](https://youtu.be/IRZZokPD3GU) and try again.",
+allow_retry = TRUE
 )
 ```
 
-```{r question-5, echo=FALSE}
+```{r question-DA-approaches_impact-pathway, echo=FALSE}
 question("Why do we use impact pathways?",
   answer("To think beforehand what might occur and what the outcomes might be, to expose weak links.", correct = TRUE),
   answer("To make sense of the processes that we have already carried out."),
-  answer("To generate new data sets.")
+  answer("To generate new data sets."),
+  incorrect = "Watch [the talk](https://youtu.be/IRZZokPD3GU) and try again.",
+allow_retry = TRUE
 )
 ```
 
-```{r question-6, echo=FALSE}
+```{r question-DA-approaches_trans-research, echo=FALSE}
 question("What is the underlying idea in transdisciplinary approaches for agricultural development?",
   answer("Farmers should be part of the research process.", correct = TRUE),
   answer("Getting academics from different fields to work together."),
-  answer("Making use of big data to generate models.")
+  answer("Making use of big data to generate models."),
+  incorrect = "Watch [the talk](https://youtu.be/IRZZokPD3GU) and try again.",
+allow_retry = TRUE
 )
 ```
 
@@ -129,7 +141,9 @@ question("What is the premise of Karl Claxton's Talk?",
   answer("We need to use all available evidence.", correct = TRUE),
   answer("We assign distributions to the parameters and sample randomly with Monte Carlo.", correct = TRUE),
   answer("We need to characterize decision uncertainty.", correct = TRUE),
-  answer("We need to get a lot of data and do analysis of these data sets.")
+  answer("We need to get a lot of data and do analysis of these data sets."),
+  incorrect = "Watch [the talk](https://www.youtube.com/watch?v=f1E3Iv8juC0) and try again.",
+allow_retry = TRUE
 )
 ```
 

@@ -93,7 +93,9 @@ question("What is the premise of Sir Ken Robinson's TED Talk?",
   answer("We need more sciences and maths in education."),
   answer("Creativity is as important as literacy in education.", correct = TRUE),
   answer("We are educating people out of their creative capacities.", correct = TRUE),
-  answer("Teachers are often invited to dinner parties.")
+  answer("Teachers are often invited to dinner parties."),
+  incorrect = "Watch [the TED talk](https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity) and try again.",
+allow_retry = TRUE
 )
 ```
 
