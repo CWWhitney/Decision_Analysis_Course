@@ -1,7 +1,3 @@
 ## Seminar 3: Using R and RStudio continued
 
-You should already have installed R and RStudio. If not, please check out the [tools we use](#tools) in this course. If you already have R and RStudio loaded then you should be able to follow the visualization section of this tutorial. 
-
-https://cory-whitney.shinyapps.io/teaching_R/
-
-<!-- embed the wrangling / plotting youtube video -->
+You should already have installed R and RStudio. If not, please check out the [tools we use](#tools) in this course. If you already have R and RStudio loaded then you should be able to follow the visualization section of this tutorial. Please follow the [Data Visualization](https://cory-whitney.shinyapps.io/teaching_R/#section-data-visualization) section of the tutorial. Share the results of your work with a data set of your choice (ie. 'ggplot2' 'diamonds' data [@R-ggplot2]) after you have worked through these materials.
