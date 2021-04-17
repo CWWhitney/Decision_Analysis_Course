@@ -5,9 +5,9 @@
 ![](images/Uni_Bonn_Picture.png){width=2in}
 ![](images/decisionSupport_hex_sticker.png){width=1in}
 
-Welcome to lecture 2 of **Decision Analysis and Forecasting for Agricultural Development**. In this lecture we will follow a [six-part micro-series of videos](https://www.youtube.com/playlist?list=PLe1C9W5AtEiBzmXFf-XzmXH8NNJjqs0IY) and use the Lecture 2 Slack channel and Zoom meeting to follow up. This will allow us all to have a chance to see your progress, provide feedback. It will be encouraging to others to see activity from colleagues. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_2]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to lecture 2 of **Decision Analysis and Forecasting for Agricultural Development**. In this lecture we will follow a [six-part micro-series of videos](https://www.youtube.com/playlist?list=PLe1C9W5AtEiBzmXFf-XzmXH8NNJjqs0IY) and use the `#lecture-02-overview` Slack channel and Zoom meeting to follow up. This will allow us all to have a chance to see your progress, provide feedback. It will be encouraging to others to see activity from colleagues. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_2]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-Please take a few minutes to watch these six short videos before our meeting. 
+Please take a few minutes to watch these six short videos and do the associated exercises before our meeting.
 
 ### Introduction
 
@@ -87,7 +87,7 @@ allow_retry = TRUE
 )
 ```
 
-Remember to watch [Hans Rosling's talk on Ted.com](https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen) (if you have not already). Also remember to share a specific risky decision that might be supported with these tools. Share your ideas with us in Slack.
+Remember to share a specific risky decision that might be supported with these tools. Share your ideas with us in Slack.
 
 ### Part 2: Decision Analysis
 
