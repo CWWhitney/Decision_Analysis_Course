@@ -1,6 +1,10 @@
 ## Lecture 2: Decision Analysis Overview {#decision_analysis}
 <!-- reference with [Decision Analysis](#decision_analysis) -->
 
+*“Everything is vague to a degree you do not realize till you have tried to make it precise.”*
+
+― @whitehead_principia_2011
+
 ![](images/INRES_Logo.png){width=1in}
 ![](images/Uni_Bonn_Picture.png){width=2in}
 ![](images/decisionSupport_hex_sticker.png){width=1in}
