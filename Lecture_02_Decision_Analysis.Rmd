@@ -17,6 +17,8 @@ Please take a few minutes to watch these six short videos and do the associated 
 
 The introduction outlines the general theory and application of Decision Analysis tools. At the end of the video please take a moment to think about decisions that are made in agricultural development, ideally decisions that are relevant to your research interests. Please share these with us in the Slack channel.
 
+**Remember to take a moment to gather your thoughts so far and share with us in Slack. **
+
 ![](https://youtu.be/7P2YI9-smfU)
 
 ```{r question-1, echo=FALSE}
@@ -52,18 +54,18 @@ allow_retry = TRUE
 )
 ```
 
-Remember to take a moment to gather your thoughts so far and share with us in Slack. 
-
 ### Part 1: Approaches
 
 Part 1 gives an overview of various approaches in agricultural research and of the Decision Analysis paradigm. At the end of the video please take a moment to think about a situation where Decision Analysis might be applicable. Try and identify a decision maker with a choice between different options and with uncertainty about the outcome.
+
+**Remember to share a specific risky decision that might be supported with these tools. Share your ideas with us in Slack.**
 
 ![](https://youtu.be/IRZZokPD3GU)
 
 
 ```{r question-DA-approaches_define, echo=FALSE}
 question("How do we define a decision in the context of Decision Analysis?",
-  answer("A irrevocable allocation of resources.", correct = TRUE),
+  answer("An irrevocable allocation of resources.", correct = TRUE),
   answer("Something that can be reversed."),
   answer("A logical choice between different options", correct = TRUE),
   incorrect = "Watch [the talk](https://youtu.be/IRZZokPD3GU) and try again.",
@@ -91,15 +93,13 @@ allow_retry = TRUE
 )
 ```
 
-Remember to share a specific risky decision that might be supported with these tools. Share your ideas with us in Slack.
-
 ### Part 2: Decision Analysis
 
 Part 2 offers some background on the theory and development of Decision Analysis and how we apply it in agricultural decisions. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UvLiq85W398" frameborder="0" allowfullscreen></iframe>
-
 At the end of the video please take some time to think about a practical application of the kinds of approaches to dealing with uncertainty that are used in Decision Analysis. Describe a few variables that you consider difficult to measure but for which the effects on a decision might be possible to describe as uncertainty distributions. Share with us in Slack.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UvLiq85W398" frameborder="0" allowfullscreen></iframe>
 
 ### Part 3: Model Building
 
@@ -107,15 +107,15 @@ Part 3 gives an overview of model building processes and approaches.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fikoVbnoNOQ" frameborder="0" allowfullscreen></iframe>
 
-At the end of this video take some time to draw a decision impact pathway. Draw a conceptual diagram of an agricultural development decision. Include the major factors that would influence the decision, no matter how difficult they might be to measure. Feel free to use any program you like to make this drawing. [Loopy](https://ncase.me/loopy/) is a very nice interface. [Google Slides](https://www.google.com/slides/about/), [Biorender](https://app.biorender.com/biorender-templates) are also good options. For the more advance R users you might like the [igraph library](https://igraph.org/r/). For those who prefer analog, a photo or scan of a hand drawn diagram is also welcome. Be sure to save your work and share it with us in Slack, a screen shot is fine, a working link is even better.
+**At the end of this video take some time to draw a decision impact pathway.** Draw a conceptual diagram of an agricultural development decision. Include the major factors that would influence the decision, no matter how difficult they might be to measure. Feel free to use any program you like to make this drawing. [Loopy](https://ncase.me/loopy/) is a very nice interface. [Google Slides](https://www.google.com/slides/about/), [Biorender](https://app.biorender.com/biorender-templates) are also good options. For the more advance R users you might like the [igraph library](https://igraph.org/r/). For those who prefer analog, a photo or scan of a hand drawn diagram is also welcome. Be sure to save your work and share it with us in Slack, a screen shot is fine, a working link is even better.
 
 ### Part 4: Overcoming Bias
 
 Part 4 gives an overview of various types of cognitive biases and outlines how these can interfere with the definition of and parameterization of models. The session ends with a number of approaches that can be applied to help in overcoming these biases and outlines the calibration training process whereby experts are trained to give accurate estimates of their own uncertainty. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dlUz5XT-u98" frameborder="0" allowfullscreen></iframe>
+**At the end of the video please take some time to consider the variables in your conceptual diagram that might benefit from calibrated estimates.** Describe variables in your model that might be difficult to measure but the effects of which might be possible to describe with calibrated-expert derived uncertainty distributions.
 
-At the end of the video please take some time to consider the variables in your conceptual diagram that might benefit from calibrated estimates. Describe variables in your model that might be difficult to measure but the effects of which might be possible to describe with calibrated-expert derived uncertainty distributions.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dlUz5XT-u98" frameborder="0" allowfullscreen></iframe>
 
 ### Parts 5 and 6: Case Studies, Conclusions
 
