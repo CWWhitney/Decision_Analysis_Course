@@ -15,7 +15,7 @@ Please take a few minutes to watch these six short videos and do the associated 
 
 ### Introduction
 
-The introduction outlines the general theory and application of Decision Analysis tools. At the end of the video please take a moment to think about decisions that are made in agricultural development, ideally decisions that are relevant to your research interests. Please share these with us in the Slack channel.
+The introduction outlines the general theory and application of Decision Analysis tools. **At the end of the video please take a moment to think about decisions that are made in agricultural development**, ideally decisions that are relevant to your research interests. Please share these with us in the Slack channel.
 
 **Remember to take a moment to gather your thoughts so far and share with us in Slack. **
 
@@ -105,9 +105,9 @@ At the end of the video please take some time to think about a practical applica
 
 Part 3 gives an overview of model building processes and approaches. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fikoVbnoNOQ" frameborder="0" allowfullscreen></iframe>
-
 **At the end of this video take some time to draw a decision impact pathway.** Draw a conceptual diagram of an agricultural development decision. Include the major factors that would influence the decision, no matter how difficult they might be to measure. Feel free to use any program you like to make this drawing. [Loopy](https://ncase.me/loopy/) is a very nice interface. [Google Slides](https://www.google.com/slides/about/), [Biorender](https://app.biorender.com/biorender-templates) are also good options. For the more advance R users you might like the [igraph library](https://igraph.org/r/). For those who prefer analog, a photo or scan of a hand drawn diagram is also welcome. Be sure to save your work and share it with us in Slack, a screen shot is fine, a working link is even better.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fikoVbnoNOQ" frameborder="0" allowfullscreen></iframe>
 
 ### Part 4: Overcoming Bias
 
