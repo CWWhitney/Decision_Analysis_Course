@@ -50,10 +50,10 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_02_R_RStudio_1.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_03_Define_Decision.Rmd"} -->
-<!-- ``` -->
-<!-- ```{r child="Seminar_03_R_RStudio_2.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_03_Define_Decision.Rmd"}
+```
+```{r child="Seminar_03_R_RStudio_2.Rmd"}
+```
 
 <!-- ```{r child="Lecture_04_Case_Studies.Rmd"} -->
 <!-- ``` -->

@@ -6,9 +6,43 @@
 ![](images/decisionSupport_hex_sticker.png){width=1in}
 <!-- Neuman and Morgenstern etc. -->
 
+### Quality Decision making
+
+This video outlines the background for quality decision making, closely following @howard_foundations_2015. At the end of the video please take some time to sketch out some thoughts about a decision that you will be working on for the experiential part of this course. 
+
+- **Define the decision-maker**: The person, organization or group that will be faced with choices. 
+- **Define the  decision choice and alternatives**: from which to choose
+- **Define the preferences**: clarify how the decision-makers consider the different possible consequences and outcomes of the decision. These can take many forms, i.e. they can be personal, societal or cultural values.
+- **Define the sources of Information**: What sources of information will you access to gather a causal understanding of the decision impact pathway. Be explicit about where you will reach out, i.e. specific farmers, literature etc.
+
+![](https://youtu.be/r_BbXfMbfe0)
+
+```{r question-quality-decision, echo=FALSE}
+question("The criteria for decision quality include:",
+  answer("Large datasets with empirical evidence and measurements of expected outcomes."),
+  answer("Preferences about decision outcomes.", correct = TRUE),
+  answer("Certainty about what the decision outcome will be."),
+ answer("Clear framing of decision alternatives.", correct = TRUE),
+  incorrect = "Watch [the video](https://youtu.be/r_BbXfMbfe0) and try again.",
+allow_retry = TRUE
+)
+```
+
+
 ### Group discussion reading: 
 
 This week you will all read @howard_foundations_2015 (Chapter 1. Introduction to Quality Decision Making). One group will lead a discussion on the reading.
+
+```{r question-howard, echo=FALSE}
+question("According to the Howard and Abbas reading, which of the following represents a decision?",
+  answer("I have decided that I do not like vanilla ice cream."),
+  answer("I have decided that the stock market will go up."),
+  answer("I have decided to ace the test."),
+ answer("I have decided to diet, and I have thrown away the ice cream in the freezer.", correct = TRUE),
+  incorrect = "Look at page 31 'What is a Decision' and try again.",
+allow_retry = TRUE
+)
+```
 
 - Howard, Ronald A., and Ali E. Abbas. Foundations of Decision Analysis. NY, NY: Prentice Hall, 2015.
 
