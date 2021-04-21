@@ -86,7 +86,7 @@ In addition, each week small teams (groups of two or three) will be responsible 
 
 ### Bonus video from Sir Ken Robinson
 
-Bonus: to get more background on the teaching methods that inspire this course watch	[Sir Ken Robinson's talk on Ted.com](https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity). If you like it please consider reading his book ‘Out of Our Minds’ [@robinson_out_2017].  
+Bonus: to get more background on the teaching methods that inspire this course watch	[Sir Ken Robinson's talk on Ted.com](https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity). If you like it you might enjoy reading his book ‘Out of Our Minds’ [@robinson_out_2017].  
 
 ```{r question-ken-robinson, echo=FALSE}
 question("What is the premise of Sir Ken Robinson's TED Talk?",

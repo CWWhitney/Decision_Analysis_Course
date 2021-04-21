@@ -143,7 +143,7 @@ Bonus: to get an economist's perspective on the Decision Analysis approaches wat
 ```{r question-karl-claxton, echo=FALSE}
 question("What is the premise of Karl Claxton's Talk?",
   answer("We need to use all available evidence.", correct = TRUE),
-  answer("We assign distributions to the parameters and sample randomly with Monte Carlo.", correct = TRUE),
+  answer("We can assign distributions to the parameters and sample randomly with Monte Carlo.", correct = TRUE),
   answer("We need to characterize decision uncertainty.", correct = TRUE),
   answer("We need to get a lot of data and do analysis of these data sets."),
   incorrect = "Watch [the talk](https://www.youtube.com/watch?v=f1E3Iv8juC0) and try again.",
