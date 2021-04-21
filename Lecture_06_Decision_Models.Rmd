@@ -1,4 +1,5 @@
 ## Lecture 6: Building Decision Models {#decision_models}
+<!-- reference with [Decision Models](#decision_models) -->
 
 Welcome to lecture 6 of **Decision Analysis and Forecasting for Agricultural Development**. We will walk through brief examples and offer the scripts. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_3]%20Decision%20Analysis%20Lecture) or the course tutor.
 

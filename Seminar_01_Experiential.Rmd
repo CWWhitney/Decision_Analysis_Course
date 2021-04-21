@@ -1,5 +1,5 @@
-## Seminar 1: Group work overview {#tools} 
-<!-- use the {#tools} syntax to create a label that can be referenced with [Tools we use](#tools) -->
+## Seminar 1: Group Work Overview {#tools} 
+<!-- use the {#tools} syntax to create a label that can be referenced with [Group Work Overview](#tools) -->
 
 Welcome to the first seminar of **Decision Analysis and Forecasting for Agricultural Development**. 
 

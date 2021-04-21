@@ -9,7 +9,6 @@ bibliography:
   - bib/packages.bib
 output: 
   learnr::tutorial:
-    progressive: true
 runtime: shiny_prerendered
 ---
 
@@ -75,7 +74,7 @@ knitr::write_bib(c(.packages(),
 <!-- ```{r child="Seminar_07_decisionSupport.Rmd"} -->
 <!-- ``` -->
 
-<!-- ```{r child="Lecture_08_TBA.Rmd"} -->
+<!-- ```{r child="Lecture_08_Forecasts.Rmd"} -->
 <!-- ``` -->
 <!-- ```{r child="Seminar_08_Calibration_short.Rmd"} -->
 <!-- ``` -->
@@ -85,7 +84,7 @@ knitr::write_bib(c(.packages(),
 <!-- ```{r child="Seminar_09_Calibration_long.Rmd"} -->
 <!-- ``` -->
 
-<!-- ```{r child="Lecture_10_TBA.Rmd"} -->
+<!-- ```{r child="Lecture_10_Analyst_Profile.Rmd"} -->
 <!-- ``` -->
 <!-- ```{r child="Seminar_10_Report.Rmd"} -->
 <!-- ``` -->

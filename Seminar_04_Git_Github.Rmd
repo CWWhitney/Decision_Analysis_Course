@@ -1,4 +1,5 @@
-## Seminar 4: Using git and Github
+## Seminar 4: Using git and Github {#github_git}
+<!-- [Using git and Github](#github_git) -->
 
 Welcome to the fourth seminar of **Decision Analysis and Forecasting for Agricultural Development**. All your programming and project work for this course should take place in the git environment and this seminar is intended to show you how to make that happen. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 

@@ -1,3 +1,4 @@
-## Seminar 11: Academic writing 
+## Seminar 11: Academic Writing {#writing} 
+<!-- [Academic writing](#writing) -->
 
 Follow up on the main lecture with inputs about some of the specifics of the academic writing process. 

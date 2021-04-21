@@ -1,3 +1,4 @@
-## Seminar 7: R package decisionSupport  {#decisionSupport} 
+## Seminar 7: R Package decisionSupport  {#decisionSupport} 
+<!-- reference with [R package decisionSupport](#decisionSupport) -->
 
 ![](images/decisionSupport_hex_sticker.png){width=3in} 

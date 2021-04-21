@@ -1,4 +1,5 @@
 ## Seminar 2: Using R and RStudio {#r_rstudio} 
+<!-- [Using R and RStudio](#r_rstudio) -->
 
 Welcome to the second seminar of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
