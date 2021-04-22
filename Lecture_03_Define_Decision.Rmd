@@ -6,9 +6,9 @@
 ![](images/decisionSupport_hex_sticker.png){width=1in}
 <!-- Neuman and Morgenstern etc. -->
 
-### Defining Decisions Part 1
-
 The following videos cover some of the challenges that researchers and agricultural development experts face when attempting to define decisions. Please watch the videos and answer the questions that follow. 
+
+### Defining Decisions Part 1
 
 ![](https://youtu.be/pPIs7MwgMe0)
 
@@ -39,27 +39,15 @@ allow_retry = TRUE
 ![](https://youtu.be/4vlwELJwHYg)
 
 Think about the following questions and jot down your thoughts.
-Does decision analysis make sense without involving a decision-maker?
-What can this achieve, and what shouldn't we expect from it?
+
+- **Does decision analysis make sense without involving a decision-maker?**
+- **What can this achieve, and what shouldn't we expect from it?**
 
 ### Defining Decisions Part 3
 
 ![](https://youtu.be/5ZTd73gcL-0)
 
 ```{r question-define-decision-part-03-01, echo=FALSE}
-question("Which aspects of research should you pay attention to, if you want to maximize the credibility of your research?",
-answer("Relationship with stakeholders"),
-answer("Robust statistics"),
-answer("Inclusive, participatory research", correct = TRUE),
-answer("Clear experimental design"),
-answer("Alignment with policies and plans", correct = TRUE),
-answer("Choices actually considered by local actors", correct = TRUE),
-  incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.",
-allow_retry = TRUE
-)
-```
-
-```{r question-define-decision-part-03-02, echo=FALSE}
 question("Which aspects of research should you pay attention to, if you want to maximize the *credibility* of your research?",
 answer("Relationship with stakeholders"),
 answer("Robust statistics", correct = TRUE),
@@ -72,7 +60,7 @@ allow_retry = TRUE
 )
 ```
 
-```{r question-define-decision-part-03-03, echo=FALSE}
+```{r question-define-decision-part-03-02, echo=FALSE}
 question("Which aspects of research should you pay attention to, if you want to maximize the *salience* of your research?",
 answer("Relationship with stakeholders"),
 answer("Robust statistics"),
@@ -85,7 +73,7 @@ allow_retry = TRUE
 )
 ```
 
-```{r question-define-decision-part-03-04, echo=FALSE}
+```{r question-define-decision-part-03-03, echo=FALSE}
 question("Which aspects of research should you pay attention to, if you want to maximize the *legitimacy* of your research?",
 answer("Relationship with stakeholders", correct = TRUE),
 answer("Robust statistics"),
@@ -99,9 +87,9 @@ allow_retry = TRUE
 )
 ```
 
-Think of challenges you may encounter when trying to do credible, salient and legitimate research (all of which decision analysts should aim to achieve).
+Think of challenges you may encounter when trying to do *credible*, *salient* and *legitimate* research (all of which decision analysts should aim to achieve).
 
-### Quality Decison Making
+### Quality Decision Making
 
 This video outlines the background for quality decision making, closely following @howard_foundations_2015. At the end of the video please take some time to sketch out some thoughts about a decision that you will be working on for the experiential part of this course. 
 
