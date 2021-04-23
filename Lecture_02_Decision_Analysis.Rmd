@@ -19,7 +19,9 @@ The introduction outlines the general theory and application of Decision Analysi
 
 **Remember to take a moment to gather your thoughts so far and share with us in Slack. **
 
-![](https://youtu.be/7P2YI9-smfU)
+<!-- ![](https://youtu.be/7P2YI9-smfU) -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7P2YI9-smfU" frameborder="0" allowfullscreen></iframe>
 
 ```{r question-1, echo=FALSE}
 question("What is the main concern of Decision Analysis for agricultural development?",
@@ -60,7 +62,9 @@ Part 1 gives an overview of various approaches in agricultural research and of t
 
 **Remember to share a specific risky decision that might be supported with these tools. Share your ideas with us in Slack.**
 
-![](https://youtu.be/IRZZokPD3GU)
+<!-- ![](https://youtu.be/IRZZokPD3GU) -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IRZZokPD3GU" frameborder="0" allowfullscreen></iframe>
 
 
 ```{r question-DA-approaches_define, echo=FALSE}

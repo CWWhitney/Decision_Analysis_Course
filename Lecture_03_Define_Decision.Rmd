@@ -10,7 +10,9 @@ The following videos cover some of the challenges that researchers and agricultu
 
 ### Defining Decisions Part 1
 
-![](https://youtu.be/pPIs7MwgMe0)
+<!-- ![](https://youtu.be/pPIs7MwgMe0) -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pPIs7MwgMe0" frameborder="0" allowfullscreen></iframe>
 
 ```{r question-define-decision-part-01-01, echo=FALSE}
 question("Who do you think came up with these topics?",
@@ -36,7 +38,9 @@ allow_retry = TRUE
 
 ### Defining Decisions Part 2
 
-![](https://youtu.be/4vlwELJwHYg)
+<!-- ![](https://youtu.be/4vlwELJwHYg) -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4vlwELJwHYg" frameborder="0" allowfullscreen></iframe>
 
 Think about the following questions and jot down your thoughts.
 
@@ -45,7 +49,9 @@ Think about the following questions and jot down your thoughts.
 
 ### Defining Decisions Part 3
 
-![](https://youtu.be/5ZTd73gcL-0)
+<!-- ![](https://youtu.be/5ZTd73gcL-0) -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5ZTd73gcL-0" frameborder="0" allowfullscreen></iframe>
 
 ```{r question-define-decision-part-03-01, echo=FALSE}
 question("Which aspects of research should you pay attention to, if you want to maximize the *credibility* of your research?",
@@ -98,7 +104,9 @@ This video outlines the background for quality decision making, closely followin
 - **Define the preferences**: clarify how the decision-makers consider the different possible consequences and outcomes of the decision. These can take many forms, i.e. they can be personal, societal or cultural values.
 - **Define the sources of Information**: What sources of information will you access to gather a causal understanding of the decision impact pathway. Be explicit about where you will reach out, i.e. specific farmers, literature etc.
 
-![](https://youtu.be/r_BbXfMbfe0)
+<!-- ![](https://youtu.be/r_BbXfMbfe0) -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/r_BbXfMbfe0" frameborder="0" allowfullscreen></iframe>
 
 ```{r question-quality-decision, echo=FALSE}
 question("The criteria for decision quality include:",
