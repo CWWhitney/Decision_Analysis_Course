@@ -1,4 +1,4 @@
-## Seminar 5: Using RMarkdown {#rmarkdown}
+## Seminar 4: Using RMarkdown {#rmarkdown}
 <!-- [Using RMarkdown](#rmarkdown) -->
 
 Now let's check out [Rmarkdown](https://rmarkdown.rstudio.com/), a powerful tool that allows making fancy reports, websites etc. out of our R code. You're already looking at an example, by the way. This website was produced with Rmarkdown (and it wasn't hard at all)!
