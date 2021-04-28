@@ -1,6 +1,138 @@
 ## Lecture 4: Decision Analysis Case Studies {#case_studies}
 <!-- reference with [Decision Analysis Case Studies](#case_studies) -->
 
+The following videos introduce some decision analysis case studies. Please watch the videos and answer the questions that follow. 
+
+### Decision analysis case - Water for Wajir
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/imQ1Gn-E7wQ" frameborder="0" allowfullscreen></iframe>
+
+Now try to answer the following questions:
+
+```{r question-1-Decision-analysis-case-Water-for-Wajir, echo=FALSE}
+question("What was the purpose of the inception workshop?",
+  answer("Elicit information about specific variables"),
+  answer("Secure political buy-in", correct = TRUE),
+  answer("Develop a conceptual model of the decision"),
+ answer("Allow stakeholders to state their expectations of the project", correct = TRUE),
+  incorrect = "Watch [the video](https://youtu.be/imQ1Gn-E7wQ) and try again.",
+allow_retry = TRUE
+)
+```
+
+```{r question-2-Decision-analysis-case-Water-for-Wajir, echo=FALSE}
+question("What impacts are likely to arise from the freshwater pipeline?",
+  answer("Improved sanitation and public health in Wajir", correct = TRUE),
+  answer("Irrigated agriculture in Wajir"),
+  answer("Acceleration of economic development in Wajir", correct = TRUE),
+ answer("Free water supply for residents of Wajir"),
+  incorrect = "Watch [the video](https://youtu.be/imQ1Gn-E7wQ) and try again.",
+allow_retry = TRUE
+)
+```
+
+```{r question-3-Decision-analysis-case-Water-for-Wajir, echo=FALSE}
+question("What are good strategies in consolidating range estimates by different people?",
+answer("Average lower and upper bounds of intervals across all participants"),
+answer("For outliers, find out if experts understood the question correctly", correct = TRUE),
+answer("Consider which experts have are most knowledgeable on each estimated variable", correct = TRUE),
+answer("Consider each expert's performance in previous estimation exercises", correct = TRUE),
+  incorrect = "Watch [the video](https://youtu.be/imQ1Gn-E7wQ) and try again.",
+allow_retry = TRUE
+)
+```
+
+### Decision analysis case - Calluna production in NRW
+
+<!-- ![](https://www.youtube.com/watch?v=hvnhjrf1Ims) -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hvnhjrf1Ims" frameborder="0" allowfullscreen></iframe>
+
+Think about the following questions and jot down your thoughts.
+
+- **How would you develop an expert network for your decision analysis project?**
+- **What do you expect from your expert network?**
+
+<!-- ![](https://www.youtube.com/watch?v=hvnhjrf1Ims) -->
+
+```{r Question1-Calluna, echo=FALSE}
+question("What are the risks and uncertainties in Calluna production?",
+answer("Bud-flowering mutation"),
+answer("Water management", correct = TRUE),
+answer("Fungal infections", correct = TRUE),
+answer("Fertilizer management", correct = TRUE),
+answer("Customer demand"),
+answer("Fungal resistance to pesticides", correct = TRUE),
+  incorrect = "Watch [the video](https://youtu.be/hvnhjrf1Ims) and try again.",
+allow_retry = TRUE
+)
+```
+
+```{r Question2-Calluna, echo=FALSE}
+question("What steps did we use to apply decision analysis in Calluna production?",
+answer("Developing impact models", correct = TRUE),
+answer("Defining decisions together with experts using participatory workshops", correct = TRUE),
+answer("Using precise numbers instead of ranges"),
+answer("Calibration of experts", correct = TRUE),
+answer("Involving the local government"),
+answer("Using model simulations to calculate probability distributions, VIP scores and the EVPI", correct = TRUE),
+  incorrect = "Watch [the video](https://youtu.be/hvnhjrf1Ims) and try again.",
+allow_retry = TRUE
+)
+```
+
+```{r Question3-Calluna, echo=FALSE}
+question("How can you consider the fact that experts tend to make mistakes when estimating and judging?",
+answer("Confront the participants from your expert network with their biases", correct = TRUE),
+answer("Teach techniques that allow your participants to do better estimations (Calibration training)", correct = TRUE),
+answer("Apply techniques that allow both shy and confident participants to contribute to your decision analysis workshop", correct = TRUE),
+answer("Involve as many professors as possible"),
+answer("Experts in high job positions would do better estimations than Master students"),
+answer("Apply techniques that allow you to focus more detailed on certain findings instead of focusing on the whole picture"),
+answer("Use feedback from all participants to merge all models into a model that you can use as a template to program your code", correct = TRUE),
+  incorrect = "Watch [the video](https://youtu.be/hvnhjrf1Ims) and try again.",
+allow_retry = TRUE
+)
+```
+
+### Case study - Using plastic covers in sweet cherry orchards in Chile
+
+This video shows the study we conducted in Chile for assessing the profitability of implementing plastic covers in sweet cherry orchards to protect the fruits from hazardous weather events.
+
+<!-- ![]() syntax will also work but not in html -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kpsqzkeg53Y" frameborder="0" allowfullscreen></iframe>
+
+```{r question-sweet_cherry-1, echo=FALSE}
+question("How did the decision of implementing covers in sweet cherry orchards emerge in this study?",
+         answer("From a thorough literature review."),
+         answer("Based on the previous knowledge of the researchers."),
+         answer("From farmers' concerns regarding future weather scenarios.", correct = TRUE),
+         answer("From consumers asking for sweet cherries of good quality."),
+         incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.",
+         allow_retry = TRUE)
+```
+
+Based on the question above, think about and write down two to three positive and negative implications of using the method we used to define the decision.
+
+```{r question-sweet_cherry-2, echo=FALSE}
+question("Based on the Net Present Value, what would be the best recommendation for farmers in northern Chile?",
+         answer("Farmers should implement covers to improve yields."),
+         answer("NPV values suggest that implementing covers in northern Chile may be not necessary.", correct = TRUE),
+         answer("The results do not allow making a clear recomendation."),
+         incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.",
+         allow_retry = TRUE)
+```
+
+```{r questio-sweet_cherry-3, echo=FALSE}
+question("Considering the results of the EVPI analysis, farmers should spend more resources to gather additional information on:",
+         answer("Yield"),
+         answer("Market price"),
+         answer("Yield lost to low firmness", correct = TRUE),
+         incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.",
+         allow_retry = TRUE)
+```
+
 ### Group discussion reading:
 
 This week you will read @shepherd_development_2015. One of the groups will present the results of this reading.

@@ -2,8 +2,8 @@ Week ,Date,Materials,Assignment
 1,"Wednesday, April 14, 2021",[Group Work Overview](#tools),Install R and Rstudio
 2,"Wednesday, April 21, 2021",[Using R and RStudio](#r_rstudio),Share R scripts (part 1)
 3,"Wednesday, April 28, 2021",[Using R and RStudio continued](#rstudio_continued),Share R scripts (part 2)
-4,"Wednesday, May 5, 2021",[Using git and Github](#github_git),Start a Github repo
-5,"Wednesday, May 12, 2021",[Using RMarkdown](#rmarkdown),Create Rmarkdown file
+4,"Wednesday, May 5, 2021",[Using RMarkdown](#rmarkdown),Create Rmarkdown file
+5,"Wednesday, May 12, 2021",[Using git and Github](#github_git),Start a Github repo
 6,"Wednesday, May 19, 2021",[Model Programming](#model_programming),Share R scripts (part 3)
 7,"Wednesday, May 26, 2021",[R Package decisionSupport](#decisionSupport),Share initial model
 8,"Wednesday, June 2, 2021",[Calibration Training](#calibration),Calibration tests (short forms)
