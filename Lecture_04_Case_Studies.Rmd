@@ -1,9 +1,17 @@
 ## Lecture 4: Decision Analysis Case Studies {#case_studies}
 <!-- reference with [Decision Analysis Case Studies](#case_studies) -->
 
+Welcome to lecture 4 of **Decision Analysis and Forecasting for Agricultural Development**. In this lecture we will follow three case studies and use the `#lecture-04-case-studes` Slack channel and Zoom meeting to follow up. This will allow us all to have a chance to see your progress, provide feedback. As always, your engagement and sharing is appreciated. It will be encouraging to others to see activity from colleagues. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_2]%20Decision%20Analysis%20Lecture) or the course tutor.
+
+Please take a few minutes to watch these short videos and do the associated exercises before our meeting.
+
+### Introduction
+
 The following videos introduce some decision analysis case studies. Please watch the videos and answer the questions that follow. 
 
 ### Decision analysis case - Water for Wajir
+
+The city of Wajir in Northern Kenya has lacks a reliable supply of clean drinking water and sanitation. To improve the situation, plans are being considered to construct a water pipeline from Habaswein over 100 km away [@luedeling_water_2014; @luedeling_fresh_2015]. Watch the following video to learn more. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/imQ1Gn-E7wQ" frameborder="0" allowfullscreen></iframe>
 
@@ -44,6 +52,8 @@ allow_retry = TRUE
 
 ### Decision analysis case - Calluna production in NRW
 
+Heather growers and other stakeholders in North Rhine-Westphalia, Germany are looking for sustainable options to manage disease outbreaks. @ruett_model-based_2020 worked with these farmers to model the impacts of changing disease management practices and to generate comprehensive forecasts of net returns. Watch the following video to learn more. 
+
 <!-- ![](https://www.youtube.com/watch?v=hvnhjrf1Ims) -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hvnhjrf1Ims" frameborder="0" allowfullscreen></iframe>
@@ -82,7 +92,7 @@ allow_retry = TRUE
 ```
 
 ```{r Question3-Calluna, echo=FALSE}
-question("How can you consider the fact that experts tend to make mistakes when estimating and judging?",
+question("How can we overcome the tendency of experts to make mistakes when generating estimates and making judgements?",
 answer("Confront the participants from your expert network with their biases", correct = TRUE),
 answer("Teach techniques that allow your participants to do better estimations (Calibration training)", correct = TRUE),
 answer("Apply techniques that allow both shy and confident participants to contribute to your decision analysis workshop", correct = TRUE),
@@ -95,9 +105,9 @@ allow_retry = TRUE
 )
 ```
 
-### Case study - Using plastic covers in sweet cherry orchards in Chile
+### Case study - Plastic covers in sweet cherry orchards in Chile
 
-This video shows the study we conducted in Chile for assessing the profitability of implementing plastic covers in sweet cherry orchards to protect the fruits from hazardous weather events.
+This video shows the study rojas_adapting_2021 conducted in Chile for assessing the profitability of implementing plastic covers in sweet cherry orchards to protect the fruits from hazardous weather events. 
 
 <!-- ![]() syntax will also work but not in html -->
 
@@ -132,6 +142,8 @@ question("Considering the results of the EVPI analysis, farmers should spend mor
          incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.",
          allow_retry = TRUE)
 ```
+
+The data and scripts for this study are also available online [@fernandez_data_2021]. 
 
 ### Group discussion reading:
 
