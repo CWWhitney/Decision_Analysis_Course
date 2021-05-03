@@ -105,9 +105,11 @@ allow_retry = TRUE
 )
 ```
 
+The data and scripts for this study are available in this [zenodo repository]( http://doi.org/10.5281/zenodo.4637259) [@ruett_data_2021]. 
+
 ### Case study - Plastic covers in sweet cherry orchards in Chile
 
-This video shows the study rojas_adapting_2021 conducted in Chile for assessing the profitability of implementing plastic covers in sweet cherry orchards to protect the fruits from hazardous weather events. 
+This video shows the study @rojas_adapting_2021 conducted in Chile for assessing the profitability of implementing plastic covers in sweet cherry orchards to protect the fruits from hazardous weather events. 
 
 <!-- ![]() syntax will also work but not in html -->
 
