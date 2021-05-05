@@ -11,6 +11,10 @@ To see an example of the result we will be aiming to create see the paper by @do
 
 The first step in getting ready for the work of this course is to install and run [R](https://www.r-project.org/) [@R-base] and [RStudio](https://rstudio.com/). 
 
+![](images/Rlogo.png){width=1in}
+
+![](images/rstudio-hex.png){width=1in}
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WT3tKlzCZgo" frameborder="0" allowfullscreen></iframe>
 
 For some expert advice on how to name and organize your projects and files please scroll through Danielle Navarro's  [Project Structure](https://slides.djnavarro.net/project-structure/#24) slides.
