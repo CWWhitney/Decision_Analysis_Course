@@ -26,6 +26,9 @@ library(tidyverse)
 
 # load the data
 stakeholder <- read.csv("data/stakeholder.csv")
+
+# suppress warnings
+options(warn = - 1) 
 ```
 
 ```{r, warning=FALSE, include = FALSE}
