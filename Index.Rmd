@@ -59,10 +59,10 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_04_RMarkdown.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_05_Participatory_Methods.Rmd"} -->
-<!-- ``` -->
-<!-- ```{r child="Seminar_05_Git_Github.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_05_Participatory_Methods.Rmd"}
+```
+```{r child="Seminar_05_Git_Github.Rmd"}
+```
 
 <!-- ```{r child="Lecture_06_Decision_Models.Rmd"} -->
 <!-- ``` -->

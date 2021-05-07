@@ -9,13 +9,43 @@ Now we look at the programming version control environment [git](https://git-scm
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/S98XJTyIVaY" frameborder="0" allowfullscreen></iframe>
 
--	Step 1 is to start simple with own repository only and work on it alone. For the first part of this course we expect you to keep a working document in git and to share this with us through that platform.
+Install Git & join Github (if you have not already):
 
--	STEP 2 is to start to collaborate on something in git. For the latter part of this course you will work in collective repository and work together to generate the final working document.
+- install Git
+<small>https://git-scm.com/downloads</small>
+
+- join Github
+<small>https://github.com/</small>
+
+Some useful tips on getting these running from our friends 
+
+- University of Zurich
+<small>http://www.geo.uzh.ch/microsite/reproducible_research/post/rr-rstudio-git/</small>
+
+- Nathan Stephens, a very helpful R blogger  
+<small>https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN</small>
+
+Start simple with your own repository only and work on it alone. Soon you will start to collaborate on something in git. For the project part of this course your team will work in a collective repository and work together to generate the final working project model and report.
+
+### Sharing html files
+
+We can use the options from `htmlpreview.github.io` to show the results of any of our html output work that is stored in our git repository. 
+
+To do that just preface the path for the html file with `http://htmlpreview.github.io/?`. 
+
+For example the slides for this seminar can be found in the `CWWhitney/teaching_git` repository. 
+
+The full path is: `https://github.com/CWWhitney/teaching_git/blob/master/R_Git_GitHub.html` 
+
+and the link to this to be viewed directly as a web page is: http://htmlpreview.github.io/?https://github.com/CWWhitney/teaching_git/blob/master/R_Git_GitHub.html
 
 ### Further Reading 
 
--	Happy Git with R by Jenny Bryan (https://happygitwithr.com/)
+-	[Happy Git with R by Jenny Bryan](https://happygitwithr.com/)
 
--	Git game (for learning about branch management): https://learngitbranching.js.org/
+-	[Git game for learning about branch management](https://learngitbranching.js.org/)
+
+- [Best practices in git from datree.io](https://www.datree.io/resources/github-best-practices)
+
+- [Best practices for using Git from deepsource.io](https://deepsource.io/blog/git-best-practices/). Note that we break rule number five when we share the html files in the git repository. That can be our secret. 
 

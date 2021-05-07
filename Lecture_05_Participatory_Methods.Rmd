@@ -1,6 +1,59 @@
 ## Lecture 5: Participatory Methods For Qualitative Model Development {#participatory_methods}
 <!-- [Participatory methods](#participatory_methods) -->
 
+### Participatory methods
+
+The following video outlines some of the tools that can be used in participatory modeling. Watch the video and answer the questions that follow. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X2ZjG6o7u3o" frameborder="0" allowfullscreen></iframe>
+
+
+```{r participatory-methods-01, echo=FALSE}
+question("Which of these is considered a modeling principle in decision analysis?",
+  answer("Incorporate all important aspects into models", correct = TRUE),
+  answer("Build models primarily based on data from expirements and measurements"),
+  answer("Model system using all sources of information, including local and expert knowledge", correct = TRUE),
+  answer("Explicitly consider uncertainties about inputs, processes and outputs", correct = TRUE),
+  incorrect = "Watch [the video](https://youtu.be/X2ZjG6o7u3o).",
+allow_retry = TRUE
+)
+```
+
+
+<!-- Future question: Why might it be useful to think about 'the fox and the hedgehog' when hosting participatory model building workshops?" -->
+
+### Stakeholder management
+
+The following video covers some definitions, methods and tools and a case study related to stakeholder management in decision analysis. Please watch the videos and answer the questions that follow. These will be helpful in determining which tools/techniques you might use to identify stakeholders in your decision analysis process.
+
+<!-- THis will also work, but not in html ![](https://youtu.be/Xax-JxlmQf0) -->
+
+<!-- Note that the youtube link needs to begin with https://www.youtube.com/embed/ -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xax-JxlmQf0" frameborder="0" allowfullscreen></iframe>
+
+```{r question-stakeholder-management-01, echo=FALSE}
+question("Which of these entities do you think could be a stakeholder?",
+  answer("Individuals", correct = TRUE),
+  answer("Groups", correct = TRUE),
+  answer("Non-living entities like forests", correct = TRUE),
+ answer("None of these could be a stakeholder"),
+  incorrect = "Watch [the video](https://youtu.be/Xax-JxlmQf0) at slide 6 and try again.",
+allow_retry = TRUE
+)
+```
+
+
+```{r question-stakeholder-management-02, echo=FALSE}
+question("What could you do if there are too many experts identified?",
+answer("Keep them all"),
+answer("Randomly select a few"),
+answer("Use criteria to categorize them and select a  representative group", correct = TRUE),
+  incorrect = "Watch [the video](https://youtu.be/Xax-JxlmQf0) and try again.",
+allow_retry = TRUE
+)
+```
+
 ### Group discussion reading: 
 
 - Luedeling, Eike, and Keith Shepherd. “[Decision-Focused Agricultural Research](https://www.thesolutionsjournal.com/article/decision-focused-agricultural-research/).” Solutions 7, no. 5 (2016): 46–54.
@@ -8,3 +61,5 @@
 ### Further Reading 
 
 -	[Liberating Structures](http://www.liberatingstructures.com/) by Keith McCandless (and others)
+
+- Reed, M. S. et al. (2009) ‘Who's in and why? A typology of stakeholder analysis methods for natural resource management’, Journal of Environmental Management, 90(5), pp. 1933–1949. doi: 10.1016/j.jenvman.2009.01.001.
