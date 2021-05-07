@@ -16,17 +16,27 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(rmarkdown)
+library(decisionSupport)
+library(ggplot2)
+library(ggrepel)
+library(ggthemes)
 library(learnr)
+library(rmarkdown)
 library(tidyverse)
+
+# load the data
+stakeholder <- read.csv("data/stakeholder.csv")
 ```
 
 ```{r, warning=FALSE, include = FALSE}
 #Automatically write R package citation entries to a .bib file
 knitr::write_bib(c(.packages(), 
-                   'rmarkdown', 
+                   'decisionSupport', 
+                   'ggplot2',
+                   'ggrepel',
+                   'ggthemes',
                    'learnr',
-                   'decisionSupport',
+                   'rmarkdown',
                    'tidyverse'), 'bib/packages.bib')
 ```
 

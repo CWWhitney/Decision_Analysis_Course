@@ -54,6 +54,44 @@ allow_retry = TRUE
 )
 ```
 
+### Bonus: Plot the stakeholder analysis in R
+
+Plot stakeholders' experience, availability and expertise in decision analysis with the `ggplot2` `ggrepel` `ggthemes` libraries [@R-ggplot2; @R-ggrepel; @R-ggthemes]. Use the stakeholder data set from our git repository. To run this on your machine, save [this raw csv file](https://raw.githubusercontent.com/CWWhitney/Decision_Analysis_Course/main/data/stakeholder.csv) as `.csv` to your local RProj directory.  Then use `stakeholder<-read.csv("stakeholder.csv")` to load the data to your R environment and save it as `stakeholder`. 
+
+```{r stakeholder-management-01, exercise=TRUE}
+
+ggplot(data = stakeholder, aes(x=Experience, 
+                               y=Availability, 
+                               label =stakeholders, 
+                               color=Expertise)) + 
+  geom_point(aes(shape=Gender)) +
+  xlab("Relevant Experiences") +
+  
+ #label names of stakeholders and expand space to show full names
+  scale_x_continuous(labels = paste(seq(0, 5, by = 1)), 
+                     breaks = seq(0,5, by = 1), 
+                     limits = c(0, 5),
+                     expand = c(0,1)) +
+  scale_y_continuous(labels = paste(seq(0, 5, by = 1)), 
+                     breaks = seq(0,5, by = 1), 
+                     limits = c(0, 5),
+                     expand = c(0,1)) +
+  theme(plot.margin = unit(c(1,1,1,1), "cm")) +
+  
+# Create line to categorize stakeholders
+  geom_hline(yintercept=2.5, color="white", size=2) +
+  geom_vline(xintercept=2.5, color="white", size=2) +
+
+# Show all names of overlapped values
+  geom_text_repel(box.padding = 0.3, max.overlaps = Inf, size = 3) +
+  annotate("text", label = "Potential core experts",
+    x = 4.5, y = 3.2, size = 5, colour = "grey48") +
+  annotate("text", label = "Resource persons",
+           x = 4.5, y = 0.25, size = 5, colour = "grey48")
+```
+
+Learn more about using names and [overlapped values](https://ggrepel.slowkow.com/articles/examples.html).
+
 ### Group discussion reading: 
 
 - Luedeling, Eike, and Keith Shepherd. “[Decision-Focused Agricultural Research](https://www.thesolutionsjournal.com/article/decision-focused-agricultural-research/).” Solutions 7, no. 5 (2016): 46–54.
