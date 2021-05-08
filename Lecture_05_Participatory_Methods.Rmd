@@ -60,12 +60,12 @@ Plot stakeholders' experience, availability and expertise in decision analysis w
 
 ```{r stakeholder-management-01, exercise=TRUE}
 
-ggplot(data = stakeholder, aes(x=Experience, 
-                               y=Availability, 
-                               label =stakeholders, 
-                               color=Expertise)) + 
+ggplot(data = stakeholder, aes(x = Experience, 
+                               y = Availability, 
+                               label = stakeholders, 
+                               color = Expertise)) + 
   geom_point(aes(shape=Gender)) +
-  xlab("Relevant Experiences") +
+  xlab("Relevant Experience") +
   
  #label names of stakeholders and expand space to show full names
   scale_x_continuous(labels = paste(seq(0, 5, by = 1)), 
@@ -86,9 +86,9 @@ ggplot(data = stakeholder, aes(x=Experience,
 # Show all names of overlapped values
   geom_text_repel(box.padding = 0.3, max.overlaps = Inf, size = 3) +
   annotate("text", label = "Potential core experts",
-    x = 4.5, y = 3.2, size = 5, colour = "grey48") +
+    x = 4.5, y = 3.2, size = 5, color = "grey48") +
   annotate("text", label = "Resource persons",
-           x = 4.5, y = 0.25, size = 5, colour = "grey48")
+           x = 4.5, y = 0.25, size = 5, color = "grey48")
 ```
 
 Learn more about using names and [overlapped values](https://ggrepel.slowkow.com/articles/examples.html).
