@@ -7,6 +7,7 @@ logo: "images/decisionSupport_hex_sticker.png"
 bibliography: 
   - bib/references.bib
   - bib/packages.bib
+csl: elsevier-harvard.csl
 output: 
   learnr::tutorial:
 runtime: shiny_prerendered
