@@ -39,7 +39,7 @@ The full path is: `https://github.com/CWWhitney/teaching_git/blob/master/R_Git_G
 
 and the link to this to be viewed directly as a web page is: http://htmlpreview.github.io/?https://github.com/CWWhitney/teaching_git/blob/master/R_Git_GitHub.html
 
-### Further Reading 
+### Bonus: Further Reading 
 
 -	[Happy Git with R by Jenny Bryan](https://happygitwithr.com/)
 
@@ -49,5 +49,8 @@ and the link to this to be viewed directly as a web page is: http://htmlpreview.
 
 -	[Git game for learning about branch management](https://learngitbranching.js.org/)
 
+Watch the 'What is GitHub' video from the GitHub developers
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w3jLJU7DT5E" frameborder="0" allowfullscreen></iframe>
 
 
