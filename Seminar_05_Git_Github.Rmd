@@ -25,9 +25,9 @@ Some useful tips on getting these running from our friends
 - Nathan Stephens, a very helpful R blogger  
 <small>https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN</small>
 
-Start simple with your own repository only and work on it alone. Soon you will start to collaborate on something in git. For the project part of this course your team will work in a collective repository and work together to generate the final working project model and report.
+Start simple with your own repository only and work on it alone. Share your profile and link to a repository you made in the Slack channel for this seminar. Soon you will start to collaborate on something in git. For the project part of this course your team will work in a collective repository and work together to generate the final working project model and report.
 
-### Sharing html files
+### Bonus: Sharing html files
 
 We can use the options from `htmlpreview.github.io` to show the results of any of our html output work that is stored in our git repository. 
 
