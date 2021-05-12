@@ -7,7 +7,7 @@ Welcome to the sixth seminar of **Decision Analysis and Forecasting for Agricult
 
 Here we can explore some of the packages that we commonly use in `R`. The main package that out team uses for simulations is the `decisionSupport`. 
 
-## decisionSupport
+### decisionSupport
 
 In order to use the standard tools for running these models in the R environment we need to load the `decisionSupport` library. To get this on your machine you will need to use the `install.packages` function, i.e. `install.packages("decisionSupport")`. 
 
@@ -15,7 +15,156 @@ In order to use the standard tools for running these models in the R environment
 library(decisionSupport)
 ```
 
-Let's take some time to walk through a vignette or two.
+### Plot
+
+In this example, we show how we can transform one of the simplest impact pathways into code for estimating profit distributions.
+
+We use the `mermaid` function from the `DiagrammeR` library to create a simple graphical impact pathway [@R-DiagrammeR].
+
+Add an additional cost to the graph called `Management cost`. 
+
+```{r graph-mermaid, exercise=TRUE}
+mermaid("graph LR
+        Y(Yield)-->I(Income); linkStyle 0 stroke:green, stroke-width:1.5px
+        M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:1.5px
+        I-->F(Final result); linkStyle 2 stroke: green, stroke-width:1.5px
+        CL(Labor cost)-->F; linkStyle 3 stroke: red, stroke-width:1.5px")
+```
+
+```{r graph-mermaid-solution}
+mermaid("graph LR
+        Y(Yield)-->I(Income); linkStyle 0 stroke:green, stroke-width:1.5px
+        M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:1.5px
+        I-->F(Final result); linkStyle 2 stroke: green, stroke-width:1.5px
+        CL(Labor cost)-->F; linkStyle 3 stroke: red, stroke-width:1.5px
+        CM(Management cost)-->F; linkStyle 4 stroke: red, stroke-width:1.5px")
+```
+
+The `LR` argument in the `mermaid` function specifies that the plot will go from left to right. Try and change this to `TD`. 
+
+Use the `style` options in `mermaid` to change the arrow widths to `2px` and the node colors to red for costs and green for benefits. You will need to break the line and put the `linkStyle` on a new line to add the color to the node. 
+
+```{r graph-mermaid-direction, exercise=TRUE}
+mermaid("graph LR
+        Y(Yield)-->I(Income); linkStyle 0 stroke:green, stroke-width:1px
+        M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:1px
+        I-->F(Final result); linkStyle 2 stroke: green, stroke-width:1px
+        CL(Labor cost)-->F; linkStyle 3 stroke: red, stroke-width:1px
+        CM(Management cost)-->F; linkStyle 4 stroke: red, stroke-width:1px")
+```
+
+```{r graph-mermaid-direction-solution}
+mermaid("graph TB
+        Y(Yield)-->I(Income); style I fill:green
+        linkStyle 0 stroke:green, stroke-width:2px
+        M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:2px
+        I-->F(Final result); linkStyle 2 stroke: green, stroke-width:2px
+        CL(Labor cost)-->F; style CL fill:red
+        linkStyle 3 stroke: red, stroke-width:2px
+        CM(Management cost)-->F; style CM fill:red
+        linkStyle 4 stroke: red, stroke-width:2px")
+```
+
+Here we generate an input table to feed the model function. Update this with your new management cost variable in the graphical impact pathway. Call your new variable `"Management_cost"`, make the lower bound `100` and the upper bound `2000`, make the distribution `"posnorm"`, make the label `"Management cost (USD/ha)"` and make the description `"Management costs in a normal season"`.
+
+```{r input_table, exercise=TRUE}
+input_estimates <- data.frame(variable = c("Yield", "Market_price", "Labor_cost"),
+                    lower = c(6000, 3, 500),
+                    median = NA,
+                    upper = c(14000, 8, 1000),
+                    distribution = c("posnorm", "posnorm", "posnorm"),
+                    label = c("Yield (kg/ha)", "Price (USD/kg)", "Labor cost (USD/ha)"),
+                    Description = c("Yield in a sweet cherry farm under normal conditions",
+                                    "Price of sweet cherry in a normal season",
+                                    "Labor costs in a normal season"))
+
+input_estimates
+```
+
+```{r input_table-solution}
+input_estimates <- data.frame(variable = c("Yield", "Market_price", "Labor_cost", "Management_cost"),
+                    lower = c(6000, 3, 500, 100),
+                    median = NA,
+                    upper = c(14000, 8, 1000, 2000),
+                    distribution = c("posnorm", "posnorm", "posnorm", "posnorm"),
+                    label = c("Yield (kg/ha)", "Price (USD/kg)", "Labor cost (USD/ha)", "Management cost (USD/ha)"),
+                    Description = c("Yield in a sweet cherry farm under normal conditions",
+                                    "Price of sweet cherry in a normal season",
+                                    "Labor costs in a normal season", 
+                                    "Management costs in a normal season"))
+
+input_estimates
+```
+
+Implement a model function that describes the graphical impact pathway. Add a new line of code that summarizes the `Labor_cost` and `Management_cost` into `overall_costs`, then subtract these from the `income` to calculate `final_result`. 
+
+```{r chile-model, exercise=TRUE}
+
+model_function <- function(){
+  
+  # Estimate the income in a normal season
+  income <- Yield * Market_price
+  
+  # Estimate the final results from the model
+  final_result <- income - Labor_cost
+  
+  # Generate the list of outputs from the Monte Carlo simulation
+  return(list(final_result = final_result))
+}
+
+# Run the Monte Carlo simulation using the model function
+mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
+                              model_function = model_function,
+                              numberOfModelRuns = 10e4,
+                              functionSyntax = "plainNames")
+
+```
+
+```{r chile-model-solution}
+
+model_function <- function(){
+  
+  # Estimate the income in a normal season
+  income <- Yield * Market_price
+  
+  overall_costs <- Labor_cost + Management_cost
+    
+  # Estimate the final results from the model
+  final_result <- income - overall_costs
+  
+  # Generate the list of outputs from the Monte Carlo simulation
+  return(list(final_result = final_result))
+}
+
+# Run the Monte Carlo simulation using the model function
+mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
+                              model_function = model_function,
+                              numberOfModelRuns = 10e4,
+                              functionSyntax = "plainNames")
+
+```
+
+Here we show the results of a Monte Carlo simulation (10,000 model runs) for estimating the profits in sweet cherry orchards. 
+
+Change the plot to a histogram by using the `method` argument in the `plot_distributions()` function. 
+
+```{r plot_distribution, exercise=TRUE}
+plot_distributions(mcSimulation_object = mc_simulation,
+                   vars = "final_result",
+                   method = "boxplot_density",
+                   old_names = "final_result",
+                   new_names = "Outcome distribution for profits")
+```
+
+
+
+```{r plot_distribution-solution}
+plot_distributions(mcSimulation_object = mc_simulation,
+                   vars = "final_result",
+                   method = "hist_simple_overlay",
+                   old_names = "final_result",
+                   new_names = "Outcome distribution for profits")
+```
 
 ### Create a simple function
 
