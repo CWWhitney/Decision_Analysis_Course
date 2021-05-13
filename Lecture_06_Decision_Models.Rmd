@@ -3,23 +3,55 @@
 
 Welcome to lecture 6 of **Decision Analysis and Forecasting for Agricultural Development**. We will walk through brief examples and offer the scripts. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_3]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-- Making a solid business case for the model before programming
+Decision-makers often wish to have a quantitative basis for their decisions. However, there is often no ‘hard data’ for many important variables, which can paralyze decision-making processes or lead decision-makers to conclude that large research efforts are needed before a decision can be made. That is, many variables decision makers must consider cannot be precisely quantified, at least not without unreasonable effort. The major objective of (prescriptive) decision analysis is to support decision-making processes faced with this problem. Following the principles of Decision Analysis can allow us to make forecasts of decision outcomes without precise numbers, as long as probability distributions describing the possible values for all variables can be estimated. 
 
-- Step1. Start simple i.e. with a skateboard … then move on to other steps
+The `decisionSupport` package implements this as a Monte Carlo simulation, which generates a large number of plausible system outcomes, based on random numbers for each input variable that are drawn from user-specified probability distributions. This approach is useful for determining whether a clearly preferable course of action can be delineated based on the present state of knowledge without the need for further information. If the distribution of predicted system outcomes does not imply a clearly preferable decision option, variables identified as carrying decision-relevant uncertainty can then be targeted by decision-supporting research. This approach is explained in more detail below and in the [model programming seminar](#model_programming).
 
-!['Skateboard, Bike, Car'](images/Model_stages_car_analogy.png) [From MetaLab](https://twitter.com/metalab) 
+In this portion of the course we hope to introduce you to the methods and inspire you to follow a few important guidelines in the process of model building. One of the key aspects of model building has to do with making a solid business case for the model before programming. 
 
-Causal model / diagram / Impact pathway / Theory of change
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bViPWX8_G4A" frameborder="0" allowfullscreen></iframe>
 
-## Brief examples
- 
- - Vietnam @do_decision_2020
- - Uganda @whitney_probabilistic_2018-1
- - Calluna @ruett_model-based_2020
- 
+Another important guideline is to start simple then move on to other steps. This ensures that you always have a working model at each of the steps in the process, i.e. starting with a skateboard rather than a car part as in this example from [MetaLab](https://twitter.com/metalab).
+
+!['Skateboard, Bike, Car'](images/Model_stages_car_analogy.png)
+
+<!-- Causal model / diagram / Impact pathway / Theory of change -->
+
+### Controlled burns in conifer forests
+
+The `mcSimulation` function from the `decisionSupport` package can be applied to conduct decision analysis [@R-decisionSupport]. The function requires three inputs:
+
+1. a `model_function` that predicts decision outcomes based on the variables named in a separate data table. This R function is customized by the user to address a particular decision problem to provide the decision analysis model.  
+1. an `estimate` of the joint probability distribution of the input variables. This can be read from a csv file and calculated with the estimate_read_csv function.input table (in .csv format) specifying the names and probability distributions for all variables used in the decision model. These distributions aim to represent the full range of possible values for each component of the model.  
+1. `numberOfModelRuns`	indicating the number of times to run the model function.
+
+These inputs are provided as arguments to the `mcSimulation` function, which conducts a Monte Carlo analysis with repeated model runs based on probability distributions for all uncertain variables. The data table and model are customized to fit the particulars of a specific decision.
+
+### Example – Controlled burning for ecological conservation in forests of the American West
+
+The ecology of the conifer forests of the American west is largely shaped by wildfires. Many ecologists recommend regular and low-intensity burns to manage the build-up of combustible understory materials (shrubs, fallen branches). However, not all municipalities or regions implement these practices. Failure to follow the recommended controlled burning regime may lead to the build-up of fire stock and increase the severity of wildfires. Such wildfires have destroyed many conifer forest ecosystems of the Western United States in the recent past.
+
+Here, we provide a simple example (in annotated R code) of how the `decisionSupport` package can be used to inform a decision process. The example provided simulates the decision of forest managers to use controlled fires in conifer forests vs. running the risk of severe fire. 
+
+### Input table
+
+To support the model building process we design an input table `wildfire_input_table.csv` containing some of the basic values for the analysis. This table contains all the variables used in the model. Their distributions are described by 90% confidence intervals, which are specified by lower (5% quantile) and upper (95% quantile) bounds, as well as the shape of the distribution. This example uses four different distributions:
+
+1.	`const` – a constant value
+1.	`norm` – a normal distribution
+1.	`tnorm_0_1` – a truncated normal distribution that can only have values between 0 and 1 (useful for probabilities; note that 0 and 1, as well as numbers outside this interval are not permitted as inputs)
+1.	`posnorm` – a normal distribution truncated at 0 (only positive values allowed)
+
+For a full list of possible distributions, type `?random.estimate1d ` in your R console. When specifying confidence intervals for truncated distributions, note that approximately 5% of the random values should ‘fit’ within the truncation interval on either side. If there is not enough space, the function will generate a warning (usually it will still work, but the inputs may not look like you intended them to).
+
+Default distributions are provided for all variables, but feel free to make adjustments by editing the .csv file in a spreadsheet program. You can download the [wildfire_input_table.csv]()
+
 ### Group discussion reading:
 
-This week you will read @savage_flaw_2009 [Chapter 1](https://hbr.org/2002/11/the-flaw-of-averages). 
+This week you will be reading @meadows_thinking_2009, Part One: System Structures and Behavior 'One. The Basics'. 
 
--Savage, Sam L., and Harry M. Markowitz. The Flaw of Averages: Why We Underestimate Risk in the Face of Uncertainty. John Wiley & Sons, 2009.
+### Bonus: More examples
  
+ - @do_decision_2020 'Decision analysis of agroforestry options reveals adoption risks for resource-poor farmers'.
+ - @whitney_probabilistic_2018-1 'Probabilistic decision tools for determining impacts of agricultural development policy on household nutrition'.
+ - @ruett_model-based_2020 'Model-based evaluation of management options in ornamental plant nurseries'

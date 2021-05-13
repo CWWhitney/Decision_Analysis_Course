@@ -1,13 +1,9 @@
 ## Seminar 6: Model Programming {#model_programming} 
 <!-- reference with [Model programming](#model_programming) -->
 
-Welcome to the sixth seminar of **Decision Analysis and Forecasting for Agricultural Development**. In this seminar we will look into different options for model programming in the `R` programming environment. if you have not already installed `R` and `RStudio` you may want to go back to the [Using R and Rstudio](#r_rstudio) seminar and follow the instructions there. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to the sixth seminar of **Decision Analysis and Forecasting for Agricultural Development**. In this seminar we will look into different options for model programming in the `R` programming environment [@R-base]. In case you have not already installed `R` and `RStudio` you may want to go back to the [Using R and Rstudio](#r_rstudio) seminar and follow the instructions there. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-<!-- Causal model / diagram / Impact pathway / Theory of change -->
-
-Here we can explore some of the packages that we commonly use in `R`. The main package that our team uses for simulations is the `decisionSupport`. 
-
-In order to use the standard tools for running these models in the R environment we need to load the `decisionSupport` library. To get this on your machine you will need to use the `install.packages` function, i.e. `install.packages("decisionSupport")`. 
+We have just learned about the processes and methods of generating [Decision Models](#decision_models). Now we can explore some of the packages that we commonly use in `R`. The main package that our team uses for simulations is the `decisionSupport`. In order to use the standard tools for running these models in the R environment you will need to load the `decisionSupport` library. Use the `install.packages` function, i.e. `install.packages("decisionSupport")`. 
 
 ```{r}
 library(decisionSupport)
@@ -63,6 +59,10 @@ mermaid("graph TB
         linkStyle 4 stroke: red, stroke-width:2px")
 ```
 
+That was just one of many ways to generate impact pathways. To see more options see the [Decision Analysis Overview](#decision_analysis) lecture materials. 
+
+### Building the model 
+
 Here we generate an input table to feed the model function. Update this with your new management cost variable in the graphical impact pathway. Call your new variable `"Management_cost"`, make the lower bound `100` and the upper bound `2000`, make the distribution `"posnorm"`, make the label `"Management cost (USD/ha)"` and make the description `"Management costs in a normal season"`.
 
 ```{r input_table, exercise=TRUE}
@@ -94,7 +94,7 @@ input_estimates <- data.frame(variable = c("Yield", "Market_price", "Labor_cost"
 input_estimates
 ```
 
-Implement a model function that describes the graphical impact pathway. Add a new line of code that summarizes the `Labor_cost` and `Management_cost` into `overall_costs`, then subtract these from the `income` to calculate `final_result`. 
+Here we use the `mcSimulation` function from the `decisionSupport` package to implement a model [@R-decisionSupport]. The model function that describes the graphical impact pathway. Add a new line of code that summarizes the `Labor_cost` and `Management_cost` into `overall_costs`, then subtract these from the `income` to calculate `final_result`. 
 
 ```{r chile-model, exercise=TRUE}
 
@@ -214,10 +214,13 @@ mcSimulation(estimate = as.estimate(example_decision_inputs),
 ```
 
 
-Bonus: Run through the vignettes on the Comprehensive R Archive Network (CRAN) page for [decisionSupport](https://cran.r-project.org/web/packages/decisionSupport/index.html).
+### Bonus: Vignettes etc. 
+
+Run through the vignettes on the Comprehensive R Archive Network (CRAN) page for [decisionSupport](https://cran.r-project.org/web/packages/decisionSupport/index.html).
+
+Listen to this interview on Alex Andorra's podcast 'Learning Bayesian Statistics', [How to use Bayes in industry, with Colin Carroll](https://www.learnbayesstats.com/episode/3-2-how-to-use-bayes-in-industry-with-colin-carroll)
 
 <!-- -	RSTAN, Other modeling programs - Betancourt’s work (selected blogs, talks, git repos, Stan, HCMC) -->
 <!-- -	Yihui (markdown etc.) -->
 <!-- -	Assignments:  -->
-<!-- -	1. “episode 3, with Colin Carroll. He mentions Tom Rainforth's thesis.”  – Alex Andorra (about his interview with Colin Carol on the podcast Learning Bayesian Statistics) -->
 <!-- -	Rainforth, Tom. “Automating Inference, Learning, and Design Using Probabilistic Programming.” Doctor of Philosophy, University of Oxford, 2017. -->

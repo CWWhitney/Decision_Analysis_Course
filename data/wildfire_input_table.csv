@@ -1,0 +1,18 @@
+variable,lower,median,upper,distribution,label
+n_years,20,,20,const,Number of years to run the simulation (yr)
+area_size,1,,1,const,Area size (ha)
+initial_biomass,20,,100,posnorm,Initial combustible biomass (Mg/ha)
+biomass_after_burning,10,,20,posnorm,Combustible biomass level after controlled burning (Mg/ha)
+biomass_after_severe_fire,2,,5,posnorm,Combustible biomass level after severe fire (Mg/ha)
+biomass_after_mild_fire,10,,20,posnorm,Combustible biomass level after mild fire (Mg/ha)
+bio_accu_rate_contr_burn,10,,40,posnorm,Combustible biomass accumulation rate with controlled burning (%)
+bio_accu_rate_no_contr_burn,40,,100,posnorm,Combustible biomass accumulation rate without controlled burning  (%)
+severity_threshold,50,,120,posnorm,Accumulated combustible biomass that leads to severe fire (Mg/ha)
+discount_rate,2,,6,posnorm,Discount rate
+controlled_burning_frequency,2,,2,const,Interval between burns
+fire_risk,0.1,,0.25,tnorm_0_1,Fire risk (chance of fire outbreak per year)
+cost_of_controlled_burning,300,,1000,posnorm,Cost of controlled burning (USD/ha)
+env_imp_severe_fire,1000,,6000,posnorm,Environmental impact of severe fire (USD/ha)
+env_imp_mild_fire,-500,,800,norm,Environmental impact of mild fire (USD/ha)
+fire_fighting_cost_mild_fire,100,,500,posnorm,Fire fighting cost for mild fire (USD)
+fire_fighting_cost_severe_fire,1000,,10000,posnorm,Fire fighting cost for severe fire (USD)
