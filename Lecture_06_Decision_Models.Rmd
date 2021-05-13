@@ -3,7 +3,7 @@
 
 Welcome to lecture 6 of **Decision Analysis and Forecasting for Agricultural Development**. We will walk through brief examples and offer the scripts. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_3]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-Decision-makers often wish to have a quantitative basis for their decisions. However, there is often no ‘hard data’ for many important variables, which can paralyze decision-making processes or lead decision-makers to conclude that large research efforts are needed before a decision can be made. That is, many variables decision makers must consider cannot be precisely quantified, at least not without unreasonable effort. The major objective of (prescriptive) decision analysis is to support decision-making processes faced with this problem. Following the principles of Decision Analysis can allow us to make forecasts of decision outcomes without precise numbers, as long as probability distributions describing the possible values for all variables can be estimated. 
+Decision-makers often wish to have a quantitative basis for their decisions. However,‘hard data’ is often missing or unattainable for many important variables, which can paralyze the decision-making processes or lead decision-makers to conclude that large research efforts are needed before a decision can be made. That is, many variables decision makers must consider cannot be precisely quantified, at least not without unreasonable effort. The major objective of (prescriptive) decision analysis is to support decision-making processes faced with this problem. Following the principles of Decision Analysis can allow us to make forecasts of decision outcomes without precise numbers, as long as probability distributions describing the possible values for all variables can be estimated. 
 
 The `decisionSupport` package implements this as a Monte Carlo simulation, which generates a large number of plausible system outcomes, based on random numbers for each input variable that are drawn from user-specified probability distributions. This approach is useful for determining whether a clearly preferable course of action can be delineated based on the present state of knowledge without the need for further information. If the distribution of predicted system outcomes does not imply a clearly preferable decision option, variables identified as carrying decision-relevant uncertainty can then be targeted by decision-supporting research. This approach is explained in more detail below and in the [model programming seminar](#model_programming).
 
@@ -17,25 +17,26 @@ Another important guideline is to start simple then move on to other steps. This
 
 <!-- Causal model / diagram / Impact pathway / Theory of change -->
 
-### Controlled burns in conifer forests
+Before you start developing the decision model (an R function), open R and download and load the ```decisionSupport``` package.
+
+```
+install.packages("decisionSupport")
+library(decisionSupport)
+```
+
+### Creating a model
 
 The `mcSimulation` function from the `decisionSupport` package can be applied to conduct decision analysis [@R-decisionSupport]. The function requires three inputs:
 
+1. an `estimate` of the joint probability distribution of the input variables. This can be read from a csv file and calculated with the estimate_read_csv function.input table (in .csv format) specifying the names and probability distributions for all variables used in the decision model. These are then converted to the correct format with the `as.estimate` function. These distributions aim to represent the full range of possible values for each component of the model.  
 1. a `model_function` that predicts decision outcomes based on the variables named in a separate data table. This R function is customized by the user to address a particular decision problem to provide the decision analysis model.  
-1. an `estimate` of the joint probability distribution of the input variables. This can be read from a csv file and calculated with the estimate_read_csv function.input table (in .csv format) specifying the names and probability distributions for all variables used in the decision model. These distributions aim to represent the full range of possible values for each component of the model.  
 1. `numberOfModelRuns`	indicating the number of times to run the model function.
 
 These inputs are provided as arguments to the `mcSimulation` function, which conducts a Monte Carlo analysis with repeated model runs based on probability distributions for all uncertain variables. The data table and model are customized to fit the particulars of a specific decision.
 
-### Example – Controlled burning for ecological conservation in forests of the American West
+### The `estimate`
 
-The ecology of the conifer forests of the American west is largely shaped by wildfires. Many ecologists recommend regular and low-intensity burns to manage the build-up of combustible understory materials (shrubs, fallen branches). However, not all municipalities or regions implement these practices. Failure to follow the recommended controlled burning regime may lead to the build-up of fire stock and increase the severity of wildfires. Such wildfires have destroyed many conifer forest ecosystems of the Western United States in the recent past.
-
-Here, we provide a simple example (in annotated R code) of how the `decisionSupport` package can be used to inform a decision process. The example provided simulates the decision of forest managers to use controlled fires in conifer forests vs. running the risk of severe fire. 
-
-### Input table
-
-To support the model building process we design an input table `wildfire_input_table.csv` containing some of the basic values for the analysis. This table contains all the variables used in the model. Their distributions are described by 90% confidence intervals, which are specified by lower (5% quantile) and upper (95% quantile) bounds, as well as the shape of the distribution. This example uses four different distributions:
+To support the model building process we design an input table to store the `estimate` values. The table is stored locally as `example_decision_inputs.csv` and contains many of the basic values for the analysis. This table contains all the input variables used in the model. Their distributions are described by 90% confidence intervals, which are specified by lower (5% quantile) and upper (95% quantile) bounds, as well as the shape of the distribution. This example uses four different distributions:
 
 1.	`const` – a constant value
 1.	`norm` – a normal distribution
@@ -44,7 +45,59 @@ To support the model building process we design an input table `wildfire_input_t
 
 For a full list of possible distributions, type `?random.estimate1d ` in your R console. When specifying confidence intervals for truncated distributions, note that approximately 5% of the random values should ‘fit’ within the truncation interval on either side. If there is not enough space, the function will generate a warning (usually it will still work, but the inputs may not look like you intended them to).
 
-Default distributions are provided for all variables, but feel free to make adjustments by editing the .csv file in a spreadsheet program. You can download the [wildfire_input_table.csv]()
+We have provided default distributions for all the variables used here, but feel free to make adjustments by editing the .csv file in a spreadsheet program. You can download the ['example_decision_inputs.csv'](https://raw.githubusercontent.com/CWWhitney/Decision_Analysis_Course/main/data/example_decision_inputs.csv) here and save it as a .csv file locally. In this example it is stored in the 'data' folder. Once you have downloaded the data you can run `example_decision_inputs <- read.csv("data/example_decision_inputs.csv")` in your console to make the following code work on your machine.  
+
+### The `model_function`
+
+The decision model is coded as an R function which takes in the variables provided in the data table and generates a model output, such as the Net Present Value. 
+
+### Create a simple function
+
+Here we define a simple model function that we call `example_decision_model`. It calculates profits as benefits minus costs and arbitrarily adds 500 to the result to arrive at `final_profits`. This simple example shows us how to use `function`, the results of which can be applied elsewhere. The most basic way to apply the library is to use the `mcSimulation` function to run our `example_decision_model`. Here we run it 100 times using inputs from the `example_decision_inputs.csv` table.  
+
+Update this model by adding `additional_benefits`, one of the variables from the `example_decision_inputs` data, to replace the 500 that was arbitrarily added to the profit and changing the number of model runs to 1,000.
+
+```{r example_decision_model, exercise=TRUE}
+
+example_decision_model <- function(x, varnames)
+{
+  profit <- benefits-costs
+  
+  final_profits <- profit + 500
+  
+  return(final_profits)
+  
+}
+
+mcSimulation(estimate = as.estimate(example_decision_inputs),
+                              model_function = example_decision_model,
+                              numberOfModelRuns = 100,
+                              functionSyntax = "plainNames")
+
+```
+
+```{r example_decision_model-solution}
+
+example_decision_model <- function(x, varnames)
+{
+  profit <- benefits-costs
+  
+  final_profits <- profit + additional_benefits
+  
+  return(final_profits)
+  
+}
+
+mcSimulation(estimate = as.estimate(example_decision_inputs),
+                              model_function = example_decision_model,
+                              numberOfModelRuns = 1000,
+                              functionSyntax = "plainNames")
+
+```
+
+Note that this example was constructed for clarity and not for speed. Speed considerations are not very important when we only run a process once, but since in the Monte Carlo simulation all delays are multiplied by `numberOfModelRuns` (e.g. 10,000), they can sometimes add up to substantial time losses. Even with highly efficient coding, Monte Carlo simulations can take a while when dealing with complex decisions.
+
+But good things are sometimes worth waiting for, and we hope that we were able to demonstrate that adding a probabilistic element to a simulation adds substantial value to an analysis. Mostly, it avoids making spurious assumptions, replacing uncertainty with ‘best bets’ and producing results that do not reflect the knowledge limitations that make decision-making so challenging. The objective of the `decisionSupport` package is to make it easier for analysts to produce decision-relevant information that adequately reflects the imperfect nature of the information we usually have. More information on all this is contained in the [decisionSupport manual](https://cran.r-project.org/web/packages/decisionSupport/decisionSupport.pdf), especially under `welfareDecisionAnalysis`.
 
 ### Group discussion reading:
 

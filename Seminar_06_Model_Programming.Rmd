@@ -165,54 +165,24 @@ plot_distributions(mcSimulation_object = mc_simulation,
                    old_names = "final_result",
                    new_names = "Outcome distribution for profits")
 ```
-### Create a simple function
 
-Here we define a simple model function that we call `example_decision_model`. It calculates profits as benefits minus costs and arbitrarily adds 500 to the result to arrive at `final_profits`. This simple example shows us how to use `function`, the results of which can be applied elsewhere. The most basic way to apply the library is to use the `mcSimulation` function to run our `example_decision_model`. Here we run it 1,000 times using inputs from a comma separated values file we named ['example_decision_inputs.csv'](https://raw.githubusercontent.com/CWWhitney/Decision_Analysis_Course/main/data/example_decision_inputs.csv) and stored in the 'data' folder. 
+### Testing with `make_variables`
 
-Run this model using `additional_benefits` from the `example_decision_inputs` data to replace the 500 that was arbitrarily added to the profit.
-
-```{r example_decision_model, exercise=TRUE}
-
-example_decision_model <- function(x, varnames)
-{
-  profit <- benefits-costs
-  
-  final_profits <- profit + 500
-  
-  return(final_profits)
-  
-}
-
-example_decision_inputs <- read.csv("data/example_decision_inputs.csv")
-
-mcSimulation(estimate = as.estimate(example_decision_inputs),
-                              model_function = example_decision_model,
-                              numberOfModelRuns = 1000,
-                              functionSyntax = "plainNames")
+You could simply start further developing the decision model now, but since the model function will be designed to make use of variables provided to it externally (random numbers drawn according to the information in the data table), you’ will need to define sample values for all variables, if you want to test pieces of the function code during the development process. This can be done manually, but it's more easily accomplished with the following helper function `make_variables`:
 
 ```
-
-```{r example_decision_model-solution}
-
-example_decision_model <- function(x, varnames)
-{
-  profit <- benefits-costs
-  
-  final_profits <- profit + additional_benefits
-  
-  return(final_profits)
-  
+make_variables<-function(est,n=1)
+{ x<-random(rho=est, n=n)
+    for(i in colnames(x)) assign(i,
+     as.numeric(x[1,i]),envir=.GlobalEnv)
 }
-
-example_decision_inputs <- read.csv("data/example_decision_inputs.csv")
-
-mcSimulation(estimate = as.estimate(example_decision_inputs),
-                              model_function = example_decision_model,
-                              numberOfModelRuns = 1000,
-                              functionSyntax = "plainNames")
-
 ```
 
+(This function is not included in the ```decisionSupport``` package, because it places the desired variables in the global environment. This is not allowed for functions included in packages on R’s download servers.)
+
+Applying `make_variables` to the data table (with default setting `n=1`) generates one random number for each variable, which then allows you to easily test code you are developing. Try running this function on your code as you build the decision function. 
+
+Taken together, all these outputs allow an evaluation of the plausible range of net benefits that can be expected to arise from the decision. They provide a recommendation on which decision option should be preferred, and an appraisal of which input variables are responsible for most of the variation in the output distribution.
 
 ### Bonus: Vignettes etc. 
 

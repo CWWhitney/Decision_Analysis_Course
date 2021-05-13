@@ -29,6 +29,7 @@ library(tidyverse)
 stakeholder <- read.csv("data/stakeholder.csv")
 input_estimates <- read.csv("data/input_estimates.csv")
 example_decision_inputs <- read.csv("data/example_decision_inputs.csv")
+
 # create the model function
 model_function <- function(){
   income <- Yield * Market_price
@@ -94,8 +95,8 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_05_Git_Github.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_06_Decision_Models.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_06_Decision_Models.Rmd"}
+```
 ```{r child="Seminar_06_Model_Programming.Rmd"}
 ```
 
