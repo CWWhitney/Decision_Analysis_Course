@@ -55,7 +55,7 @@ The decision model is coded as an R function which takes in the variables provid
 
 Here we define a simple model function that we call `example_decision_model`. It calculates profits as benefits minus costs and arbitrarily adds 500 to the result to arrive at `final_profits`. This simple example shows us how to use `function`, the results of which can be applied elsewhere. The most basic way to apply the library is to use the `mcSimulation` function to run our `example_decision_model`. Here we run it 100 times using inputs from the `example_decision_inputs.csv` table.  
 
-Update this model by adding `additional_benefits`, one of the variables from the `example_decision_inputs` data, to replace the 500 that was arbitrarily added to the profit and changing the number of model runs to 1,000.
+Update this model by adding `additional_benefits`, one of the variables from the `example_decision_inputs` data, to replace the 500 that was arbitrarily added to the profit and changing the number of model runs to 700.
 
 ```{r example_decision_model, exercise=TRUE}
 
@@ -90,7 +90,7 @@ example_decision_model <- function(x, varnames)
 
 mcSimulation(estimate = as.estimate(example_decision_inputs),
                               model_function = example_decision_model,
-                              numberOfModelRuns = 1000,
+                              numberOfModelRuns = 700,
                               functionSyntax = "plainNames")
 
 ```

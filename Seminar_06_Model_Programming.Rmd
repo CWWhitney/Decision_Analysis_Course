@@ -113,7 +113,7 @@ model_function <- function(){
 # Run the Monte Carlo simulation using the model function
 chile_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
                               model_function = model_function,
-                              numberOfModelRuns = 1000,
+                              numberOfModelRuns = 800,
                               functionSyntax = "plainNames")
 
 chile_mc_simulation
@@ -139,7 +139,7 @@ model_function <- function(){
 # Run the Monte Carlo simulation using the model function
 chile_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
                               model_function = model_function,
-                              numberOfModelRuns = 1000,
+                              numberOfModelRuns = 800,
                               functionSyntax = "plainNames")
 
 chile_mc_simulation
@@ -151,7 +151,7 @@ Here we show the results of a Monte Carlo simulation (1,000 model runs) for esti
 Change the plot to a histogram by using the `method` argument in the `plot_distributions` function. 
 
 ```{r plot_distribution, exercise=TRUE}
-plot_distributions(mcSimulation_object = mc_simulation,
+plot_distributions(mcSimulation_object = chile_mc_simulation,
                    vars = "final_result",
                    method = "boxplot_density",
                    old_names = "final_result",
@@ -159,7 +159,7 @@ plot_distributions(mcSimulation_object = mc_simulation,
 ```
 
 ```{r plot_distribution-solution}
-plot_distributions(mcSimulation_object = mc_simulation,
+plot_distributions(mcSimulation_object = chile_mc_simulation,
                    vars = "final_result",
                    method = "hist_simple_overlay",
                    old_names = "final_result",
@@ -168,7 +168,7 @@ plot_distributions(mcSimulation_object = mc_simulation,
 
 ### Testing with `make_variables`
 
-You could simply start further developing the decision model now, but since the model function will be designed to make use of variables provided to it externally (random numbers drawn according to the information in the data table), you’ will need to define sample values for all variables, if you want to test pieces of the function code during the development process. This can be done manually, but it's more easily accomplished with the following helper function `make_variables`:
+You could simply start further developing the decision model now, but since the model function will be designed to make use of variables provided to it externally (random numbers drawn according to the information in the data table), you will need to define sample values for all variables, if you want to test pieces of the function code during the development process. This can be done manually, but it's more easily accomplished with the following helper function `make_variables`:
 
 ```
 make_variables<-function(est,n=1)
@@ -178,15 +178,17 @@ make_variables<-function(est,n=1)
 }
 ```
 
-(This function is not included in the ```decisionSupport``` package, because it places the desired variables in the global environment. This is not allowed for functions included in packages on R’s download servers.)
+This function is not included in the ```decisionSupport``` package, because it places the desired variables in the global environment. This is not allowed for functions included in packages on R’s download servers.
 
 Applying `make_variables` to the data table (with default setting `n=1`) generates one random number for each variable, which then allows you to easily test code you are developing. Try running this function on your code as you build the decision function. 
 
+### Next steps
+
+Once you have followed and run the code above on your machine it is a good time to look through the outline of these procedures in the `decisionSupport` vignette on the CRAN called ['Applying the mcSimulation function in decisionSupport'](https://cran.r-project.org/web/packages/decisionSupport/vignettes/example_decision_function.html) [@fernandez_applying_2021]. This will show you how the tools can be applied for comparing decision outcomes. It runs a Monte-Carlo-based selection of sedimentation management strategies for a reservoir in the Upper Volta River Basin of Burkina Faso [@lanzanova_improving_2019]. Tip: If you want to play with this code you can find the [Rmarkdown file](https://raw.githubusercontent.com/eikeluedeling/decisionSupport/master/vignettes/example_decision_function.Rmd) and the [estimate table](https://raw.githubusercontent.com/eikeluedeling/decisionSupport/master/vignettes/example_input_table.csv) in the `decisionSupport` GitHub repository. 
+
 Taken together, all these outputs allow an evaluation of the plausible range of net benefits that can be expected to arise from the decision. They provide a recommendation on which decision option should be preferred, and an appraisal of which input variables are responsible for most of the variation in the output distribution.
 
-### Bonus: Vignettes etc. 
-
-Run through the vignettes on the Comprehensive R Archive Network (CRAN) page for [decisionSupport](https://cran.r-project.org/web/packages/decisionSupport/index.html).
+### Bonus: Bayesian modeling application 
 
 Listen to this interview on Alex Andorra's podcast 'Learning Bayesian Statistics', [How to use Bayes in industry, with Colin Carroll](https://www.learnbayesstats.com/episode/3-2-how-to-use-bayes-in-industry-with-colin-carroll)
 
