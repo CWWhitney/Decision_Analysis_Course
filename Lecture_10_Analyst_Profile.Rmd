@@ -1,2 +1,8 @@
 ## Lecture 10: Profile of a Decision Analyst {#analyst_profile}
 <!-- reference with [Profile of a decision analyst](#analyst_profile) -->
+
+### Reading 
+
+This week you will read @savage_flaw_2009 [Chapter 1](https://hbr.org/2002/11/the-flaw-of-averages). 
+
+-Savage, Sam L., and Harry M. Markowitz. The Flaw of Averages: Why We Underestimate Risk in the Face of Uncertainty. John Wiley & Sons, 2009.
