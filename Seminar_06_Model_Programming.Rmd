@@ -19,7 +19,7 @@ In this example, we show how we can transform a simple impact pathway into code 
 
 We use the `mermaid` function from the `DiagrammeR` library to create the graphical impact pathway [@R-DiagrammeR].
 
-Add an additional cost to the graph called `Management cost`. 
+Run the code below and then add an additional cost to the graph called `Management cost` (try to do this on your own but feel free to look to the `solution` to see one way to do this). 
 
 ```{r graph-mermaid, exercise=TRUE}
 mermaid("graph LR
@@ -167,9 +167,12 @@ plot_distributions(mcSimulation_object = mc_simulation,
 ```
 ### Create a simple function
 
-Here we define a simple model function that we call `example_decision_model`. It calculates profits as benefits minus costs and arbitrarily adds 500 to the result to arrive at 'final_profits'. This simple example shows us how to use `function`, the results of which can be applied elsewhere. The most basic way to apply the library is to use the `decisionSupport` function to run our `example_decision_model` function. Here we run it 1,000 times using inputs from a comma separated values file we named 'example_decision_inputs.csv' and stored in the 'data' folder. We also store the outputs of the model in a folder we are calling 'outputs'. 
+Here we define a simple model function that we call `example_decision_model`. It calculates profits as benefits minus costs and arbitrarily adds 500 to the result to arrive at `final_profits`. This simple example shows us how to use `function`, the results of which can be applied elsewhere. The most basic way to apply the library is to use the `mcSimulation` function to run our `example_decision_model`. Here we run it 1,000 times using inputs from a comma separated values file we named ['example_decision_inputs.csv'](https://raw.githubusercontent.com/CWWhitney/Decision_Analysis_Course/main/data/example_decision_inputs.csv) and stored in the 'data' folder. 
+
+Run this model using `additional_benefits` from the `example_decision_inputs` data to replace the 500 that was arbitrarily added to the profit.
 
 ```{r example_decision_model, exercise=TRUE}
+
 example_decision_model <- function(x, varnames)
 {
   profit <- benefits-costs
@@ -180,14 +183,35 @@ example_decision_model <- function(x, varnames)
   
 }
 
-example_mc_simulation <- mcSimulation(estimate = as.estimate(example_decision_inputs),
+example_decision_inputs <- read.csv("data/example_decision_inputs.csv")
+
+mcSimulation(estimate = as.estimate(example_decision_inputs),
                               model_function = example_decision_model,
                               numberOfModelRuns = 1000,
                               functionSyntax = "plainNames")
 
-example_mc_simulation
 ```
 
+```{r example_decision_model-solution}
+
+example_decision_model <- function(x, varnames)
+{
+  profit <- benefits-costs
+  
+  final_profits <- profit + additional_benefits
+  
+  return(final_profits)
+  
+}
+
+example_decision_inputs <- read.csv("data/example_decision_inputs.csv")
+
+mcSimulation(estimate = as.estimate(example_decision_inputs),
+                              model_function = example_decision_model,
+                              numberOfModelRuns = 1000,
+                              functionSyntax = "plainNames")
+
+```
 
 
 Bonus: Run through the vignettes on the Comprehensive R Archive Network (CRAN) page for [decisionSupport](https://cran.r-project.org/web/packages/decisionSupport/index.html).
