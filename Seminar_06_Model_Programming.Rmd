@@ -146,7 +146,7 @@ chile_mc_simulation
 
 ```
 
-Here we show the results of a Monte Carlo simulation (1,000 model runs) for estimating the profits in sweet cherry orchards. 
+Here we show the results of a Monte Carlo simulation (800 model runs) for estimating the profits in sweet cherry orchards. 
 
 Change the plot to a histogram by using the `method` argument in the `plot_distributions` function. 
 

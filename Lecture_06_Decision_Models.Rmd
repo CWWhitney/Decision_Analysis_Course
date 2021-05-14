@@ -17,7 +17,7 @@ Another important guideline is to start simple then move on to other steps. This
 
 <!-- Causal model / diagram / Impact pathway / Theory of change -->
 
-Before you start developing the decision model (an R function), open R and download and load the ```decisionSupport``` package.
+Before you start developing the decision model (an R function), open R and download and load the `decisionSupport` package.
 
 ```
 install.packages("decisionSupport")
@@ -28,7 +28,7 @@ library(decisionSupport)
 
 The `mcSimulation` function from the `decisionSupport` package can be applied to conduct decision analysis [@R-decisionSupport]. The function requires three inputs:
 
-1. an `estimate` of the joint probability distribution of the input variables. This can be read from a csv file and calculated with the estimate_read_csv function.input table (in .csv format) specifying the names and probability distributions for all variables used in the decision model. These are then converted to the correct format with the `as.estimate` function. These distributions aim to represent the full range of possible values for each component of the model.  
+1. an `estimate` of the joint probability distribution of the input variables. These specify the names and probability distributions for all variables used in the decision model. These distributions aim to represent the full range of possible values for each component of the model. 
 1. a `model_function` that predicts decision outcomes based on the variables named in a separate data table. This R function is customized by the user to address a particular decision problem to provide the decision analysis model.  
 1. `numberOfModelRuns`	indicating the number of times to run the model function.
 
@@ -45,7 +45,8 @@ To support the model building process we design an input table to store the `est
 
 For a full list of possible distributions, type `?random.estimate1d ` in your R console. When specifying confidence intervals for truncated distributions, note that approximately 5% of the random values should ‘fit’ within the truncation interval on either side. If there is not enough space, the function will generate a warning (usually it will still work, but the inputs may not look like you intended them to).
 
-We have provided default distributions for all the variables used here, but feel free to make adjustments by editing the .csv file in a spreadsheet program. You can download the ['example_decision_inputs.csv'](https://raw.githubusercontent.com/CWWhitney/Decision_Analysis_Course/main/data/example_decision_inputs.csv) here and save it as a .csv file locally (from your web browser try: File > Save page as). In this example it is stored in the 'data' folder. Once you have downloaded the data you can run `example_decision_inputs <- read.csv("data/example_decision_inputs.csv")` in your console to make the following code work on your machine.  
+We have provided default distributions for all the variables used here, but feel free to make adjustments by editing the .csv file in a spreadsheet program. You can download the ['example_decision_inputs.csv'](https://raw.githubusercontent.com/CWWhitney/Decision_Analysis_Course/main/data/example_decision_inputs.csv) here and save it as a .csv file locally (from your web browser try: File > Save page as). In this example it is stored in the 'data' folder. Once you have downloaded the data you can run `example_decision_inputs <- read.csv("data/example_decision_inputs.csv")` in your console to make the following code work on your machine. Note that the input table that can be written or read from a .csv file and calculated with the `estimate_read_csv` function or converted to the correct format with the `as.estimate` function. 
+
 ### The `model_function`
 
 The decision model is coded as an R function which takes in the variables provided in the data table and generates a model output, such as the Net Present Value. 
@@ -94,15 +95,17 @@ mcSimulation(estimate = as.estimate(example_decision_inputs),
 
 ```
 
+Now we have a simulation of possible outcomes. In the [model programming seminar](#model_programming) this week we will go into more detail on the options for assessment of the results of simulations and on visualization of the results. 
+
 Note that this example was constructed for clarity and not for speed. Speed considerations are not very important when we only run a process once, but since in the Monte Carlo simulation all delays are multiplied by `numberOfModelRuns` (e.g. 10,000), they can sometimes add up to substantial time losses. Even with highly efficient coding, Monte Carlo simulations can take a while when dealing with complex decisions.
 
-But good things are sometimes worth waiting for, and we hope that we were able to demonstrate that adding a probabilistic element to a simulation adds substantial value to an analysis. Mostly, it avoids making spurious assumptions, replacing uncertainty with ‘best bets’ and producing results that do not reflect the knowledge limitations that make decision-making so challenging. The objective of the `decisionSupport` package is to make it easier for analysts to produce decision-relevant information that adequately reflects the imperfect nature of the information we usually have. More information on all this is contained in the [decisionSupport manual](https://cran.r-project.org/web/packages/decisionSupport/decisionSupport.pdf), especially under `welfareDecisionAnalysis`.
+The objective of the procedures used in the `decisionSupport` package is to make it easier for analysts to produce decision-relevant information that adequately reflects the imperfect nature of the information we usually have. Adding  probabilistic elements to a simulation adds substantial value to an analysis. Mostly, it avoids making spurious assumptions, replacing uncertainty with ‘best bets’ and producing results that do not reflect the knowledge limitations that make decision-making so challenging. More information on all this is contained in the [decisionSupport manual](https://cran.r-project.org/web/packages/decisionSupport/decisionSupport.pdf), especially under `welfareDecisionAnalysis`.
 
 ### Group discussion reading:
 
 This week you will be reading @meadows_thinking_2009, Part One: System Structures and Behavior 'One. The Basics'. 
 
-### Bonus: More examples
+### Bonus: Further reading
  
  - @do_decision_2020 'Decision analysis of agroforestry options reveals adoption risks for resource-poor farmers'.
  - @whitney_probabilistic_2018-1 'Probabilistic decision tools for determining impacts of agricultural development policy on household nutrition'.

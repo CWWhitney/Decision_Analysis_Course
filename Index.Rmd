@@ -41,7 +41,7 @@ model_function <- function(){
 # Run the Monte Carlo simulation using the model function
 chile_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
                               model_function = model_function,
-                              numberOfModelRuns = 1000,
+                              numberOfModelRuns = 800,
                               functionSyntax = "plainNames")
 
 # suppress warnings
