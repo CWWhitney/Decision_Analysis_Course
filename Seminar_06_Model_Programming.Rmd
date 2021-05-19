@@ -151,27 +151,31 @@ Here we show the results of a Monte Carlo simulation (800 model runs) for estima
 Change the plot to a histogram by using the `method` argument in the `plot_distributions` function. 
 
 ```{r plot_distribution, exercise=TRUE}
+
 plot_distributions(mcSimulation_object = chile_mc_simulation,
                    vars = "final_result",
                    method = "boxplot_density",
                    old_names = "final_result",
                    new_names = "Outcome distribution for profits")
+
 ```
 
 ```{r plot_distribution-solution}
+
 plot_distributions(mcSimulation_object = chile_mc_simulation,
                    vars = "final_result",
                    method = "hist_simple_overlay",
                    old_names = "final_result",
                    new_names = "Outcome distribution for profits")
+
 ```
 
 ### Testing with `make_variables`
 
 You could simply start further developing the decision model now, but since the model function will be designed to make use of variables provided to it externally (random numbers drawn according to the information in the data table), you will need to define sample values for all variables, if you want to test pieces of the function code during the development process. This can be done manually, but it's more easily accomplished with the following helper function `make_variables`:
 
-```
-make_variables<-function(est,n=1)
+```{r make_variables_function, exercise=TRUE}
+make_variables <- function(est,n=1)
 { x<-random(rho=est, n=n)
     for(i in colnames(x)) assign(i,
      as.numeric(x[1,i]),envir=.GlobalEnv)
@@ -180,7 +184,26 @@ make_variables<-function(est,n=1)
 
 This function is not included in the ```decisionSupport``` package, because it places the desired variables in the global environment. This is not allowed for functions included in packages on R’s download servers.
 
-Applying `make_variables` to the data table (with default setting `n=1`) generates one random number for each variable, which then allows you to easily test code you are developing. Try running this function on your code as you build the decision function. 
+Applying `make_variables` and `as.estimate` to the data table (with default setting `n=1`) generates one random number for each variable, which then allows you to easily test the code you are developing. Try running this function on your code as you build the decision function. This allows for testing the values within a model rather than running the full model.
+
+Run the `make_variables` and `as.estimate` on the `input_estimates` input table that we created and then calculate the result of `Labor_cost + Management_cost` goven a single random value for these variables. *Note that each time you run this code it generates a new random draw and produces a different number from within the range for the variables in the input table.*
+
+```{r make_variables, exercise=TRUE}
+
+make_variables(as.estimate(input_estimates))
+
+Market_price
+
+```
+
+```{r make_variables-solution}
+
+make_variables(as.estimate(input_estimates))
+
+Labor_cost + Management_cost
+
+```
+
 
 ### Next steps
 
