@@ -1,0 +1,7 @@
+## Seminar 8: Model forecasts {#forecast_seminar} 
+<!-- reference with [Model forecasts](#forecast_seminar) -->
+
+Welcome to eighth seminar of **Decision Analysis and Forecasting for Agricultural Development**. We will be working in this session to calibrate you. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
+
+### Reading
+
