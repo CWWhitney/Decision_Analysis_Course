@@ -22,8 +22,7 @@ Decisions in agriculture are often risky, meaning that decision makers have unce
 In this course, we will provide an overview of methods we can use to study agricultural development decisions and generate forecasts of decision outcomes. If you do not have a clear idea what that is you've come to the right place. This course was developed for MSc. students in [Crop Sciences](https://www.lf.uni-bonn.de/en/studying/master/npw) at the [University of Bonn](https://www.uni-bonn.de/startpage?set_language=en), but the materials are also intended for a general audience interested in applying these tools. The main parts of the course include:
 
 - [Introduction to Decision Analysis](#decision_analysis)
-- [Forecasting and cognitive biases](#biases)
-- [Calibration training](#calibration)
+- [Calibration training](#calibration_lecture)
 - [Participatory modeling building](#participatory_methods)
 - [Decision modeling in R](#model_programming)
 - Group project on decision analysis
