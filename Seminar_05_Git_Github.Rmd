@@ -14,6 +14,8 @@ Install Git & join Github (if you have not already):
 - install Git
 <small>https://git-scm.com/downloads</small>
 
+**Important note for Windows users**: when you download Git, it may be installed into your `Program Files` directory by default. This often causes issues later. The general recommendation is to choose a different directory for installing, i.e. `C:/Users/username/bin/`. Once Git is installed, open RStudio, and go to `Tools > Global Options`, select `Git/SVN`, and then enter or select the path for your Git executable.
+
 - join Github
 <small>https://github.com/</small>
 
