@@ -1,2 +1,2 @@
-## Seminar 9: Calibration Training (long form) {#calibration_long} 
-<!-- [Calibration continued](#calibration_long) -->
+## Seminar 9: Models and forecasts continued {#models_continued} 
+<!-- [Calibration continued](#models_continued) -->
