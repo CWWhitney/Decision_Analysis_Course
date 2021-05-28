@@ -15,7 +15,7 @@ question("What is the intention of decision analysts in measuring things?",
   answer("They want to get precise information."),
   answer("They follow what the research project leader tells them to do."),
  answer("They want to reduce their uncertainty.", correct = TRUE),
- answer("They are inspired by Douglas Hubbard and just measure anything."), 
+ answer("They are inspired by Douglas Hubbard to try and measure everything."), 
   incorrect = "Watch [the video](https://youtu.be/DYAv-LBZaIU) especially the part
  4:30-5:30 and try again.",
 allow_retry = TRUE
@@ -56,7 +56,7 @@ allow_retry = TRUE
 ```{r question-explaining-calibration-training-part-02-02, echo=FALSE}
 question("What is the meaning of 'Anchoring'?",
 answer("Achoring is the influence of multicolored wheels on estimates."),
-answer("Anchoring is what a ship is doing in the port and is unrelated to the calibration topic.", correct = TRUE),
+answer("Anchoring is specifically about ships and is unrelated to the calibration topic."),
 answer("Anchoring is a kind of bias that may influence you to give estimates around a value you have seen or heard, but is not necessarily related to the variable you are estimating.", correct = TRUE),
   incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.",
 allow_retry = TRUE
@@ -73,3 +73,5 @@ allow_retry = TRUE
 Watch the video and do the awareness test!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UfA3ivLK_tE" frameborder="0" allowfullscreen></iframe>
+
+Have a look at Terry Heick's [Cognitive Bias codex](https://www.teachthought.com/critical-thinking/the-cognitive-bias-codex-a-visual-of-180-cognitive-biases/). 

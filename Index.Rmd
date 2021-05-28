@@ -119,7 +119,7 @@ knitr::write_bib(c(.packages(),
 
 <!-- ```{r child="Lecture_09_Bayesian_Thinking.Rmd"} -->
 <!-- ``` -->
-<!-- ```{r child="Seminar_09_Calibration_long.Rmd"} -->
+<!-- ```{r child="Seminar_09_Cognitive_bias.Rmd"} -->
 <!-- ``` -->
 
 <!-- ```{r child="Lecture_10_Analyst_Profile.Rmd"} -->

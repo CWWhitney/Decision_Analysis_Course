@@ -6,6 +6,7 @@
 
 ### Expected Value of Perfect Information (EVPI) 
 
+<!-- Hoa's AF video -->
 <!-- Cory's EVPI video -->
 
 There is always some degree of uncertainty surrounding a decision, because there is always a chance that the decision turns out to be wrong. EVPI measures the expected cost of that uncertainty where access to perfect information can eliminate the possibility of making the wrong decision. We do this with a payoff matrix {\Rij} in which the row index {\i} describes a choice that must be made by the decision maker, while the column index {\j} describes a random variable that the decision maker does not yet have knowledge of, that has probability {\pj} of being in state {\j}. If the decision maker is to choose {\i} without knowing the value of {\j}, the best choice is the one that maximizes the expected value:
@@ -45,4 +46,4 @@ The input is a PLS model and the output is a set of column vectors equal in leng
 
 ### Group discussion reading: 
 
-- **Chapter 3** Tetlock, Philip E., and Dan Gardner. Superforecasting: The Art and Science of Prediction. New York, NY: Crown Publishers, 2015. 
+- Tetlock, Philip E., and Dan Gardner. Superforecasting: The Art and Science of Prediction. New York, NY: Crown Publishers, 2015.(Chapter 1. An Optimistic Skeptic) 
