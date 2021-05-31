@@ -1,0 +1,4 @@
+## Seminar 9: Model forecasts {#forecasts_seminar} 
+<!-- reference with [Model forecasts](#forecasts_seminar) -->
+
+<!-- Review and share cognitive biases -->
