@@ -3,7 +3,7 @@
 
 Welcome to the fourth seminar of **Decision Analysis and Forecasting for Agricultural Development**. All your programming and project work for this course should take place in the git environment and this seminar is intended to show you how to make that happen. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-### git and Github
+### Git and Github
 
 Now we look at the programming version control environment [git](https://git-scm.com/) and the interface [github](https://github.com/), which we use to share our scripts and changes to our work.
 
@@ -47,7 +47,7 @@ and the link to this to be viewed directly as a web page is: http://htmlpreview.
 
 - [Best practices in git from datree.io](https://www.datree.io/resources/github-best-practices)
 
-- [Best practices for using Git from deepsource.io](https://deepsource.io/blog/git-best-practices/). Note that we break rule number five when we share the html files in the git repository. That can be our secret. 
+- [Best practices for using Git from deepsource.io](https://deepsource.io/blog/git-best-practices/). Note that we break rule number five when we share the html files in the Git repository. That can be our secret. 
 
 -	[Git game for learning about branch management](https://learngitbranching.js.org/)
 

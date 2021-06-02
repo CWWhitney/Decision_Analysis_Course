@@ -7,7 +7,7 @@ RMarkdown: overview
 
 ![](images/RMarkdown.png){width=2in}
 
-Now let's check out [Rmarkdown](https://rmarkdown.rstudio.com/), a powerful tool that allows making fancy reports, websites etc. out of our R code. You're already looking at an example, by the way. This website was produced with Rmarkdown (and it wasn't hard at all)!
+Now let's check out [Rmarkdown](https://rmarkdown.rstudio.com/), a powerful tool that allows making fancy reports, websites etc. out of our R code (@R-rmarkdown). You're already looking at an example, by the way. This website was produced with Rmarkdown (and it wasn't hard at all)!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hh4wyP8tvkI" frameborder="0" allowfullscreen></iframe>
 
@@ -51,4 +51,8 @@ and library(`knitr`)
 
 ![](images/knit-logo.png)
 
-Now we're equipped with all the basic tools for this course. We'll start using them pretty soon. Throughout the course you'll find occasional references to your RMarkdown file. This is supposed to be produced with Rmarkdown, with subsequent versions of it stored on github.
+Now we're equipped with all the basic tools for this course. We'll start using them pretty soon. Throughout the course you'll find occasional references to your RMarkdown file. This is supposed to be produced with Rmarkdown, with subsequent versions of it stored on Github.
+
+### Bonus: Reuse chunk options
+
+In case of repeated formatting in different code chunks we can use the `knitr` `opts.label` option to reuse what we wrote and avoid repetition (@R-knitr). Following the [Don’t Repeat Yourself (DRY) principle](https://yihui.org/en/2021/05/knitr-reuse/).
