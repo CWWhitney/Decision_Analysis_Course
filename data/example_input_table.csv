@@ -1,0 +1,36 @@
+Description,label,variable,distribution,lower,median,upper
+,Audit cost (USD),intervention_mngmt_audit_cost,const,0,,0
+"Coefficient of variation, ratio of the standard deviation to the mean (a measure of relative variability).",coeff. Variation,var_CV,posnorm,5,,20
+,Communication cost (USD),intervention_communication_cost,posnorm,5000,,20000
+,cost of digging wells (USD),intervention_wells_cost,posnorm,20000,,80000
+,Cost of the nursery (USD),intervention_nursery_cost,posnorm,2000,,18000
+,Cost tech devices (USD),intervention_tech_devices_cost,posnorm,1000,,4800
+,Delay bef. P(blockage cleared)=0.5,intervention_strip_delay_of_time_until_chance_cleared_50percent,posnorm,4,,6
+,Delay in irrigable area halved D/S ,intervention_strip_delay_of_irrig_area_halved,posnorm,8,,20
+Discount rate (%),Discount rate (%),discount_rate,posnorm,1,,5
+,Equipment cost (USD),intervention_mngmt_oprt_cost,const,0,,0
+,Fruit area in ha ,intervention_fruit_area_ha,posnorm,1,,2
+,Maintenance cost (USD),maintenance_intervention_strips,posnorm,800,,7000
+,Monitoring cost (USD),intervention_mngmt_follow_cost,const,0,,0
+,Plantation cost (USD),intervention_adaptation_cost,posnorm,20000,,130000
+Livestock keepers profit (USD) per Tropical Livestock Unit. ,Profit per TLU (USD),profit_per_TLU,posnorm,40,,120
+,Profit per ton-fruit (USD),intervention_fruit_profit_USD_t,posnorm,100,,200
+,Profit per ton-rainfed crops (USD),intervention_rainfed_crop_profit_USD_t,posnorm,50,,200
+,Profit per ton-vegetable (USD),intervention_vegetable_profit_USD_t,posnorm,100,,200
+Years from the start o the implementation of the intervention to the end.,Project time horizon (years),n_years,const,5,,5
+,Rainfed crop area in ha,intervention_rainfed_crop_area_ha,posnorm,6,,8
+"Percentage risk that the necessary donors (local and national goverments, local NGOs) will not help with the implentation of the intervention strip intervention.",Risk donors non involv (%),intervention_NonDonorsInvolv,tnorm_0_1,0.04,,0.1
+"Percentage risk that the necessary institutions (local and national goverments, local NGOs) will not help with the implentation of the intervention strip intervention.",Risk instit. non involv (%),intervention_NonInstInvolv,tnorm_0_1,0.05,,0.15
+Percentage risk that a chosen intervention will be poorly designed.,Risk of bad design (%),BadDesign,tnorm_0_1,0.2,,0.5
+Percentage risk that a chosen intervention will be poorly managed.,Risk of bad maintenance (%),BadMaintenance,tnorm_0_1,0.2,,0.5
+Percentage risk that a natural hazard may occur.,Risk of natural hazard (%),nat_hazard,tnorm_0_1,0.1,,0.3
+Percentage risk that the communities surrounding the reservoir will not comply with requirements for intervention effectiveness.,Risk of non compliance (%),NonCompliance,tnorm_0_1,0.2,,0.5
+Percentage risk that the communities surrounding the reservoir will not help with the implentation of the intervention strip intervention.,Risk pop non involv (%),intervention_NonPopInvolv,tnorm_0_1,0.1,,0.3
+"Tropical Livestock Units that are kept in the reservoir area and, at least partly, dependent on reservoir water",Baseline TLU,TLU_no_intervention,posnorm,8700,,13000
+Percentage change (reduction or growth of population) in Tropical Livestock Units that are kept in the reservoir area if the intervention strips are implemented,TLU change with intervention (%),change_TLU_intervention_perc,norm,-0.1,,0.1
+,Training cost (USD),intervention_training_cost,posnorm,8000,,46000
+,Vegetable area in ha,intervention_vegetable_area_ha,posnorm,5,,7
+,Yields per ha-fruit (ton),intervention_fruit_yield_t_ha,posnorm,10,,30
+,Yields per ha-rainfed crops (ton),intervention_rainfed_crop_yield_t_ha,posnorm,1,,3
+,Yields per ha-vegetable (ton),intervention_vegetable_yield_t_ha,posnorm,5,,10
+,Zoning cost (USD),intervention_zoning_cost,posnorm,3000,,29000
