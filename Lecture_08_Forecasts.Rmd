@@ -1,48 +1,133 @@
 ## Lecture 8: Using Models to Create Forecasts {#forecasts}
 <!-- reference with [Forecasts](#forecasts) -->
 
+Welcome to lecture 8 of **Decision Analysis and Forecasting for Agricultural Development**. We will walk through brief examples and offer the scripts. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_3]%20Decision%20Analysis%20Lecture) or the course tutor.
+
+In this lecture we will revisit the model we built in the [Decision Models](#decision_models) lecture and the [Model programming](#model_programming) seminar to learn more about how to generate useful forecasts for communicating model results. We will implement the Monte Carlo simulation again. 
+
+In the [Model programming](#model_programming) seminar we generated a model. As a quick referesher change the plot from `boxplot_density` to `smooth_simple_overlay` by using the `method` argument in the `plot_distributions` function. 
+
+```{r forecasts_plot_distribution, exercise=TRUE}
+
+plot_distributions(mcSimulation_object = example_mc_simulation,
+                   vars = "final_result",
+                   method = "boxplot_density",
+                   old_names = "final_result",
+                   new_names = "Outcome distribution for profits")
+
+```
+
+```{r forecasts_plot_distribution-solution}
+
+plot_distributions(mcSimulation_object = example_mc_simulation,
+                   vars = "final_result",
+                   method = "smooth_simple_overlay",
+                   old_names = "final_result",
+                   new_names = "Outcome distribution for profits")
+
+```
+
 ### Making forecasts
 
+First let's look at a case study on agroforestry interventions in Northwest Vietnam [@do_decision_2020].
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FZfACcoX4O0" frameborder="0" allowfullscreen></iframe>
+
+```{r do-forecasts-question-1, echo=FALSE}
+question("How do probabilistic models differ from frequentist or deterministic models?",
+  answer("They contain more variables."),
+  answer("They do not have as broad a range of applicability across different domains of science."),
+  answer("Unlike deterministic models, probabilistic models can accept uncertainty as inputs.", correct = TRUE),
+  answer("Unlike deterministic models, probabilistic models can produce uncertain distributions as outputs.", correct = TRUE),
+  incorrect = "Watch [the talk](https://youtu.be/FZfACcoX4O0) and try again.",
+allow_retry = TRUE
+)
+```
+
+```{r do-forecasts-question-2, echo=FALSE}
+question("What are the steps in the proposed process for rational decision-making?",
+  answer("Gather empirical evidence and data and apply regression tools as part of an exploratory process to look for relationships. Then decide based on any relevant results."),
+  answer("Perform interviews and then decide based on the suggestion of experts."),
+  answer("Pool information, quantify uncertainty, produce assessments, then either measure where information value is high or take decision.", correct = TRUE),
+  incorrect = "Watch [the talk](https://youtu.be/FZfACcoX4O0) and try again.",
+allow_retry = TRUE
+)
+```
+
+```{r do-forecasts-question-3, echo=FALSE}
+question("Why was Projection to Latent Structure (PLS) analysis used in the study?",
+  answer("To generate a p-value for the reliability of the model results."),
+  answer("To perform sensitivity analysis.", correct = TRUE),
+  answer("To assess the sensitivity of the output with the many collinear model inputs using the Varible Importance in the Projection (VIP) score.", correct = TRUE),
+  incorrect = "Watch [the talk](https://youtu.be/FZfACcoX4O0) and try again.",
+allow_retry = TRUE
+)
+```
 
 ### Expected Value of Perfect Information (EVPI) 
 
-<!-- Hoa's AF video -->
 <!-- Cory's EVPI video -->
 
-There is always some degree of uncertainty surrounding a decision, because there is always a chance that the decision turns out to be wrong. EVPI measures the expected cost of that uncertainty where access to perfect information can eliminate the possibility of making the wrong decision. We do this with a payoff matrix {\Rij} in which the row index {\i} describes a choice that must be made by the decision maker, while the column index {\j} describes a random variable that the decision maker does not yet have knowledge of, that has probability {\pj} of being in state {\j}. If the decision maker is to choose {\i} without knowing the value of {\j}, the best choice is the one that maximizes the expected value:
+There is always some degree of uncertainty surrounding a decision, because there is always a chance that the decision turns out to be wrong. EVPI measures the expected cost of that uncertainty where hypothetical access to perfect information can eliminate the possibility of making the wrong decision. Please watch the following talk from the Fifth European Agroforestry Conference on defining research priorities in complex agroforestry systems [@schiffers_defining_2021] to see more about the application of value of information analysis. 
 
-{\displaystyle {\mbox{EMV}}=\max _{i}\sum _{j}p_{j}R_{ij}}{\displaystyle {\mbox{EMV}}=\max _{i}\sum _{j}p_{j}R_{ij}}
-where
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MlIetFhu87U" frameborder="0" allowfullscreen></iframe>
 
-{\displaystyle \sum _{j}p_{j}R_{ij}}{\displaystyle \sum _{j}p_{j}R_{ij}}
-is the expected payoff for action {\i} i.e. the expectation value, and
+```{r schiffers-forecasts-question-1, echo=FALSE}
+question("Why might it be useful to test for value of information?",
+  answer("To determine what to do now given current evidence.", correct = TRUE),
+  answer("To find out if we need more evidence.", correct = TRUE),
+  answer("To determine if we should reject the null hypothesis."),
+  answer("To find out what type of evidence we need and how much.", correct = TRUE),
+  answer("To determine if we should wait to get the evidence.", correct = TRUE),
+  incorrect = "Watch [the talk](https://youtu.be/MlIetFhu87U) and try again.",
+allow_retry = TRUE
+)
+```
 
-{\displaystyle {\mbox{EMV}}=\max _{i}}{\displaystyle {\mbox{EMV}}=\max _{i}}
-is choosing the maximum of these expectations for all available actions. On the other hand, with perfect knowledge of {\j}, the player may choose a value of {\i} that optimizes the expectation for that specific {\j}. Therefore, the expected value given perfect information is
+```{r schiffers-forecasts-question-2, echo=FALSE}
+question("Why do we calculate Expected Value of Perfect Information (EVPI)?",
+  answer("To help identify those variables for which more information would maximize the model output.", correct = TRUE),
+  answer("To define potential research priorities.", correct = TRUE),
+  answer("To determine how much money we can make by doing research."),
+  incorrect = "Watch [the talk](https://youtu.be/MlIetFhu87U) and try again.",
+allow_retry = TRUE
+)
+```
 
-{\displaystyle {\mbox{EV}}|{\mbox{PI}}=\sum _{j}p_{j}(\max _{i}R_{ij}),}{\displaystyle {\mbox{EV}}|{\mbox{PI}}=\sum _{j}p_{j}(\max _{i}R_{ij}),}
-where {\displaystyle p_{j}}p_{j} is the probability that the system is in state {\j}, and {\displaystyle R_{ij}}R_{ij} is the pay-off if one follows action {\i} while the system is in state {\j}. Here {\displaystyle (\max _{i}R_{ij}),}{\displaystyle (\max _{i}R_{ij}),} indicates the best choice of action {\i} for each state {\j}.
+```{r schiffers-forecasts-question-3, echo=FALSE}
+question("How is EVPI calculated?",
+  answer("It is the expected maximum value minus the expected value given perfect information."),
+  answer("It is the expected value given perfect information (before decision making)
+minus the expected maximum value.", correct = TRUE),
+  answer("It is the Varible Importance in the Projection (VIP) score multiplied by the number of variables in the model."),
+  incorrect = "Watch [the talk](https://youtu.be/MlIetFhu87U) and try again.",
+allow_retry = TRUE
+)
+```
+
+Technically we assess the possibility of making the wrong decision with a payoff matrix $Rij$ with the row index $i$ describing a choice and the column index $j$ describing a random variable that the decision maker does not yet have knowledge of, that has probability $pj$ of being in state $j$. If the decision maker has to choose $i$ without knowing the value of $j$, the best choice is the one that maximizes the expected value:
+
+${\mbox{EMV}}=\max _{i}\sum _{j}p_{j}R_{ij}$
+
+where $\sum _{j}p_{j}R_{ij}$ is the expected payoff for action $i$ i.e. the expectation value, and ${\mbox{EMV}}=\max _{i}$ is choosing the maximum of these expectations for all available actions. 
+
+However, with perfect knowledge of $j$, the decision maker would choose a value of $i$ that optimizes the expectation for that specific $j$. Therefore, the expected value given perfect information is
+
+${\mbox{EV}}|{\mbox{PI}}=\sum _{j}p_{j}(\max _{i}R_{ij})$
+
+where $p_{j}$ is the probability that the system is in state $j$, and $R_{ij}$ is the pay-off if one follows action $i$ while the system is in state $j$. Here $(\max_{i}R_{ij})$ indicates the best choice of action $i$ for each state $j$.
 
 The expected value of perfect information is the difference between these two quantities,
 
-{\displaystyle {\mbox{EVPI}}={\mbox{EV}}|{\mbox{PI}}-{\mbox{EMV}}.}{\displaystyle {\mbox{EVPI}}={\mbox{EV}}|{\mbox{PI}}-{\mbox{EMV}}.}
+${\mbox{EVPI}}={\mbox{EV}}|{\mbox{PI}}-{\mbox{EMV}}$
 
-This difference describes, in expectation, how much larger a value the player can hope to obtain by knowing j and picking the best i for that j, as compared to picking a value of i before j is known. Since EV|PI is necessarily greater than or equal to EMV, EVPI is always non-negative.
+This difference describes, in expectation, how much larger a value the decision maker can hope to obtain by knowing $j$ and picking the best $i$ for that $j$, as compared to picking a value of $i$ before $j$ is known. Since $EV|PI$ is necessarily greater than or equal to $EMV$, $EVPI$ is always non-negative.
 
 ### Projection to Latent Structures
 
-The general underlying model of multivariate PLS is
+Projection to Latent Structures (PLS), also sometimes known as Partial Least Squares regression is a modeling technique that can deal with multiple collinear dependent and independent variables. It can be used as another means to assess the outcomes of a Monte Carlo model. Variable Importance in Projection (VIP) scores estimate the importance of each variable in the projection used in a PLS mode. A variable with a VIP Score close to or greater than 1 (one) can be considered important in given model. The input is a PLS model and the output is a set of column vectors equal in length to the number of variables included in the model. Read more in ['A Simple Explanation of Partial Least Squares' by Kee Siong Ng](http://users.cecs.anu.edu.au/~kee/pls.pdf).
 
-{\displaystyle X=TP^{\mathrm {T} }+E}{\displaystyle X=TP^{\mathrm {T} }+E}
-{\displaystyle Y=UQ^{\mathrm {T} }+F}{\displaystyle Y=UQ^{\mathrm {T} }+F}
-
-where X is an {\displaystyle n\times m}n\times m matrix of predictors, Y is an {\displaystyle n\times p}n\times p matrix of responses; T and U are {\displaystyle n\times l}n \times l matrices that are, respectively, projections of X (the X score, component or factor matrix) and projections of Y (the Y scores); P and Q are, respectively, {\displaystyle m\times l}m \times l and {\displaystyle p\times l}p \times l orthogonal loading matrices; and matrices E and F are the error terms, assumed to be independent and identically distributed random normal variables. The decomposition of X and Y are made so as to maximize the covariance between T and U. Read more in ['A Simple Explanation of Partial Least Squares' by Kee Siong Ng](http://users.cecs.anu.edu.au/~kee/pls.pdf).
-
-### Varible Importance in the Projection (VIP)
-
-Variable Importance in Projection (VIP) scores estimate the importance of each variable in the projection used in a PLS mode. A variable with a VIP Score close to or greater than 1 (one) can be considered important in given model. Variables with VIP scores significantly less than 1 (one) are less important and might be good candidates for exclusion from the model.
-
-The input is a PLS model and the output is a set of column vectors equal in length to the number of variables included in the model..
+In the seminar we will go into detail abut how to calculate these with the built-in functions of the `decisionSupport` package.
 
 ### Group discussion reading: 
 

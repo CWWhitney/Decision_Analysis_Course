@@ -111,12 +111,12 @@ model_function <- function(){
 }
 
 # Run the Monte Carlo simulation using the model function
-chile_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
+example_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
                               model_function = model_function,
                               numberOfModelRuns = 800,
                               functionSyntax = "plainNames")
 
-chile_mc_simulation
+example_mc_simulation
 
 ```
 
@@ -137,12 +137,12 @@ model_function <- function(){
 }
 
 # Run the Monte Carlo simulation using the model function
-chile_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
+example_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
                               model_function = model_function,
                               numberOfModelRuns = 800,
                               functionSyntax = "plainNames")
 
-chile_mc_simulation
+example_mc_simulation
 
 ```
 
@@ -152,7 +152,7 @@ Change the plot to a histogram by using the `method` argument in the `plot_distr
 
 ```{r plot_distribution, exercise=TRUE}
 
-plot_distributions(mcSimulation_object = chile_mc_simulation,
+plot_distributions(mcSimulation_object = example_mc_simulation,
                    vars = "final_result",
                    method = "boxplot_density",
                    old_names = "final_result",
@@ -162,7 +162,7 @@ plot_distributions(mcSimulation_object = chile_mc_simulation,
 
 ```{r plot_distribution-solution}
 
-plot_distributions(mcSimulation_object = chile_mc_simulation,
+plot_distributions(mcSimulation_object = example_mc_simulation,
                    vars = "final_result",
                    method = "hist_simple_overlay",
                    old_names = "final_result",

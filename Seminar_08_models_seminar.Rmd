@@ -1,7 +1,8 @@
 ## Seminar 8: Models {#model_share_seminar} 
 <!-- reference with [Models](#model_share_seminar) -->
 
-Welcome to eighth seminar of **Decision Analysis and Forecasting for Agricultural Development**. We will be working in this session to calibrate you. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to eighth seminar of **Decision Analysis and Forecasting for Agricultural Development**.Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-### Reading
+In this module each group will present the decision and proposed model that they will be programming for the rest of the course. 
 
+<!-- make a list of groups in Slack and give instructions about how a 10 minute presentation can be structured here -->

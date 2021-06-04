@@ -40,7 +40,7 @@ model_function <- function(){
 }
 
 # Run the Monte Carlo simulation using the model function
-chile_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
+example_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
                               model_function = model_function,
                               numberOfModelRuns = 800,
                               functionSyntax = "plainNames")
@@ -114,8 +114,9 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_07_calibration_seminar.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_08_Forecasts.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_08_Forecasts.Rmd"}
+```
+
 <!-- ```{r child="Seminar_08_models_seminar.Rmd"} -->
 <!-- ``` -->
 
