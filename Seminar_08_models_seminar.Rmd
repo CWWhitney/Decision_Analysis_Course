@@ -8,6 +8,7 @@ Welcome to eighth seminar of **Decision Analysis and Forecasting for Agricultura
 As we have discussed in previous lectures, when deciding on intervention in complex systems, many of the variables decision makers need to consider are difficult or impossible to precisely quantify. The `decisionSupport` package [@R-decisionSupport] can make use of uncertainty around these relationships and implement a Monte Carlo simulation, which generates a large number of plausible system outcomes. The model procedure draws random numbers for each input variable, which are drawn from specified probability distributions. The method requires two inputs to the `mcSimulation` function:
 
 1)	an R function that predicts decision outcomes based on the variables named in a separate data table. This R function is customized by the user to address a particular decision problem.  
+
 2)	an input table (normally in `comma separated values` format, ending in `.csv`) specifying the names and probability distributions for all variables used in the decision model. These distributions aim to represent the full range of possible values for each component of the model.  
 
 The `mcSimulation` function from the `decisionSupport` package conducts a Monte Carlo analysis with repeated model runs based on probability distributions for all uncertain variables. The data table and model are customized to fit the particulars of a specific decision.
@@ -253,9 +254,9 @@ pls_result <- plsr.mcSimulation(object = mcSimulation_results,
                   resultName = names(mcSimulation_results$y)[3], ncomp = 1)
 ```
 
-We run the `plot_pls()` on the results from `plsr.mcSimulation()` with a number of standard settings. The length of the bars is equal to VIP with a vertical line at '1' on the x-axis indicating a standard cut-off for VIP used for variable selection [@Whitney2017]. The overall plot only shows those variables with a VIP > 0.8, which is the common threshold for variable selection [@Lanzanova2019, @Luedeling2016]. The colors of the bars represent the positive or negative coefficient of the given input variable with the output variable.
+We run the `plot_pls()` on the results from `plsr.mcSimulation()` with a number of standard settings. The length of the bars is equal to VIP with a vertical line at '1' on the x-axis indicating a standard cut-off for VIP used for variable selection. The overall plot only shows those variables with a VIP > 0.8, which is the common threshold for variable selection. The colors of the bars represent the positive or negative coefficient of the given input variable with the output variable.
 
-Here we import the input table again to replace the labels for the variables on the y-axis. The input table can include a 'label' and 'variable' column. The standard labels (from the 'variable' column) are usually computer readable and not very nice for a plot. The `plot_pls()` function uses the text in the 'label' column as replacement for the default text in the 'variable' column.  
+Here we import the input table again to replace the labels for the variables on the y-axis. The input table can include a `label` and `variable` column. The standard labels (from the `variable` column) are usually computer readable and not very nice for a plot. The `plot_pls()` function uses the text in the `label` column as replacement for the default text in the `variable` column.  
 
 ```{r models-seminar-plot_pls, exercise=TRUE}
 plot_pls(pls_result, input_table = input_table, threshold = 0)
@@ -281,7 +282,7 @@ We use the function `plot_evpi()` on the results from `multi_EVPI()` to plot the
 plot_evpi(evpi, decision_vars = "NPV_decision_do")
 ```
 
-Finally, we provide a single function for a quick assessment. The `compound_figure()` function can be used to run the full decision assessment for a simple binary decision ('do' or 'do not do').
+Finally, we can use the `compound_figure()` function to provide a single figure for a quick assessment. The can be used to run the full decision assessment for a simple binary decision ('do' or 'do not do').
 
 ```{r models-seminar-compound_figure, exercise=TRUE}
 compound_figure(mcSimulation_object = mcSimulation_results, 
@@ -294,6 +295,6 @@ compound_figure(mcSimulation_object = mcSimulation_results,
 
 ### Tasks
 
-In our seminar meeting each group will present the decision and proposed model that they will be programming for the rest of the course. See the first part of the talk by Hoa Do in the [Lecture 8 on forecasts](#forecasts) for an example of how to present a model overview in succinct and clear way. The model is presented in the first three minutes of [the talk](https://youtu.be/MlIetFhu87U). 
+In our seminar meeting each group will present the decision and proposed impact pathway model that they will be programming for the rest of the course. See the first part of the talk by Hoa Do in the [Lecture 8 on forecasts](#forecasts) for an example of how to present a model overview in succinct and clear way. The model is presented in the first three minutes of [the talk](https://youtu.be/MlIetFhu87U). 
 
 <!-- make a list of groups in Slack -->

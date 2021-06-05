@@ -23,6 +23,7 @@ library(ggrepel)
 library(ggthemes)
 library(knitr)
 library(learnr)
+library(plyr)
 library(rmarkdown)
 library(tidyverse)
 
@@ -218,6 +219,7 @@ knitr::write_bib(c(.packages(),
                    'ggthemes',
                    'knitr',
                    'learnr',
+                   'plyr',
                    'rmarkdown',
                    'tidyverse'), 'bib/packages.bib')
 ```
