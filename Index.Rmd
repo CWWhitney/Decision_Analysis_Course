@@ -224,7 +224,7 @@ knitr::write_bib(c(.packages(),
                    'tidyverse'), 'bib/packages.bib')
 ```
 
-<!-- <!-- List of Lecture RMD files to be compiled -->
+<!-- List of Lecture RMD files to be compiled -->
 
 ```{r child="Lecture_01_Introduction.Rmd"}
 ```
