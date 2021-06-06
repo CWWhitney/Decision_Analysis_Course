@@ -295,6 +295,6 @@ compound_figure(mcSimulation_object = mcSimulation_results,
 
 ### Tasks
 
-In our seminar meeting each group will present the decision and proposed impact pathway model that they will be programming for the rest of the course. See the first part of the talk by Hoa Do in the [Lecture 8 on forecasts](#forecasts) for an example of how to present a model overview in succinct and clear way. The model is presented in the first three minutes of [the talk](https://youtu.be/MlIetFhu87U). 
+In our seminar meeting each group will present the decision and proposed impact pathway model that they will be programming for the rest of the course. See the model section of the talk by Hoa Do in the [Lecture 8 on forecasts](#forecasts) (from around 4:40-6 minutes in) for an example of how to present a model overview in succinct and clear way. The model is presented in the first three minutes of [the talk](https://youtu.be/MlIetFhu87U). 
 
 <!-- make a list of groups in Slack -->
