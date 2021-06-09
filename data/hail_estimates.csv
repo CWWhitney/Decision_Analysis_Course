@@ -1,0 +1,6 @@
+"","variable","lower","median","upper","distribution","label","Description"
+"1","yield",6000,NA,14000,"posnorm","Yield (kg/ha)","Yield under normal conditions"
+"2","var_CV",20,NA,20,"const","Coefficient of variation","Coefficient of variation (measure of relative variability)"
+"3","initial_investment",500,NA,1000,"posnorm","Investment cost (USD)","Investment cost"
+"4","price",5,NA,80,"posnorm","Market price (EUR/kg)","Market price achieved for yields (EUR/kg)"
+"5","p_hail",0.02,NA,0.2,"posnorm","% chance hail","Probability of a hail storm"

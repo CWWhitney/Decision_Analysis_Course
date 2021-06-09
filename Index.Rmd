@@ -21,17 +21,21 @@ library(DiagrammeR)
 library(ggplot2)
 library(ggrepel)
 library(ggthemes)
+library(igraph)
 library(knitr)
 library(learnr)
 library(plyr)
 library(rmarkdown)
 library(tidyverse)
 
-# load the data
+# load the data (use write.csv for data created in RMD)
 stakeholder <- read.csv("data/stakeholder.csv")
 input_estimates <- read.csv("data/input_estimates.csv")
 example_decision_inputs <- read.csv("data/example_decision_inputs.csv")
 input_table <- read.csv("data/example_input_table.csv")
+hail_estimates <- read.csv("data/hail_estimates.csv")
+
+###### chile function #######
 
 # create the model function
 model_function <- function(){
@@ -46,7 +50,7 @@ example_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
                               model_function = model_function,
                               numberOfModelRuns = 800,
                               functionSyntax = "plainNames")
-
+###### make variables #######
 # make variables
 make_variables <- function(est,n=1)
 { x<-random(rho=est, n=n)
@@ -57,6 +61,7 @@ make_variables <- function(est,n=1)
 # suppress warnings
 options(warn = - 1) 
 
+###### burkina function #######
 # second decision function
 example_decision_function <- function(x, varnames){
   
@@ -199,6 +204,7 @@ return(list(Interv_NPV = NPV_interv,
             NPV_decision_do = NPV_interv - NPV_n_interv,
             Cashflow_decision_do = result_interv - result_n_interv))
 }
+###### run burkina model #######
 # second simulation
 mcSimulation_results <- decisionSupport::mcSimulation(
   estimate = decisionSupport::estimate_read_csv("data/example_input_table.csv"),
@@ -207,6 +213,48 @@ mcSimulation_results <- decisionSupport::mcSimulation(
   functionSyntax = "plainNames"
 )
  
+###### HAIL Risk #######
+hail_function <- function(){
+  
+yields <- vv(var_mean = yield, 
+             var_CV = var_CV, 
+             n = 20)
+
+prices <- vv(var_mean = price, 
+             var_CV = var_CV, 
+             n = 20)
+
+# use 'rep' to simulate the investment 
+# only in the first year (assuming the net lasts 20 years)
+invest_costs <- c(initial_investment, rep(0, 19))
+
+# use 'chance_event' to adjust yield for potential hail
+hail_adjusted_yield <- chance_event(chance = p_hail, 
+                                    value_if = 0,
+                                    value_if_not = yield,
+                                    n = 20)
+
+# calculate profit without net
+profit_no_net <- hail_adjusted_yield*prices
+
+# calculate profit with the net
+profit_with_net <- (yields*prices)-invest_costs
+
+# use 'discount' to calculate net present value 
+# 'discount_rate' is expressed in percent
+NPV_no_net <- discount(profit_no_net, discount_rate = 5, calculate_NPV = TRUE)
+NPV_net <- discount(profit_with_net, discount_rate = 5, calculate_NPV = TRUE)
+
+return(list(NPV_no_net =  NPV_no_net,
+            NPV_net =  NPV_net))
+}
+
+###### Run HAIL Risk model #######
+hail_mc_simulation <- mcSimulation(estimate = as.estimate(hail_estimates),
+                              model_function = hail_function,
+                              numberOfModelRuns = 200,
+                              functionSyntax = "plainNames")
+
 ```
 
 ```{r, warning=FALSE, include = FALSE}
@@ -217,6 +265,7 @@ knitr::write_bib(c(.packages(),
                    'ggplot2',
                    'ggrepel',
                    'ggthemes',
+                   'igraph',
                    'knitr',
                    'learnr',
                    'plyr',
@@ -274,10 +323,10 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_08_models_seminar.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_09_Bayesian_Thinking.Rmd"} -->
-<!-- ``` -->
-<!-- ```{r child="Seminar_09_forecast_seminar.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_09_Bayesian_Thinking.Rmd"}
+```
+```{r child="Seminar_09_forecast_seminar.Rmd"}
+```
 
 <!-- ```{r child="Lecture_10_Analyst_Profile.Rmd"} -->
 <!-- ``` -->

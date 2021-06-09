@@ -1,4 +1,168 @@
 ## Seminar 9: Model forecasts {#forecasts_seminar} 
 <!-- reference with [Model forecasts](#forecasts_seminar) -->
 
-<!-- Review and share cognitive biases -->
+
+Review the process in the [Models](#model_share_seminar) lecture. 
+
+### Building a decision model as an R function
+
+We have already built some simple models in the [Decision Models](#decision_models) lecture and the [Model programming](#model_programming) seminar. Now we can explore another simple model with `decisionSupport`. First, load the `decisionSupport` library. Use the `install.packages` function, i.e. `install.packages("decisionSupport")` and then load the library with `library(decisionSupport)`.
+
+### Plot the impact pathway
+
+Let's use the `graph.formula` function from the `igraph` library again [@R-igraph]. This time to create the graphical impact pathway of an investment into hail nets. Add another factor called 'Discount' that impacts the Net Present Value (NPV) value.
+
+```{r igraph-example, exercise=TRUE}
+hail_path <- graph.formula(HailNet -+ Yield, 
+                          HailNet -+ Cost, 
+                          HailEvent -+ Yield,
+                          Yield -+ MarketPrice, 
+                          MarketPrice -+ NPV,
+                          Cost -+ NPV)
+
+plot(hail_path)
+```
+
+```{r igraph-example-solution}
+hail_path <- graph.formula(HailNet -+ Yield, 
+                          HailNet -+ Cost, 
+                          HailEvent -+ Yield,
+                          Yield -+ MarketPrice, 
+                          MarketPrice -+ NPV,
+                          Cost -+ NPV,
+                          Discount -+ NPV)
+
+plot(hail_path)
+```
+
+That was just one of many ways to generate visual impact pathways. To see more options see the [Decision Analysis Overview](#decision_analysis) lecture materials. 
+
+### Building the model 
+
+Here we generate an input table to feed the model function. Update this with your new management cost variable in the graphical impact pathway. Call your new variable `"p_hail"`, make the lower bound `0.02` and the upper bound `0.2`, make the distribution `"posnorm"`, make the label `"% chance hail"` and make the description `"Probability of a hail storm"`.
+
+```{r hail_input_table, exercise=TRUE}
+hail_estimates <- data.frame(variable = c("yield", 
+                                           "var_CV", 
+                                           "initial_investment", 
+                                           "price"),
+                    lower = c(6000, 20, 500, 5),
+                    median = NA,
+                    upper = c(14000, 20, 1000, 80),
+                    distribution = c("posnorm", 
+                                     "const", 
+                                     "posnorm", 
+                                     "posnorm"),
+                    label = c("Yield (kg/ha)", 
+                              "Coefficient of variation", 
+                              "Investment cost (USD)", 
+                              "Market price (EUR/kg)"),
+                    Description = c("Yield under normal conditions",
+                                    "Coefficient of variation (measure of relative variability)",
+                                    "Investment cost", 
+                                    "Market price achieved for yields (EUR/kg)"))
+
+hail_estimates
+```
+
+```{r hail_input_table-solution}
+hail_estimates <- data.frame(variable = c("yield", 
+                                           "var_CV", 
+                                           "initial_investment", 
+                                           "price", 
+                                           "p_hail"),
+                    lower = c(6000, 20, 500, 5, 0.02),
+                    median = NA,
+                    upper = c(14000, 20, 1000, 80, 0.2),
+                    distribution = c("posnorm", 
+                                     "const", 
+                                     "posnorm", 
+                                     "posnorm",
+                                     "posnorm"),
+                    label = c("Yield (kg/ha)", 
+                              "Coefficient of variation", 
+                              "Investment cost (USD)", 
+                              "Market price (EUR/kg)", 
+                              "% chance hail"),
+                    Description = c("Yield under normal conditions",
+                                    "Coefficient of variation (measure of relative variability)",
+                                    "Investment cost", 
+                                    "Market price achieved for yields (EUR/kg)", 
+                                    "Probability of a hail storm"))
+
+hail_estimates
+```
+
+Here we create a function following the graphical impact pathway and using the inputs above to calculate the Net Present Value for the investment in hail nets. We use the `vv` function from the `decisionSupport` package to add more variation over time [@R-decisionSupport]. We also use the `chance_event` function to calculate a `hail_adjusted_yield` for losses when there is hail. 
+
+```{r hail-model, exercise=TRUE}
+hail_function <- function(){
+  
+yields <- vv(var_mean = yield, 
+             var_CV = var_CV, 
+             n = 20)
+
+prices <- vv(var_mean = price, 
+             var_CV = var_CV, 
+             n = 20)
+
+# use 'rep' to simulate the investment 
+# only in the first year (assuming the net lasts 20 years)
+invest_costs <- c(initial_investment, rep(0, 19))
+
+# use 'chance_event' to adjust yield for potential hail
+hail_adjusted_yield <- chance_event(chance = p_hail, 
+                                    value_if = 0,
+                                    value_if_not = yield,
+                                    n = 20)
+
+# calculate profit without net
+profit_no_net <- hail_adjusted_yield*prices
+
+# calculate profit with the net
+profit_with_net <- (yields*prices)-invest_costs
+
+# use 'discount' to calculate net present value 
+# 'discount_rate' is expressed in percent
+NPV_no_net <- discount(profit_no_net, discount_rate = 5, calculate_NPV = TRUE)
+NPV_net <- discount(profit_with_net, discount_rate = 5, calculate_NPV = TRUE)
+
+return(list(NPV_no_net =  NPV_no_net,
+            NPV_net =  NPV_net))
+}
+```
+
+We can use the `mcSimulation` function from the `decisionSupport` package to implement a model [@R-decisionSupport].
+
+```{r hail-model-run, exercise=TRUE}
+# Run the Monte Carlo simulation using the model function
+hail_mc_simulation <- mcSimulation(estimate = as.estimate(hail_estimates),
+                              model_function = hail_function,
+                              numberOfModelRuns = 200,
+                              functionSyntax = "plainNames")
+
+hail_mc_simulation
+```
+
+Here we show the results of a Monte Carlo simulation (200 model runs) for estimating the comparative profits with and without hail nets. 
+
+```{r hail_plot_distribution, exercise=TRUE}
+decisionSupport::plot_distributions(mcSimulation_object = hail_mc_simulation, 
+                                    vars = c("NPV_no_net", "NPV_net"),
+                                    method = 'smooth_simple_overlay', 
+                                    base_size = 7)
+```
+
+### Next steps
+
+Once you have followed and run the code above on your machine it is a good time to look through the outline of these procedures in the `decisionSupport` vignette on the CRAN called ['Applying the mcSimulation function in decisionSupport'](https://cran.r-project.org/web/packages/decisionSupport/vignettes/example_decision_function.html) [@fernandez_applying_2021]. This will show you how the tools can be applied for comparing decision outcomes. It runs a Monte-Carlo-based selection of sedimentation management strategies for a reservoir in the Upper Volta River Basin of Burkina Faso [@lanzanova_improving_2019]. Tip: If you want to play with this code you can find the [Rmarkdown file](https://raw.githubusercontent.com/eikeluedeling/decisionSupport/master/vignettes/example_decision_function.Rmd) and the [estimate table](https://raw.githubusercontent.com/eikeluedeling/decisionSupport/master/vignettes/example_input_table.csv) in the `decisionSupport` GitHub repository. 
+
+### Bonus: Bayesian links
+
+Follow [Chelsea Parlett Pelleriti's Bayesian statiscs work](https://cmparlettpelleriti.github.io/)
+
+Listen to the ['Learning Bayesian Statistics'](https://www.learnbayesstats.com) podcast
+
+Follow [Michael Betancourt’s Bayesian statiscs work](https://betanalpha.github.io/)
+
+<!-- -	Rainforth, Tom. “Automating Inference, Learning, and Design Using Probabilistic Programming.” Doctor of Philosophy, University of Oxford, 2017. -->

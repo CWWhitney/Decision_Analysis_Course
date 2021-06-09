@@ -1,4 +1,74 @@
 ## Lecture 9: Bayesian Thinking {#bayes}
 <!-- reference with [Bayesian thinking](#bayes) -->
 
-Welcome to lecture 6 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_6]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to lecture 9 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_6]%20Decision%20Analysis%20Lecture) or the course tutor.
+
+<!-- https://youtu.be/_Hf7tYwTEZw -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_Hf7tYwTEZw" frameborder="0" allowfullscreen></iframe>
+
+```{r bayesian-thinking-question-1, echo=FALSE}
+question("What are characteristics of the frequentist approach to science?",
+  answer("We should consider prior knowledge."),
+  answer("All knowledge should be derived objectively from data.", correct = TRUE),
+  answer("Research can not produce insights into causal relationships.", correct = TRUE),
+  incorrect = "Watch [the talk](https://youtu.be/_Hf7tYwTEZw) and try again.",
+allow_retry = TRUE
+)
+```
+
+
+```{r bayesian-thinking-question-2, echo=FALSE}
+question("What are the main challenges to Bayesian science today?",
+  answer("Lack of computational power."),
+  answer("Reliable characterization of the state of knowledge, i.e. definition of good Bayesian priors", correct = TRUE),
+  answer("The scientific community does not accept Bayesian methods."),
+  incorrect = "Watch [the talk](https://youtu.be/_Hf7tYwTEZw) and try again.",
+allow_retry = TRUE
+)
+```
+
+
+```{r bayesian-thinking-question-3, echo=FALSE}
+question("What is a Bayesian Prior?",
+  answer("A probability distribution that expresses beliefs about a quantity before some evidence is taken into account.", correct = TRUE),
+  answer("The understanding about a phenomenon before any research or formal data collection.", correct = TRUE),
+  answer("An expression of the existing state of knowledge that takes into account all existing data and available knowledge.", correct = TRUE),
+  answer("A good reflection of reality based on the existing state of knowledge.", correct = TRUE),
+  incorrect = "Watch [the talk](https://youtu.be/_Hf7tYwTEZw) and try again.",
+allow_retry = TRUE
+)
+```
+
+
+```{r bayesian-thinking-question-4, echo=FALSE}
+question("What is a posterior belief?",
+  answer("Revised or updated probability after taking into consideration new information.", correct = TRUE),
+  answer("Updated understanding after having applied some observations or research to our prior belief.", correct = TRUE),
+  answer("An expression of a belief that is the result of long term trials and investigations."),
+  answer("Updated beliefs about values and events after having seen additional information.", correct = TRUE),
+  answer("It is the prior probability plus new evidence.", correct = TRUE),
+  incorrect = "Watch [the talk](https://youtu.be/_Hf7tYwTEZw) and try again.",
+allow_retry = TRUE
+)
+```
+
+
+```{r bayesian-thinking-question-5, echo=FALSE}
+question("What are ways that we can define proper priors?",
+  answer("Perform long term trials to generate a data set from which to generate reliable values."),
+  answer("Consider your prior beliefs about the distribution of the parameters.", correct = TRUE),
+  answer("Calibrate ourselves and others who are expected to express knowledge.", correct = TRUE),
+  answer("Use your intuitive understanding to generate a distribution.", correct = TRUE),
+  incorrect = "Watch [the talk](https://youtu.be/_Hf7tYwTEZw) and try again.",
+allow_retry = TRUE
+)
+```
+
+![](bayesian-hypothesis-testing.jpg) 
+
+
+Summarize for yourself the difference between the frequentist and the Bayesian approach to knowledge generation. Which one do you feel more comfortable about? Are you ready to become a Bayesian?
+
+<!-- Join Learn Bayes Stats -->
+<!-- Other lists -->
