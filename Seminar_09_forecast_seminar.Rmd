@@ -93,7 +93,7 @@ hail_estimates <- data.frame(variable = c("yield",
 hail_estimates
 ```
 
-Here we create a function following the graphical impact pathway and using the inputs above to calculate the Net Present Value for the investment in hail nets. We use the `vv` function from the `decisionSupport` package to add more variation over time [@R-decisionSupport]. We also use the `chance_event` function to calculate a `hail_adjusted_yield` for losses when there is hail. 
+Here we create a function following the graphical impact pathway and using the inputs above to calculate the Net Present Value for the investment in hail nets. We use the `vv()` function from the `decisionSupport` package to add more variation over time [@R-decisionSupport]. We also use the `chance_event()` function to calculate a `hail_adjusted_yield` for losses when there is hail. 
 
 ```{r hail-model, exercise=TRUE}
 hail_function <- function(){
@@ -132,7 +132,7 @@ profit_with_net <- (yields*prices)-invest_costs
 NPV_no_net <- discount(profit_no_net, discount_rate = 5, calculate_NPV = TRUE)
 NPV_net <- discount(profit_with_net, discount_rate = 5, calculate_NPV = TRUE)
 
-# calculate the overall NPV of the decison (do - don't do)
+# calculate the overall NPV of the decision (do - don't do)
 NPV_decision <- NPV_net-NPV_no_net
 
 return(list(NPV_no_net =  NPV_no_net,
@@ -141,7 +141,7 @@ return(list(NPV_no_net =  NPV_no_net,
 }
 ```
 
-We can use the `mcSimulation` function from the `decisionSupport` package to implement a model [@R-decisionSupport].
+We can use the `mcSimulation()` function from the `decisionSupport` package to implement a model [@R-decisionSupport].
 
 ```{r hail-model-run, exercise=TRUE}
 # Run the Monte Carlo simulation using the model function
@@ -163,25 +163,25 @@ plot_distributions(mcSimulation_object = hail_mc_simulation,
 ```
 #### Value of Information (VoI) analysis
 
-Calculate Value of Information (VoI) analysis with the Expected Value of Perfect Information (EVPI). As we learned in [Lecture 8 on forecasts](#forecasts), EVPI is determined by examining the influence of a given variable on the output value of a decision model. 
+Calculate Value of Information (VoI) analysis with the Expected Value of Perfect Information (EVPI). As we learned in [Lecture 8 on forecasts](#forecasts), EVPI helps us determine if more research will be helpful in understanding the expected change in the value of a decision outcome through reducing uncertainty on a given variable. 
 
-Use the function `data.frame()` to transform the x and y outputs of the `mcSimulation()` function for EVPI calculation. We use the `multi_EVPI()` function to calculate the EVPI for multiple independent variables. For the first_out_var argument we choose `intervention_mngmt_audit_cost` from the input table since this is the first variable after the `NPV` and `cashflow` model outputs, which we would like to exclude from the EVPI analysis. 
+Use the function `data.frame()` to transform the x and y outputs of the `mcSimulation()` function results for EVPI calculation. We use the `multi_EVPI()` function to calculate the EVPI for multiple independent variables. For the first_out_var argument we choose `NPV_decision` from the input table since this is the first output variable (the only variable) and will the subject of the EVPI. 
 
 ```{r hail-evpi, exercise=TRUE}
 # subset the outputs from the mcSimulation function (y) 
 # to run the multi_EVPI only on the variables that the we want 
 # (i.e. the NPV_decision)
-mcSimulation_table <- data.frame(hail_mc_simulation$x, 
+mcSimulation_table_hail <- data.frame(hail_mc_simulation$x, 
                                  hail_mc_simulation$y[3])
 
-evpi <- multi_EVPI(mc = mcSimulation_table, 
+evpi_hail <- multi_EVPI(mc = mcSimulation_table_hail, 
                    first_out_var = "NPV_decision")
 ```
 
 We use the function `plot_evpi()` on the results from `multi_EVPI()` to plot the Expected Value of Perfect Information (EVPI). Here we show the results with the standard settings. The length of the bars is equal to EVPI.
 
 ```{r hail-evpi_plot, exercise=TRUE}
-plot_evpi(evpi, decision_vars = "NPV_decision")
+plot_evpi(evpi_hail, decision_vars = "NPV_decision")
 ```
 
 ### Next steps
