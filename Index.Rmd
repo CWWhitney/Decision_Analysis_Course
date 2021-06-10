@@ -246,7 +246,8 @@ NPV_no_net <- discount(profit_no_net, discount_rate = 5, calculate_NPV = TRUE)
 NPV_net <- discount(profit_with_net, discount_rate = 5, calculate_NPV = TRUE)
 
 return(list(NPV_no_net =  NPV_no_net,
-            NPV_net =  NPV_net))
+            NPV_net =  NPV_net, 
+            NPV_decision = NPV_decision))
 }
 
 ###### Run HAIL Risk model #######
