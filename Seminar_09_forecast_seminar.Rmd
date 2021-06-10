@@ -6,11 +6,11 @@ Review the process in the [Models](#model_share_seminar) lecture.
 
 ### Building a decision model as an R function
 
-We have already built some simple models in the [Decision Models](#decision_models) lecture and the [Model programming](#model_programming) seminar. Now we can explore another simple model with `decisionSupport`. First, load the `decisionSupport` library. Use the `install.packages` function, i.e. `install.packages("decisionSupport")` and then load the library with `library(decisionSupport)`.
+We have already built some simple models in the [Decision Models](#decision_models) lecture and the [Model programming](#model_programming) seminar. Now we can explore another simple model with `decisionSupport`. 
 
 ### Plot the impact pathway
 
-Let's use the `graph.formula` function from the `igraph` library again [@R-igraph]. This time to create the graphical impact pathway of an investment into hail nets. Add another factor called 'Discount' that impacts the Net Present Value (NPV) value.
+Let's use the `graph.formula` function from the `igraph` library again [@igraph2006]. This time to create the graphical impact pathway of an investment into hail nets. Add another factor called 'Discount' that impacts the Net Present Value (NPV) value.
 
 ```{r igraph-example, exercise=TRUE}
 hail_path <- graph.formula(HailNet -+ Yield, 
@@ -35,7 +35,7 @@ hail_path <- graph.formula(HailNet -+ Yield,
 plot(hail_path)
 ```
 
-That was just one of many ways to generate visual impact pathways. To see more options see the [Decision Analysis Overview](#decision_analysis) lecture materials. 
+That was just one of many ways to generate visual impact pathways. To see more options see the [Decision Analysis Overview](#decision_analysis) lecture materials.
 
 ### Building the model 
 
@@ -98,6 +98,9 @@ Here we create a function following the graphical impact pathway and using the i
 ```{r hail-model, exercise=TRUE}
 hail_function <- function(){
   
+# use vv() to add variability to the 
+# random draws of yield and of  price 
+# over a 20 year simulation 
 yields <- vv(var_mean = yield, 
              var_CV = var_CV, 
              n = 20)
@@ -106,11 +109,13 @@ prices <- vv(var_mean = price,
              var_CV = var_CV, 
              n = 20)
 
-# use 'rep' to simulate the investment 
+# use rep() to simulate the initial_investment 
 # only in the first year (assuming the net lasts 20 years)
 invest_costs <- c(initial_investment, rep(0, 19))
 
-# use 'chance_event' to adjust yield for potential hail
+# use p_hail in the chance_event() 
+# to adjust yield for probability of hail
+# assuming no yield at all in the event of hail
 hail_adjusted_yield <- chance_event(chance = p_hail, 
                                     value_if = 0,
                                     value_if_not = yield,
@@ -127,8 +132,12 @@ profit_with_net <- (yields*prices)-invest_costs
 NPV_no_net <- discount(profit_no_net, discount_rate = 5, calculate_NPV = TRUE)
 NPV_net <- discount(profit_with_net, discount_rate = 5, calculate_NPV = TRUE)
 
+# calculate the overall NPV of the decison (do - don't do)
+NPV_decision <- NPV_net-NPV_no_net
+
 return(list(NPV_no_net =  NPV_no_net,
-            NPV_net =  NPV_net))
+            NPV_net =  NPV_net, 
+            NPV_decision = NPV_decision))
 }
 ```
 
@@ -147,15 +156,39 @@ hail_mc_simulation
 Here we show the results of a Monte Carlo simulation (200 model runs) for estimating the comparative profits with and without hail nets. 
 
 ```{r hail_plot_distribution, exercise=TRUE}
-decisionSupport::plot_distributions(mcSimulation_object = hail_mc_simulation, 
-                                    vars = c("NPV_no_net", "NPV_net"),
-                                    method = 'smooth_simple_overlay', 
-                                    base_size = 7)
+plot_distributions(mcSimulation_object = hail_mc_simulation, 
+                      vars = c("NPV_no_net", "NPV_net"),
+                      method = 'smooth_simple_overlay', 
+                      base_size = 7)
+```
+#### Value of Information (VoI) analysis
+
+Calculate Value of Information (VoI) analysis with the Expected Value of Perfect Information (EVPI). As we learned in [Lecture 8 on forecasts](#forecasts), EVPI is determined by examining the influence of a given variable on the output value of a decision model. 
+
+Use the function `data.frame()` to transform the x and y outputs of the `mcSimulation()` function for EVPI calculation. We use the `multi_EVPI()` function to calculate the EVPI for multiple independent variables. For the first_out_var argument we choose `intervention_mngmt_audit_cost` from the input table since this is the first variable after the `NPV` and `cashflow` model outputs, which we would like to exclude from the EVPI analysis. 
+
+```{r hail-evpi, exercise=TRUE}
+# subset the outputs from the mcSimulation function (y) 
+# to run the multi_EVPI only on the variables that the we want 
+# (i.e. the NPV_decision)
+mcSimulation_table <- data.frame(hail_mc_simulation$x, 
+                                 hail_mc_simulation$y[3])
+
+evpi <- multi_EVPI(mc = mcSimulation_table, 
+                   first_out_var = "NPV_decision")
+```
+
+We use the function `plot_evpi()` on the results from `multi_EVPI()` to plot the Expected Value of Perfect Information (EVPI). Here we show the results with the standard settings. The length of the bars is equal to EVPI.
+
+```{r hail-evpi_plot, exercise=TRUE}
+plot_evpi(evpi, decision_vars = "NPV_decision")
 ```
 
 ### Next steps
 
-Once you have followed and run the code above on your machine it is a good time to look through the outline of these procedures in the `decisionSupport` vignette on the CRAN called ['Applying the mcSimulation function in decisionSupport'](https://cran.r-project.org/web/packages/decisionSupport/vignettes/example_decision_function.html) [@fernandez_applying_2021]. This will show you how the tools can be applied for comparing decision outcomes. It runs a Monte-Carlo-based selection of sedimentation management strategies for a reservoir in the Upper Volta River Basin of Burkina Faso [@lanzanova_improving_2019]. Tip: If you want to play with this code you can find the [Rmarkdown file](https://raw.githubusercontent.com/eikeluedeling/decisionSupport/master/vignettes/example_decision_function.Rmd) and the [estimate table](https://raw.githubusercontent.com/eikeluedeling/decisionSupport/master/vignettes/example_input_table.csv) in the `decisionSupport` GitHub repository. 
+Once you have followed and run the code above on your machine it is a good time to look through the outline of these procedures in the example by @lanzanova_improving_2019 called ['Sediment management in a reservoir in Burkina Faso'](http://htmlpreview.github.io/?https://github.com/CWWhitney/BurkinaExample/blob/master/Burkina_vignette.html). It runs a Monte-Carlo-based selection of sedimentation management strategies for a reservoir in the Upper Volta River Basin of Burkina Faso [@lanzanova_improving_2019]. 
+
+*Tip*: If you want to play with this code you can find the [Rmarkdown file](https://raw.githubusercontent.com/CWWhitney/17_Burkina_Vignette/blob/master/Burkina_vignette.Rmd) and the [estimate table](https://raw.githubusercontent.com/CWWhitney/BurkinaExample/master/Sediment_input_table.csv) in the GitHub repository. 
 
 ### Bonus: Bayesian links
 
