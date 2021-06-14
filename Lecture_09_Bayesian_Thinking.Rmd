@@ -67,8 +67,8 @@ allow_retry = TRUE
 
 ![](images/bayesian-hypothesis-testing.jpg) 
 
-
 Summarize for yourself the difference between the frequentist and the Bayesian approach to knowledge generation. Which one do you feel more comfortable about? Are you ready to become a Bayesian?
 
-<!-- Join Learn Bayes Stats -->
-<!-- Other lists -->
+### Group discussion reading: 
+
+- Bertsch McGrayne (2011) `The theory that would not die’  (Chapter 1. Causes in the Air)
