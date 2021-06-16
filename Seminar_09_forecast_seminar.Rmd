@@ -192,10 +192,10 @@ Once you have followed and run the code above on your machine it is a good time 
 
 ### Bonus: Bayesian links
 
-Follow [Chelsea Parlett Pelleriti's Bayesian statiscs work](https://cmparlettpelleriti.github.io/)
+Follow [Chelsea Parlett Pelleriti's Bayesian statistics work](https://cmparlettpelleriti.github.io/)
 
 Listen to the ['Learning Bayesian Statistics'](https://www.learnbayesstats.com) podcast
 
-Follow [Michael Betancourt’s Bayesian statiscs work](https://betanalpha.github.io/)
+Follow [Michael Betancourt’s Bayesian statistics work](https://betanalpha.github.io/)
 
 <!-- -	Rainforth, Tom. “Automating Inference, Learning, and Design Using Probabilistic Programming.” Doctor of Philosophy, University of Oxford, 2017. -->
