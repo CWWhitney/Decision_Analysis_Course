@@ -1,4 +1,0 @@
-## Seminar 10: Group Project Report {#project_report} 
-<!-- [Group project report](#project_report) -->
-
-Provide an overview of the decision identified and the process thus far of generating a model. 
