@@ -349,9 +349,8 @@ knitr::write_bib(c(.packages(),
 
 ```{r child="Lecture_10_Analyst_Profile.Rmd"}
 ```
-
-<!-- ```{r child="Seminar_10_Report.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_10_Functions.Rmd"}
+```
 
 <!-- ```{r child="Lecture_11_Writing.Rmd"} -->
 <!-- ``` -->
