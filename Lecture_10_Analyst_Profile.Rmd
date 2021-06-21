@@ -3,6 +3,66 @@
 
 <!-- https://youtu.be/XG0R9ViQm0E -->
 
+Welcome to lecture 10 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_6]%20Decision%20Analysis%20Lecture) or the course tutor.
+
+Those who work in Decision Analysis must be able to do a number of diverse jobs from the facilitation and integration of ideas into models and also in programming these models. In teh following short lecture you will learn about the skills that are particularly important for *integration* of knowledge, *facilitation* of knowledge gathering processes and for *programming* decision models. Please watch the video and answer the multiple choice questions below.
+
+<!-- https://youtu.be/XG0R9ViQm0E -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XG0R9ViQm0E" frameborder="0" allowfullscreen></iframe>
+
+```{r analyst-profile-question-1, echo=FALSE}
+question("Decision analysts must be able to facilitate, integrate and program. Which of the following skills are particularly important for *integration* of knowledge?",
+  answer("Bring a holistic ambition.", correct = TRUE),
+  answer("Be nice and personable"),
+  answer("Be curious and inquisitive", correct = TRUE),
+  answer("Able to communicate to diverse audiences"),
+  answer("Systems thinking", correct = TRUE),
+  answer("Good judgement, good `calibration`", correct = TRUE),
+  answer("Output-oriented"),
+  answer("(Ideally) have some experience in modeling"),
+  answer("Be creative and open-minded", correct = TRUE),
+  answer("Ability to run simulation models, produce decision analysis outputs and interpret results"),
+  incorrect = "Watch [the talk](https://youtu.be/XG0R9ViQm0E) and try again.",
+allow_retry = TRUE
+)
+```
+
+```{r analyst-profile-question-2, echo=FALSE}
+question("Which of the following skills are particularly important for *facilitation* of knowledge gathering processes?",
+  answer("Be creative and open-minded."),
+  answer("Knowledgeable about decision analysis 'philosophy'."),
+  answer("Able to communicate to diverse audiences.", correct = TRUE),
+  answer("Good judgement, good 'calibration'."),
+  answer("Knowledgeable about group work techniques", correct = TRUE),
+  answer("Systems thinking."),
+  answer("Be nice and personable", correct = TRUE),
+  answer("Be inclusive", correct = TRUE),
+  answer("Good understanding of how to integrate uncertainty in models"),
+  answer("Output oriented", correct = TRUE),
+  answer("Ability to run simulation models, produce decision analysis outputs and interpret results"),
+  incorrect = "Watch [the talk](https://youtu.be/XG0R9ViQm0E) and try again.",
+allow_retry = TRUE
+)
+```
+
+```{r analyst-profile-question-3, echo=FALSE}
+question("Which of the following skills are particularly important for *programming* decision models?",
+  answer("Be curious and inquisitive."),
+  answer("Be creative and open-minded."),
+  answer("Systems thinking."),
+  answer("Be nice and personable"),
+  answer("Knowledgeable about decision analysis 'philosophy'."),
+  answer("Be thorough and meticulous.", correct = TRUE),
+  answer("Be well-versed in using model-building tools.", correct = TRUE),
+  answer("(Ideally) have some experience in modeling", correct = TRUE),
+  answer("Good understanding of how to integrate uncertainty in models", correct = TRUE),
+  answer("Ability to run simulation models, produce decision analysis outputs and interpret results"),
+  incorrect = "Watch [the talk](https://youtu.be/XG0R9ViQm0E) and try again.",
+allow_retry = TRUE
+)
+```
+
 
 ### Reading 
 

@@ -1,7 +1,9 @@
 ## Lecture 9: Bayesian Thinking {#bayes}
 <!-- reference with [Bayesian thinking](#bayes) -->
 
-Welcome to lecture 9 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_6]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to lecture 9 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_6]%20Decision%20Analysis%20Lecture) or the course tutor. 
+
+Please watch the video and answer the multiple choice questions below.
 
 <!-- https://youtu.be/_Hf7tYwTEZw -->
 
@@ -65,7 +67,7 @@ allow_retry = TRUE
 )
 ```
 
-![](images/bayesian-hypothesis-testing.jpg) 
+![](images/bayesian-hypothesis-testing.jpg){width=2in} 
 
 Summarize for yourself the difference between the frequentist and the Bayesian approach to knowledge generation. Which one do you feel more comfortable about? Are you ready to become a Bayesian?
 
