@@ -1,6 +1,7 @@
 ## Seminar 9: Model forecasts {#forecasts_seminar} 
 <!-- reference with [Model forecasts](#forecasts_seminar) -->
 
+Welcome to ninth seminar of **Decision Analysis and Forecasting for Agricultural Development**.Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_9]%20Decision%20Analysis%20Lecture) or the course tutor.
 
 Review the process in the [Models](#model_share_seminar) lecture. 
 
