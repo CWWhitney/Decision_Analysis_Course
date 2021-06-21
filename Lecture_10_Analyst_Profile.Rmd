@@ -18,7 +18,7 @@ question("Decision analysts must be able to facilitate, integrate and program. W
   answer("Be curious and inquisitive", correct = TRUE),
   answer("Able to communicate to diverse audiences"),
   answer("Systems thinking", correct = TRUE),
-  answer("Good judgement, good `calibration`", correct = TRUE),
+  answer("Good judgement, good 'calibration'", correct = TRUE),
   answer("Output-oriented"),
   answer("(Ideally) have some experience in modeling"),
   answer("Be creative and open-minded", correct = TRUE),
@@ -31,7 +31,7 @@ allow_retry = TRUE
 ```{r analyst-profile-question-2, echo=FALSE}
 question("Which of the following skills are particularly important for *facilitation* of knowledge gathering processes?",
   answer("Be creative and open-minded."),
-  answer("Knowledgeable about decision analysis 'philosophy'."),
+  answer("Knowledgeable about decision analysis 'philosophy'.", correct =TRUE),
   answer("Able to communicate to diverse audiences.", correct = TRUE),
   answer("Good judgement, good 'calibration'."),
   answer("Knowledgeable about group work techniques", correct = TRUE),
@@ -57,7 +57,7 @@ question("Which of the following skills are particularly important for *programm
   answer("Be well-versed in using model-building tools.", correct = TRUE),
   answer("(Ideally) have some experience in modeling", correct = TRUE),
   answer("Good understanding of how to integrate uncertainty in models", correct = TRUE),
-  answer("Ability to run simulation models, produce decision analysis outputs and interpret results"),
+  answer("Ability to run simulation models, produce decision analysis outputs and interpret results", correct = TRUE),
   incorrect = "Watch [the talk](https://youtu.be/XG0R9ViQm0E) and try again.",
 allow_retry = TRUE
 )
@@ -72,4 +72,4 @@ This week we will read and discuss Chapter 1 of 'The Flaw of Averages' by @savag
 
 ### Bonus reading 
 
-Sm Savage's article [The Flaw of Averages](https://hbr.org/2002/11/the-flaw-of-averages) in the Harvard Business Review. 
+Sam Savage's article [The Flaw of Averages](https://hbr.org/2002/11/the-flaw-of-averages) in the Harvard Business Review. 
