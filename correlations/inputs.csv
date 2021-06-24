@@ -1,0 +1,4 @@
+variable,distribution,lower,upper
+benefit,norm,5,30
+cost,norm,2,10
+sales,norm,10000,100000
