@@ -171,3 +171,7 @@ gompertz_yield(max_harvest = 500,
 ```
 
 In the seminar you will provide the updated version of your decision model. 
+
+### Bonus: Adding correlation to the model {#correlation}
+
+To add correlation to your model visit the [Adding correlations to Decision Analysis models](http://htmlpreview.github.io/?https://github.com/CWWhitney/Decision_Analysis_Course/blob/main/correlations/correlations_example.html) vignette.
