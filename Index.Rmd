@@ -16,10 +16,12 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(bayesplot)
 library(decisionSupport)
 library(DiagrammeR)
 library(ggplot2)
 library(ggrepel)
+library(ggridges)
 library(ggthemes)
 library(igraph)
 library(knitr)
@@ -279,10 +281,12 @@ evpi_hail <- multi_EVPI(mc = mcSimulation_table_hail,
 ```{r, warning=FALSE, include = FALSE}
 #Automatically write R package citation entries to a .bib file
 knitr::write_bib(c(.packages(), 
+                   'bayesplot',
                    'decisionSupport', 
                    'DiagrammeR',
                    'ggplot2',
                    'ggrepel',
+                   'ggridges',
                    'ggthemes',
                    'igraph',
                    'knitr',
@@ -352,14 +356,14 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_10_Functions.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_11_Writing.Rmd"} -->
-<!-- ``` -->
-<!-- ```{r child="Seminar_11_Writing.Rmd"} -->
+```{r child="Lecture_11_Communicating.Rmd"}
+```
+<!-- ```{r child="Seminar_11_citations.Rmd"} -->
 <!-- ``` -->
 
-<!-- ```{r child="Lecture_12_Communicating.Rmd"} -->
+<!-- ```{r child="Lecture_12_Writing.Rmd"} -->
 <!-- ``` -->
-<!-- ```{r child="Seminar_12_citations.Rmd"} -->
+<!-- ```{r child="Seminar_12_Writing.Rmd"} -->
 <!-- ``` -->
 
 ```{r child="Impressum.Rmd"}
