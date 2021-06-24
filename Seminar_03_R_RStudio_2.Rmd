@@ -6,4 +6,4 @@ You should already have installed R and RStudio. If not, please check out the [t
 ### Lifestyle choices
 
 If you run the code `usethis::use_blank_slate()` in your console it will set your 
-RStudio preference to NEVER save or restore .RData on exit or startup, which is a lifestyle choice endorsed by many excellent researchers like @JennyBryan.
+RStudio preference to NEVER save or restore .RData on exit or startup, which is a lifestyle choice endorsed by many excellent researchers like [@JennyBryan](https://twitter.com/JennyBryan).
