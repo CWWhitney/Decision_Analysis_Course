@@ -1,0 +1,106 @@
+---
+title: "Correlations example"
+author: "Eike and Cory"
+date: "6/23/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+In a normal Monte Carlo simulation, all variables are treated as independent when random numbers are drawn. This is sometimes undesirable, because some variables are correlated, i.e. whenever a variable assumes a high value, some other variable might also always have a particularly high - or a particularly low - value. Even in such cases, a normal Monte Carlo simulation should be able to capture all possible situations, but it would also capture some *im*possible situations, which add meaningless variation to the outputs.
+
+To some extent, `decisionSupport` allows you to implement such correlations. This is only possible (so far) for normally distributed variables.
+
+Here's how this can be done. Let's first look at a normal Monte Carlo simulation without any correlations:
+
+```{r}
+require(decisionSupport)
+
+ profit<-function(){
+   Profit<-sales*(benefit - cost)
+   return(list(Profit=Profit))
+ }
+
+inputs<-read.csv("inputs.csv")
+
+predictionProfit<-mcSimulation(estimate=as.estimate(inputs), 
+                                 model_function=profit, 
+                                 numberOfModelRuns=10000,
+                                 functionSyntax="plainNames")
+```
+
+What we just did should be quite familiar to you by now. What you may have noticed is that we loaded the input file into R before adding it to the mcSimulation function - you'll understand why shortly.
+
+Let's plot the results:
+
+```{r}
+plot_distributions(predictionProfit,"Profit")
+
+```
+
+Let's plot the correlations between the input variables too. We can implement this with the *ggcorrplot* package:
+
+```{r}
+#install.packages("ggcorrplot")
+library(ggcorrplot)
+
+ggcorrplot(cor(predictionProfit$x))
+
+```
+
+We see that of course every variable is perfectly correlated with itself (shown in red), but other than that there are no correlations (shown in white).
+
+Now let's look at how we can introduce correlations. Let's first inspect the input element a bit more closely. We can do this by calling the `as.estimate` function:
+
+```{r}
+as.estimate(inputs)
+```
+
+You see that this estimate object consists of two elements: the `$marginal` element and the `correlation_matrix` element. The first is what you put in your input table; the latter is empty.
+
+We can add such a `correlation_matrix` element by simply creating a new `.csv` table that specifies correlations and placing it in the same folder as our input file. The `decisionSupport` functions will automatically find this, if it has the same name as the input table, but doesn't end on `.csv` but on `_cor.csv` (e.g. `inputs.csv` would be supplemented by `inputs_cor.csv`).
+
+Let's see what such a table looks like:
+
+```{r}
+read.csv("inputs_cor.csv")
+```
+
+As you see, this is a `data.frame` with columns and rows named after the input variables. This doesn't have to contain all variables, but it should contain the ones you want to be correlated. The table contains correlation coefficients we want to achieve. This means that if these are positive values (between 0 and 1), we'll get a positive correlation, for values between 0 and -1, the correlation will be negative. The matrix has to be symmetric, meaning that you have to specify each interesting variable in two places.
+
+***Note that this only works for normally distributed variables.***
+
+To run the simulation with these correlations, since both the `inputs.csv` and the `inputs_cor.csv` files are in the same folder, we simply have to load the `inputs.csv` file. `decisionSupport` will then automatically find the correlation file:
+
+```{r}
+
+predictionProfit<-mcSimulation(estimate=estimate_read_csv(fileName="inputs.csv"), 
+                                 model_function=profit, 
+                                 numberOfModelRuns=10000,
+                                 functionSyntax="plainNames")
+```
+
+And once again, let's look at the output:
+
+```{r}
+
+plot_distributions(predictionProfit,"Profit")
+
+```
+
+The prospects have become quite a bit worse now...
+
+And the reason for this is that the input variables are now correlated, as we can confirm by looking at the correlation matrix:
+
+```{r}
+
+ggcorrplot(cor(predictionProfit$x))
+
+```
+
+Now you know how, *for normally distributed variables*, you can add correlations to your Monte Carlo simulation. One final note: This works quite well, if you have two or three variables that are correlated. If you want to impose correlations on larger sets of variables, you quickly get *impossible* situations, or at least situations that are very hard for the random number generator to deal with. In such cases, the function will crash. So don't get overexcited with these correlations. It should be possible without many problems, however, to introduce correlations between multiple sets of correlated variables, as long as these sets remain independent of each other.
+
+Try it out and enjoy!
+
