@@ -1,4 +1,0 @@
-## Seminar 12: Citation Management {#citations} 
-<!-- [Citation management](#citations) -->
-
-Software and literature sources
