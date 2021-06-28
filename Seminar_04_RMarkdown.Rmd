@@ -53,6 +53,3 @@ and library(`knitr`)
 
 Now we're equipped with all the basic tools for this course. We'll start using them pretty soon. Throughout the course you'll find occasional references to your RMarkdown file. This is supposed to be produced with Rmarkdown, with subsequent versions of it stored on Github.
 
-### Bonus: Reuse chunk options
-
-In case of repeated formatting in different code chunks we can use the `knitr` `opts.label` option to reuse what we wrote and avoid repetition (@R-knitr). Following the [Don’t Repeat Yourself (DRY) principle](https://yihui.org/en/2021/05/knitr-reuse/).
