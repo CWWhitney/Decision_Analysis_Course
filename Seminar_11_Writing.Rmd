@@ -20,14 +20,20 @@ RMarkdown_options.png
 - Open an Rmarkdown file
 
 ![](images/Rmarkdown_open.png)
+
 ### Yet Another Markup Language
 
 - When you open an Rmarkdown file you get a defualt document with examples and also with the standard setting, as we discussed in the [Using RMarkdown](#rmarkdown) seminar. the top of the document contains information between three dashed lines like this `---`. The language within these marks is known as YAML and sets the general layout and format of your document. 
 
 ![](images/RMarkdown_yaml.png)
 
-### Adding citations
+### Transparent Data Sharing
 
+<!-- https://youtu.be/jFwnIihK3aw -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jFwnIihK3aw" frameborder="0" allowfullscreen></iframe>
+
+The video for the @ruett_model-based_2020 paper and the supplementary materials by @ruett_data_2021 are in the references. 
 
 ### Reuse chunk options
 
