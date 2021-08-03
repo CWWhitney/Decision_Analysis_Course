@@ -141,8 +141,8 @@ The `plot_cashflow` function from the `decisionSupport` package [@R-decisionSupp
 variable = c("revenue_option1", "costs_option1", "n_years", 
              "revenue_option2", "costs_option2")
 distribution = c("norm", "norm", "const", "norm", "norm")
-lower = c(10000,  5000, 10, 8000,  500)
-upper = c(100000, 50000, 10, 80000,  30000)
+lower = c(10000,  5000, 20, 8000,  500)
+upper = c(100000, 50000, 20, 80000,  30000)
 
 costBenefitEstimate <- as.estimate(variable, distribution, lower, upper)
 
