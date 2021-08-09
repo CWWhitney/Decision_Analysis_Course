@@ -17,7 +17,8 @@ runtime: shiny_prerendered
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(bayesplot)
-devtools::install_github("eikeluedeling/decisionSupport")
+# library(devtools)
+# devtools::install_github("eikeluedeling/decisionSupport")
 library(decisionSupport)
 library(DiagrammeR)
 library(ggplot2)
