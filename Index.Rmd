@@ -52,7 +52,7 @@ model_function <- function(){
 # Run the Monte Carlo simulation using the model function ####
 example_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
                               model_function = model_function,
-                              numberOfModelRuns = 800,
+                              numberOfModelRuns = 100,
                               functionSyntax = "plainNames")
 ###### make variables function #######
 # make variables
@@ -213,7 +213,7 @@ return(list(Interv_NPV = NPV_interv,
 mcSimulation_results <- decisionSupport::mcSimulation(
   estimate = decisionSupport::estimate_read_csv("data/example_input_table.csv"),
   model_function = example_decision_function,
-  numberOfModelRuns = 200,
+  numberOfModelRuns = 100,
   functionSyntax = "plainNames"
 )
  
@@ -267,7 +267,7 @@ return(list(NPV_no_net =  NPV_no_net,
 ###### Run HAIL Risk model #######
 hail_mc_simulation <- mcSimulation(estimate = as.estimate(hail_estimates),
                               model_function = hail_function,
-                              numberOfModelRuns = 200,
+                              numberOfModelRuns = 100,
                               functionSyntax = "plainNames")
 
 ######  HAIL Risk evpi #######
