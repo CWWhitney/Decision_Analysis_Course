@@ -7,7 +7,7 @@ Your work for this this seminar is to review materials from Lecture 7 on the met
 
 To prepare please load the required calibration sheets from our shared Slack work space. 
 
-After this session please consider the inputs that will be necessary for your own model and prepare the input table and formulate questions for get calibrated estimates from your colleagues and/or any experts that you have identified for your team's model.
+After this session please consider the inputs that will be necessary for your own model and prepare the input table and formulate questions for eliciting calibrated estimates from your colleagues and/or any experts that you have identified for your team's model.
 
 ### Further tools
 
