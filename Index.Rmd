@@ -310,62 +310,62 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_Schedule.Rmd"}
 ```
 
-```{r child="Seminar_01_Experiential.Rmd"}
-```
+<!-- ```{r child="Seminar_01_Experiential.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_02_Decision_Analysis.Rmd"}
-```
-```{r child="Seminar_02_R_RStudio_1.Rmd"}
-```
+<!-- ```{r child="Lecture_02_Decision_Analysis.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_02_R_RStudio_1.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_03_Define_Decision.Rmd"}
-```
-```{r child="Seminar_03_R_RStudio_2.Rmd"}
-```
+<!-- ```{r child="Lecture_03_Define_Decision.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_03_R_RStudio_2.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_04_Case_Studies.Rmd"}
-```
-```{r child="Seminar_04_RMarkdown.Rmd"}
-```
+<!-- ```{r child="Lecture_04_Case_Studies.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_04_RMarkdown.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_05_Participatory_Methods.Rmd"}
-```
-```{r child="Seminar_05_Git_Github.Rmd"}
-```
+<!-- ```{r child="Lecture_05_Participatory_Methods.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_05_Git_Github.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_06_Decision_Models.Rmd"}
-```
-```{r child="Seminar_06_Model_Programming.Rmd"}
-```
+<!-- ```{r child="Lecture_06_Decision_Models.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_06_Model_Programming.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_07_calibration_lecture.Rmd"}
-```
-```{r child="Seminar_07_calibration_seminar.Rmd"}
-```
+<!-- ```{r child="Lecture_07_calibration_lecture.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_07_calibration_seminar.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_08_Forecasts.Rmd"}
-```
+<!-- ```{r child="Lecture_08_Forecasts.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Seminar_08_models_seminar.Rmd"}
-```
+<!-- ```{r child="Seminar_08_models_seminar.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_09_Bayesian_Thinking.Rmd"}
-```
-```{r child="Seminar_09_forecast_seminar.Rmd"}
-```
+<!-- ```{r child="Lecture_09_Bayesian_Thinking.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_09_forecast_seminar.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_10_Analyst_Profile.Rmd"}
-```
-```{r child="Seminar_10_Functions.Rmd"}
-```
+<!-- ```{r child="Lecture_10_Analyst_Profile.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_10_Functions.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_11_Communicating.Rmd"}
-```
-```{r child="Seminar_11_Writing.Rmd"}
-```
+<!-- ```{r child="Lecture_11_Communicating.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_11_Writing.Rmd"} -->
+<!-- ``` -->
 
 ```{r child="Impressum.Rmd"}
 ```
 
-```{r child="References.Rmd"}
-```
+<!-- ```{r child="References.Rmd"} -->
+<!-- ``` -->
