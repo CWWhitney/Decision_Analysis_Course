@@ -84,7 +84,7 @@ Hash: 3067a413f1457c3c1d88bf39026b179f
 
 Package: XML
 Source: CRAN
-Version: 3.99-0.9
+Version: 3.99-0.3
 Hash: 683f728baddccd5764fecc98835ac236
 
 Package: askpass
