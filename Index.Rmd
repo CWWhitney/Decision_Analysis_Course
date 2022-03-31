@@ -367,5 +367,5 @@ knitr::write_bib(c(.packages(),
 ```{r child="Impressum.Rmd"}
 ```
 
-<!-- ```{r child="References.Rmd"} -->
-<!-- ``` -->
+```{r child="References.Rmd"}
+```
