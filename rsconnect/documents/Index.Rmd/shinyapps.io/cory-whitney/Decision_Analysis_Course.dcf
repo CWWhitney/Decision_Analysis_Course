@@ -5,10 +5,10 @@ account: cory-whitney
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3901868
-bundleId: 5748794
+bundleId: 5749075
 url: https://cory-whitney.shinyapps.io/Decision_Analysis_Course/
-when: 1648715986.83869
-lastSyncTime: 1648715986.8387
+when: 1648721559.1445
+lastSyncTime: 1648721559.14451
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: .gitattributes|.gitmodules|bib/.DS_Store
+ignoredFiles: .RData|bib/.DS_Store
