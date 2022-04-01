@@ -5,10 +5,10 @@ account: michaelthomasketchbrook
 server: agtools.app
 hostUrl: https://agtools.app/__api__
 appId: 8
-bundleId: 34
+bundleId: 39
 url: https://agtools.app/content/9456f6d0-406a-475f-8c38-45e9bce6eace/
-when: 1648798037.04724
-lastSyncTime: 1648798037.04726
+when: 1648807487.03401
+lastSyncTime: 1648807487.03403
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: bib/.DS_Store|slides_etc/.DS_Store
