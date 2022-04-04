@@ -310,8 +310,8 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_Schedule.Rmd"}
 ```
 
-<!-- ```{r child="Seminar_01_Experiential.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_01_Experiential.Rmd"}
+```
 
 <!-- ```{r child="Lecture_02_Decision_Analysis.Rmd"} -->
 <!-- ``` -->
