@@ -313,10 +313,10 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_01_Experiential.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_02_Decision_Analysis.Rmd"} -->
-<!-- ``` -->
-<!-- ```{r child="Seminar_02_R_RStudio_1.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_02_Decision_Analysis.Rmd"}
+```
+```{r child="Seminar_02_R_RStudio_1.Rmd"}
+```
 
 <!-- ```{r child="Lecture_03_Define_Decision.Rmd"} -->
 <!-- ``` -->
