@@ -617,244 +617,244 @@ example_decision_inputs <- read.csv("data/example_decision_inputs.csv")
 input_table <- read.csv("data/example_input_table.csv")
 hail_estimates <- read.csv("data/hail_estimates.csv")
 
-# ###### chile function #######
-# 
-# # create the model function
-# model_function <- function(){
-#   income <- Yield * Market_price
-#   overall_costs <- Labor_cost + Management_cost
-#   final_result <- income - overall_costs
-#   return(list(final_result = final_result))
-# }
-# 
-# # Run the Monte Carlo simulation using the model function ####
-# example_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
-#                               model_function = model_function,
-#                               numberOfModelRuns = 100,
-#                               functionSyntax = "plainNames")
-# ###### make variables function #######
-# # make variables
-# make_variables <- function(est,n=1)
-# { x<-random(rho=est, n=n)
-#     for(i in colnames(x)) assign(i,
-#      as.numeric(x[1,i]),envir=.GlobalEnv)
-# }
-# 
-# # suppress warnings
-# options(warn = - 1)
-# 
-# ###### burkina function #######
-# # second decision function
-# example_decision_function <- function(x, varnames){
-# 
-#   # calculate ex-ante risks: impact the implementation of interventions ####
-#   intervention_NonPopInvolvEvent <-
-#     chance_event(intervention_NonPopInvolv, 1, 0, n = 1)
-# 
-#   # pre-calculate common random draws for all intervention model runs ####
-# 
-#   # profits from Tropical Livestock Units (TLU)
-#   TLU <- vv(TLU_no_intervention, var_CV, n_years)
-#   TLU_profit <- vv(profit_per_TLU, var_CV, n_years)
-# 
-#   # benefits of fruit
-#   precalc_intervention_fruit_benefits <-
-#     vv(intervention_fruit_area_ha, var_CV, n_years) *
-#     vv(intervention_fruit_yield_t_ha, var_CV, n_years) *
-#     vv(intervention_fruit_profit_USD_t, var_CV, n_years)
-# 
-#   # benefits of vegetables
-#   precalc_intervention_vegetable_benefits <-
-#     vv(intervention_vegetable_area_ha, var_CV, n_years) *
-#     vv(intervention_vegetable_yield_t_ha, var_CV, n_years) *
-#     vv(intervention_vegetable_profit_USD_t, var_CV, n_years)
-# 
-#   # benefits of rain-fed crops
-#   precalc_intervention_rainfed_crop_benefits <-
-#     vv(intervention_rainfed_crop_area_ha, var_CV, n_years) *
-#     vv(intervention_rainfed_crop_yield_t_ha, var_CV, n_years) *
-#     vv(intervention_rainfed_crop_profit_USD_t, var_CV, n_years)
-# 
-#   #  Intervention ####
-# 
-#   for (decision_intervention_strips in c(FALSE,TRUE))
-#       {
-# 
-#   if (decision_intervention_strips)
-#   {
-#     intervention_strips <- TRUE
-#     intervention_strips_PlanningCost <- TRUE
-#     intervention_strips_cost <- TRUE
-#   } else
-#   {
-#     intervention_strips <- FALSE
-#     intervention_strips_PlanningCost <- FALSE
-#     intervention_strips_cost <- FALSE
-#   }
-# 
-#   if (intervention_NonPopInvolvEvent) {
-#     intervention_strips <- FALSE
-#     intervention_strips_cost <- FALSE
-#   }
-# 
-#   # Costs ####
-#   if (intervention_strips_cost) {
-#     cost_intervention_strips <-
-#       intervention_adaptation_cost +
-#       intervention_tech_devices_cost +
-#       intervention_nursery_cost +
-#       intervention_wells_cost +
-#       intervention_training_cost +
-#       intervention_mngmt_oprt_cost +
-#       intervention_mngmt_follow_cost +
-#       intervention_mngmt_audit_cost
-#   } else
-#     cost_intervention_strips <- 0
-# 
-#   if (intervention_strips_PlanningCost) {
-#     plan_cost_intervention_strips <-
-#       intervention_communication_cost + intervention_zoning_cost
-#   } else
-#     plan_cost_intervention_strips <- 0
-# 
-#   maintenance_cost <- rep(0, n_years)
-# 
-#   if (intervention_strips)
-#     maintenance_cost <-
-#     maintenance_cost + vv(maintenance_intervention_strips,
-#                           var_CV, n_years)
-# 
-#   intervention_cost <- maintenance_cost
-#   intervention_cost[1] <-
-#     intervention_cost[1] +
-#     cost_intervention_strips +
-#     plan_cost_intervention_strips
-# 
-# 
-#   # Benefits from  cultivation in the intervention strips ####
-# 
-#   intervention_fruit_benefits <-
-#     as.numeric(intervention_strips) * precalc_intervention_fruit_benefits
-#   intervention_vegetable_benefits <-
-#     as.numeric(intervention_strips) * precalc_intervention_vegetable_benefits
-#   intervention_rainfed_crop_benefits <-
-#     as.numeric(intervention_strips) * precalc_intervention_rainfed_crop_benefits
-# 
-#   # Total benefits from crop production (agricultural development and riparian zone) ####
-#   crop_production <-
-#     intervention_fruit_benefits +
-#     intervention_vegetable_benefits +
-#     intervention_rainfed_crop_benefits
-# 
-#   # Benefits from livestock ####
-#   # The following allows considering that intervention strips may
-#   # restrict access to the reservoir for livestock.
-# 
-#   if (intervention_strips)
-#     TLU_intervention <-
-#     TLU * (1 + change_TLU_intervention_perc / 100)
-#   else
-#     TLU_intervention <- TLU
-# 
-#   if (decision_intervention_strips){
-#     livestock_benefits <- TLU_intervention * TLU_profit
-#     total_benefits <- crop_production + livestock_benefits
-#     net_benefits <- total_benefits - intervention_cost
-#     result_interv <- net_benefits}
-# 
-# 
-#   if (!decision_intervention_strips){
-#     livestock_benefits <- TLU_no_intervention * TLU_profit
-#     total_benefits <- livestock_benefits
-#     net_benefits <- total_benefits - intervention_cost
-#     result_n_interv <- net_benefits}
-# 
-#     } #close intervention loop bracket
-# 
-# NPV_interv <-
-#   discount(result_interv, discount_rate, calculate_NPV = TRUE)
-# 
-# NPV_n_interv <-
-#   discount(result_n_interv, discount_rate, calculate_NPV = TRUE)
-# 
-# # Beware, if you do not name your outputs
-# # (left-hand side of the equal sign) in the return section,
-# # the variables will be called output_1, _2, etc.
-# 
-# return(list(Interv_NPV = NPV_interv,
-#             NO_Interv_NPV = NPV_n_interv,
-#             NPV_decision_do = NPV_interv - NPV_n_interv,
-#             Cashflow_decision_do = result_interv - result_n_interv))
-# }
-# ###### run burkina model #######
-# # second simulation
-# mcSimulation_results <- decisionSupport::mcSimulation(
-#   estimate = decisionSupport::estimate_read_csv("data/example_input_table.csv"),
-#   model_function = example_decision_function,
-#   numberOfModelRuns = 100,
-#   functionSyntax = "plainNames"
-# )
-# 
-# ###### burkina evpi #####
-# mcSimulation_table <- data.frame(mcSimulation_results$x, mcSimulation_results$y[1:3])
-# 
-# evpi <- multi_EVPI(mc = mcSimulation_table, first_out_var = "Interv_NPV")
-# ###### Burkina pls ########
-# pls_result <- plsr.mcSimulation(object = mcSimulation_results,
-#                   resultName = names(mcSimulation_results$y)[3], ncomp = 1)
-# ###### HAIL Risk #######
-# hail_function <- function(){
-# 
-# yields <- vv(var_mean = yield,
-#              var_CV = var_CV,
-#              n = 20)
-# 
-# prices <- vv(var_mean = price,
-#              var_CV = var_CV,
-#              n = 20)
-# 
-# # use 'rep' to simulate the investment
-# # only in the first year (assuming the net lasts 20 years)
-# invest_costs <- c(initial_investment, rep(0, 19))
-# 
-# # use 'chance_event' to adjust yield for potential hail
-# hail_adjusted_yield <- chance_event(chance = p_hail,
-#                                     value_if = 0,
-#                                     value_if_not = yield,
-#                                     n = 20)
-# 
-# # calculate profit without net
-# profit_no_net <- hail_adjusted_yield*prices
-# 
-# # calculate profit with the net
-# profit_with_net <- (yields*prices)-invest_costs
-# 
-# # use 'discount' to calculate net present value
-# # 'discount_rate' is expressed in percent
-# NPV_no_net <- discount(profit_no_net, discount_rate = 5, calculate_NPV = TRUE)
-# NPV_net <- discount(profit_with_net, discount_rate = 5, calculate_NPV = TRUE)
-# 
-# # calculate the overall NPV of the decision (do - don't do)
-# NPV_decision <- NPV_net-NPV_no_net
-# 
-# return(list(NPV_no_net =  NPV_no_net,
-#             NPV_net =  NPV_net,
-#             NPV_decision = NPV_decision))
-# }
-# 
-# ###### Run HAIL Risk model #######
-# hail_mc_simulation <- mcSimulation(estimate = as.estimate(hail_estimates),
-#                               model_function = hail_function,
-#                               numberOfModelRuns = 100,
-#                               functionSyntax = "plainNames")
-# 
-# ######  HAIL Risk evpi #######
-# 
-# mcSimulation_table_hail <- data.frame(hail_mc_simulation$x,
-#                                  hail_mc_simulation$y[3])
-# 
-# evpi_hail <- multi_EVPI(mc = mcSimulation_table_hail,
-#                    first_out_var = "NPV_decision")
+###### chile function #######
+
+# create the model function
+model_function <- function(){
+  income <- Yield * Market_price
+  overall_costs <- Labor_cost + Management_cost
+  final_result <- income - overall_costs
+  return(list(final_result = final_result))
+}
+
+# Run the Monte Carlo simulation using the model function ####
+example_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
+                              model_function = model_function,
+                              numberOfModelRuns = 100,
+                              functionSyntax = "plainNames")
+###### make variables function #######
+# make variables
+make_variables <- function(est,n=1)
+{ x<-random(rho=est, n=n)
+    for(i in colnames(x)) assign(i,
+     as.numeric(x[1,i]),envir=.GlobalEnv)
+}
+
+# suppress warnings
+options(warn = - 1)
+
+###### burkina function #######
+# second decision function
+example_decision_function <- function(x, varnames){
+
+  # calculate ex-ante risks: impact the implementation of interventions ####
+  intervention_NonPopInvolvEvent <-
+    chance_event(intervention_NonPopInvolv, 1, 0, n = 1)
+
+  # pre-calculate common random draws for all intervention model runs ####
+
+  # profits from Tropical Livestock Units (TLU)
+  TLU <- vv(TLU_no_intervention, var_CV, n_years)
+  TLU_profit <- vv(profit_per_TLU, var_CV, n_years)
+
+  # benefits of fruit
+  precalc_intervention_fruit_benefits <-
+    vv(intervention_fruit_area_ha, var_CV, n_years) *
+    vv(intervention_fruit_yield_t_ha, var_CV, n_years) *
+    vv(intervention_fruit_profit_USD_t, var_CV, n_years)
+
+  # benefits of vegetables
+  precalc_intervention_vegetable_benefits <-
+    vv(intervention_vegetable_area_ha, var_CV, n_years) *
+    vv(intervention_vegetable_yield_t_ha, var_CV, n_years) *
+    vv(intervention_vegetable_profit_USD_t, var_CV, n_years)
+
+  # benefits of rain-fed crops
+  precalc_intervention_rainfed_crop_benefits <-
+    vv(intervention_rainfed_crop_area_ha, var_CV, n_years) *
+    vv(intervention_rainfed_crop_yield_t_ha, var_CV, n_years) *
+    vv(intervention_rainfed_crop_profit_USD_t, var_CV, n_years)
+
+  #  Intervention ####
+
+  for (decision_intervention_strips in c(FALSE,TRUE))
+      {
+
+  if (decision_intervention_strips)
+  {
+    intervention_strips <- TRUE
+    intervention_strips_PlanningCost <- TRUE
+    intervention_strips_cost <- TRUE
+  } else
+  {
+    intervention_strips <- FALSE
+    intervention_strips_PlanningCost <- FALSE
+    intervention_strips_cost <- FALSE
+  }
+
+  if (intervention_NonPopInvolvEvent) {
+    intervention_strips <- FALSE
+    intervention_strips_cost <- FALSE
+  }
+
+  # Costs ####
+  if (intervention_strips_cost) {
+    cost_intervention_strips <-
+      intervention_adaptation_cost +
+      intervention_tech_devices_cost +
+      intervention_nursery_cost +
+      intervention_wells_cost +
+      intervention_training_cost +
+      intervention_mngmt_oprt_cost +
+      intervention_mngmt_follow_cost +
+      intervention_mngmt_audit_cost
+  } else
+    cost_intervention_strips <- 0
+
+  if (intervention_strips_PlanningCost) {
+    plan_cost_intervention_strips <-
+      intervention_communication_cost + intervention_zoning_cost
+  } else
+    plan_cost_intervention_strips <- 0
+
+  maintenance_cost <- rep(0, n_years)
+
+  if (intervention_strips)
+    maintenance_cost <-
+    maintenance_cost + vv(maintenance_intervention_strips,
+                          var_CV, n_years)
+
+  intervention_cost <- maintenance_cost
+  intervention_cost[1] <-
+    intervention_cost[1] +
+    cost_intervention_strips +
+    plan_cost_intervention_strips
+
+
+  # Benefits from  cultivation in the intervention strips ####
+
+  intervention_fruit_benefits <-
+    as.numeric(intervention_strips) * precalc_intervention_fruit_benefits
+  intervention_vegetable_benefits <-
+    as.numeric(intervention_strips) * precalc_intervention_vegetable_benefits
+  intervention_rainfed_crop_benefits <-
+    as.numeric(intervention_strips) * precalc_intervention_rainfed_crop_benefits
+
+  # Total benefits from crop production (agricultural development and riparian zone) ####
+  crop_production <-
+    intervention_fruit_benefits +
+    intervention_vegetable_benefits +
+    intervention_rainfed_crop_benefits
+
+  # Benefits from livestock ####
+  # The following allows considering that intervention strips may
+  # restrict access to the reservoir for livestock.
+
+  if (intervention_strips)
+    TLU_intervention <-
+    TLU * (1 + change_TLU_intervention_perc / 100)
+  else
+    TLU_intervention <- TLU
+
+  if (decision_intervention_strips){
+    livestock_benefits <- TLU_intervention * TLU_profit
+    total_benefits <- crop_production + livestock_benefits
+    net_benefits <- total_benefits - intervention_cost
+    result_interv <- net_benefits}
+
+
+  if (!decision_intervention_strips){
+    livestock_benefits <- TLU_no_intervention * TLU_profit
+    total_benefits <- livestock_benefits
+    net_benefits <- total_benefits - intervention_cost
+    result_n_interv <- net_benefits}
+
+    } #close intervention loop bracket
+
+NPV_interv <-
+  discount(result_interv, discount_rate, calculate_NPV = TRUE)
+
+NPV_n_interv <-
+  discount(result_n_interv, discount_rate, calculate_NPV = TRUE)
+
+# Beware, if you do not name your outputs
+# (left-hand side of the equal sign) in the return section,
+# the variables will be called output_1, _2, etc.
+
+return(list(Interv_NPV = NPV_interv,
+            NO_Interv_NPV = NPV_n_interv,
+            NPV_decision_do = NPV_interv - NPV_n_interv,
+            Cashflow_decision_do = result_interv - result_n_interv))
+}
+###### run burkina model #######
+# second simulation
+mcSimulation_results <- decisionSupport::mcSimulation(
+  estimate = decisionSupport::estimate_read_csv("data/example_input_table.csv"),
+  model_function = example_decision_function,
+  numberOfModelRuns = 100,
+  functionSyntax = "plainNames"
+)
+
+###### burkina evpi #####
+mcSimulation_table <- data.frame(mcSimulation_results$x, mcSimulation_results$y[1:3])
+
+evpi <- multi_EVPI(mc = mcSimulation_table, first_out_var = "Interv_NPV")
+###### Burkina pls ########
+pls_result <- plsr.mcSimulation(object = mcSimulation_results,
+                  resultName = names(mcSimulation_results$y)[3], ncomp = 1)
+###### HAIL Risk #######
+hail_function <- function(){
+
+yields <- vv(var_mean = yield,
+             var_CV = var_CV,
+             n = 20)
+
+prices <- vv(var_mean = price,
+             var_CV = var_CV,
+             n = 20)
+
+# use 'rep' to simulate the investment
+# only in the first year (assuming the net lasts 20 years)
+invest_costs <- c(initial_investment, rep(0, 19))
+
+# use 'chance_event' to adjust yield for potential hail
+hail_adjusted_yield <- chance_event(chance = p_hail,
+                                    value_if = 0,
+                                    value_if_not = yield,
+                                    n = 20)
+
+# calculate profit without net
+profit_no_net <- hail_adjusted_yield*prices
+
+# calculate profit with the net
+profit_with_net <- (yields*prices)-invest_costs
+
+# use 'discount' to calculate net present value
+# 'discount_rate' is expressed in percent
+NPV_no_net <- discount(profit_no_net, discount_rate = 5, calculate_NPV = TRUE)
+NPV_net <- discount(profit_with_net, discount_rate = 5, calculate_NPV = TRUE)
+
+# calculate the overall NPV of the decision (do - don't do)
+NPV_decision <- NPV_net-NPV_no_net
+
+return(list(NPV_no_net =  NPV_no_net,
+            NPV_net =  NPV_net,
+            NPV_decision = NPV_decision))
+}
+
+###### Run HAIL Risk model #######
+hail_mc_simulation <- mcSimulation(estimate = as.estimate(hail_estimates),
+                              model_function = hail_function,
+                              numberOfModelRuns = 100,
+                              functionSyntax = "plainNames")
+
+######  HAIL Risk evpi #######
+
+mcSimulation_table_hail <- data.frame(hail_mc_simulation$x,
+                                 hail_mc_simulation$y[3])
+
+evpi_hail <- multi_EVPI(mc = mcSimulation_table_hail,
+                   first_out_var = "NPV_decision")
 
 </script>
  
@@ -869,35 +869,35 @@ session$onSessionEnded(function() {
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-ken-robinson",     question = structure("What is the premise of Sir Ken Robinson&#39;s TED Talk?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_e7d1305",         option = "We need more sciences and maths in education.",         value = "We need more sciences and maths in education.",         label = structure("We need more sciences and maths in education.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_af6441b",         option = "Creativity is as important as literacy in education.",         value = "Creativity is as important as literacy in education.",         label = structure("Creativity is as important as literacy in education.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_af2ac0a",         option = "We are educating people out of their creative capacities.",         value = "We are educating people out of their creative capacities.",         label = structure("We are educating people out of their creative capacities.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_27b186e",         option = "Teachers are often invited to dinner parties.",         value = "Teachers are often invited to dinner parties.",         label = structure("Teachers are often invited to dinner parties.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("Watch <a href=\"https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity\">the TED talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), incorrect = structure("Watch <a href=\"https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity\">the TED talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "question-ken-robinson-answer", question = "question-ken-robinson"),     loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the premise of Sir Ken Robinson&#39;s TED Talk?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 1959122316.58771, options = list()), class = c("learnr_checkbox", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-ken-robinson",     question = structure("What is the premise of Sir Ken Robinson&#39;s TED Talk?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_a8422e9",         option = "We need more sciences and maths in education.",         value = "We need more sciences and maths in education.",         label = structure("We need more sciences and maths in education.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ed2b74a",         option = "Creativity is as important as literacy in education.",         value = "Creativity is as important as literacy in education.",         label = structure("Creativity is as important as literacy in education.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_af1970d",         option = "We are educating people out of their creative capacities.",         value = "We are educating people out of their creative capacities.",         label = structure("We are educating people out of their creative capacities.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e72feb7",         option = "Teachers are often invited to dinner parties.",         value = "Teachers are often invited to dinner parties.",         label = structure("Teachers are often invited to dinner parties.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("Watch <a href=\"https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity\">the TED talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), incorrect = structure("Watch <a href=\"https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity\">the TED talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "question-ken-robinson-answer", question = "question-ken-robinson"),     loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the premise of Sir Ken Robinson&#39;s TED Talk?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 1224225116.42993, options = list()), class = c("learnr_checkbox", "tutorial_question")))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-1", question = structure("What is the main concern of Decision Analysis for agricultural development?", html = TRUE, class = c("html", "character")), answers = list(structure(list(id = "lnr_ans_cee3dfe",     option = "How do people make decisions?", value = "How do people make decisions?",     label = structure("How do people make decisions?", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_83c2115",     option = "What does the data tell us about development?",     value = "What does the data tell us about development?",     label = structure("What does the data tell us about development?", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_19bf8ef",     option = "How will decisions influence future sustainability?",     value = "How will decisions influence future sustainability?",     label = structure("How will decisions influence future sustainability?", html = TRUE, class = c("html",     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6e57993",     option = "How can we perform analyses of big data for policy advice?",     value = "How can we perform analyses of big data for policy advice?",     label = structure("How can we perform analyses of big data for policy advice?", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html", "character")), try_again = structure("Try Again", html = TRUE, class = c("html", "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", "character")), try_again = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", "character")), incorrect = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", "character")), message = NULL, post_message = NULL), ids = list(    answer = "question-1-answer", question = "question-1"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the main concern of Decision Analysis for agricultural development?\n<br/><br/><br/>", html = TRUE, class = c("html", "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 463698251.284074, options = list()), class = c("learnr_radio", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-1", question = structure("What is the main concern of Decision Analysis for agricultural development?", html = TRUE, class = c("html", "character")), answers = list(structure(list(id = "lnr_ans_71d07f7",     option = "How do people make decisions?", value = "How do people make decisions?",     label = structure("How do people make decisions?", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_431aece",     option = "What does the data tell us about development?",     value = "What does the data tell us about development?",     label = structure("What does the data tell us about development?", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_99011a3",     option = "How will decisions influence future sustainability?",     value = "How will decisions influence future sustainability?",     label = structure("How will decisions influence future sustainability?", html = TRUE, class = c("html",     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e6b220",     option = "How can we perform analyses of big data for policy advice?",     value = "How can we perform analyses of big data for policy advice?",     label = structure("How can we perform analyses of big data for policy advice?", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html", "character")), try_again = structure("Try Again", html = TRUE, class = c("html", "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", "character")), try_again = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", "character")), incorrect = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", "character")), message = NULL, post_message = NULL), ids = list(    answer = "question-1-answer", question = "question-1"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the main concern of Decision Analysis for agricultural development?\n<br/><br/><br/>", html = TRUE, class = c("html", "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 1857012096.13526, options = list()), class = c("learnr_radio", "tutorial_question")))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-2", question = structure("Why do we apply Decision Analysis in agricultural development research?", html = TRUE, class = c("html", "character")), answers = list(structure(list(id = "lnr_ans_799bb2d",     option = "To make sense of large data sets.", value = "To make sense of large data sets.",     label = structure("To make sense of large data sets.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5416aad",     option = "To better understand how decisions are made.",     value = "To better understand how decisions are made.", label = structure("To better understand how decisions are made.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_27d7ed4",     option = "To offer support in decision making under uncertainty.",     value = "To offer support in decision making under uncertainty.",     label = structure("To offer support in decision making under uncertainty.", html = TRUE, class = c("html",     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a739e9b",     option = "To generate new data sets.", value = "To generate new data sets.",     label = structure("To generate new data sets.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html", "character")), try_again = structure("Try Again", html = TRUE, class = c("html", "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", "character")), try_again = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", "character")), incorrect = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", "character")), message = NULL, post_message = NULL), ids = list(    answer = "question-2-answer", question = "question-2"), loading = structure("<strong>Loading:<\u002fstrong> \nWhy do we apply Decision Analysis in agricultural development research?\n<br/><br/><br/>", html = TRUE, class = c("html", "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 1628865957.7415, options = list()), class = c("learnr_radio", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-2", question = structure("Why do we apply Decision Analysis in agricultural development research?", html = TRUE, class = c("html", "character")), answers = list(structure(list(id = "lnr_ans_8236ab9",     option = "To make sense of large data sets.", value = "To make sense of large data sets.",     label = structure("To make sense of large data sets.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_987e29a",     option = "To better understand how decisions are made.",     value = "To better understand how decisions are made.", label = structure("To better understand how decisions are made.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_91081aa",     option = "To offer support in decision making under uncertainty.",     value = "To offer support in decision making under uncertainty.",     label = structure("To offer support in decision making under uncertainty.", html = TRUE, class = c("html",     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_7cbb9ee",     option = "To generate new data sets.", value = "To generate new data sets.",     label = structure("To generate new data sets.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html", "character")), try_again = structure("Try Again", html = TRUE, class = c("html", "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", "character")), try_again = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", "character")), incorrect = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", "character")), message = NULL, post_message = NULL), ids = list(    answer = "question-2-answer", question = "question-2"), loading = structure("<strong>Loading:<\u002fstrong> \nWhy do we apply Decision Analysis in agricultural development research?\n<br/><br/><br/>", html = TRUE, class = c("html", "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 126935501.440891, options = list()), class = c("learnr_radio", "tutorial_question")))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-3", question = structure("What is one of the main benefits of Decision Analysis approaches?", html = TRUE, class = c("html", "character")), answers = list(structure(list(id = "lnr_ans_35e7ce9",     option = "Making use of existing knowledge to build forecasts.",     value = "Making use of existing knowledge to build forecasts.",     label = structure("Making use of existing knowledge to build forecasts.", html = TRUE, class = c("html",     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_8ea03d4",     option = "Helping to better understand how and why decisions are made.",     value = "Helping to better understand how and why decisions are made.",     label = structure("Helping to better understand how and why decisions are made.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c75d44",     option = "Making use of big data to generate models.", value = "Making use of big data to generate models.",     label = structure("Making use of big data to generate models.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_2b574ab",     option = "Support decisions by using existing measurements and evidence for which we have high certainty.",     value = "Support decisions by using existing measurements and evidence for which we have high certainty.",     label = structure("Support decisions by using existing measurements and evidence for which we have high certainty.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html", "character")), try_again = structure("Try Again", html = TRUE, class = c("html", "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", "character")), try_again = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", "character")), incorrect = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", "character")), message = NULL, post_message = NULL), ids = list(    answer = "question-3-answer", question = "question-3"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat is one of the main benefits of Decision Analysis approaches?\n<br/><br/><br/>", html = TRUE, class = c("html", "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 1398595179.84873, options = list()), class = c("learnr_radio", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-3", question = structure("What is one of the main benefits of Decision Analysis approaches?", html = TRUE, class = c("html", "character")), answers = list(structure(list(id = "lnr_ans_430bc1e",     option = "Making use of existing knowledge to build forecasts.",     value = "Making use of existing knowledge to build forecasts.",     label = structure("Making use of existing knowledge to build forecasts.", html = TRUE, class = c("html",     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_512eb88",     option = "Helping to better understand how and why decisions are made.",     value = "Helping to better understand how and why decisions are made.",     label = structure("Helping to better understand how and why decisions are made.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5337626",     option = "Making use of big data to generate models.", value = "Making use of big data to generate models.",     label = structure("Making use of big data to generate models.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_d489aa5",     option = "Support decisions by using existing measurements and evidence for which we have high certainty.",     value = "Support decisions by using existing measurements and evidence for which we have high certainty.",     label = structure("Support decisions by using existing measurements and evidence for which we have high certainty.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html", "character")), try_again = structure("Try Again", html = TRUE, class = c("html", "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", "character")), try_again = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", "character")), incorrect = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", "character")), message = NULL, post_message = NULL), ids = list(    answer = "question-3-answer", question = "question-3"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat is one of the main benefits of Decision Analysis approaches?\n<br/><br/><br/>", html = TRUE, class = c("html", "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 988168954.039848, options = list()), class = c("learnr_radio", "tutorial_question")))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-DA-approaches_define",     question = structure("How do we define a decision in the context of Decision Analysis?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_c61cc3b",         option = "An irrevocable allocation of resources.", value = "An irrevocable allocation of resources.",         label = structure("An irrevocable allocation of resources.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_7996709",         option = "Something that can be reversed.", value = "Something that can be reversed.",         label = structure("Something that can be reversed.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_63f054e",         option = "A logical choice between different options",         value = "A logical choice between different options",         label = structure("A logical choice between different options", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("Watch <a href=\"https://youtu.be/IRZZokPD3GU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), incorrect = structure("Watch <a href=\"https://youtu.be/IRZZokPD3GU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "question-DA-approaches_define-answer", question = "question-DA-approaches_define"),     loading = structure("<strong>Loading:<\u002fstrong> \nHow do we define a decision in the context of Decision Analysis?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 1625376552.74312, options = list()), class = c("learnr_checkbox", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-DA-approaches_define",     question = structure("How do we define a decision in the context of Decision Analysis?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_3728b5",         option = "An irrevocable allocation of resources.", value = "An irrevocable allocation of resources.",         label = structure("An irrevocable allocation of resources.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_2fb22bd",         option = "Something that can be reversed.", value = "Something that can be reversed.",         label = structure("Something that can be reversed.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6a5d980",         option = "A logical choice between different options",         value = "A logical choice between different options",         label = structure("A logical choice between different options", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("Watch <a href=\"https://youtu.be/IRZZokPD3GU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), incorrect = structure("Watch <a href=\"https://youtu.be/IRZZokPD3GU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "question-DA-approaches_define-answer", question = "question-DA-approaches_define"),     loading = structure("<strong>Loading:<\u002fstrong> \nHow do we define a decision in the context of Decision Analysis?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 1372147634.86104, options = list()), class = c("learnr_checkbox", "tutorial_question")))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-DA-approaches_impact-pathway",     question = structure("Why do we use impact pathways?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_5ca8d39",         option = "To think beforehand what might occur and what the outcomes might be, to expose weak links.",         value = "To think beforehand what might occur and what the outcomes might be, to expose weak links.",         label = structure("To think beforehand what might occur and what the outcomes might be, to expose weak links.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_31e8068",         option = "To make sense of the processes that we have already carried out.",         value = "To make sense of the processes that we have already carried out.",         label = structure("To make sense of the processes that we have already carried out.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_8b714c5",         option = "To generate new data sets.", value = "To generate new data sets.",         label = structure("To generate new data sets.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("Watch <a href=\"https://youtu.be/IRZZokPD3GU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), incorrect = structure("Watch <a href=\"https://youtu.be/IRZZokPD3GU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "question-DA-approaches_impact-pathway-answer",         question = "question-DA-approaches_impact-pathway"),     loading = structure("<strong>Loading:<\u002fstrong> \nWhy do we use impact pathways?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 1304693897.89245, options = list()), class = c("learnr_radio", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-DA-approaches_impact-pathway",     question = structure("Why do we use impact pathways?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_b4da9de",         option = "To think beforehand what might occur and what the outcomes might be, to expose weak links.",         value = "To think beforehand what might occur and what the outcomes might be, to expose weak links.",         label = structure("To think beforehand what might occur and what the outcomes might be, to expose weak links.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a32af3e",         option = "To make sense of the processes that we have already carried out.",         value = "To make sense of the processes that we have already carried out.",         label = structure("To make sense of the processes that we have already carried out.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_66806d9",         option = "To generate new data sets.", value = "To generate new data sets.",         label = structure("To generate new data sets.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("Watch <a href=\"https://youtu.be/IRZZokPD3GU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), incorrect = structure("Watch <a href=\"https://youtu.be/IRZZokPD3GU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "question-DA-approaches_impact-pathway-answer",         question = "question-DA-approaches_impact-pathway"),     loading = structure("<strong>Loading:<\u002fstrong> \nWhy do we use impact pathways?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 328891582.846848, options = list()), class = c("learnr_radio", "tutorial_question")))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-DA-approaches_trans-research",     question = structure("What is the underlying idea in transdisciplinary approaches for agricultural development?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_605655c",         option = "Farmers should be part of the research process.",         value = "Farmers should be part of the research process.",         label = structure("Farmers should be part of the research process.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_1b0c037",         option = "Getting academics from different fields to work together.",         value = "Getting academics from different fields to work together.",         label = structure("Getting academics from different fields to work together.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_2a0b49b",         option = "Making use of big data to generate models.",         value = "Making use of big data to generate models.",         label = structure("Making use of big data to generate models.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("Watch <a href=\"https://youtu.be/IRZZokPD3GU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), incorrect = structure("Watch <a href=\"https://youtu.be/IRZZokPD3GU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "question-DA-approaches_trans-research-answer",         question = "question-DA-approaches_trans-research"),     loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the underlying idea in transdisciplinary approaches for agricultural development?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 41195644.4808168, options = list()), class = c("learnr_radio", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-DA-approaches_trans-research",     question = structure("What is the underlying idea in transdisciplinary approaches for agricultural development?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_44efca0",         option = "Farmers should be part of the research process.",         value = "Farmers should be part of the research process.",         label = structure("Farmers should be part of the research process.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_29d0f7f",         option = "Getting academics from different fields to work together.",         value = "Getting academics from different fields to work together.",         label = structure("Getting academics from different fields to work together.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_9a06341",         option = "Making use of big data to generate models.",         value = "Making use of big data to generate models.",         label = structure("Making use of big data to generate models.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("Watch <a href=\"https://youtu.be/IRZZokPD3GU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), incorrect = structure("Watch <a href=\"https://youtu.be/IRZZokPD3GU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "question-DA-approaches_trans-research-answer",         question = "question-DA-approaches_trans-research"),     loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the underlying idea in transdisciplinary approaches for agricultural development?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 218397178.398301, options = list()), class = c("learnr_radio", "tutorial_question")))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-karl-claxton",     question = structure("What is the premise of Karl Claxton&#39;s Talk?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_d3b182b",         option = "We need to use all available evidence.", value = "We need to use all available evidence.",         label = structure("We need to use all available evidence.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_cced5fc",         option = "We can assign distributions to the parameters and sample randomly with Monte Carlo.",         value = "We can assign distributions to the parameters and sample randomly with Monte Carlo.",         label = structure("We can assign distributions to the parameters and sample randomly with Monte Carlo.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3fe090",         option = "We need to characterize decision uncertainty.",         value = "We need to characterize decision uncertainty.",         label = structure("We need to characterize decision uncertainty.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_510482c",         option = "We need to get a lot of data and do analysis of these data sets.",         value = "We need to get a lot of data and do analysis of these data sets.",         label = structure("We need to get a lot of data and do analysis of these data sets.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("Watch <a href=\"https://www.youtube.com/watch?v=f1E3Iv8juC0\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), incorrect = structure("Watch <a href=\"https://www.youtube.com/watch?v=f1E3Iv8juC0\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "question-karl-claxton-answer", question = "question-karl-claxton"),     loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the premise of Karl Claxton&#39;s Talk?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 698978778.674513, options = list()), class = c("learnr_checkbox", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-karl-claxton",     question = structure("What is the premise of Karl Claxton&#39;s Talk?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_2477c9c",         option = "We need to use all available evidence.", value = "We need to use all available evidence.",         label = structure("We need to use all available evidence.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_615a71e",         option = "We can assign distributions to the parameters and sample randomly with Monte Carlo.",         value = "We can assign distributions to the parameters and sample randomly with Monte Carlo.",         label = structure("We can assign distributions to the parameters and sample randomly with Monte Carlo.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_d3d3b74",         option = "We need to characterize decision uncertainty.",         value = "We need to characterize decision uncertainty.",         label = structure("We need to characterize decision uncertainty.", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_88be825",         option = "We need to get a lot of data and do analysis of these data sets.",         value = "We need to get a lot of data and do analysis of these data sets.",         label = structure("We need to get a lot of data and do analysis of these data sets.", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("Watch <a href=\"https://www.youtube.com/watch?v=f1E3Iv8juC0\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), incorrect = structure("Watch <a href=\"https://www.youtube.com/watch?v=f1E3Iv8juC0\">the talk<\u002fa> and try again.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "question-karl-claxton-answer", question = "question-karl-claxton"),     loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the premise of Karl Claxton&#39;s Talk?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = TRUE,     seed = 782316627.135705, options = list()), class = c("learnr_checkbox", "tutorial_question")))
 </script>
  <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="dependencies">
@@ -906,7 +906,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <!--/html_preserve-->
 <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="execution_dependencies">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127]}},"value":[{"type":"character","attributes":{},"value":["assertthat","backports","base","bayesplot","bitops","boot","broom","bslib","cellranger","checkmate","chillR","cli","codetools","colorspace","compiler","crayon","datasets","DBI","dbplyr","decisionSupport","DiagrammeR","digest","dotCall64","dplyr","eha","ellipsis","evaluate","expm","fansi","fastmap","fields","forcats","fs","generics","GenSA","ggplot2","ggrepel","ggridges","ggthemes","glue","graphics","grDevices","grid","gridExtra","gtable","haven","highr","hms","htmltools","htmlwidgets","httpuv","httr","igraph","jquerylib","jsonlite","Kendall","knitr","later","lattice","learnr","lifecycle","lubridate","magrittr","maps","markdown","Matrix","mc2d","methods","mime","modelr","msm","munsell","mvtnorm","pander","patchwork","pillar","pkgconfig","pls","plyr","promises","purrr","R.methodsS3","R.oo","R.utils","R6","raster","RColorBrewer","Rcpp","RCurl","readr","readxl","reprex","rlang","rmarkdown","rprojroot","rriskDistributions","rstudioapi","rvest","sass","scales","shiny","sp","spam","splines","stats","stringi","stringr","survival","terra","tibble","tidyr","tidyselect","tidyverse","tools","tzdb","utf8","utils","vctrs","viridis","viridisLite","visNetwork","withr","xfun","XML","xml2","xtable","yaml"]},{"type":"character","attributes":{},"value":["0.2.1","1.3.0","4.1.3","1.8.1","1.0-7","1.3-28","0.7.10","0.3.1","1.1.0","2.0.0","0.72.5","3.1.0","0.2-18","2.0-2","4.1.3","1.4.2","4.1.3","1.1.1","2.1.1","1.109","1.0.6.1","0.6.28","1.0-1","1.0.7","2.9.0","0.3.2","0.14","0.999-6","0.5.0","1.1.0","13.3","0.5.1","1.5.0","0.1.1","1.1.7","3.3.5","0.9.1","0.5.3","4.2.4","1.5.0","4.1.3","4.1.3","4.1.3","2.3","0.3.0","2.4.3","0.9","1.1.1","0.5.2","1.5.4","1.6.3","1.4.2","1.2.9","0.1.4","1.7.2","2.2","1.37","1.3.0","0.20-45","0.10.1","1.0.1","1.8.0","2.0.1","3.4.0","1.1","1.4-0","0.1-21","4.1.3","0.12","0.1.8","1.6.9","0.5.0","1.1-3","0.6.4","1.1.1","1.6.4","2.0.3","2.8-0","1.8.6","1.2.0.1","0.3.4","1.8.1","1.24.0","2.11.0","2.5.1","3.5-2","1.1-2","1.0.7","1.98-1.5","2.1.1","1.3.1","2.0.1","0.4.12","2.11","2.0.2","2.1.2","0.13","1.0.2","0.4.0","1.1.1","1.7.1","1.4-6","2.7-0","4.1.3","4.1.3","1.7.5","1.4.0","3.2-13","1.4-21","3.1.6","1.1.4","1.1.1","1.3.1","4.1.3","0.2.0","1.2.2","4.1.3","0.3.8","0.6.2","0.4.0","2.1.0","2.4.2","0.28","3.99-0.3","1.3.2","1.8-4","2.2.1"]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129]}},"value":[{"type":"character","attributes":{},"value":["assertthat","backports","base","bayesplot","bitops","boot","broom","bslib","cellranger","checkmate","chillR","cli","codetools","colorspace","compiler","crayon","datasets","DBI","dbplyr","decisionSupport","DiagrammeR","digest","dotCall64","dplyr","eha","ellipsis","evaluate","expm","fANCOVA","fansi","fastmap","fields","forcats","fs","generics","GenSA","ggplot2","ggrepel","ggridges","ggthemes","glue","graphics","grDevices","grid","gridExtra","gtable","haven","highr","hms","htmltools","htmlwidgets","httpuv","httr","igraph","jquerylib","jsonlite","Kendall","knitr","later","lattice","learnr","lifecycle","lubridate","magrittr","maps","markdown","Matrix","mc2d","methods","mime","modelr","msm","munsell","mvtnorm","nleqslv","pander","patchwork","pillar","pkgconfig","pls","plyr","promises","purrr","R.methodsS3","R.oo","R.utils","R6","raster","RColorBrewer","Rcpp","RCurl","readr","readxl","reprex","rlang","rmarkdown","rprojroot","rriskDistributions","rstudioapi","rvest","sass","scales","shiny","sp","spam","splines","stats","stringi","stringr","survival","terra","tibble","tidyr","tidyselect","tidyverse","tools","tzdb","utf8","utils","vctrs","viridis","viridisLite","visNetwork","withr","xfun","XML","xml2","xtable","yaml"]},{"type":"character","attributes":{},"value":["0.2.1","1.3.0","4.1.3","1.8.1","1.0-7","1.3-28","0.7.10","0.3.1","1.1.0","2.0.0","0.72.5","3.1.0","0.2-18","2.0-2","4.1.3","1.4.2","4.1.3","1.1.1","2.1.1","1.109","1.0.6.1","0.6.28","1.0-1","1.0.7","2.9.0","0.3.2","0.14","0.999-6","0.6-1","0.5.0","1.1.0","13.3","0.5.1","1.5.0","0.1.1","1.1.7","3.3.5","0.9.1","0.5.3","4.2.4","1.5.0","4.1.3","4.1.3","4.1.3","2.3","0.3.0","2.4.3","0.9","1.1.1","0.5.2","1.5.4","1.6.3","1.4.2","1.2.9","0.1.4","1.7.2","2.2","1.37","1.3.0","0.20-45","0.10.1","1.0.1","1.8.0","2.0.1","3.4.0","1.1","1.4-0","0.1-21","4.1.3","0.12","0.1.8","1.6.9","0.5.0","1.1-3","3.3.2","0.6.4","1.1.1","1.6.4","2.0.3","2.8-0","1.8.6","1.2.0.1","0.3.4","1.8.1","1.24.0","2.11.0","2.5.1","3.5-2","1.1-2","1.0.7","1.98-1.5","2.1.1","1.3.1","2.0.1","0.4.12","2.11","2.0.2","2.1.2","0.13","1.0.2","0.4.0","1.1.1","1.7.1","1.4-6","2.7-0","4.1.3","4.1.3","1.7.5","1.4.0","3.2-13","1.4-21","3.1.6","1.1.4","1.1.1","1.3.1","4.1.3","0.2.0","1.2.2","4.1.3","0.3.8","0.6.2","0.4.0","2.1.0","2.4.2","0.28","3.99-0.3","1.3.2","1.8-4","2.2.1"]}]}]}
 </script>
 <!--/html_preserve-->
 <div id="section-refs" class="references csl-bib-body hanging-indent">
