@@ -333,10 +333,10 @@ knitr::write_bib(c(.packages(),
 <!-- ```{r child="Seminar_05_Git_Github.Rmd"} -->
 <!-- ``` -->
 
-```{r child="Lecture_06_Decision_Models.Rmd"}
-```
-```{r child="Seminar_06_Model_Programming.Rmd"}
-```
+<!-- ```{r child="Lecture_06_Decision_Models.Rmd"} -->
+<!-- ``` -->
+<!-- ```{r child="Seminar_06_Model_Programming.Rmd"} -->
+<!-- ``` -->
 
 <!-- ```{r child="Lecture_07_calibration_lecture.Rmd"} -->
 <!-- ``` -->
