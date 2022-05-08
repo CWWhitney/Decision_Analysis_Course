@@ -56,7 +56,7 @@ allow_retry = TRUE
 
 ### Bonus: Plot the stakeholder analysis in R
 
-Plot stakeholders' experience, availability and expertise in decision analysis with the `ggplot2` `ggrepel` `ggthemes` libraries [@R-ggplot2; @R-ggrepel; @R-ggthemes]. Use the stakeholder data set from our git repository. To run this on your machine, save [this raw csv file](https://raw.githubusercontent.com/CWWhitney/Decision_Analysis_Course/main/data/stakeholder.csv) as `.csv` to your local RProj directory.  Then use `stakeholder<-read.csv("stakeholder.csv")` to load the data to your R environment and save it as `stakeholder`. 
+Plot stakeholders' experience, availability and expertise in decision analysis with the `ggplot2` `ggrepel` `ggthemes` libraries [@R-ggplot2; @R-ggrepel; @R-ggthemes]. Use the stakeholder data set from our git repository. To run this on your machine, save [this raw csv file](https://raw.githubusercontent.com/CWWhitney/Decision_Analysis_Course/main/data/stakeholder.csv) as `.csv` to your local `.RProj` directory. Then use `stakeholder<-read.csv("stakeholder.csv")` to load the data to your R environment and save it as `stakeholder`. 
 
 ```{r stakeholder-management-01, exercise=TRUE}
 
