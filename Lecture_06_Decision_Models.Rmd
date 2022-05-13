@@ -103,10 +103,10 @@ The objective of the procedures used in the `decisionSupport` package is to make
 
 ### Group discussion reading:
 
-This week you will be reading @meadows_thinking_2009, Part One: System Structures and Behavior 'One. The Basics'. 
+ - @do_decision_2020 'Decision analysis of agroforestry options reveals adoption risks for resource-poor farmers'.
 
 ### Bonus: Further reading
- 
- - @do_decision_2020 'Decision analysis of agroforestry options reveals adoption risks for resource-poor farmers'.
- - @whitney_probabilistic_2018-1 'Probabilistic decision tools for determining impacts of agricultural development policy on household nutrition'.
+
+- @whitney_probabilistic_2018-1 'Probabilistic decision tools for determining impacts of agricultural development policy on household nutrition'.
+
  - @ruett_model-based_2020 'Model-based evaluation of management options in ornamental plant nurseries'

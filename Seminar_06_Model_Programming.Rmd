@@ -186,7 +186,7 @@ This function is not included in the ```decisionSupport``` package, because it p
 
 Applying `make_variables` and `as.estimate` to the data table (with default setting `n=1`) generates one random number for each variable, which then allows you to easily test the code you are developing. Try running this function on your code as you build the decision function. This allows for testing the values within a model rather than running the full model.
 
-Run the `make_variables` and `as.estimate` on the `input_estimates` input table that we created and then calculate the result of `Labor_cost + Management_cost` goven a single random value for these variables. **Note that each time you run this code it generates a new random draw and produces a different number from within the range for the variables in the input table.**
+Run the `make_variables` and `as.estimate` on the `input_estimates` input table that we created and then calculate the result of `Labor_cost + Management_cost` given a single random value for these variables. **Note that each time you run this code it generates a new random draw and produces a different number from within the range for the variables in the input table.**
 
 ```{r make_variables, exercise=TRUE}
 
