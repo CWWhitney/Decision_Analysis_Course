@@ -1,7 +1,7 @@
 ## Lecture 6: Building Decision Models {#decision_models}
 <!-- reference with [Decision Models](#decision_models) -->
 
-Welcome to lecture 6 of **Decision Analysis and Forecasting for Agricultural Development**. We will walk through brief examples and offer the scripts. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_3]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to lecture 6 of **Decision Analysis and Forecasting for Agricultural Development**. We will walk through brief examples and offer the scripts. Feel free to bring up any questions or concerns in the Slack, to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_3]%20Decision%20Analysis%20Lecture) or to the course tutor.
 
 Decision-makers often wish to have a quantitative basis for their decisions. However,‘hard data’ is often missing or unattainable for many important variables, which can paralyze the decision-making processes or lead decision-makers to conclude that large research efforts are needed before a decision can be made. That is, many variables decision makers must consider cannot be precisely quantified, at least not without unreasonable effort. The major objective of (prescriptive) decision analysis is to support decision-making processes faced with this problem. Following the principles of Decision Analysis can allow us to make forecasts of decision outcomes without precise numbers, as long as probability distributions describing the possible values for all variables can be estimated. 
 
