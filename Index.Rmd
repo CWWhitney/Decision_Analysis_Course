@@ -346,10 +346,10 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_07_calibration_seminar.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_08_Forecasts.Rmd"} -->
-<!-- ``` -->
-<!-- ```{r child="Seminar_08_models_seminar.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_08_Forecasts.Rmd"}
+```
+```{r child="Seminar_08_models_seminar.Rmd"}
+```
 
 <!-- ```{r child="Lecture_09_Bayesian_Thinking.Rmd"} -->
 <!-- ``` -->
