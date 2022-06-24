@@ -199,6 +199,7 @@ Follow [Chelsea Parlett Pelleriti's Bayesian statistics work](https://cmparlettp
 
 Listen to the ['Learning Bayesian Statistics'](https://www.learnbayesstats.com) podcast
 
+
 Follow [Michael Betancourt’s Bayesian statistics work](https://betanalpha.github.io/)
 
 <!-- -	Rainforth, Tom. “Automating Inference, Learning, and Design Using Probabilistic Programming.” Doctor of Philosophy, University of Oxford, 2017. -->
