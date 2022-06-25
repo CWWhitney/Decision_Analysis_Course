@@ -229,9 +229,14 @@ plot_cashflow(mcSimulation_object = predictionProfit1,
 
 ### Reading 
 
-This week we will read and discuss 'Decision Analysis of Agroforestry Options Reveals Adoption Risks for Resource-Poor Farmers' by @do_decision_2020.
+<!-- ?NEXT YEAR ADD THIS HERE AND REMOVE FROM other CHAPTER?-->
+<!-- This week we will read and discuss 'Decision Analysis of Agroforestry Options Reveals Adoption Risks for Resource-Poor Farmers' by @do_decision_2020. -->
 
-Do, Hoa, Eike Luedeling, and Cory Whitney. “Decision Analysis of Agroforestry Options Reveals Adoption Risks for Resource-Poor Farmers.” Agronomy for Sustainable Development 40, no. 3 (June 2020): 20. https://doi.org/10.1007/s13593-020-00624-5.
+<!-- Do, Hoa, Eike Luedeling, and Cory Whitney. “Decision Analysis of Agroforestry Options Reveals Adoption Risks for Resource-Poor Farmers.” Agronomy for Sustainable Development 40, no. 3 (June 2020): 20. https://doi.org/10.1007/s13593-020-00624-5. -->
+
+This week we will read and discuss chapter four of Hubbard's 'How To Measure Anything'.
+
+Hubbard, Douglas W. How To Measure Anything: Finding the Value of Intangibles in Business. 2nd ed. Vol. Second Edition. Hoboken, New Jersey: John Wiley & Sons, 2014.
 
 ### Bonus, More plotting options
 
