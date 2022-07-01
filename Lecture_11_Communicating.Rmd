@@ -8,6 +8,23 @@ The results of a Monte Carlo model are not always easy to interpret and to commu
 
 In the [Model programming](#model_programming) seminar we generated a model called `example_mc_simulation`. As a quick refresher change the plot of the results of that model from `hist_simple_overlay` to `boxplot_density` by using the `method` argument in the `plot_distributions` function. 
 
+<!-- Add reminders about this data and these steps later :) 
+
+input_estimates <- read.csv("data/input_estimates.csv")
+
+model_function <- function(){
+  income <- Yield * Market_price
+  overall_costs <- Labor_cost + Management_cost
+  final_result <- income - overall_costs
+  return(list(final_result = final_result))
+}
+
+example_mc_simulation <- decisionSupport::mcSimulation(estimate = decisionSupport::as.estimate(input_estimates),
+                                      model_function = model_function,
+                                      numberOfModelRuns = 10000,
+                                      functionSyntax = "plainNames")
+
+-->
 
 ```{r communicating-plot_distribution, exercise=TRUE}
 
