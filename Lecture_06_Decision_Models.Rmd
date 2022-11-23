@@ -59,8 +59,7 @@ Update this model by adding `additional_benefits`, one of the variables from the
 
 ```{r example_decision_model, exercise=TRUE}
 
-example_decision_model <- function(x, varnames)
-{
+example_decision_model <- function(x, varnames){
   profit <- benefits-costs
   
   final_profits <- profit + 500
