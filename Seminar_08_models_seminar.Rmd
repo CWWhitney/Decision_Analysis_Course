@@ -52,11 +52,10 @@ example_decision_function <- function(x, varnames){
   
   #  Intervention ####
   
-  for (decision_intervention_strips in c(FALSE,TRUE))
-      {
+  for (decision_intervention_strips in c(FALSE,TRUE)){
       
-  if (decision_intervention_strips)
-  {
+  if (decision_intervention_strips){
+    
     intervention_strips <- TRUE
     intervention_strips_PlanningCost <- TRUE
     intervention_strips_cost <- TRUE
@@ -182,7 +181,7 @@ Want to have a look? Load the data using the `read.csv` function.
 example_data <- read.csv("example_input_table.csv")
 ```
 
-Notice that the data has seven columns. Looking at the file it should be clear from the 'Description' column what each variable is about and in which units it is in. Ideally this is also mostly celar form the name of the variable. 
+Notice that the data has seven columns. Looking at the file it should be clear from the 'Description' column what each variable is about and in which units it is in. Ideally this is also mostly clear form the name of the variable. 
 
 ```{r models-head, exercise=TRUE}
 names(input_table)
@@ -266,7 +265,7 @@ plot_pls(pls_result, input_table = input_table, threshold = 0)
 
 We calculate Value of Information (VoI) analysis with the Expected Value of Perfect Information (EVPI). As we learned in [Lecture 8 on forecasts](#forecasts), EVPI measures the expected opportunity loss that is incurred when the decision-maker does not have perfect information about a particular variable. EVPI is determined by examining the influence of that variable on the output value of a decision model. 
 
-We use the function `data.frame()` to transform the x and y outputs of the `mcSimulation()` function for EVPI calculation. We use the `multi_EVPI()` function to calculate the EVPI for multiple independent variables. For the first_out_var argument we choose `intervention_mngmt_audit_cost` from the input table since this is the first variable after the `NPV` and `cashflow` model outputs, which we would like to exclude from the EVPI analysis.
+We use the function `data.frame()` to transform the x and y outputs of the `mcSimulation()` function for EVPI calculation. We use the `multi_EVPI()` function to calculate the EVPI for multiple independent variables. For the `first_out_var` argument we choose `intervention_mngmt_audit_cost` from the input table since this is the first variable after the `NPV` and `cashflow` model outputs, which we would like to exclude from the EVPI analysis.
 
 ```{r models-seminar-evpi, exercise=TRUE}
 #here we subset the outputs from the mcSimulation function (y) by selecting the correct variables

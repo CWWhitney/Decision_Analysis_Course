@@ -77,8 +77,8 @@ mcSimulation(estimate = as.estimate(example_decision_inputs),
 
 ```{r example_decision_model-solution}
 
-example_decision_model <- function(x, varnames)
-{
+example_decision_model <- function(x, varnames){
+  
   profit <- benefits-costs
   
   final_profits <- profit + additional_benefits
