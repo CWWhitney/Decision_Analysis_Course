@@ -326,10 +326,10 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_03_R_RStudio_2.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_04_Case_Studies.Rmd"} -->
-<!-- ``` -->
-<!-- ```{r child="Seminar_04_RMarkdown.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_04_Case_Studies.Rmd"}
+```
+```{r child="Seminar_04_RMarkdown.Rmd"}
+```
 
 
 <!-- ```{r child="Lecture_05_Participatory_Methods.Rmd"} -->
