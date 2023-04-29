@@ -50,49 +50,49 @@ allow_retry = TRUE
 )
 ```
 
-<!-- ### Case study - Plastic covers in sweet cherry orchards in Chile -->
+### Case study - Plastic covers in sweet cherry orchards in Chile
 
-<!-- This video shows the study @rojas_adapting_2021 conducted in Chile for assessing the profitability of implementing plastic covers in sweet cherry orchards to protect the fruits from hazardous weather events.  -->
+This video shows the study @rojas_adapting_2021 conducted in Chile for assessing the profitability of implementing plastic covers in sweet cherry orchards to protect the fruits from hazardous weather events.
 
-<!-- <!-- ![]() syntax will also work but not in html --> -->
+<!-- ![]() syntax will also work but not in html -->
 
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/kpsqzkeg53Y" frameborder="0" allowfullscreen></iframe> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kpsqzkeg53Y" frameborder="0" allowfullscreen></iframe>
 
-<!-- ```{r question-sweet_cherry-1, echo=FALSE} -->
-<!-- question("How did the decision of implementing covers in sweet cherry orchards emerge in this study?", -->
-<!--          answer("From a thorough literature review."), -->
-<!--          answer("Based on the previous knowledge of the researchers."), -->
-<!--          answer("From farmers' concerns regarding future weather scenarios.", correct = TRUE), -->
-<!--          answer("From consumers asking for sweet cherries of good quality."), -->
-<!--          incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.", -->
-<!--          allow_retry = TRUE) -->
-<!-- ``` -->
+```{r question-sweet_cherry-1, echo=FALSE}
+question("How did the decision of implementing covers in sweet cherry orchards emerge in this study?",
+         answer("From a thorough literature review."),
+         answer("Based on the previous knowledge of the researchers."),
+         answer("From farmers' concerns regarding future weather scenarios.", correct = TRUE),
+         answer("From consumers asking for sweet cherries of good quality."),
+         incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.",
+         allow_retry = TRUE)
+```
 
-<!-- Based on the question above, think about and write down two to three positive and negative implications of using the method we used to define the decision. -->
+Based on the question above, think about and write down two to three positive and negative implications of using the method we used to define the decision.
 
-<!-- ```{r question-sweet_cherry-2, echo=FALSE} -->
-<!-- question("Based on the Net Present Value, what would be the best recommendation for farmers in northern Chile?", -->
-<!--          answer("Farmers should implement covers to improve yields."), -->
-<!--          answer("NPV values suggest that implementing covers in northern Chile may be not necessary.", correct = TRUE), -->
-<!--          answer("The results do not allow making a clear recomendation."), -->
-<!--          incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.", -->
-<!--          allow_retry = TRUE) -->
-<!-- ``` -->
+```{r question-sweet_cherry-2, echo=FALSE}
+question("Based on the Net Present Value, what would be the best recommendation for farmers in northern Chile?",
+         answer("Farmers should implement covers to improve yields."),
+         answer("NPV values suggest that implementing covers in northern Chile may be not necessary.", correct = TRUE),
+         answer("The results do not allow making a clear recomendation."),
+         incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.",
+         allow_retry = TRUE)
+```
 
-<!-- ```{r questio-sweet_cherry-3, echo=FALSE} -->
-<!-- question("Considering the results of the EVPI analysis, farmers should spend more resources to gather additional information on:", -->
-<!--          answer("Yield"), -->
-<!--          answer("Market price"), -->
-<!--          answer("Yield lost to low firmness", correct = TRUE), -->
-<!--          incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.", -->
-<!--          allow_retry = TRUE) -->
-<!-- ``` -->
+```{r questio-sweet_cherry-3, echo=FALSE}
+question("Considering the results of the EVPI analysis, farmers should spend more resources to gather additional information on:",
+         answer("Yield"),
+         answer("Market price"),
+         answer("Yield lost to low firmness", correct = TRUE),
+         incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.",
+         allow_retry = TRUE)
+```
 
-<!-- The data and scripts for this study are also available online [@fernandez_data_2021].  -->
+The data and scripts for this study are also available online [@fernandez_data_2021].
 
 ### Group discussion reading:
 
-This week you will read @shepherd_development_2015. One of the groups will present the results of this reading.
+This week you will read @shepherd_development_2015. One of the members of each of your groups will present the results of this reading.
 
 - Shepherd, Keith, Douglas Hubbard, Norman Fenton, Karl Claxton, Eike Luedeling, and Jan de Leeuw. “Development Goals Should Enable Decision-Making.” Nature 523, no. 7559 (2015): 152–54. 
 
