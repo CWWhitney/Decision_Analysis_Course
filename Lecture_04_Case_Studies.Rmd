@@ -92,9 +92,7 @@ The data and scripts for this study are also available online [@fernandez_data_2
 
 ### Group discussion reading:
 
-This week you will read @shepherd_development_2015. One of the members of each of your groups will present the results of this reading.
-
-- Shepherd, Keith, Douglas Hubbard, Norman Fenton, Karl Claxton, Eike Luedeling, and Jan de Leeuw. “Development Goals Should Enable Decision-Making.” Nature 523, no. 7559 (2015): 152–54. 
+- Luedeling, Eike, and Keith Shepherd. “[Decision-Focused Agricultural Research](https://www.thesolutionsjournal.com/article/decision-focused-agricultural-research/).” Solutions 7, no. 5 (2016): 46–54.
 
 <!-- ### Bonus: Decision analysis case - Calluna production in NRW -->
 
