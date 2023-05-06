@@ -1,55 +1,58 @@
 ## Seminar 4: Using RMarkdown {#rmarkdown}
+
 <!-- [Using RMarkdown](#rmarkdown) -->
 
 ### Using RMarkdown
 
 RMarkdown: overview
 
-![](images/RMarkdown.png){width=2in}
+![](images/RMarkdown.png){width="2in"}
 
 Now let's check out [Rmarkdown](https://rmarkdown.rstudio.com/), a powerful tool that allows making fancy reports, websites etc. out of our R code (@R-rmarkdown). You're already looking at an example, by the way. This website was produced with Rmarkdown (and it wasn't hard at all)!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hh4wyP8tvkI" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hh4wyP8tvkI" frameborder="0" allowfullscreen>
+
+</iframe>
 
 <!-- ![](https://youtu.be/hh4wyP8tvkI) -->
 
 Here are [the slides](http://htmlpreview.github.io/?https://github.com/CWWhitney/teaching_R//blob/master/RMarkdown/RMarkdown.html) and [the html file](http://htmlpreview.github.io/?https://github.com/CWWhitney/teaching_R//blob/master/RMarkdown/RMarkdown_example.html) generated in the video.
 
-To run this you will need to load `library(rmarkdown)` 
+To run this you will need to load `library(rmarkdown)`
 
-![](images/hex-rmarkdown.png){width=1in}
+![](images/hex-rmarkdown.png){width="1in"}
 
-and library(`knitr`) 
+and library(`knitr`)
 
-![](images/knitrhex.png){width=1in}
+![](images/knitrhex.png){width="1in"}
 
-- Use [RMarkdown](https://rmarkdown.rstudio.com/)! 
-- You will thank yourself 
-- Save often with new version (or use git)
+-   Use [RMarkdown](https://rmarkdown.rstudio.com/)!
+-   You will thank yourself
+-   Save often with new version (or use git)
 
 ### RMarkdown: getting stuck
 
-- Use a ‘?’ with function, package, data name in the R console
-- If you get stuck, use Google: just add “R” to a search e.g. a copy of an error message
-- Someone else has also been confused by it and has written about it
-- Thousands of talented programmers scan the web and answer these problems
+-   Use a '?' with function, package, data name in the R console
+-   If you get stuck, use Google: just add "R" to a search e.g. a copy of an error message
+-   Someone else has also been confused by it and has written about it
+-   Thousands of talented programmers scan the web and answer these problems
 
-<div class="footer"></small>https://stackoverflow.com/ </small></div>
+::: footer
+</small><https://stackoverflow.com/> </small>
+:::
 
 ### RMarkdown: basics
 
-<small>https://rmarkdown.rstudio.com/authoring_basics.html</small>
+<small><https://rmarkdown.rstudio.com/authoring_basics.html></small>
 
-<small>https://bookdown.org/yihui/rmarkdown/r-code.html</small>
+<small><https://bookdown.org/yihui/rmarkdown/r-code.html></small>
 
-- Open RStudio
+-   Open RStudio
 
-![](images/rstudio-hex.png){width=1in}
-- Open an Rmarkdown file and knit. 
+![](images/rstudio-hex.png){width="1in"} - Open an Rmarkdown file and knit.
 
 ![](images/open_markdown_file.jpg)
 
 ![](images/knit-logo.png)
 
 Now we're equipped with all the basic tools for this course. We'll start using them pretty soon. Throughout the course you'll find occasional references to your RMarkdown file. This is supposed to be produced with Rmarkdown, with subsequent versions of it stored on Github.
-
