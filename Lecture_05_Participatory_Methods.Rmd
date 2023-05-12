@@ -36,7 +36,7 @@ The following video covers some definitions, methods and tools and a case study 
 question("Which of these entities do you think could be a stakeholder?",
   answer("Individuals", correct = TRUE),
   answer("Groups", correct = TRUE),
-  answer("Non-living entities like forests", correct = TRUE),
+  answer("Non-human entities like forests", correct = TRUE),
  answer("None of these could be a stakeholder"),
   incorrect = "Watch [the video](https://youtu.be/Xax-JxlmQf0) at slide 6 and try again.",
 allow_retry = TRUE
