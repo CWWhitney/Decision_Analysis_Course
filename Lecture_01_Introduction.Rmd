@@ -17,7 +17,7 @@ Decisions in agriculture are often risky, meaning that decision makers have unce
 
 -	**Now What?** You will build a working model of an agricultural development decision.
 
-![](images/Graphical_Syllabus.png){width=6in}
+![](images/Graphical_Syllabus_latest.jpg){width=6in}
 
 ## Course content
 
