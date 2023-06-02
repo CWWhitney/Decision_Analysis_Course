@@ -3,6 +3,8 @@
 
 Welcome to ninth seminar of **Decision Analysis and Forecasting for Agricultural Development**.Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_9]%20Decision%20Analysis%20Lecture) or the course tutor.
 
+In our seminar meeting each group will present the decision and proposed impact pathway model that they will be programming for the rest of the course. 
+
 Review the process in the [Models](#model_share_seminar) lecture. 
 
 ### Building a decision model as an R function
