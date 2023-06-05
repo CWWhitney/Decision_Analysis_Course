@@ -68,12 +68,12 @@ allow_retry = TRUE
 
 <!-- Cory's EVPI video -->
 
-Since the model inputs are uncertain variables, there is always a chance that the decision turns out to be wrong. Gathering new data to inform the decision, will lead to (on average) better decisions. But how much better? Is it worth the measuring effort? What if we not only *measure* but even *manipulate* the model inputs? These concepts are informally known as "value of clairvoyance" and "value of wizardry". Please watch the following lecture by Johannes Kopton and enter the magical world of decision analyis:
+Since the model inputs are uncertain variables, there is always a chance that the decision turns out to be wrong. Gathering new data to inform the decision, will lead to (on average) better decisions. But how much better? Is it worth the measuring effort? What if we not only *measure* but even *manipulate* the model inputs? These concepts are informally known as "value of clairvoyance" and "value of wizardry". Please watch the following lecture by Johannes Kopton and enter the magical world of decision analysis:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/g-MxM_2rWJg" frameborder="0" allowfullscreen></iframe>
 
 ```{r johannes-forecasts-question-1, echo=FALSE}
-question("A lottery has 200 tickets which costs 10€ each. The winner gets 1000€. The decision is, whether to buy a ticket or not. What is the value of information on whether a specific ticket is winning?",
+question("A lottery has 200 tickets which costs 10€ each. The winner gets 1000€. The decision is, whether to buy a ticket or not. What is the value of information on whether a specific ticket will be a winner?",
   answer("0 €"),
   answer("4.95 €", correct = TRUE),
   answer("10 €"),
@@ -84,7 +84,7 @@ allow_retry = TRUE
 ```
 
 ```{r johannes-forecasts-question-2, echo=FALSE}
-question("What is the value of controlling whether a specific ticket is winning?",
+question("What is the value of controlling whether a specific ticket will be a winner?",
   answer("0 €"),
   answer("4.95 €"),
   answer("10 €"),
