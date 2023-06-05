@@ -64,22 +64,32 @@ allow_retry = TRUE
 )
 ```
 
-### Expected Value of Perfect Information (EVPI) 
+### Value of information and value of control
 
 <!-- Cory's EVPI video -->
 
-There is always some degree of uncertainty surrounding a decision, because there is always a chance that the decision turns out to be wrong. EVPI measures the expected cost of that uncertainty where hypothetical access to perfect information can eliminate the possibility of making the wrong decision. Please watch the following talk from the Fifth European Agroforestry Conference on defining research priorities in complex agroforestry systems [@schiffers_defining_2021] to see more about the application of value of information analysis. 
+Since the model inputs are uncertain variables, there is always a chance that the decision turns out to be wrong. Gathering new data to inform the decision, will lead to (on average) better decisions. But how much better? Is it worth the measuring effort? What if we not only *measure* but even *manipulate* the model inputs? These concepts are informally known as "value of clairvoyance" and "value of wizardry". Please watch the following lecture by Johannes Kopton and enter the magical world of decision analysis:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MlIetFhu87U" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g-MxM_2rWJg" frameborder="0" allowfullscreen></iframe>
 
-```{r schiffers-forecasts-question-1, echo=FALSE}
-question("Why might it be useful to test for value of information?",
-  answer("To determine what to do now given current evidence.", correct = TRUE),
-  answer("To find out if we need more evidence.", correct = TRUE),
-  answer("To determine if we should reject the null hypothesis."),
-  answer("To find out what type of evidence we need and how much.", correct = TRUE),
-  answer("To determine if we should wait to get the evidence.", correct = TRUE),
-  incorrect = "Watch [the talk](https://youtu.be/MlIetFhu87U) and try again.",
+```{r johannes-forecasts-question-1, echo=FALSE}
+question("A lottery has 200 tickets which costs 10€ each. The winner gets 1000€. The decision is, whether to buy a ticket or not. What is the value of information on whether a specific ticket will be a winner?",
+  answer("0 €"),
+  answer("4.95 €", correct = TRUE),
+  answer("10 €"),
+  answer("990 €"),
+  incorrect = "Watch [the talk](https://youtu.be/g-MxM_2rWJg) and try again.",
+allow_retry = TRUE
+)
+```
+
+```{r johannes-forecasts-question-2, echo=FALSE}
+question("What is the value of controlling whether a specific ticket will be a winner?",
+  answer("0 €"),
+  answer("4.95 €"),
+  answer("10 €"),
+  answer("990 €", correct = TRUE),
+  incorrect = "Watch [the talk](https://youtu.be/g-MxM_2rWJg) and try again.",
 allow_retry = TRUE
 )
 ```
@@ -88,8 +98,8 @@ allow_retry = TRUE
 question("Why do we calculate Expected Value of Perfect Information (EVPI)?",
   answer("To help identify those variables for which more information would maximize the model output.", correct = TRUE),
   answer("To define potential research priorities.", correct = TRUE),
-  answer("To determine how much money we can make by doing research."),
-  incorrect = "Watch [the talk](https://youtu.be/MlIetFhu87U) and try again.",
+  answer("It is more a hypothetical concept without any real application."),
+  incorrect = "Watch [the talk](https://youtu.be/g-MxM_2rWJg) and try again.",
 allow_retry = TRUE
 )
 ```
@@ -97,10 +107,10 @@ allow_retry = TRUE
 ```{r schiffers-forecasts-question-3, echo=FALSE}
 question("How is EVPI calculated?",
   answer("It is the expected maximum value minus the expected value given perfect information."),
-  answer("It is the expected value given perfect information (before decision making)
-minus the expected maximum value.", correct = TRUE),
+  answer("It is the expected value given perfect information
+minus the best expected value without further information.", correct = TRUE),
   answer("It is the Varible Importance in the Projection (VIP) score multiplied by the number of variables in the model."),
-  incorrect = "Watch [the talk](https://youtu.be/MlIetFhu87U) and try again.",
+  incorrect = "Watch [the talk](https://youtu.be/g-MxM_2rWJg) and try again.",
 allow_retry = TRUE
 )
 ```
@@ -127,7 +137,7 @@ This difference describes, in expectation, how much larger a value the decision 
 
 Projection to Latent Structures (PLS), also sometimes known as Partial Least Squares regression is a multivariate statistical technique that can deal with multiple collinear dependent and independent variables [@wold_pls-regression_2001]. It can be used as another means to assess the outcomes of a Monte Carlo model. Read more in ['A Simple Explanation of Partial Least Squares' by Kee Siong Ng](http://users.cecs.anu.edu.au/~kee/pls.pdf).
 
-Variable Importance in Projection (VIP) scores estimate the importance of each variable in the projection used in a PLS mode. VIP is a parameter used for calculating the cumulative measure of the influence of individual $X$-variables on the model. For a given PLS dimension, $a$, the squared PLS weight $(Wa)2$ of that term is multiplied by the explained sum of squares ($SS$) of that $PLS$ dimension; and the value obtained is then divided by the total explained $SS$ by the PLS model and multiplied by the number of terms in the model. The final $VIP$ is the square root of that number.
+Variable Importance in Projection (VIP) scores estimate the importance of each variable in the projection used in a PLS mode. VIP is a parameter used for calculating the cumulative measure of the influence of individual $X$-variables on the model. For a given PLS dimension, $a$, the squared PLS weight $(W_a^2$ of that term is multiplied by the explained sum of squares ($SS$) of that $PLS$ dimension; and the value obtained is then divided by the total explained $SS$ by the PLS model and multiplied by the number of terms in the model. The final $VIP$ is the square root of that number.
 
 $VIP_{PLS} = K\times (\frac{[\sum_{a=1}^{A}(W_{a}^{2} \times SSY_{comp,a})]}{SSY_{cum}})$
 
