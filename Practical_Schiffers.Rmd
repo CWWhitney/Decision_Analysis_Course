@@ -87,9 +87,9 @@ daten <- data.frame(rasse=rasse, ll=ll)
 
 **3. Combining the prior distribution with the data to obtain the posterior distribution**
 
-To estimate the posterior distribution, we use the 'brm' function of the 'brms' package. As we know from other evaluations, we first formulate our model, namely that the egg-laying performance ll depends on the breed. The -1 in the model formula causes the model to estimate the mean egg-laying performance for both breeds rather than just the mean for the first breed and the difference to it. Under 'data', we enter our own collected data and under 'prior', we define the above priors. The 'silent' argument determines how much information is output to the console when the MCMC chains start running. Depending on the complexity of the model, these simulations can take several seconds or minutes.
+To estimate the posterior distribution, we use the 'brm' function of the 'brms' package [@R-brms]. As we know from other evaluations, we first formulate our model, namely that the egg-laying performance ll depends on the breed. The -1 in the model formula causes the model to estimate the mean egg-laying performance for both breeds rather than just the mean for the first breed and the difference to it. Under 'data', we enter our own collected data and under 'prior', we define the above priors. The 'silent' argument determines how much information is output to the console when the MCMC chains start running. Depending on the complexity of the model, these simulations can take several seconds or minutes.
 
-```{r, results='hide'}
+```{r legeleistung, results='hide'}
 legeleistung <- brm(ll ~ rasse -1, data = daten, prior = priors, silent = 2)
 
 ```
