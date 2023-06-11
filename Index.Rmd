@@ -20,7 +20,7 @@ library(bayesplot)
 # library(devtools)
 # install.packages(c("bayesplot", "decisionSupport", "DiagrammeR", "ggcorrplot", "ggplot2", "ggrepel", "ggridges", "ggthemes", "igraph", "knitr", "learnr", "pander", "plyr", "rmarkdown", "tidyverse"))
 # devtools::install_github("eikeluedeling/decisionSupport")
-library(brms)
+# library(brms)
 library(decisionSupport)
 library(DiagrammeR)
 library(ggcorrplot)
@@ -295,7 +295,7 @@ evpi_hail <- multi_EVPI(mc = mcSimulation_table_hail,
 ```{r packages, warning=FALSE, include = FALSE}
 #Automatically write R package citation entries to a .bib file
 knitr::write_bib(c(.packages(), 
-                   'brms',
+                  # 'brms',
                    'bayesplot',
                    'decisionSupport', 
                    'DiagrammeR',
