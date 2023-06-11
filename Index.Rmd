@@ -20,6 +20,7 @@ library(bayesplot)
 # library(devtools)
 # install.packages(c("bayesplot", "decisionSupport", "DiagrammeR", "ggcorrplot", "ggplot2", "ggrepel", "ggridges", "ggthemes", "igraph", "knitr", "learnr", "pander", "plyr", "rmarkdown", "tidyverse"))
 # devtools::install_github("eikeluedeling/decisionSupport")
+library(brms)
 library(decisionSupport)
 library(DiagrammeR)
 library(ggcorrplot)
@@ -281,11 +282,20 @@ mcSimulation_table_hail <- data.frame(hail_mc_simulation$x,
 evpi_hail <- multi_EVPI(mc = mcSimulation_table_hail,
                    first_out_var = "NPV_decision")
 
+
+# brms stuff with Schiffers
+# library(brms, warn.conflicts=F, quietly=T)
+# priors <- c(set_prior("normal(200, 5)", coef = "rasseN"), set_prior("normal(210, 5)", coef = "rasseK"))
+# rasse <- c("K", "K", "K", "N", "N", "N", "N", "N", "N")
+# ll <- c(225, 222, 221, 219, 219, 216, 221, 218, 217)
+# daten <- data.frame(rasse=rasse, ll=ll)
+# legeleistung <- brms::brm(formula = ll ~ rasse -1, data = daten , prior = priors, silent = 2)
 ```
 
-```{r, warning=FALSE, include = FALSE}
+```{r packages, warning=FALSE, include = FALSE}
 #Automatically write R package citation entries to a .bib file
 knitr::write_bib(c(.packages(), 
+                   'brms',
                    'bayesplot',
                    'decisionSupport', 
                    'DiagrammeR',
@@ -350,6 +360,9 @@ knitr::write_bib(c(.packages(),
 ```{r child="Lecture_08_Forecasts.Rmd"}
 ```
 ```{r child="Seminar_08_models_seminar.Rmd"}
+```
+
+```{r child="Practical_Schiffers.Rmd"}
 ```
 
 <!-- ```{r child="Lecture_09_Bayesian_Thinking.Rmd"} -->
