@@ -282,6 +282,14 @@ mcSimulation_table_hail <- data.frame(hail_mc_simulation$x,
 evpi_hail <- multi_EVPI(mc = mcSimulation_table_hail,
                    first_out_var = "NPV_decision")
 
+
+# brms stuff with Schiffers
+# library(brms, warn.conflicts=F, quietly=T)
+# priors <- c(set_prior("normal(200, 5)", coef = "rasseN"), set_prior("normal(210, 5)", coef = "rasseK"))
+# rasse <- c("K", "K", "K", "N", "N", "N", "N", "N", "N")
+# ll <- c(225, 222, 221, 219, 219, 216, 221, 218, 217)
+# daten <- data.frame(rasse=rasse, ll=ll)
+# legeleistung <- brms::brm(formula = ll ~ rasse -1, data = daten , prior = priors, silent = 2)
 ```
 
 ```{r packages, warning=FALSE, include = FALSE}
