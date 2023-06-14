@@ -40,7 +40,7 @@ So how do we calculate this probability? Unfortunately, it's usually not as stra
 
 MCMC methods can approximate probability distributions (in this case, P(H|X)) that cannot be analytically computed. The most intuitive and quite ingenious explanation I found for this is by Michael Franke on his Github page at [https://michael-franke.github.io/intro-data-analysis/Ch-03-03-estimation-algorithms.html](https://michael-franke.github.io/intro-data-analysis/Ch-03-03-estimation-algorithms.html). Here are some parts of it:
 
-![Image by brgfx on Freepik](images/apple_tree.jpg)
+![Image by brgfx on Freepik](images/apple_tree.jpg){width=50%}
 
 **How the Apples Get to the Trees**
 
