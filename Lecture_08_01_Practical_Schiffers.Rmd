@@ -82,7 +82,9 @@ We inquire about the egg production of the two breeds and learn that Niederrhein
 Now we report our own observations of the egg-laying performance of the 3 Kraienköppe and 6 Niederrheiners from the previous year:
 
 `rasse <- c("K", "K", "K", "N", "N", "N", "N", "N", "N")`
+
 `ll <- c(225, 222, 221, 219, 219, 216, 221, 218, 217)`
+
 `daten <- data.frame(rasse=rasse, ll=ll)`
 
 **3. Combining the prior distribution with the data to obtain the posterior distribution**
