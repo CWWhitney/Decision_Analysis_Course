@@ -69,6 +69,8 @@ We inquire about the egg production of the two breeds and learn that Niederrhein
 
 `library(brms)`
 
+To get the `brms` library to work as expected you may need the latest `rstan` and `StanHeaders`. Run `install.packages("rstan")`.  `install.packages("StanHeaders")`. You may also need to set up the connection with these libraries with `options(mc.cores = parallel::detectCores())` and `rstan_options(auto_write = TRUE)`.
+
 *We define 2 normal distributions using the function set_prior, one with a mean of 200 and a standard deviation of 1.5, and another with a mean of 210 and a standard deviation of 1.5. We specify under 'coef' which parameters in the model that we later formulate these priors belong to.*
 
 `priors <- c(set_prior("normal(200, 5)", coef = "rasseN"), set_prior("normal(210, 5)", coef = "rasseK"))`
@@ -114,7 +116,7 @@ From the a-posteriori distributions, we could now also calculate the exact proba
 
 ### Frequentist	versus Bayesian
 
-| Frequentis | Bayesian |
+| Frequentist | Bayesian |
 |----------------|---------------|
 Probability of data, in relation to hypothesis| only yes/no answer	|Probability of hypotheses|
 Confidence interval: in which interval do we expect 95% of the means of further random samples of the same sample size	|Credibility interval: in which range of values does the true population mean lie with a probability of 95%|
