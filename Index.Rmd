@@ -365,10 +365,10 @@ knitr::write_bib(c(.packages(),
 ```{r child="Lecture_08_01_Practical_Schiffers.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_09_Bayesian_Thinking.Rmd"} -->
-<!-- ``` -->
-<!-- ```{r child="Seminar_09_forecast_seminar.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_09_Bayesian_Thinking.Rmd"}
+```
+```{r child="Seminar_09_forecast_seminar.Rmd"}
+```
 
 <!-- ```{r child="Lecture_10_Analyst_Profile.Rmd"} -->
 <!-- ``` -->
