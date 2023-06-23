@@ -370,10 +370,10 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_09_forecast_seminar.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_10_Analyst_Profile.Rmd"} -->
-<!-- ``` -->
-<!-- ```{r child="Seminar_10_Functions.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_10_Analyst_Profile.Rmd"}
+```
+```{r child="Seminar_10_Functions.Rmd"}
+```
 
 <!-- ```{r child="Lecture_11_Communicating.Rmd"} -->
 <!-- ``` -->
