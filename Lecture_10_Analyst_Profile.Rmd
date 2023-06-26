@@ -5,7 +5,7 @@
 
 Welcome to lecture 10 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_6]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-Those who work in Decision Analysis must be able to do a number of diverse jobs from the facilitation and integration of ideas into models and also in programming these models. In teh following short lecture you will learn about the skills that are particularly important for *integration* of knowledge, *facilitation* of knowledge gathering processes and for *programming* decision models. Please watch the video and answer the multiple choice questions below.
+Those who work in Decision Analysis must be able to do a number of diverse jobs from the facilitation and integration of ideas into models and also in programming these models. In the following short lecture you will learn about the skills that are particularly important for *integration* of knowledge, *facilitation* of knowledge gathering processes and for *programming* decision models. Please watch the video and answer the multiple choice questions below.
 
 <!-- https://youtu.be/XG0R9ViQm0E -->
 
