@@ -31,13 +31,13 @@ RMarkdown_options.png
 
 In case of repeated formatting in different code chunks we can use the `knitr` `opts.label` option to reuse what we wrote and avoid repetition (@R-knitr). Following the [Don’t Repeat Yourself (DRY) principle](https://yihui.org/en/2021/05/knitr-reuse/).
 
-### Transparent Data Sharing
+<!-- ### Transparent Data Sharing -->
 
-<!-- https://youtu.be/jFwnIihK3aw -->
+<!-- <!-- https://youtu.be/jFwnIihK3aw --> -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jFwnIihK3aw" frameborder="0" allowfullscreen></iframe>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/jFwnIihK3aw" frameborder="0" allowfullscreen></iframe> -->
 
-The video for the @ruett_model-based_2020 paper and the supplementary materials by @ruett_data_2021 are in the references. 
+<!-- The video for the @ruett_model-based_2020 paper and the supplementary materials by @ruett_data_2021 are in the references.  -->
 
 ### Hosting an html
 
