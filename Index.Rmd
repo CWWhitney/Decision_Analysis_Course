@@ -375,11 +375,10 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_10_Functions.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_11_Communicating.Rmd"} -->
-<!-- ``` -->
-<!-- ```{r child="Seminar_11_Writing.Rmd"} -->
-<!-- ``` -->
-
+```{r child="Lecture_11_Communicating.Rmd"}
+```
+```{r child="Seminar_11_Writing.Rmd"}
+```
 
 ```{r child="Impressum.Rmd"}
 ```
