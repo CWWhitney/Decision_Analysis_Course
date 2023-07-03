@@ -33,7 +33,7 @@ In case of repeated formatting in different code chunks we can use the `knitr` `
 
 <!-- ### Transparent Data Sharing -->
 
-<!-- <!-- https://youtu.be/jFwnIihK3aw --> -->
+<!-- <!-- https://youtu.be/jFwnIihK3aw -->
 
 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/jFwnIihK3aw" frameborder="0" allowfullscreen></iframe> -->
 
@@ -41,7 +41,7 @@ In case of repeated formatting in different code chunks we can use the `knitr` `
 
 ### Hosting an html
 
-You can host your html files in your github repository with the htmlpreview.github.io tools. 
+You can host your html files in your github repository with the `htmlpreview.github.io` tools. 
 
 The website hosting the raw html file for this course is: 
 
