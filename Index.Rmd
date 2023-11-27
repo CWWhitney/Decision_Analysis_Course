@@ -16,11 +16,11 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(bayesplot)
 # library(devtools)
-# install.packages(c("bayesplot", "decisionSupport", "DiagrammeR", "ggcorrplot", "ggplot2", "ggrepel", "ggridges", "ggthemes", "igraph", "knitr", "learnr", "pander", "plyr", "rmarkdown", "tidyverse"))
+# install.packages(c("bayesplot", "DiagrammeR", "ggcorrplot", "ggplot2", "ggrepel", "ggridges", "ggthemes", "igraph", "knitr", "learnr", "pander", "plyr", "rmarkdown", "tidyverse"))
 # devtools::install_github("eikeluedeling/decisionSupport")
 # library(brms)
+library(bayesplot)
 library(decisionSupport)
 library(DiagrammeR)
 library(ggcorrplot)
