@@ -3,6 +3,6 @@
 ```{r echo = FALSE, results = 'asis', warning=FALSE}
 library(knitr)
 library(pander)
-seminar_schedule<-read.csv("seminar_schedule.csv")
+seminar_schedule<-read.csv("seminar_schedule2024.csv")
 kable(seminar_schedule)
 ```
