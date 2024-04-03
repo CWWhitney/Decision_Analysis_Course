@@ -16,8 +16,10 @@ Decisions in agriculture are often risky, meaning that decision makers have unce
 -	**So What?** The aim is for you to become a critical thinker and lead the process in generating useful forecasts for decision makers in agricultural development.
 
 -	**Now What?** You will build a working model of an agricultural development decision.
-
-![](images/Graphical_Syllabus2024.png){width=6in}
+  
+  Here is a course overview:
+  
+![](images/DA-Overview.png){width=6in}
 
 ## Course content
 
