@@ -21,6 +21,9 @@ Decisions in agriculture are often risky, meaning that decision makers have unce
   
   
 ![](images/DA-Overview.png){width=9in}
+[Enlarged figure](https://raw.githubusercontent.com/CWWhitney/Decision_Analysis_Course/main/images/DA-Overview.png)
+
+<!-- <a href="https://raw.githubusercontent.com/CWWhitney/Decision_Analysis_Course/main/images/DA-Overview.png" enl>Download this figure</a> doesn't work -->
 
 ## Course content
 
