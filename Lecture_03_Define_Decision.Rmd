@@ -134,7 +134,7 @@ allow_retry = TRUE
 )
 ```
 
-# Reading for this lecture
+### Reading for this lecture
 
 - Howard, Ronald A., and Ali E. Abbas. Foundations of Decision Analysis. NY, NY: Prentice Hall, 2015.
 
