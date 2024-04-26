@@ -332,23 +332,25 @@ knitr::write_bib(c(.packages(),
 ```{r child="Lecture_04_Case_Studies.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_05_Participatory_Methods.Rmd"} -->
+```{r child="Lecture_05_Participatory_Methods.Rmd"}
+```
+
+```{r child="Lecture_06_Decision_Models.Rmd"}
+```
+
+
+<!-- ```{r child="Lecture_07_Forecasts.Rmd"} -->
 <!-- ``` -->
 
-<!-- ```{r child="Lecture_06_Decision_Models.Rmd"} -->
+<!-- ```{r child="Lecture_07_01_Practical_Schiffers.Rmd"} -->
 <!-- ``` -->
 
-<!-- ```{r child="Lecture_07_calibration_lecture.Rmd"} -->
+<!-- ```{r child="Lecture_08_Bayesian_Thinking.Rmd"} -->
 <!-- ``` -->
 
-<!-- ```{r child="Lecture_08_Forecasts.Rmd"} -->
+<!-- ```{r child="Lecture_09_calibration_lecture.Rmd"} -->
 <!-- ``` -->
 
-<!-- ```{r child="Lecture_08_01_Practical_Schiffers.Rmd"} -->
-<!-- ``` -->
-
-<!-- ```{r child="Lecture_09_Bayesian_Thinking.Rmd"} -->
-<!-- ``` -->
 
 <!-- ```{r child="Lecture_10_Analyst_Profile.Rmd"} -->
 <!-- ``` -->

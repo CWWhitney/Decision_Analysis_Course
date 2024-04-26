@@ -1,7 +1,7 @@
-## Lecture 8: Using Models to Create Forecasts {#forecasts}
+## Lecture 7: Using Models to Create Forecasts {#forecasts}
 <!-- reference with [Forecasts](#forecasts) -->
 
-Welcome to lecture 8 of **Decision Analysis and Forecasting for Agricultural Development**. We will walk through brief examples and offer the scripts. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_3]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to lecture 7 of **Decision Analysis and Forecasting for Agricultural Development**. We will walk through brief examples and offer the scripts. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_3]%20Decision%20Analysis%20Lecture) or the course tutor.
 
 In this lecture we will build on what we learned in the [Decision Models](#decision_models) lecture and the [Model programming](#model_programming) seminar to learn more about how to generate useful forecasts for communicating model results. We will implement another Monte Carlo simulation. 
 

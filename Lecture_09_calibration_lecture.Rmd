@@ -1,7 +1,7 @@
-## Lecture 7: Calibrating experts {#calibration_lecture} 
+## Lecture 9: Calibrating experts {#calibration_lecture} 
 <!-- reference with [Calibrating experts](#calibration_lecture) -->
 
-Welcome to lecture 7 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_4]%Calibrating%Experts%20Lecture) or the course tutor.
+Welcome to lecture 9 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_4]%Calibrating%Experts%20Lecture) or the course tutor.
 
 The following videos tell you something about a method which is frequently used in our group to get reliable values for the input tables from our stakeholders. Please watch the videos and answer the questions that follow. 
 
