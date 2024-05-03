@@ -339,8 +339,8 @@ knitr::write_bib(c(.packages(),
 ```
 
 
-<!-- ```{r child="Lecture_07_Forecasts.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_07_Forecasts.Rmd"}
+```
 
 <!-- ```{r child="Lecture_07_01_Practical_Schiffers.Rmd"} -->
 <!-- ``` -->
