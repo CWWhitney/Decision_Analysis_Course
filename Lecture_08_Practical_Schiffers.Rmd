@@ -1,4 +1,4 @@
-##  Lecture 7.1: Bayesian Analysis Practical {#practical}
+##  Lecture 8: Bayesian Analysis Practical {#practical}
 
 ### Confronting expert calibrated models with data
 
