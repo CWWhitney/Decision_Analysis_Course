@@ -5,7 +5,7 @@ Welcome to the second seminar of **Decision Analysis and Forecasting for Agricul
 
 Remember that this is an experiential course and will be based largely on work from your side that is supported by us, rather than passive learning where we deliver content. In order to work with us in this course you will need to have some basic tools.
 
-You should already have installed R and RStudio. If not, please check out the [tools we use](#tools) in this course. If you already have R and RStudio loaded then you should be able to follow parts our R tutorial. Please follow [Data Wrangling Part 1]((https://agtools.app/learning_r/#section-data-wrangling-part-1) and [Data Wrangling Part 2]((https://agtools.app/learning_r/#section-data-wrangling-part-2) portions of the tutorial. Share the results of your work with the 'ggplot2' 'diamonds' data [@R-ggplot2] after you have worked through these materials.
+You should already have installed R and RStudio. If not, please check out the [tools we use](#tools) in this course. If you already have R and RStudio loaded then you should be able to follow parts our R tutorial. Please follow [Data Wrangling Part one](https://agtools.app/learning_r/#section-data-wrangling-part-1) and [Data Wrangling Part two](https://agtools.app/learning_r/#section-data-wrangling-part-2) portions of the tutorial. Share the results of your work with the 'ggplot2' 'diamonds' data [@R-ggplot2] after you have worked through these materials.
 
 <!-- remake and embed R course materials -->
 <!-- world cafe in zoom? a kind of 'speed dating' app... get people to converse-->

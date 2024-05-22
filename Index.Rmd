@@ -359,8 +359,8 @@ knitr::write_bib(c(.packages(),
 <!-- ``` -->
 
 
-<!-- ```{r child="Seminar_01_Experiential.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_01_Experiential.Rmd"}
+```
 
 ```{r child="Seminar_02_R_RStudio_1.Rmd"}
 ```
@@ -368,29 +368,29 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_03_R_RStudio_2.Rmd"}
 ```
 
-<!-- ```{r child="Seminar_04_RMarkdown.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_04_RMarkdown.Rmd"}
+```
 
-<!-- ```{r child="Seminar_05_Git_Github.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_05_Git_Github.Rmd"}
+```
 
-<!-- ```{r child="Seminar_06_Model_Programming.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_06_Model_Programming.Rmd"}
+```
 
-<!-- ```{r child="Seminar_07_calibration_seminar.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_07_calibration_seminar.Rmd"}
+```
 
-<!-- ```{r child="Seminar_08_models_seminar.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_08_models_seminar.Rmd"}
+```
 
-<!-- ```{r child="Seminar_09_forecast_seminar.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_09_forecast_seminar.Rmd"}
+```
 
-<!-- ```{r child="Seminar_10_Functions.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_10_Functions.Rmd"}
+```
 
-<!-- ```{r child="Seminar_11_Writing.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_11_Writing.Rmd"}
+```
 
 ```{r child="Impressum.Rmd"}
 ```
