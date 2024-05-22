@@ -1,7 +1,7 @@
 ## Seminar: Using R and RStudio Continued {#rstudio_continued}
 <!-- [Using R and RStudio Continued](#rstudio_continued) -->
 
-You should already have installed R and RStudio. If not, please check out the [tools we use](#tools) in this course. If you already have R and RStudio loaded then you should be able to follow this [Data Visualization](https://cory-whitney.shinyapps.io/teaching_R/#section-data-visualization) section of the R tutorial. Share the results of your work with a data set of your choice (i.e. `ggplot2` `diamonds` data [@R-ggplot2]) after you have worked through these materials.
+You should already have installed R and RStudio. If not, please check out the [tools we use](#tools) in this course. If you already have R and RStudio loaded then you should be able to follow this [Data Visualization](https://agtools.app/learning_r/#section-data-visualization) section of the R tutorial. Share the results of your work with a data set of your choice (i.e. `ggplot2` `diamonds` data [@R-ggplot2]) after you have worked through these materials.
 
 ### Lifestyle choices
 

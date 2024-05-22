@@ -43,7 +43,7 @@ example_decision_inputs <- read.csv("data/example_decision_inputs.csv")
 input_table <- read.csv("data/example_input_table.csv")
 hail_estimates <- read.csv("data/hail_estimates.csv")
 
-###### chile function #######
+###### Chile function #######
 
 # create the model function
 model_function <- function(){

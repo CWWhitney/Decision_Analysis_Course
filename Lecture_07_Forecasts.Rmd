@@ -3,8 +3,6 @@
 
 Welcome to lecture 7 of **Decision Analysis and Forecasting for Agricultural Development**. We will walk through brief examples and offer the scripts. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_3]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-# ??
-
 ### Group discussion reading: 
 
 - Tetlock, Philip E., and Dan Gardner. Superforecasting: The Art and Science of Prediction. New York, NY: Crown Publishers, 2015.(Chapter 1. An Optimistic Skeptic) 
