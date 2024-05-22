@@ -9,62 +9,11 @@ We have just learned about the processes and methods of generating [Decision Mod
 library(decisionSupport)
 ```
 
-<!-- ### Plot the impact pathway -->
-
-<!-- In this example, we show how we can transform a simple impact pathway into code for estimating profit distributions. -->
-
-<!-- We use the `mermaid` function from the `DiagrammeR` library to create the graphical impact pathway [@R-DiagrammeR]. -->
-
-<!-- Run the code below and then add an additional cost to the graph called `Management cost` (try to do this on your own but feel free to look to the `solution` to see one way to do this).  -->
-
-<!-- ```{r graph-mermaid, exercise=TRUE} -->
-<!-- mermaid("graph LR -->
-<!--         Y(Yield)-->I(Income); linkStyle 0 stroke:green, stroke-width:1.5px -->
-<!--         M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:1.5px -->
-<!--         I-->F(Final result); linkStyle 2 stroke: green, stroke-width:1.5px -->
-<!--         CL(Labor cost)-->F; linkStyle 3 stroke: red, stroke-width:1.5px") -->
-<!-- ``` -->
-
-<!-- ```{r graph-mermaid-solution} -->
-<!-- mermaid("graph LR -->
-<!--         Y(Yield)-->I(Income); linkStyle 0 stroke:green, stroke-width:1.5px -->
-<!--         M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:1.5px -->
-<!--         I-->F(Final result); linkStyle 2 stroke: green, stroke-width:1.5px -->
-<!--         CL(Labor cost)-->F; linkStyle 3 stroke: red, stroke-width:1.5px -->
-<!--         CM(Management cost)-->F; linkStyle 4 stroke: red, stroke-width:1.5px") -->
-<!-- ``` -->
-
-<!-- The `LR` argument in the `mermaid` function specifies that the plot will go from left to right. Try and change this to `TD`.  -->
-
-<!-- Use the `style` options in `mermaid` to change the arrow widths to `2px` and the node colors to red for costs and green for benefits. You will need to break the line and put the `linkStyle` on a new line to add the color to the node.  -->
-
-<!-- ```{r graph-mermaid-direction, exercise=TRUE} -->
-<!-- mermaid("graph LR -->
-<!--         Y(Yield)-->I(Income); linkStyle 0 stroke:green, stroke-width:1px -->
-<!--         M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:1px -->
-<!--         I-->F(Final result); linkStyle 2 stroke: green, stroke-width:1px -->
-<!--         CL(Labor cost)-->F; linkStyle 3 stroke: red, stroke-width:1px -->
-<!--         CM(Management cost)-->F; linkStyle 4 stroke: red, stroke-width:1px") -->
-<!-- ``` -->
-
-<!-- ```{r graph-mermaid-direction-solution} -->
-<!-- mermaid("graph TB -->
-<!--         Y(Yield)-->I(Income); style I fill:green -->
-<!--         linkStyle 0 stroke:green, stroke-width:2px -->
-<!--         M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:2px -->
-<!--         I-->F(Final result); linkStyle 2 stroke: green, stroke-width:2px -->
-<!--         CL(Labor cost)-->F; style CL fill:red -->
-<!--         linkStyle 3 stroke: red, stroke-width:2px -->
-<!--         CM(Management cost)-->F; style CM fill:red -->
-<!--         linkStyle 4 stroke: red, stroke-width:2px") -->
-<!-- ``` -->
-
-<!-- That was just one of many ways to generate impact pathways. To see more options see the [Decision Analysis Overview](#decision_analysis) lecture materials.  -->
 
 
 ### Building the model 
 
-![](images/model_simple.png)
+![](images/model_simple.png){width=50%}
 
 Here we generate an input table to feed the model function. Update this to include the management cost variable in the graphical impact pathway above. Call your new variable `"Management_cost"`, make the lower bound `100` and the upper bound `2000`, make the distribution `"posnorm"`, make the label `"Management cost (USD/ha)"` and make the description `"Management costs in a normal season"`.
 
