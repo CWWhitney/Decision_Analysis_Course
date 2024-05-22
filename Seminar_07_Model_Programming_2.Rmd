@@ -1,7 +1,7 @@
-## Seminar: Model Programming {#model_programming} 
-<!-- reference with [Model programming](#model_programming) -->
+## Seminar 7: Model Programming continued {#model_programming_cont} 
+<!-- reference with [Model programming](#model_programming_cont) -->
 
-Welcome to **Decision Analysis and Forecasting for Agricultural Development**. In this seminar we will look into different options for model programming in the `R` programming environment [@R-base]. In case you have not already installed `R` and `RStudio` you may want to go back to the [Using R and Rstudio](#r_rstudio) seminar and follow the instructions there. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to the second seminar on model programming **Decision Analysis and Forecasting for Agricultural Development**. In this seminar we will look into different options for model programming in the `R` programming environment [@R-base]. In case you have not already installed `R` and `RStudio` you may want to go back to the [Using R and Rstudio](#r_rstudio) seminar and follow the instructions there. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
 
 ### Decision analysis with the decisionSupport package

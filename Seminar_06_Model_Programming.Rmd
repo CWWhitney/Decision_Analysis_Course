@@ -1,7 +1,7 @@
 ## Seminar 6: Model Programming {#model_programming} 
 <!-- reference with [Model programming](#model_programming) -->
 
-Welcome to the sixth seminar of **Decision Analysis and Forecasting for Agricultural Development**. In this seminar we will look into different options for model programming in the `R` programming environment [@R-base]. In case you have not already installed `R` and `RStudio` you may want to go back to the [Using R and Rstudio](#r_rstudio) seminar and follow the instructions there. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to the model programming seminar of **Decision Analysis and Forecasting for Agricultural Development**. In this seminar we will look into different options for model programming in the `R` programming environment [@R-base]. In case you have not already installed `R` and `RStudio` you may want to go back to the [Using R and Rstudio](#r_rstudio) seminar and follow the instructions there. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
 We have just learned about the processes and methods of generating [Decision Models](#decision_models). Now we can explore some of the packages that we commonly use in `R`. The main package that our team uses for simulations is the `decisionSupport`. In order to use the standard tools for running these models in the R environment you will need to load the `decisionSupport` library. Use the `install.packages` function, i.e. `install.packages("decisionSupport")`. 
 
@@ -9,61 +9,64 @@ We have just learned about the processes and methods of generating [Decision Mod
 library(decisionSupport)
 ```
 
-### Plot the impact pathway
+<!-- ### Plot the impact pathway -->
 
-In this example, we show how we can transform a simple impact pathway into code for estimating profit distributions.
+<!-- In this example, we show how we can transform a simple impact pathway into code for estimating profit distributions. -->
 
-We use the `mermaid` function from the `DiagrammeR` library to create the graphical impact pathway [@R-DiagrammeR].
+<!-- We use the `mermaid` function from the `DiagrammeR` library to create the graphical impact pathway [@R-DiagrammeR]. -->
 
-Run the code below and then add an additional cost to the graph called `Management cost` (try to do this on your own but feel free to look to the `solution` to see one way to do this). 
+<!-- Run the code below and then add an additional cost to the graph called `Management cost` (try to do this on your own but feel free to look to the `solution` to see one way to do this).  -->
 
-```{r graph-mermaid, exercise=TRUE}
-mermaid("graph LR
-        Y(Yield)-->I(Income); linkStyle 0 stroke:green, stroke-width:1.5px
-        M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:1.5px
-        I-->F(Final result); linkStyle 2 stroke: green, stroke-width:1.5px
-        CL(Labor cost)-->F; linkStyle 3 stroke: red, stroke-width:1.5px")
-```
+<!-- ```{r graph-mermaid, exercise=TRUE} -->
+<!-- mermaid("graph LR -->
+<!--         Y(Yield)-->I(Income); linkStyle 0 stroke:green, stroke-width:1.5px -->
+<!--         M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:1.5px -->
+<!--         I-->F(Final result); linkStyle 2 stroke: green, stroke-width:1.5px -->
+<!--         CL(Labor cost)-->F; linkStyle 3 stroke: red, stroke-width:1.5px") -->
+<!-- ``` -->
 
-```{r graph-mermaid-solution}
-mermaid("graph LR
-        Y(Yield)-->I(Income); linkStyle 0 stroke:green, stroke-width:1.5px
-        M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:1.5px
-        I-->F(Final result); linkStyle 2 stroke: green, stroke-width:1.5px
-        CL(Labor cost)-->F; linkStyle 3 stroke: red, stroke-width:1.5px
-        CM(Management cost)-->F; linkStyle 4 stroke: red, stroke-width:1.5px")
-```
+<!-- ```{r graph-mermaid-solution} -->
+<!-- mermaid("graph LR -->
+<!--         Y(Yield)-->I(Income); linkStyle 0 stroke:green, stroke-width:1.5px -->
+<!--         M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:1.5px -->
+<!--         I-->F(Final result); linkStyle 2 stroke: green, stroke-width:1.5px -->
+<!--         CL(Labor cost)-->F; linkStyle 3 stroke: red, stroke-width:1.5px -->
+<!--         CM(Management cost)-->F; linkStyle 4 stroke: red, stroke-width:1.5px") -->
+<!-- ``` -->
 
-The `LR` argument in the `mermaid` function specifies that the plot will go from left to right. Try and change this to `TD`. 
+<!-- The `LR` argument in the `mermaid` function specifies that the plot will go from left to right. Try and change this to `TD`.  -->
 
-Use the `style` options in `mermaid` to change the arrow widths to `2px` and the node colors to red for costs and green for benefits. You will need to break the line and put the `linkStyle` on a new line to add the color to the node. 
+<!-- Use the `style` options in `mermaid` to change the arrow widths to `2px` and the node colors to red for costs and green for benefits. You will need to break the line and put the `linkStyle` on a new line to add the color to the node.  -->
 
-```{r graph-mermaid-direction, exercise=TRUE}
-mermaid("graph LR
-        Y(Yield)-->I(Income); linkStyle 0 stroke:green, stroke-width:1px
-        M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:1px
-        I-->F(Final result); linkStyle 2 stroke: green, stroke-width:1px
-        CL(Labor cost)-->F; linkStyle 3 stroke: red, stroke-width:1px
-        CM(Management cost)-->F; linkStyle 4 stroke: red, stroke-width:1px")
-```
+<!-- ```{r graph-mermaid-direction, exercise=TRUE} -->
+<!-- mermaid("graph LR -->
+<!--         Y(Yield)-->I(Income); linkStyle 0 stroke:green, stroke-width:1px -->
+<!--         M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:1px -->
+<!--         I-->F(Final result); linkStyle 2 stroke: green, stroke-width:1px -->
+<!--         CL(Labor cost)-->F; linkStyle 3 stroke: red, stroke-width:1px -->
+<!--         CM(Management cost)-->F; linkStyle 4 stroke: red, stroke-width:1px") -->
+<!-- ``` -->
 
-```{r graph-mermaid-direction-solution}
-mermaid("graph TB
-        Y(Yield)-->I(Income); style I fill:green
-        linkStyle 0 stroke:green, stroke-width:2px
-        M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:2px
-        I-->F(Final result); linkStyle 2 stroke: green, stroke-width:2px
-        CL(Labor cost)-->F; style CL fill:red
-        linkStyle 3 stroke: red, stroke-width:2px
-        CM(Management cost)-->F; style CM fill:red
-        linkStyle 4 stroke: red, stroke-width:2px")
-```
+<!-- ```{r graph-mermaid-direction-solution} -->
+<!-- mermaid("graph TB -->
+<!--         Y(Yield)-->I(Income); style I fill:green -->
+<!--         linkStyle 0 stroke:green, stroke-width:2px -->
+<!--         M(Market price)-->I; linkStyle 1 stroke: green, stroke-width:2px -->
+<!--         I-->F(Final result); linkStyle 2 stroke: green, stroke-width:2px -->
+<!--         CL(Labor cost)-->F; style CL fill:red -->
+<!--         linkStyle 3 stroke: red, stroke-width:2px -->
+<!--         CM(Management cost)-->F; style CM fill:red -->
+<!--         linkStyle 4 stroke: red, stroke-width:2px") -->
+<!-- ``` -->
 
-That was just one of many ways to generate impact pathways. To see more options see the [Decision Analysis Overview](#decision_analysis) lecture materials. 
+<!-- That was just one of many ways to generate impact pathways. To see more options see the [Decision Analysis Overview](#decision_analysis) lecture materials.  -->
+
 
 ### Building the model 
 
-Here we generate an input table to feed the model function. Update this with your new management cost variable in the graphical impact pathway. Call your new variable `"Management_cost"`, make the lower bound `100` and the upper bound `2000`, make the distribution `"posnorm"`, make the label `"Management cost (USD/ha)"` and make the description `"Management costs in a normal season"`.
+![](images/model_simple.png)
+
+Here we generate an input table to feed the model function. Update this to include the management cost variable in the graphical impact pathway above. Call your new variable `"Management_cost"`, make the lower bound `100` and the upper bound `2000`, make the distribution `"posnorm"`, make the label `"Management cost (USD/ha)"` and make the description `"Management costs in a normal season"`.
 
 ```{r input_table, exercise=TRUE}
 input_estimates <- data.frame(variable = c("Yield", "Market_price", "Labor_cost"),
@@ -219,3 +222,88 @@ Listen to this interview on Alex Andorra's podcast 'Learning Bayesian Statistics
 <!-- -	Yihui (markdown etc.) -->
 <!-- -	Assignments:  -->
 <!-- -	Rainforth, Tom. “Automating Inference, Learning, and Design Using Probabilistic Programming.” Doctor of Philosophy, University of Oxford, 2017. -->
+
+### Causal model / diagram / Impact pathway / Theory of change
+
+Before you start developing the decision model (an R function), open R and download and load the `decisionSupport` package.
+
+```
+install.packages("decisionSupport")
+library(decisionSupport)
+```
+
+### Creating a model
+
+The `mcSimulation` function from the `decisionSupport` package can be applied to conduct decision analysis [@R-decisionSupport]. The function requires three inputs:
+
+1. an `estimate` of the joint probability distribution of the input variables. These specify the names and probability distributions for all variables used in the decision model. These distributions aim to represent the full range of possible values for each component of the model.
+1. a `model_function` that predicts decision outcomes based on the variables named in a separate data table. This R function is customized by the user to address a particular decision problem to provide the decision analysis model.
+1. `numberOfModelRuns`	indicating the number of times to run the model function.
+
+These inputs are provided as arguments to the `mcSimulation` function, which conducts a Monte Carlo analysis with repeated model runs based on probability distributions for all uncertain variables. The data table and model are customized to fit the particulars of a specific decision.
+
+### The `estimate`
+
+To support the model building process we design an input table to store the `estimate` values. The table is stored locally as `example_decision_inputs.csv` and contains many of the basic values for the analysis. This table contains all the input variables used in the model. Their distributions are described by 90% confidence intervals, which are specified by lower (5% quantile) and upper (95% quantile) bounds, as well as the shape of the distribution. This example uses four different distributions:
+
+1.	`const` – a constant value
+1.	`norm` – a normal distribution
+1.	`tnorm_0_1` – a truncated normal distribution that can only have values between 0 and 1 (useful for probabilities; note that 0 and 1, as well as numbers outside this interval are not permitted as inputs)
+1.	`posnorm` – a normal distribution truncated at 0 (only positive values allowed)
+
+For a full list of possible distributions, type `?random.estimate1d ` in your R console. When specifying confidence intervals for truncated distributions, note that approximately 5% of the random values should ‘fit’ within the truncation interval on either side. If there is not enough space, the function will generate a warning (usually it will still work, but the inputs may not look like you intended them to).
+
+We have provided default distributions for all the variables used here, but feel free to make adjustments by editing the .csv file in a spreadsheet program. You can download the ['example_decision_inputs.csv'](https://raw.githubusercontent.com/CWWhitney/Decision_Analysis_Course/main/data/example_decision_inputs.csv) here and save it as a .csv file locally (from your web browser try: File > Save page as). In this example it is stored in the 'data' folder. Once you have downloaded the data you can run `example_decision_inputs <- read.csv("data/example_decision_inputs.csv")` in your console to make the following code work on your machine. Note that the input table that can be written or read from a .csv file and calculated with the `estimate_read_csv` function or converted to the correct format with the `as.estimate` function.
+
+### The `model_function`
+
+The decision model is coded as an R function which takes in the variables provided in the data table and generates a model output, such as the Net Present Value.
+
+### Create a simple function
+
+Here we define a simple model function that we call `example_decision_model`. It calculates profits as benefits minus costs and arbitrarily adds 500 to the result to arrive at `final_profits`. This simple example shows us how to use `function`, the results of which can be applied elsewhere. The most basic way to apply the library is to use the `mcSimulation` function to run our `example_decision_model`. Here we run it 100 times using inputs from the `example_decision_inputs.csv` table.
+
+Update this model by adding `additional_benefits`, one of the variables from the `example_decision_inputs` data, to replace the 500 that was arbitrarily added to the profit and changing the number of model runs to 700.
+
+```{r example_decision_model, exercise=TRUE}
+
+example_decision_model <- function(x, varnames){
+  profit <- benefits-costs
+
+  final_profits <- profit + 500
+
+  return(final_profits)
+
+}
+
+mcSimulation(estimate = as.estimate(example_decision_inputs),
+                              model_function = example_decision_model,
+                              numberOfModelRuns = 100,
+                              functionSyntax = "plainNames")
+
+```
+
+```{r example_decision_model-solution}
+
+example_decision_model <- function(x, varnames){
+
+  profit <- benefits-costs
+
+  final_profits <- profit + additional_benefits
+
+  return(final_profits)
+
+}
+
+mcSimulation(estimate = as.estimate(example_decision_inputs),
+                              model_function = example_decision_model,
+                              numberOfModelRuns = 700,
+                              functionSyntax = "plainNames")
+
+```
+
+Now we have a simulation of possible outcomes. In the [model programming seminar](#model_programming) this week we will go into more detail on the options for assessment of the results of simulations and on visualization of the results.
+
+Note that this example was constructed for clarity and not for speed. Speed considerations are not very important when we only run a process once, but since in the Monte Carlo simulation all delays are multiplied by `numberOfModelRuns` (e.g. 10,000), they can sometimes add up to substantial time losses. Even with highly efficient coding, Monte Carlo simulations can take a while when dealing with complex decisions.
+
+The objective of the procedures used in the `decisionSupport` package is to make it easier for analysts to produce decision-relevant information that adequately reflects the imperfect nature of the information we usually have. Adding  probabilistic elements to a simulation adds substantial value to an analysis. Mostly, it avoids making spurious assumptions, replacing uncertainty with ‘best bets’ and producing results that do not reflect the knowledge limitations that make decision-making so challenging. More information on all this is contained in the [decisionSupport manual](https://cran.r-project.org/web/packages/decisionSupport/decisionSupport.pdf), especially under `welfareDecisionAnalysis`.
