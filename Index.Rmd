@@ -352,21 +352,21 @@ knitr::write_bib(c(.packages(),
 ```
 
 
-<!-- ```{r child="Lecture_10_Analyst_Profile.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_10_Analyst_Profile.Rmd"}
+```
 
-<!-- ```{r child="Lecture_11_Communicating.Rmd"} -->
+<!-- ```{r child="Seminar_Communicating.Rmd"} -->
 <!-- ``` -->
 
 
 <!-- ```{r child="Seminar_01_Experiential.Rmd"} -->
 <!-- ``` -->
 
-<!-- ```{r child="Seminar_02_R_RStudio_1.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_02_R_RStudio_1.Rmd"}
+```
 
-<!-- ```{r child="Seminar_03_R_RStudio_2.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_03_R_RStudio_2.Rmd"}
+```
 
 <!-- ```{r child="Seminar_04_RMarkdown.Rmd"} -->
 <!-- ``` -->
