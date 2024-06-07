@@ -1,0 +1,15 @@
+## Seminar 3: Model Updates
+
+Participants shared conceptual models and recieved feedback. 
+
+See Slack
+
+#### Useful graphical model tools
+
+[draw.io](https://app.diagrams.net/)
+
+[loopy](https://ncase.me/loopy/)
+
+[miro](https://miro.com/)
+
+[Lucid](https://www.lucidchart.com/pages/)

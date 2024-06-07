@@ -365,11 +365,12 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_02_R_RStudio_2.Rmd"}
 ```
 
-<!-- # Seminar 3 is for presentations -->
+```{r child="Seminar_03_Model_Updates.Rmd"}
+```
 
 
-<!-- ```{r child="Seminar_04_RMarkdown.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_04_RMarkdown.Rmd"}
+```
 
 <!-- ```{r child="Seminar_05_Git_Github.Rmd"} -->
 <!-- ``` -->

@@ -1780,9 +1780,85 @@ console it will set your RStudio preference to <strong>NEVER</strong>
 save or restore <code>.RData</code> on exit or on startup, which is a
 lifestyle choice endorsed by many excellent researchers like <a
 href="https://twitter.com/JennyBryan">Jenny Bryan</a>.</p>
-<!-- # Seminar 3 is for presentations -->
-<!-- ```{r child="Seminar_04_RMarkdown.Rmd"} -->
-<!-- ``` -->
+</div>
+</div>
+<div id="section-seminar-3-model-updates" class="section level2">
+<h2>Seminar 3: Model Updates</h2>
+<p>Participants shared conceptual models and recieved feedback.</p>
+<p>See Slack</p>
+<div id="section-useful-graphical-model-tools" class="section level4">
+<h4>Useful graphical model tools</h4>
+<p><a href="https://app.diagrams.net/">draw.io</a></p>
+<p><a href="https://ncase.me/loopy/">loopy</a></p>
+<p><a href="https://miro.com/">miro</a></p>
+<p><a href="https://www.lucidchart.com/pages/">Lucid</a></p>
+</div>
+</div>
+<div id="section-rmarkdown" class="section level2">
+<h2>Seminar 4: Using RMarkdown</h2>
+<!-- [Using RMarkdown](#rmarkdown) -->
+<div id="section-using-rmarkdown" class="section level3">
+<h3>Using RMarkdown</h3>
+<p>RMarkdown: overview</p>
+<p><img src="images/RMarkdown.png" style="width:2in" /></p>
+<p>Now let’s check out <a
+href="https://rmarkdown.rstudio.com/">Rmarkdown</a>, a powerful tool
+that allows making fancy reports, websites etc. out of our R code (<span
+class="citation">Allaire et al. (2024)</span>). You’re already looking
+at an example, by the way. This website was produced with Rmarkdown (and
+it wasn’t hard at all)!</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hh4wyP8tvkI" frameborder="0" allowfullscreen>
+</iframe>
+<!-- ![](https://youtu.be/hh4wyP8tvkI) -->
+<p>Here are <a
+href="http://htmlpreview.github.io/?https://github.com/CWWhitney/teaching_R//blob/master/RMarkdown/RMarkdown.html">the
+slides</a> and <a
+href="http://htmlpreview.github.io/?https://github.com/CWWhitney/teaching_R//blob/master/RMarkdown/RMarkdown_example.html">the
+html file</a> generated in the video.</p>
+<p>To run this you will need to load <code>library(rmarkdown)</code></p>
+<p><img src="images/hex-rmarkdown.png" style="width:1in" /></p>
+<p>and library(<code>knitr</code>)</p>
+<p><img src="images/knitrhex.png" style="width:1in" /></p>
+<ul>
+<li>Use <a href="https://rmarkdown.rstudio.com/">RMarkdown</a>!</li>
+<li>You will thank yourself</li>
+<li>Save often with new version (or use git)</li>
+</ul>
+</div>
+<div id="section-rmarkdown-getting-stuck" class="section level3">
+<h3>RMarkdown: getting stuck</h3>
+<ul>
+<li>Use a ‘?’ with function, package, data name in the R console</li>
+<li>If you get stuck, use Google: just add “R” to a search e.g. a copy
+of an error message</li>
+<li>Someone else has also been confused by it and has written about
+it</li>
+<li>Thousands of talented programmers scan the web and answer these
+problems</li>
+</ul>
+<div class="footer">
+<p></small><a href="https://stackoverflow.com/"
+class="uri">https://stackoverflow.com/</a> </small></p>
+</div>
+</div>
+<div id="section-rmarkdown-basics" class="section level3">
+<h3>RMarkdown: basics</h3>
+<p><small><a href="https://rmarkdown.rstudio.com/authoring_basics.html"
+class="uri">https://rmarkdown.rstudio.com/authoring_basics.html</a></small></p>
+<p><small><a href="https://bookdown.org/yihui/rmarkdown/r-code.html"
+class="uri">https://bookdown.org/yihui/rmarkdown/r-code.html</a></small></p>
+<ul>
+<li>Open RStudio</li>
+</ul>
+<p><img src="images/rstudio-hex.png" style="width:1in" /> - Open an
+Rmarkdown file and knit.</p>
+<p><img src="images/open_markdown_file.jpg" /></p>
+<p><img src="images/knit-logo.png" /></p>
+<p>Now we’re equipped with all the basic tools for this course. We’ll
+start using them pretty soon. Throughout the course you’ll find
+occasional references to your RMarkdown file. This is supposed to be
+produced with Rmarkdown, with subsequent versions of it stored on
+Github.</p>
 <!-- ```{r child="Seminar_05_Git_Github.Rmd"} -->
 <!-- ``` -->
 <!-- ```{r child="Seminar_06_Model_Programming.Rmd"} -->
@@ -2114,22 +2190,22 @@ session$onSessionEnded(function() {
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-ken-robinson", 
     question = structure("What is the premise of Sir Ken Robinson’s TED Talk?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_e13c938", 
+    "character")), answers = list(structure(list(id = "lnr_ans_abbee7b", 
         option = "We need more sciences and maths in education.", 
         value = "We need more sciences and maths in education.", 
         label = structure("We need more sciences and maths in education.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c634ae4", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3544bdf", 
         option = "Creativity is as important as literacy in education.", 
         value = "Creativity is as important as literacy in education.", 
         label = structure("Creativity is as important as literacy in education.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_bf4e4a7", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ef1d4d9", 
         option = "We are educating people out of their creative capacities.", 
         value = "We are educating people out of their creative capacities.", 
         label = structure("We are educating people out of their creative capacities.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_1703ac", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6287d8d", 
         option = "Teachers are often invited to dinner parties.", 
         value = "Teachers are often invited to dinner parties.", 
         label = structure("Teachers are often invited to dinner parties.", html = TRUE, class = c("html", 
@@ -2142,28 +2218,28 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-ken-robinson-answer", question = "question-ken-robinson"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 471578402.780404, options = list()), class = c("learnr_checkbox", 
+    seed = 1157608478.96095, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
 
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-1", question = structure("What is the main concern of Decision Analysis for agricultural development?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_901dc9c", 
+"character")), answers = list(structure(list(id = "lnr_ans_962c910", 
     option = "How do people make decisions?", value = "How do people make decisions?", 
     label = structure("How do people make decisions?", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ff673a3", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ad05b93", 
     option = "What does the data tell us about development?", 
     value = "What does the data tell us about development?", 
     label = structure("What does the data tell us about development?", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5f4249f", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_da9a191", 
     option = "How will decisions influence future sustainability?", 
     value = "How will decisions influence future sustainability?", 
     label = structure("How will decisions influence future sustainability?", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_da57e39", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_4eb2b57", 
     option = "How can we perform analyses of big data for policy advice?", 
     value = "How can we perform analyses of big data for policy advice?", 
     label = structure("How can we perform analyses of big data for policy advice?", html = TRUE, class = c("html", 
@@ -2175,27 +2251,27 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "question-1-answer", question = "question-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 188990130.911995, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1487413328.30737, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-2", question = structure("Why do we apply Decision Analysis in agricultural development research?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_cd5e83c", 
+"character")), answers = list(structure(list(id = "lnr_ans_65283fb", 
     option = "To make sense of large data sets.", value = "To make sense of large data sets.", 
     label = structure("To make sense of large data sets.", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_4988e5", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_54b7fe", 
     option = "To better understand how decisions are made.", 
     value = "To better understand how decisions are made.", label = structure("To better understand how decisions are made.", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_2ebb02", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ec9839d", 
     option = "To offer support in decision making under uncertainty.", 
     value = "To offer support in decision making under uncertainty.", 
     label = structure("To offer support in decision making under uncertainty.", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d920dd4", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_223e33d", 
     option = "To generate new data sets.", value = "To generate new data sets.", 
     label = structure("To generate new data sets.", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -2206,7 +2282,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "question-2-answer", question = "question-2"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1311540568.88927, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 464963430.283485, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -2214,21 +2290,21 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-3", question = structure("What is one of the main benefits of Decision Analysis approaches?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_cc1f029", 
+"character")), answers = list(structure(list(id = "lnr_ans_d8b0cd4", 
     option = "Making use of existing knowledge to build forecasts.", 
     value = "Making use of existing knowledge to build forecasts.", 
     label = structure("Making use of existing knowledge to build forecasts.", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_2430070", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_b7829a0", 
     option = "Helping to better understand how and why decisions are made.", 
     value = "Helping to better understand how and why decisions are made.", 
     label = structure("Helping to better understand how and why decisions are made.", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_31b0c00", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ae82e49", 
     option = "Making use of big data to generate models.", value = "Making use of big data to generate models.", 
     label = structure("Making use of big data to generate models.", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1dd8202", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_dddfd9c", 
     option = "Support decisions by using existing measurements and evidence for which we have high certainty.", 
     value = "Support decisions by using existing measurements and evidence for which we have high certainty.", 
     label = structure("Support decisions by using existing measurements and evidence for which we have high certainty.", html = TRUE, class = c("html", 
@@ -2240,7 +2316,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Watch <a href=\"https://youtu.be/7P2YI9-smfU\">the talk<\u002fa> and try again.", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "question-3-answer", question = "question-3"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1049837717.01113, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 179612190.916362, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -2248,15 +2324,15 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-DA-approaches_define", 
     question = structure("How do we define a decision in the context of Decision Analysis?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_723ca10", 
+    "character")), answers = list(structure(list(id = "lnr_ans_e14014", 
         option = "An irrevocable allocation of resources.", value = "An irrevocable allocation of resources.", 
         label = structure("An irrevocable allocation of resources.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5465215", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_58b0c82", 
         option = "Something that can be reversed.", value = "Something that can be reversed.", 
         label = structure("Something that can be reversed.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a455809", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_75b7b7f", 
         option = "A logical choice between different options", 
         value = "A logical choice between different options", 
         label = structure("A logical choice between different options", html = TRUE, class = c("html", 
@@ -2269,7 +2345,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-DA-approaches_define-answer", question = "question-DA-approaches_define"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 2095980515.52398, options = list()), class = c("learnr_checkbox", 
+    seed = 1720907524.19864, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
 
@@ -2277,17 +2353,17 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-DA-approaches_impact-pathway", 
     question = structure("Why do we use impact pathways?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_23d3a3a", 
+    "character")), answers = list(structure(list(id = "lnr_ans_fbc3695", 
         option = "To think beforehand what might occur and what the outcomes might be, to expose weak links.", 
         value = "To think beforehand what might occur and what the outcomes might be, to expose weak links.", 
         label = structure("To think beforehand what might occur and what the outcomes might be, to expose weak links.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_13497df", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_46ae848", 
         option = "To make sense of the processes that we have already carried out.", 
         value = "To make sense of the processes that we have already carried out.", 
         label = structure("To make sense of the processes that we have already carried out.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_75fd79b", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_300ee69", 
         option = "To generate new data sets.", value = "To generate new data sets.", 
         label = structure("To generate new data sets.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -2300,24 +2376,24 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
         answer = "question-DA-approaches_impact-pathway-answer", 
         question = "question-DA-approaches_impact-pathway"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 986321949.540708, options = list()), class = c("learnr_radio", 
+    seed = 1239196548.42295, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-DA-approaches_trans-research", 
     question = structure("What is the underlying idea in transdisciplinary approaches for agricultural development?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_8eaf80f", 
+    "character")), answers = list(structure(list(id = "lnr_ans_8788c0d", 
         option = "Farmers should be part of the research process.", 
         value = "Farmers should be part of the research process.", 
         label = structure("Farmers should be part of the research process.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_deb20c0", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_dab3d5a", 
         option = "Getting academics from different fields to work together.", 
         value = "Getting academics from different fields to work together.", 
         label = structure("Getting academics from different fields to work together.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_daff564", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_92620c", 
         option = "Making use of big data to generate models.", 
         value = "Making use of big data to generate models.", 
         label = structure("Making use of big data to generate models.", html = TRUE, class = c("html", 
@@ -2331,7 +2407,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
         answer = "question-DA-approaches_trans-research-answer", 
         question = "question-DA-approaches_trans-research"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 51934660.975816, options = list()), class = c("learnr_radio", 
+    seed = 661699302.691872, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
 
@@ -2339,21 +2415,21 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-karl-claxton", 
     question = structure("What is the premise of Karl Claxton’s Talk?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_5ddbf86", 
+    "character")), answers = list(structure(list(id = "lnr_ans_85ac9bc", 
         option = "We need to use all available evidence.", value = "We need to use all available evidence.", 
         label = structure("We need to use all available evidence.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_dd898b7", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_df8946b", 
         option = "We can assign distributions to the parameters and sample randomly with Monte Carlo.", 
         value = "We can assign distributions to the parameters and sample randomly with Monte Carlo.", 
         label = structure("We can assign distributions to the parameters and sample randomly with Monte Carlo.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_aac020a", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_7bd7a24", 
         option = "We need to characterize decision uncertainty.", 
         value = "We need to characterize decision uncertainty.", 
         label = structure("We need to characterize decision uncertainty.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_67e69f1", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_42cd1ae", 
         option = "We need to get a lot of data and do analysis of these data sets.", 
         value = "We need to get a lot of data and do analysis of these data sets.", 
         label = structure("We need to get a lot of data and do analysis of these data sets.", html = TRUE, class = c("html", 
@@ -2366,25 +2442,25 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-karl-claxton-answer", question = "question-karl-claxton"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1350371207.87118, options = list()), class = c("learnr_checkbox", 
+    seed = 1725037784.19672, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-define-decision-part-01-01", 
     question = structure("Who do you think came up with these topics?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_ce013", 
+    "character")), answers = list(structure(list(id = "lnr_ans_2fc1091", 
         option = "Local government.", value = "Local government.", 
         label = structure("Local government.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_9b49a02", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6ffc4dd", 
         option = "Development NGO.", value = "Development NGO.", 
         label = structure("Development NGO.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_cff45c1", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5669ed3", 
         option = "Researchers.", value = "Researchers.", label = structure("Researchers.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e95f210", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6b7aae8", 
         option = "Farmers.", value = "Farmers.", label = structure("Farmers.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
     "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -2395,7 +2471,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-define-decision-part-01-01-answer", 
         question = "question-define-decision-part-01-01"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 851085812.103682, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 2064516304.53863, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -2404,20 +2480,20 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-define-decision-part-01-02", 
     question = structure("What is missing?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_2270f74", 
+    "character")), answers = list(structure(list(id = "lnr_ans_476d406", 
         option = "Decision-maker", value = "Decision-maker", 
         label = structure("Decision-maker", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_15579b7", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_70f648a", 
         option = "Concrete options", value = "Concrete options", 
         label = structure("Concrete options", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e00a01a", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_2477265", 
         option = "Relevant issue in agricultural development", 
         value = "Relevant issue in agricultural development", 
         label = structure("Relevant issue in agricultural development", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b05a1c7", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a331ff3", 
         option = "Clear context", value = "Clear context", label = structure("Clear context", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
     "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -2428,7 +2504,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-define-decision-part-01-02-answer", 
         question = "question-define-decision-part-01-02"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1463832875.81835, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1383603131.85571, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
@@ -2436,27 +2512,27 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-define-decision-part-03-01", 
     question = structure("Which aspects of research should you pay attention to, if you want to maximize the <em>credibility<\u002fem> of your research?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_b8b5253", 
+    "character")), answers = list(structure(list(id = "lnr_ans_2749f97", 
         option = "Relationship with stakeholders", value = "Relationship with stakeholders", 
         label = structure("Relationship with stakeholders", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_98501c2", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_36775dd", 
         option = "Robust statistics", value = "Robust statistics", 
         label = structure("Robust statistics", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3fc718", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3c9995d", 
         option = "Inclusive, participatory research", value = "Inclusive, participatory research", 
         label = structure("Inclusive, participatory research", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b3411b9", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_26d9fc6", 
         option = "Clear experimental design", value = "Clear experimental design", 
         label = structure("Clear experimental design", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_7d37f90", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_2ed76b1", 
         option = "Alignment with policies and plans", value = "Alignment with policies and plans", 
         label = structure("Alignment with policies and plans", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_66426dd", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6af968a", 
         option = "Choices actually considered by local actors", 
         value = "Choices actually considered by local actors", 
         label = structure("Choices actually considered by local actors", html = TRUE, class = c("html", 
@@ -2469,7 +2545,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-define-decision-part-03-01-answer", 
         question = "question-define-decision-part-03-01"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 929616491.067114, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1933487101.09965, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
@@ -2478,27 +2554,27 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-define-decision-part-03-02", 
     question = structure("Which aspects of research should you pay attention to, if you want to maximize the <em>salience<\u002fem> of your research?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_698a61b", 
+    "character")), answers = list(structure(list(id = "lnr_ans_c61d7dd", 
         option = "Relationship with stakeholders", value = "Relationship with stakeholders", 
         label = structure("Relationship with stakeholders", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_fb4fa3b", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_65df6b8", 
         option = "Robust statistics", value = "Robust statistics", 
         label = structure("Robust statistics", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_18cf1a3", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_aeadf19", 
         option = "Inclusive, participatory research", value = "Inclusive, participatory research", 
         label = structure("Inclusive, participatory research", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6da2502", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_626f681", 
         option = "Clear experimental design", value = "Clear experimental design", 
         label = structure("Clear experimental design", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_9af0bc3", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ff750a9", 
         option = "Alignment with policies and plans", value = "Alignment with policies and plans", 
         label = structure("Alignment with policies and plans", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5a5bc67", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_1339d68", 
         option = "Choices actually considered by local actors", 
         value = "Choices actually considered by local actors", 
         label = structure("Choices actually considered by local actors", html = TRUE, class = c("html", 
@@ -2511,7 +2587,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-define-decision-part-03-02-answer", 
         question = "question-define-decision-part-03-02"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1210786336.93618, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1585500460.26169, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
@@ -2519,31 +2595,31 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-define-decision-part-03-03", 
     question = structure("Which aspects of research should you pay attention to, if you want to maximize the <em>legitimacy<\u002fem> of your research?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_eded250", 
+    "character")), answers = list(structure(list(id = "lnr_ans_c1141c8", 
         option = "Relationship with stakeholders", value = "Relationship with stakeholders", 
         label = structure("Relationship with stakeholders", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_8520fa1", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_4d1ad42", 
         option = "Robust statistics", value = "Robust statistics", 
         label = structure("Robust statistics", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c169b7b", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_1c72201", 
         option = "Inclusive, participatory research", value = "Inclusive, participatory research", 
         label = structure("Inclusive, participatory research", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_35f3a46", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c4cf423", 
         option = "Involvement of local leaders", value = "Involvement of local leaders", 
         label = structure("Involvement of local leaders", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e0e809a", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_880bb13", 
         option = "Clear experimental design", value = "Clear experimental design", 
         label = structure("Clear experimental design", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c65513f", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c95a756", 
         option = "Alignment with policies and plans", value = "Alignment with policies and plans", 
         label = structure("Alignment with policies and plans", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c7191bd", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_f59855d", 
         option = "Choices actually considered by local actors", 
         value = "Choices actually considered by local actors", 
         label = structure("Choices actually considered by local actors", html = TRUE, class = c("html", 
@@ -2556,7 +2632,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-define-decision-part-03-03-answer", 
         question = "question-define-decision-part-03-03"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 979604910.543836, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 184434891.914116, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
@@ -2565,21 +2641,21 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-quality-decision", 
     question = structure("The criteria for decision quality include:", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_da846dc", 
+    "character")), answers = list(structure(list(id = "lnr_ans_2c56cfc", 
         option = "Large datasets with empirical evidence and measurements of expected outcomes.", 
         value = "Large datasets with empirical evidence and measurements of expected outcomes.", 
         label = structure("Large datasets with empirical evidence and measurements of expected outcomes.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_9fb32e9", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_466744f", 
         option = "Preferences about decision outcomes.", value = "Preferences about decision outcomes.", 
         label = structure("Preferences about decision outcomes.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5f782cd", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_8ed9819", 
         option = "Certainty about what the decision outcome will be.", 
         value = "Certainty about what the decision outcome will be.", 
         label = structure("Certainty about what the decision outcome will be.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_efc5689", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b05c3a9", 
         option = "Clear framing of decision alternatives.", value = "Clear framing of decision alternatives.", 
         label = structure("Clear framing of decision alternatives.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -2591,28 +2667,28 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-quality-decision-answer", question = "question-quality-decision"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 83795679.4609796, options = list()), class = c("learnr_checkbox", 
+    seed = 1816588699.65408, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-howard", 
     question = structure("According to the Howard and Abbas reading, which of the following represents a decision?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_22f6f09", 
+    "character")), answers = list(structure(list(id = "lnr_ans_9cec70", 
         option = "I have decided that I do not like vanilla ice cream.", 
         value = "I have decided that I do not like vanilla ice cream.", 
         label = structure("I have decided that I do not like vanilla ice cream.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_72da810", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_f4ec46", 
         option = "I have decided that the stock market will go up.", 
         value = "I have decided that the stock market will go up.", 
         label = structure("I have decided that the stock market will go up.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6cf75", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_bb82c77", 
         option = "I have decided to ace the test.", value = "I have decided to ace the test.", 
         label = structure("I have decided to ace the test.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e22966c", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_832a79f", 
         option = "I have decided to diet, and I have thrown away the ice cream in the freezer.", 
         value = "I have decided to diet, and I have thrown away the ice cream in the freezer.", 
         label = structure("I have decided to diet, and I have thrown away the ice cream in the freezer.", html = TRUE, class = c("html", 
@@ -2625,7 +2701,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-howard-answer", question = "question-howard"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 79628096.9629203, options = list()), class = c("learnr_radio", 
+    seed = 808565314.623482, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
 
@@ -2633,21 +2709,21 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-1-Decision-analysis-case-Water-for-Wajir", 
     question = structure("What was the purpose of the inception workshop?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_b6fed9", 
+    "character")), answers = list(structure(list(id = "lnr_ans_912ebb8", 
         option = "Elicit information about specific variables", 
         value = "Elicit information about specific variables", 
         label = structure("Elicit information about specific variables", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_9897bbe", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_4cb07da", 
         option = "Secure political buy-in", value = "Secure political buy-in", 
         label = structure("Secure political buy-in", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_96187cd", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_15d01d0", 
         option = "Develop a conceptual model of the decision", 
         value = "Develop a conceptual model of the decision", 
         label = structure("Develop a conceptual model of the decision", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_1c7949f", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_2cc6941", 
         option = "Allow stakeholders to state their expectations of the project", 
         value = "Allow stakeholders to state their expectations of the project", 
         label = structure("Allow stakeholders to state their expectations of the project", html = TRUE, class = c("html", 
@@ -2661,28 +2737,28 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
         answer = "question-1-Decision-analysis-case-Water-for-Wajir-answer", 
         question = "question-1-Decision-analysis-case-Water-for-Wajir"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 474932794.278842, options = list()), class = c("learnr_checkbox", 
+    seed = 1092966779.49105, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-2-Decision-analysis-case-Water-for-Wajir", 
     question = structure("What impacts are likely to arise from the freshwater pipeline?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_cc6dfed", 
+    "character")), answers = list(structure(list(id = "lnr_ans_a4f6f68", 
         option = "Improved sanitation and public health in Wajir", 
         value = "Improved sanitation and public health in Wajir", 
         label = structure("Improved sanitation and public health in Wajir", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ceb7b08", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_94dd170", 
         option = "Irrigated agriculture in Wajir", value = "Irrigated agriculture in Wajir", 
         label = structure("Irrigated agriculture in Wajir", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ea6afa4", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_56cd037", 
         option = "Acceleration of economic development in Wajir", 
         value = "Acceleration of economic development in Wajir", 
         label = structure("Acceleration of economic development in Wajir", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_4bb1583", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_32e4431", 
         option = "Free water supply for residents of Wajir", 
         value = "Free water supply for residents of Wajir", label = structure("Free water supply for residents of Wajir", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -2695,7 +2771,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
         answer = "question-2-Decision-analysis-case-Water-for-Wajir-answer", 
         question = "question-2-Decision-analysis-case-Water-for-Wajir"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1841664363.64241, options = list()), class = c("learnr_checkbox", 
+    seed = 1116570059.48006, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
 
@@ -2703,22 +2779,22 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-3-Decision-analysis-case-Water-for-Wajir", 
     question = structure("What are good strategies in consolidating range estimates by different people?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_c03cd19", 
+    "character")), answers = list(structure(list(id = "lnr_ans_cc5c8a0", 
         option = "Average lower and upper bounds of intervals across all participants", 
         value = "Average lower and upper bounds of intervals across all participants", 
         label = structure("Average lower and upper bounds of intervals across all participants", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_bdab99", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_f55e13e", 
         option = "For outliers, find out if experts understood the question correctly", 
         value = "For outliers, find out if experts understood the question correctly", 
         label = structure("For outliers, find out if experts understood the question correctly", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ab8f484", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_7b9dd2e", 
         option = "Consider which experts have are most knowledgeable on each estimated variable", 
         value = "Consider which experts have are most knowledgeable on each estimated variable", 
         label = structure("Consider which experts have are most knowledgeable on each estimated variable", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e88024a", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3bb1054", 
         option = "Consider each expert's performance in previous estimation exercises", 
         value = "Consider each expert's performance in previous estimation exercises", 
         label = structure("Consider each expert’s performance in previous estimation exercises", html = TRUE, class = c("html", 
@@ -2732,28 +2808,28 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
         answer = "question-3-Decision-analysis-case-Water-for-Wajir-answer", 
         question = "question-3-Decision-analysis-case-Water-for-Wajir"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 551015751.743413, options = list()), class = c("learnr_checkbox", 
+    seed = 7666569.49642998, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-sweet_cherry-1", 
     question = structure("How did the decision of implementing covers in sweet cherry orchards emerge in this study?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_bbed397", 
+    "character")), answers = list(structure(list(id = "lnr_ans_1750540", 
         option = "From a thorough literature review.", value = "From a thorough literature review.", 
         label = structure("From a thorough literature review.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_cacbeb6", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_f84352d", 
         option = "Based on the previous knowledge of the researchers.", 
         value = "Based on the previous knowledge of the researchers.", 
         label = structure("Based on the previous knowledge of the researchers.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3d642c9", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a3ee5b2", 
         option = "From farmers' concerns regarding future weather scenarios.", 
         value = "From farmers' concerns regarding future weather scenarios.", 
         label = structure("From farmers’ concerns regarding future weather scenarios.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_1c17874", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_9950fc4", 
         option = "From consumers asking for sweet cherries of good quality.", 
         value = "From consumers asking for sweet cherries of good quality.", 
         label = structure("From consumers asking for sweet cherries of good quality.", html = TRUE, class = c("html", 
@@ -2766,7 +2842,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-sweet_cherry-1-answer", question = "question-sweet_cherry-1"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 2137745306.50453, options = list()), class = c("learnr_radio", 
+    seed = 1708469487.70443, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
 
@@ -2774,17 +2850,17 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-sweet_cherry-2", 
     question = structure("Based on the Net Present Value, what would be the best recommendation for farmers in northern Chile?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_c6a3ab9", 
+    "character")), answers = list(structure(list(id = "lnr_ans_3f11dfb", 
         option = "Farmers should implement covers to improve yields.", 
         value = "Farmers should implement covers to improve yields.", 
         label = structure("Farmers should implement covers to improve yields.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3f1e7df", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_965396f", 
         option = "NPV values suggest that implementing covers in northern Chile may be not necessary.", 
         value = "NPV values suggest that implementing covers in northern Chile may be not necessary.", 
         label = structure("NPV values suggest that implementing covers in northern Chile may be not necessary.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_7fdfa83", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_348dd03", 
         option = "The results do not allow making a clear recomendation.", 
         value = "The results do not allow making a clear recomendation.", 
         label = structure("The results do not allow making a clear recomendation.", html = TRUE, class = c("html", 
@@ -2797,20 +2873,20 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-sweet_cherry-2-answer", question = "question-sweet_cherry-2"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1375059135.35969, options = list()), class = c("learnr_radio", 
+    seed = 473489526.779514, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "questio-sweet_cherry-3", 
     question = structure("Considering the results of the EVPI analysis, farmers should spend more resources to gather additional information on:", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_f3c189d", 
+    "character")), answers = list(structure(list(id = "lnr_ans_446a5bf", 
         option = "Yield", value = "Yield", label = structure("Yield", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_9dccc32", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_1f468df", 
         option = "Market price", value = "Market price", label = structure("Market price", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_39f171b", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_4fa26d4", 
         option = "Yield lost to low firmness", value = "Yield lost to low firmness", 
         label = structure("Yield lost to low firmness", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -2822,7 +2898,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "questio-sweet_cherry-3-answer", question = "questio-sweet_cherry-3"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1457315849.82138, options = list()), class = c("learnr_radio", 
+    seed = 316361208.352683, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
 
@@ -2830,22 +2906,22 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "participatory-methods-01", 
     question = structure("Which of these is considered a modeling principle in decision analysis?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_7341f12", 
+    "character")), answers = list(structure(list(id = "lnr_ans_3a30d6c", 
         option = "Incorporate all important aspects into models", 
         value = "Incorporate all important aspects into models", 
         label = structure("Incorporate all important aspects into models", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_67d781c", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_688932e", 
         option = "Build models primarily based on data from expirements and measurements", 
         value = "Build models primarily based on data from expirements and measurements", 
         label = structure("Build models primarily based on data from expirements and measurements", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_8d1828b", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3efe5aa", 
         option = "Model system using all sources of information, including local and expert knowledge", 
         value = "Model system using all sources of information, including local and expert knowledge", 
         label = structure("Model system using all sources of information, including local and expert knowledge", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6da82d1", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_2f6ac3c", 
         option = "Explicitly consider uncertainties about inputs, processes and outputs", 
         value = "Explicitly consider uncertainties about inputs, processes and outputs", 
         label = structure("Explicitly consider uncertainties about inputs, processes and outputs", html = TRUE, class = c("html", 
@@ -2858,24 +2934,24 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "participatory-methods-01-answer", question = "participatory-methods-01"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1698238581.2092, options = list()), class = c("learnr_checkbox", 
+    seed = 849953167.10421, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-stakeholder-management-01", 
     question = structure("Which of these entities do you think could be a stakeholder?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_c966016", 
+    "character")), answers = list(structure(list(id = "lnr_ans_2e6ce67", 
         option = "Individuals", value = "Individuals", label = structure("Individuals", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a0e4279", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_cd9b8db", 
         option = "Groups", value = "Groups", label = structure("Groups", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3013a47", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5b70ae1", 
         option = "Non-human entities like forests", value = "Non-human entities like forests", 
         label = structure("Non-human entities like forests", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_fa5eb1f", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3fa255", 
         option = "None of these could be a stakeholder", value = "None of these could be a stakeholder", 
         label = structure("None of these could be a stakeholder", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -2887,7 +2963,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-stakeholder-management-01-answer", 
         question = "question-stakeholder-management-01"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 686653430.180252, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1307882266.39097, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
@@ -2896,14 +2972,14 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-stakeholder-management-02", 
     question = structure("What could you do if there are too many experts identified?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_410adf5", 
+    "character")), answers = list(structure(list(id = "lnr_ans_64d2018", 
         option = "Keep them all", value = "Keep them all", label = structure("Keep them all", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_d4b1640", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_12ca779", 
         option = "Randomly select a few", value = "Randomly select a few", 
         label = structure("Randomly select a few", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_372a2fa", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_dd733fd", 
         option = "Use criteria to categorize them and select a  representative group", 
         value = "Use criteria to categorize them and select a  representative group", 
         label = structure("Use criteria to categorize them and select a  representative group", html = TRUE, class = c("html", 
@@ -2916,7 +2992,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "question-stakeholder-management-02-answer", 
         question = "question-stakeholder-management-02"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 211392268.401563, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 741053605.15492, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -2924,16 +3000,16 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "bayesian-thinking-question-1", 
     question = structure("What are characteristics of the frequentist approach to science?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_5a188ef", 
+    "character")), answers = list(structure(list(id = "lnr_ans_e811696", 
         option = "We should consider prior knowledge.", value = "We should consider prior knowledge.", 
         label = structure("We should consider prior knowledge.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_951e65d", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_854070e", 
         option = "All knowledge should be derived objectively from data.", 
         value = "All knowledge should be derived objectively from data.", 
         label = structure("All knowledge should be derived objectively from data.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_50516f4", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_91dd372", 
         option = "Research can not produce insights into causal relationships.", 
         value = "Research can not produce insights into causal relationships.", 
         label = structure("Research can not produce insights into causal relationships.", html = TRUE, class = c("html", 
@@ -2946,7 +3022,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "bayesian-thinking-question-1-answer", question = "bayesian-thinking-question-1"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 2101859340.52125, options = list()), class = c("learnr_checkbox", 
+    seed = 1240485005.92235, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
 
@@ -2954,16 +3030,16 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "bayesian-thinking-question-2", 
     question = structure("What are the main challenges to Bayesian science today?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_d5b8439", 
+    "character")), answers = list(structure(list(id = "lnr_ans_731e5bb", 
         option = "Lack of computational power.", value = "Lack of computational power.", 
         label = structure("Lack of computational power.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ac2a6f5", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6094a23", 
         option = "Reliable characterization of the state of knowledge, i.e. definition of good Bayesian priors", 
         value = "Reliable characterization of the state of knowledge, i.e. definition of good Bayesian priors", 
         label = structure("Reliable characterization of the state of knowledge, i.e. definition of good Bayesian priors", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_92a944c", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_4e8cb78", 
         option = "The scientific community does not accept Bayesian methods.", 
         value = "The scientific community does not accept Bayesian methods.", 
         label = structure("The scientific community does not accept Bayesian methods.", html = TRUE, class = c("html", 
@@ -2976,29 +3052,29 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "bayesian-thinking-question-2-answer", question = "bayesian-thinking-question-2"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 687292965.679954, options = list()), class = c("learnr_radio", 
+    seed = 727356010.661299, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "bayesian-thinking-question-3", 
     question = structure("What is a Bayesian Prior?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_d098d63", 
+    "character")), answers = list(structure(list(id = "lnr_ans_a6b7c96", 
         option = "A probability distribution that expresses beliefs about a quantity before some evidence is taken into account.", 
         value = "A probability distribution that expresses beliefs about a quantity before some evidence is taken into account.", 
         label = structure("A probability distribution that expresses beliefs about a quantity before some evidence is taken into account.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6cb2fec", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_db2c5cb", 
         option = "The understanding about a phenomenon before any research or formal data collection.", 
         value = "The understanding about a phenomenon before any research or formal data collection.", 
         label = structure("The understanding about a phenomenon before any research or formal data collection.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_cdeba64", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_74b2cda", 
         option = "An expression of the existing state of knowledge that takes into account all existing data and available knowledge.", 
         value = "An expression of the existing state of knowledge that takes into account all existing data and available knowledge.", 
         label = structure("An expression of the existing state of knowledge that takes into account all existing data and available knowledge.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_edb73cd", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3016466", 
         option = "A good reflection of reality based on the existing state of knowledge.", 
         value = "A good reflection of reality based on the existing state of knowledge.", 
         label = structure("A good reflection of reality based on the existing state of knowledge.", html = TRUE, class = c("html", 
@@ -3011,7 +3087,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "bayesian-thinking-question-3-answer", question = "bayesian-thinking-question-3"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1966769095.58415, options = list()), class = c("learnr_checkbox", 
+    seed = 1115914935.48036, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
 
@@ -3019,27 +3095,27 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "bayesian-thinking-question-4", 
     question = structure("What is a posterior belief?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_84776a8", 
+    "character")), answers = list(structure(list(id = "lnr_ans_6308ea3", 
         option = "Revised or updated probability after taking into consideration new information.", 
         value = "Revised or updated probability after taking into consideration new information.", 
         label = structure("Revised or updated probability after taking into consideration new information.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_d81c9bc", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6dbe925", 
         option = "Updated understanding after having applied some observations or research to our prior belief.", 
         value = "Updated understanding after having applied some observations or research to our prior belief.", 
         label = structure("Updated understanding after having applied some observations or research to our prior belief.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e7803dd", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_82b778a", 
         option = "An expression of a belief that is the result of long term trials and investigations.", 
         value = "An expression of a belief that is the result of long term trials and investigations.", 
         label = structure("An expression of a belief that is the result of long term trials and investigations.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_da1572a", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e02870c", 
         option = "Updated beliefs about values and events after having seen additional information.", 
         value = "Updated beliefs about values and events after having seen additional information.", 
         label = structure("Updated beliefs about values and events after having seen additional information.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_8c8afb4", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_dfe7f1f", 
         option = "It is the prior probability plus new evidence.", 
         value = "It is the prior probability plus new evidence.", 
         label = structure("It is the prior probability plus new evidence.", html = TRUE, class = c("html", 
@@ -3052,29 +3128,29 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "bayesian-thinking-question-4-answer", question = "bayesian-thinking-question-4"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1636629722.73788, options = list()), class = c("learnr_checkbox", 
+    seed = 1955475381.08941, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "bayesian-thinking-question-5", 
     question = structure("What are ways that we can define proper priors?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_8c958f3", 
+    "character")), answers = list(structure(list(id = "lnr_ans_6a47f6b", 
         option = "Perform long term trials to generate a data set from which to generate reliable values.", 
         value = "Perform long term trials to generate a data set from which to generate reliable values.", 
         label = structure("Perform long term trials to generate a data set from which to generate reliable values.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6a27b6d", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a943d3", 
         option = "Consider your prior beliefs about the distribution of the parameters.", 
         value = "Consider your prior beliefs about the distribution of the parameters.", 
         label = structure("Consider your prior beliefs about the distribution of the parameters.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_81e54e9", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_f63560", 
         option = "Calibrate ourselves and others who are expected to express knowledge.", 
         value = "Calibrate ourselves and others who are expected to express knowledge.", 
         label = structure("Calibrate ourselves and others who are expected to express knowledge.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_7eb7c4", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b421e8a", 
         option = "Use your intuitive understanding to generate a distribution.", 
         value = "Use your intuitive understanding to generate a distribution.", 
         label = structure("Use your intuitive understanding to generate a distribution.", html = TRUE, class = c("html", 
@@ -3087,7 +3163,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "bayesian-thinking-question-5-answer", question = "bayesian-thinking-question-5"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 393059844.816967, options = list()), class = c("learnr_checkbox", 
+    seed = 625238577.708851, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
 
@@ -3095,24 +3171,24 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-explaining-calibration-training-part-01-01", 
     question = structure("What is the intention of decision analysts in measuring things?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_3272144", 
+    "character")), answers = list(structure(list(id = "lnr_ans_75516ad", 
         option = "They want to get paid for it.", value = "They want to get paid for it.", 
         label = structure("They want to get paid for it.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c300ce3", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_55cb1ec", 
         option = "They want to get precise information.", value = "They want to get precise information.", 
         label = structure("They want to get precise information.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_8dad350", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_4e88289", 
         option = "They follow what the research project leader tells them to do.", 
         value = "They follow what the research project leader tells them to do.", 
         label = structure("They follow what the research project leader tells them to do.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a5291d9", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_366fa75", 
         option = "They want to reduce their uncertainty.", value = "They want to reduce their uncertainty.", 
         label = structure("They want to reduce their uncertainty.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_715bab", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a40f2be", 
         option = "They are inspired by Douglas Hubbard to try and measure everything.", 
         value = "They are inspired by Douglas Hubbard to try and measure everything.", 
         label = structure("They are inspired by Douglas Hubbard to try and measure everything.", html = TRUE, class = c("html", 
@@ -3126,33 +3202,33 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
         answer = "question-explaining-calibration-training-part-01-01-answer", 
         question = "question-explaining-calibration-training-part-01-01"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1590613159.25931, options = list()), class = c("learnr_radio", 
+    seed = 1648420600.73239, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-explaining-calibration-training-part-01-02", 
     question = structure("What is calibration?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_21c4a0f", 
+    "character")), answers = list(structure(list(id = "lnr_ans_ae2d4b2", 
         option = "Calibration is a measuring process.", value = "Calibration is a measuring process.", 
         label = structure("Calibration is a measuring process.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_68d5276", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6dbf534", 
         option = "Calibration is a test of measuring devices to make sure they are measuring accurately.", 
         value = "Calibration is a test of measuring devices to make sure they are measuring accurately.", 
         label = structure("Calibration is a test of measuring devices to make sure they are measuring accurately.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_4a3cc0b", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_9238ff1", 
         option = "Calibration tells us which measuring device not to use.", 
         value = "Calibration tells us which measuring device not to use.", 
         label = structure("Calibration tells us which measuring device not to use.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c070d80", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_8a1a374", 
         option = "Calibration tells us the deviation of a measuring device.", 
         value = "Calibration tells us the deviation of a measuring device.", 
         label = structure("Calibration tells us the deviation of a measuring device.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c3d8adf", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_d901eaf", 
         option = "Calibration helps our experts to get a feeling about their uncertainty.", 
         value = "Calibration helps our experts to get a feeling about their uncertainty.", 
         label = structure("Calibration helps our experts to get a feeling about their uncertainty.", html = TRUE, class = c("html", 
@@ -3166,7 +3242,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
         answer = "question-explaining-calibration-training-part-01-02-answer", 
         question = "question-explaining-calibration-training-part-01-02"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1044656324.51354, options = list()), class = c("learnr_checkbox", 
+    seed = 1223895817.93008, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
 
@@ -3174,30 +3250,30 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "question-explaining-calibration-training-part-02-01", 
     question = structure("Why do we apply the calibration training process with experts?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_1f11974", 
+    "character")), answers = list(structure(list(id = "lnr_ans_257b7d6", 
         option = "To tell them more about the desired field of expertise.", 
         value = "To tell them more about the desired field of expertise.", 
         label = structure("To tell them more about the desired field of expertise.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c12b45c", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e79e41b", 
         option = "To train them about their own biases.", value = "To train them about their own biases.", 
         label = structure("To train them about their own biases.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_98c38df", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_1ff0f98", 
         option = "To get to know them better.", value = "To get to know them better.", 
         label = structure("To get to know them better.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_f27af98", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_aad6fc", 
         option = "To teach them procedures how to improve the estimation performance.", 
         value = "To teach them procedures how to improve the estimation performance.", 
         label = structure("To teach them procedures how to improve the estimation performance.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_d83ebb5", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5adf21a", 
         option = "To let them interact with a wheel of fortune.", 
         value = "To let them interact with a wheel of fortune.", 
         label = structure("To let them interact with a wheel of fortune.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_9665d93", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_9b78c09", 
         option = "To slow down their answering behaviour and reduce the impact of the affective system.", 
         value = "To slow down their answering behaviour and reduce the impact of the affective system.", 
         label = structure("To slow down their answering behaviour and reduce the impact of the affective system.", html = TRUE, class = c("html", 
@@ -3211,24 +3287,24 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
         answer = "question-explaining-calibration-training-part-02-01-answer", 
         question = "question-explaining-calibration-training-part-02-01"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 21251666.4901039, options = list()), class = c("learnr_checkbox", 
+    seed = 1234284844.42524, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "question-explaining-calibration-training-part-02-02", 
     question = structure("What is the meaning of ‘Anchoring’?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_b143729", 
+    "character")), answers = list(structure(list(id = "lnr_ans_19d5f89", 
         option = "Achoring is the influence of multicolored wheels on estimates.", 
         value = "Achoring is the influence of multicolored wheels on estimates.", 
         label = structure("Achoring is the influence of multicolored wheels on estimates.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_1ac760c", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3401c04", 
         option = "Anchoring is specifically about ships and is unrelated to the calibration topic.", 
         value = "Anchoring is specifically about ships and is unrelated to the calibration topic.", 
         label = structure("Anchoring is specifically about ships and is unrelated to the calibration topic.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_fc39818", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_623df8b", 
         option = "Anchoring is a kind of bias that may influence you to give estimates around a value you have seen or heard, but is not necessarily related to the variable you are estimating.", 
         value = "Anchoring is a kind of bias that may influence you to give estimates around a value you have seen or heard, but is not necessarily related to the variable you are estimating.", 
         label = structure("Anchoring is a kind of bias that may influence you to give estimates around a value you have seen or heard, but is not necessarily related to the variable you are estimating.", html = TRUE, class = c("html", 
@@ -3242,7 +3318,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
         answer = "question-explaining-calibration-training-part-02-02-answer", 
         question = "question-explaining-calibration-training-part-02-02"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1668580124.22301, options = list()), class = c("learnr_radio", 
+    seed = 2139769277.50359, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
 
@@ -3250,44 +3326,44 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "analyst-profile-question-1", 
     question = structure("Decision analysts must be able to facilitate, integrate and program. Which of the following skills are particularly important for <em>integration<\u002fem> of knowledge?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_3fa8cc1", 
+    "character")), answers = list(structure(list(id = "lnr_ans_edc043c", 
         option = "Bring a holistic ambition.", value = "Bring a holistic ambition.", 
         label = structure("Bring a holistic ambition.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_f421e1d", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_8f26ea9", 
         option = "Be nice and personable", value = "Be nice and personable", 
         label = structure("Be nice and personable", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6d2313", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_29bd964", 
         option = "Be curious and inquisitive", value = "Be curious and inquisitive", 
         label = structure("Be curious and inquisitive", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_71f8cc1", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_4f143c3", 
         option = "Able to communicate to diverse audiences", 
         value = "Able to communicate to diverse audiences", label = structure("Able to communicate to diverse audiences", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_d9bdbc9", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b84332", 
         option = "Systems thinking", value = "Systems thinking", 
         label = structure("Systems thinking", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_4a5ecc7", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_640d9e4", 
         option = "Good judgement, good 'calibration'", value = "Good judgement, good 'calibration'", 
         label = structure("Good judgement, good ‘calibration’", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_4192db6", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_71c1d21", 
         option = "Output-oriented", value = "Output-oriented", 
         label = structure("Output-oriented", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a17ca46", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_f11e765", 
         option = "(Ideally) have some experience in modeling", 
         value = "(Ideally) have some experience in modeling", 
         label = structure("(Ideally) have some experience in modeling", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c4bf618", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c090b73", 
         option = "Be creative and open-minded", value = "Be creative and open-minded", 
         label = structure("Be creative and open-minded", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_aed8435", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_8916b0", 
         option = "Ability to run simulation models, produce decision analysis outputs and interpret results", 
         value = "Ability to run simulation models, produce decision analysis outputs and interpret results", 
         label = structure("Ability to run simulation models, produce decision analysis outputs and interpret results", html = TRUE, class = c("html", 
@@ -3300,57 +3376,57 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "analyst-profile-question-1-answer", question = "analyst-profile-question-1"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 318058605.851892, options = list()), class = c("learnr_checkbox", 
+    seed = 458630492.286434, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "analyst-profile-question-2", 
     question = structure("Which of the following skills are particularly important for <em>facilitation<\u002fem> of knowledge gathering processes?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_75ea20e", 
+    "character")), answers = list(structure(list(id = "lnr_ans_d9944e6", 
         option = "Be creative and open-minded.", value = "Be creative and open-minded.", 
         label = structure("Be creative and open-minded.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_7141e63", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_9e32d79", 
         option = "Knowledgeable about decision analysis 'philosophy'.", 
         value = "Knowledgeable about decision analysis 'philosophy'.", 
         label = structure("Knowledgeable about decision analysis ‘philosophy’.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_4d4f079", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b6731ec", 
         option = "Able to communicate to diverse audiences.", 
         value = "Able to communicate to diverse audiences.", 
         label = structure("Able to communicate to diverse audiences.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ced03ca", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e48df22", 
         option = "Good judgement, good 'calibration'.", value = "Good judgement, good 'calibration'.", 
         label = structure("Good judgement, good ‘calibration’.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b9d958c", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_38c84e9", 
         option = "Knowledgeable about group work techniques", 
         value = "Knowledgeable about group work techniques", 
         label = structure("Knowledgeable about group work techniques", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_23de4e2", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e225eb4", 
         option = "Systems thinking.", value = "Systems thinking.", 
         label = structure("Systems thinking.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5b7a12d", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ea416a", 
         option = "Be nice and personable", value = "Be nice and personable", 
         label = structure("Be nice and personable", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_d3adc0c", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_d9ed0a0", 
         option = "Be inclusive", value = "Be inclusive", label = structure("Be inclusive", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_d71adc8", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b529ade", 
         option = "Good understanding of how to integrate uncertainty in models", 
         value = "Good understanding of how to integrate uncertainty in models", 
         label = structure("Good understanding of how to integrate uncertainty in models", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6f2a21d", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_d3e7c5", 
         option = "Output oriented", value = "Output oriented", 
         label = structure("Output oriented", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ecc5e11", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e828f5f", 
         option = "Ability to run simulation models, produce decision analysis outputs and interpret results", 
         value = "Ability to run simulation models, produce decision analysis outputs and interpret results", 
         label = structure("Ability to run simulation models, produce decision analysis outputs and interpret results", html = TRUE, class = c("html", 
@@ -3363,7 +3439,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "analyst-profile-question-2-answer", question = "analyst-profile-question-2"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1266411096.91028, options = list()), class = c("learnr_checkbox", 
+    seed = 559678755.239379, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
 
@@ -3371,47 +3447,47 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "analyst-profile-question-3", 
     question = structure("Which of the following skills are particularly important for <em>programming<\u002fem> decision models?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_612b14c", 
+    "character")), answers = list(structure(list(id = "lnr_ans_2f35479", 
         option = "Be curious and inquisitive.", value = "Be curious and inquisitive.", 
         label = structure("Be curious and inquisitive.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c8c9938", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_1a86298", 
         option = "Be creative and open-minded.", value = "Be creative and open-minded.", 
         label = structure("Be creative and open-minded.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3af5b79", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_aa376e5", 
         option = "Systems thinking.", value = "Systems thinking.", 
         label = structure("Systems thinking.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_383fb7c", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_eb08bca", 
         option = "Be nice and personable", value = "Be nice and personable", 
         label = structure("Be nice and personable", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a89064a", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_80005b2", 
         option = "Knowledgeable about decision analysis 'philosophy'.", 
         value = "Knowledgeable about decision analysis 'philosophy'.", 
         label = structure("Knowledgeable about decision analysis ‘philosophy’.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_99247ec", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_37253c6", 
         option = "Be thorough and meticulous.", value = "Be thorough and meticulous.", 
         label = structure("Be thorough and meticulous.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e4b5469", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c176088", 
         option = "Be well-versed in using model-building tools.", 
         value = "Be well-versed in using model-building tools.", 
         label = structure("Be well-versed in using model-building tools.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5b79291", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5a98201", 
         option = "(Ideally) have some experience in modeling", 
         value = "(Ideally) have some experience in modeling", 
         label = structure("(Ideally) have some experience in modeling", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6d09192", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_68ac87b", 
         option = "Good understanding of how to integrate uncertainty in models", 
         value = "Good understanding of how to integrate uncertainty in models", 
         label = structure("Good understanding of how to integrate uncertainty in models", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_add414", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_2047174", 
         option = "Ability to run simulation models, produce decision analysis outputs and interpret results", 
         value = "Ability to run simulation models, produce decision analysis outputs and interpret results", 
         label = structure("Ability to run simulation models, produce decision analysis outputs and interpret results", html = TRUE, class = c("html", 
@@ -3424,7 +3500,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "analyst-profile-question-3-answer", question = "analyst-profile-question-3"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1274726405.90641, options = list()), class = c("learnr_checkbox", 
+    seed = 1842883688.64184, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
 </p>
@@ -3440,6 +3516,12 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <!--/html_preserve-->
 <div id="section-refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">
+<div id="section-ref-R-rmarkdown" class="csl-entry">
+Allaire, JJ, Yihui Xie, Christophe Dervieux, Jonathan McPherson, Javier
+Luraschi, Kevin Ushey, Aron Atkins, et al. 2024. <em>Rmarkdown: Dynamic
+Documents for r</em>. <a
+href="https://github.com/rstudio/rmarkdown">https://github.com/rstudio/rmarkdown</a>.
+</div>
 <div id="section-ref-bertsch_mcgrayne_theory_2011" class="csl-entry">
 Bertsch McGrayne, Sharon. 2011. <em>The Theory That Would Not Die: How
 <span>Bayes</span>’ Rule Cracked the Enigma Code, Hunted down
