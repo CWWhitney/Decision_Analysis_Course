@@ -16,16 +16,18 @@ Install Git & join Github (if you have not already):
 
 **Important note for Windows users**: when you download Git, it may be installed into your `Program Files` directory by default. This often causes issues later. The general recommendation is to choose a different directory for installing, i.e. `C:/Users/username/bin/`. Once Git is installed, open RStudio, and go to `Tools > Global Options`, select `Git/SVN`, and then enter or select the path for your Git executable.
 
-- join Github
+- **join Github**
 <small>https://github.com/</small>
 
 Some useful tips on getting these running from our friends 
 
-- University of Zurich
+- **University of Zurich**
 <small>http://www.geo.uzh.ch/microsite/reproducible_research/post/rr-rstudio-git/</small>
 
-- Nathan Stephens, a very helpful R blogger  
+- **Nathan Stephens**, a very helpful R blogger  
 <small>https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN</small>
+
+- **R For the Rest of us** Learn the essentials of using Git and GitHub with RStudio. This guide explains how to integrate version control into your R projects for better collaboration. <https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/>
 
 Start simple with your own repository only and work on it alone. Share your profile and link to a repository you made in the Slack channel for this seminar. Soon you will start to collaborate on something in git. For the project part of this course your team will work in a collective repository and work together to generate the final working project model and report.
 
