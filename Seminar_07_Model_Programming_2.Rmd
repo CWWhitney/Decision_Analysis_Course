@@ -16,10 +16,9 @@ The `mcSimulation` function from the `decisionSupport` package conducts a Monte 
 
 ### Building a decision model as an R function
 
-We have already built some simple models in the [Decision Models](#decision_models) lecture and the [Model programming](#model_programming) seminar. Now let's look at a slightly more comprehensive decision model of sedimentation management strategies for a reservoir in the Upper Volta River Basin of Burkina Faso [@lanzanova_improving_2019]. The reservoirs in the Upper Volta have multiple benefits for rural communities and are important for food security and livelihoods. Sedimentation is a major issue, requiring efficient sedimentation management for which there are many options each fraught with uncertainty and risk. We will walk through a simplified version of the model by @lanzanova_improving_2019. We will use various functions from the `decisionSupport` library. 
+We have already built some simple models in the [Decision Models](#decision_models) lecture and the [Model programming](#model_programming) seminar. 
 
 First we generate a model as a function. We use the `decisionSupport` functions `vv()` to produce time series with variation from a pre-defined mean and coefficient of variation, `chance_event()` to simulate whether events occur and `discount()` to discount values along a time series.
-
 
 ### decisionSupport package in R
 
@@ -277,6 +276,8 @@ Note that this example was constructed for clarity and not for speed. Speed cons
 The objective of the procedures used in the `decisionSupport` package is to make it easier for analysts to produce decision-relevant information that adequately reflects the imperfect nature of the information we usually have. Adding  probabilistic elements to a simulation adds substantial value to an analysis. Mostly, it avoids making spurious assumptions, replacing uncertainty with ‘best bets’ and producing results that do not reflect the knowledge limitations that make decision-making so challenging. More information on all this is contained in the [decisionSupport manual](https://cran.r-project.org/web/packages/decisionSupport/decisionSupport.pdf), especially under `welfareDecisionAnalysis`.
  
 ### Bonus Burkina model
+
+Now let's look at a slightly more comprehensive decision model of sedimentation management strategies for a reservoir in the Upper Volta River Basin of Burkina Faso [@lanzanova_improving_2019]. The reservoirs in the Upper Volta have multiple benefits for rural communities and are important for food security and livelihoods. Sedimentation is a major issue, requiring efficient sedimentation management for which there are many options each fraught with uncertainty and risk. We will walk through a simplified version of the model by @lanzanova_improving_2019. We will use various functions from the `decisionSupport` library. 
 
 ```{r models-seminar-burkina-model, exercise=TRUE}
 example_decision_function <- function(x, varnames){

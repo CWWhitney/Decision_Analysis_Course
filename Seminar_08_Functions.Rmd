@@ -1,7 +1,7 @@
-## Seminar 10: Model functions {#model_functions} 
+## Seminar 8: Model functions {#model_functions} 
 <!-- [Model functions](#model_functions) -->
 
-Welcome to the tenth seminar of **Decision Analysis and Forecasting for Agricultural Development**.Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_10]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to the 8th seminar of **Decision Analysis and Forecasting for Agricultural Development**.Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_08]%20Decision%20Analysis%20Lecture) or the course tutor.
 
 In this seminar we will go over some of the functions that are useful for building parts of our models in the `decisionSupport` package. 
 
