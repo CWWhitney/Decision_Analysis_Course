@@ -381,8 +381,8 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_07_Model_Programming_2.Rmd"}
 ```
 
-```{r child="Seminar_08_Functions.Rmd"}
-```
+<!-- ```{r child="Seminar_08_Functions.Rmd"} -->
+<!-- ``` -->
 
 <!-- # ```{r child="Seminar_07_calibration_seminar.Rmd"} -->
 <!-- # ``` -->
