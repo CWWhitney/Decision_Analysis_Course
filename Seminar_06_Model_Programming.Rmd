@@ -9,8 +9,10 @@ Remember to start simple then move on to other steps, make sure that you always 
 
 ### Monte Carlo Simulation of Apples and Sheep Agroforestry 
 
-Follow this example for a simple first Monte Carlo in base R. 
+Follow this hypothetical example of a silvopastoral system as your first Monte Carlo simulation in base R. 
 
-![Simple example of a Monte Carlo simulation of a  silvopastoral system](images/MC_apples_sheep.png){width=50%}
+![](images/MC_apples_sheep.png){width=50%}
+
+In this video we walk you through the process of running this model. Please follow along and write your own R script. If you ask nicely we might also share the R script.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Wj49RrvjQ5M" frameborder="0" allowfullscreen></iframe>
