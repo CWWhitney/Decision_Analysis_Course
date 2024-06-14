@@ -15,12 +15,6 @@ Another important guideline is to start simple then move on to other steps. This
 
 !['Skateboard, Bike, Car'](images/Model_stages_car_analogy.png)
 
-### Monte Carlo Simulation of Apples and Sheep Agroforestry 
-
-Follow this example for a simple first Monte Carlo in base R. 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Wj49RrvjQ5M" frameborder="0" allowfullscreen></iframe>
-
 <!-- ### Group discussion reading: -->
 
 <!--  - @do_decision_2020 'Decision analysis of agroforestry options reveals adoption risks for resource-poor farmers'. -->
