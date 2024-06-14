@@ -20,6 +20,264 @@ We have already built some simple models in the [Decision Models](#decision_mode
 
 First we generate a model as a function. We use the `decisionSupport` functions `vv()` to produce time series with variation from a pre-defined mean and coefficient of variation, `chance_event()` to simulate whether events occur and `discount()` to discount values along a time series.
 
+
+### decisionSupport package in R
+
+We have just learned about the processes and methods of generating [Decision Models](#decision_models). Now we can explore some of the packages that we commonly use in `R`. The main package that our team uses for simulations is the `decisionSupport`. In order to use the standard tools for running these models in the R environment you will need to load the `decisionSupport` library. Use the `install.packages` function, i.e. `install.packages("decisionSupport")`. 
+
+```{r}
+library(decisionSupport)
+```
+
+
+### Building the model 
+
+![A simple model costs and benefits of sweet cherry production](images/model_simple.png){width=50%}
+
+Here we generate an input table to feed the model function. Update this to include the management cost variable in the graphical impact pathway above. Call your new variable `"Management_cost"`, make the lower bound `100` and the upper bound `2000`, make the distribution `"posnorm"`, make the label `"Management cost (USD/ha)"` and make the description `"Management costs in a normal season"`.
+
+```{r input_table, exercise=TRUE}
+input_estimates <- data.frame(variable = c("Yield", "Market_price", "Labor_cost"),
+                    lower = c(6000, 3, 500),
+                    median = NA,
+                    upper = c(14000, 8, 1000),
+                    distribution = c("posnorm", "posnorm", "posnorm"),
+                    label = c("Yield (kg/ha)", "Price (USD/kg)", "Labor cost (USD/ha)"),
+                    Description = c("Yield in a sweet cherry farm under normal conditions",
+                                    "Price of sweet cherry in a normal season",
+                                    "Labor costs in a normal season"))
+
+input_estimates
+```
+
+```{r input_table-solution}
+input_estimates <- data.frame(variable = c("Yield", "Market_price", "Labor_cost", "Management_cost"),
+                    lower = c(6000, 3, 500, 100),
+                    median = NA,
+                    upper = c(14000, 8, 1000, 2000),
+                    distribution = c("posnorm", "posnorm", "posnorm", "posnorm"),
+                    label = c("Yield (kg/ha)", "Price (USD/kg)", "Labor cost (USD/ha)", "Management cost (USD/ha)"),
+                    Description = c("Yield in a sweet cherry farm under normal conditions",
+                                    "Price of sweet cherry in a normal season",
+                                    "Labor costs in a normal season", 
+                                    "Management costs in a normal season"))
+
+input_estimates
+```
+
+Here we use the `mcSimulation` function from the `decisionSupport` package to implement a model [@R-decisionSupport]. The model function that describes the graphical impact pathway. Add a new line of code that summarizes the `Labor_cost` and `Management_cost` into `overall_costs`, then subtract these from the `income` to calculate `final_result`. 
+
+```{r chile-model, exercise=TRUE}
+
+model_function <- function(){
+  
+  # Estimate the income in a normal season
+  income <- Yield * Market_price
+  
+  # Estimate the final results from the model
+  final_result <- income - Labor_cost
+  
+  # Generate the list of outputs from the Monte Carlo simulation
+  return(list(final_result = final_result))
+}
+
+# Run the Monte Carlo simulation using the model function
+example_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
+                              model_function = model_function,
+                              numberOfModelRuns = 800,
+                              functionSyntax = "plainNames")
+
+example_mc_simulation
+
+```
+
+```{r chile-model-solution}
+
+model_function <- function(){
+  
+  # Estimate the income in a normal season
+  income <- Yield * Market_price
+  
+  overall_costs <- Labor_cost + Management_cost
+    
+  # Estimate the final results from the model
+  final_result <- income - overall_costs
+  
+  # Generate the list of outputs from the Monte Carlo simulation
+  return(list(final_result = final_result))
+}
+
+# Run the Monte Carlo simulation using the model function
+example_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
+                              model_function = model_function,
+                              numberOfModelRuns = 800,
+                              functionSyntax = "plainNames")
+
+example_mc_simulation
+
+```
+
+Here we show the results of a Monte Carlo simulation (800 model runs) for estimating the profits in sweet cherry orchards. 
+
+Change the plot to a histogram by using the `method` argument in the `plot_distributions` function. 
+
+```{r plot_distribution, exercise=TRUE}
+
+plot_distributions(mcSimulation_object = example_mc_simulation,
+                   vars = "final_result",
+                   method = "boxplot_density",
+                   old_names = "final_result",
+                   new_names = "Outcome distribution for profits")
+
+```
+
+```{r plot_distribution-solution}
+
+plot_distributions(mcSimulation_object = example_mc_simulation,
+                   vars = "final_result",
+                   method = "hist_simple_overlay",
+                   old_names = "final_result",
+                   new_names = "Outcome distribution for profits")
+
+```
+
+### Testing with `make_variables`
+
+You could simply start further developing the decision model now, but since the model function will be designed to make use of variables provided to it externally (random numbers drawn according to the information in the data table), you will need to define sample values for all variables, if you want to test pieces of the function code during the development process. This can be done manually, but it's more easily accomplished with the following helper function `make_variables`:
+
+```{r make_variables_function, exercise=TRUE}
+make_variables <- function(est,n=1)
+{ x<-random(rho=est, n=n)
+    for(i in colnames(x)) assign(i,
+     as.numeric(x[1,i]),envir=.GlobalEnv)
+}
+```
+
+This function is not included in the ```decisionSupport``` package, because it places the desired variables in the global environment. This is not allowed for functions included in packages on R’s download servers.
+
+Applying `make_variables` and `as.estimate` to the data table (with default setting `n=1`) generates one random number for each variable, which then allows you to easily test the code you are developing. Try running this function on your code as you build the decision function. This allows for testing the values within a model rather than running the full model.
+
+Run the `make_variables` and `as.estimate` on the `input_estimates` input table that we created and then calculate the result of `Labor_cost + Management_cost` given a single random value for these variables. **Note that each time you run this code it generates a new random draw and produces a different number from within the range for the variables in the input table.**
+
+```{r make_variables, exercise=TRUE}
+
+make_variables(as.estimate(input_estimates))
+
+Market_price
+
+```
+
+```{r make_variables-solution}
+
+make_variables(as.estimate(input_estimates))
+
+Labor_cost + Management_cost
+
+```
+
+
+### Next steps
+
+Once you have followed and run the code above on your machine it is a good time to look through the outline of these procedures in the `decisionSupport` vignette on the CRAN called ['Applying the mcSimulation function in decisionSupport'](https://cran.r-project.org/web/packages/decisionSupport/vignettes/example_decision_function.html) [@fernandez_applying_2021]. This will show you how the tools can be applied for comparing decision outcomes. It runs a Monte-Carlo-based selection of sedimentation management strategies for a reservoir in the Upper Volta River Basin of Burkina Faso [@lanzanova_improving_2019]. Tip: If you want to play with this code you can find the [Rmarkdown file](https://raw.githubusercontent.com/eikeluedeling/decisionSupport/master/vignettes/example_decision_function.Rmd) and the [estimate table](https://raw.githubusercontent.com/eikeluedeling/decisionSupport/master/vignettes/example_input_table.csv) in the `decisionSupport` GitHub repository. 
+
+Taken together, all these outputs allow an evaluation of the plausible range of net benefits that can be expected to arise from the decision. They provide a recommendation on which decision option should be preferred, and an appraisal of which input variables are responsible for most of the variation in the output distribution.
+
+### Bonus: Bayesian modeling application 
+
+Listen to this interview on Alex Andorra's podcast 'Learning Bayesian Statistics', [How to use Bayes in industry, with Colin Carroll](https://www.learnbayesstats.com/episode/3-2-how-to-use-bayes-in-industry-with-colin-carroll)
+
+<!-- -	RSTAN, Other modeling programs - Betancourt’s work (selected blogs, talks, git repos, Stan, HCMC) -->
+<!-- -	Yihui (markdown etc.) -->
+<!-- -	Assignments:  -->
+<!-- -	Rainforth, Tom. “Automating Inference, Learning, and Design Using Probabilistic Programming.” Doctor of Philosophy, University of Oxford, 2017. -->
+
+### Causal model / diagram / Impact pathway / Theory of change
+
+Before you start developing the decision model (an R function), open R and download and load the `decisionSupport` package.
+
+```
+install.packages("decisionSupport")
+library(decisionSupport)
+```
+
+### Creating a model
+
+The `mcSimulation` function from the `decisionSupport` package can be applied to conduct decision analysis [@R-decisionSupport]. The function requires three inputs:
+
+1. an `estimate` of the joint probability distribution of the input variables. These specify the names and probability distributions for all variables used in the decision model. These distributions aim to represent the full range of possible values for each component of the model.
+1. a `model_function` that predicts decision outcomes based on the variables named in a separate data table. This R function is customized by the user to address a particular decision problem to provide the decision analysis model.
+1. `numberOfModelRuns`	indicating the number of times to run the model function.
+
+These inputs are provided as arguments to the `mcSimulation` function, which conducts a Monte Carlo analysis with repeated model runs based on probability distributions for all uncertain variables. The data table and model are customized to fit the particulars of a specific decision.
+
+### The `estimate`
+
+To support the model building process we design an input table to store the `estimate` values. The table is stored locally as `example_decision_inputs.csv` and contains many of the basic values for the analysis. This table contains all the input variables used in the model. Their distributions are described by 90% confidence intervals, which are specified by lower (5% quantile) and upper (95% quantile) bounds, as well as the shape of the distribution. This example uses four different distributions:
+
+1.	`const` – a constant value
+1.	`norm` – a normal distribution
+1.	`tnorm_0_1` – a truncated normal distribution that can only have values between 0 and 1 (useful for probabilities; note that 0 and 1, as well as numbers outside this interval are not permitted as inputs)
+1.	`posnorm` – a normal distribution truncated at 0 (only positive values allowed)
+
+For a full list of possible distributions, type `?random.estimate1d ` in your R console. When specifying confidence intervals for truncated distributions, note that approximately 5% of the random values should ‘fit’ within the truncation interval on either side. If there is not enough space, the function will generate a warning (usually it will still work, but the inputs may not look like you intended them to).
+
+We have provided default distributions for all the variables used here, but feel free to make adjustments by editing the .csv file in a spreadsheet program. You can download the ['example_decision_inputs.csv'](https://raw.githubusercontent.com/CWWhitney/Decision_Analysis_Course/main/data/example_decision_inputs.csv) here and save it as a .csv file locally (from your web browser try: File > Save page as). In this example it is stored in the 'data' folder. Once you have downloaded the data you can run `example_decision_inputs <- read.csv("data/example_decision_inputs.csv")` in your console to make the following code work on your machine. Note that the input table that can be written or read from a .csv file and calculated with the `estimate_read_csv` function or converted to the correct format with the `as.estimate` function.
+
+### The `model_function`
+
+The decision model is coded as an R function which takes in the variables provided in the data table and generates a model output, such as the Net Present Value.
+
+### Create a simple function
+
+Here we define a simple model function that we call `example_decision_model`. It calculates profits as benefits minus costs and arbitrarily adds 500 to the result to arrive at `final_profits`. This simple example shows us how to use `function`, the results of which can be applied elsewhere. The most basic way to apply the library is to use the `mcSimulation` function to run our `example_decision_model`. Here we run it 100 times using inputs from the `example_decision_inputs.csv` table.
+
+Update this model by adding `additional_benefits`, one of the variables from the `example_decision_inputs` data, to replace the 500 that was arbitrarily added to the profit and changing the number of model runs to 700.
+
+```{r example_decision_model, exercise=TRUE}
+
+example_decision_model <- function(x, varnames){
+  profit <- benefits-costs
+
+  final_profits <- profit + 500
+
+  return(final_profits)
+
+}
+
+mcSimulation(estimate = as.estimate(example_decision_inputs),
+                              model_function = example_decision_model,
+                              numberOfModelRuns = 100,
+                              functionSyntax = "plainNames")
+
+```
+
+```{r example_decision_model-solution}
+
+example_decision_model <- function(x, varnames){
+
+  profit <- benefits-costs
+
+  final_profits <- profit + additional_benefits
+
+  return(final_profits)
+
+}
+
+mcSimulation(estimate = as.estimate(example_decision_inputs),
+                              model_function = example_decision_model,
+                              numberOfModelRuns = 700,
+                              functionSyntax = "plainNames")
+
+```
+
+Now we have a simulation of possible outcomes. In the [model programming seminar](#model_programming) this week we will go into more detail on the options for assessment of the results of simulations and on visualization of the results.
+
+Note that this example was constructed for clarity and not for speed. Speed considerations are not very important when we only run a process once, but since in the Monte Carlo simulation all delays are multiplied by `numberOfModelRuns` (e.g. 10,000), they can sometimes add up to substantial time losses. Even with highly efficient coding, Monte Carlo simulations can take a while when dealing with complex decisions.
+
+The objective of the procedures used in the `decisionSupport` package is to make it easier for analysts to produce decision-relevant information that adequately reflects the imperfect nature of the information we usually have. Adding  probabilistic elements to a simulation adds substantial value to an analysis. Mostly, it avoids making spurious assumptions, replacing uncertainty with ‘best bets’ and producing results that do not reflect the knowledge limitations that make decision-making so challenging. More information on all this is contained in the [decisionSupport manual](https://cran.r-project.org/web/packages/decisionSupport/decisionSupport.pdf), especially under `welfareDecisionAnalysis`.
+ 
+### Bonus Burkina model
+
 ```{r models-seminar-burkina-model, exercise=TRUE}
 example_decision_function <- function(x, varnames){
   
