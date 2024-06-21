@@ -317,7 +317,6 @@ knitr::write_bib(c(.packages(),
 ```{r child="Lecture_01_Introduction.Rmd"}
 ```
 
-
 <!-- ```{r child="Tools_Experiential.Rmd"} -->
 <!-- ``` -->
 
