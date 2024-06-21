@@ -5,7 +5,7 @@ Welcome to the Value of Information seminar for the course **Decision Analysis a
 
 In this seminar we will build on what we learned in the [Decision Models](#decision_models) lecture and the [Model programming](#model_programming) seminar to learn more about how to generate useful forecasts for communicating model results. We will implement another Monte Carlo simulation.
 
-In the [Model programming](#model_programming) seminar we generated a model called `example_mc_simulation`. As a quick refresher change the plot of the results of that model from `boxplot_density` to `smooth_simple_overlay` by using the `method` argument in the `plot_distributions` function.
+In the [Model programming](#model_programming_cont) seminar we generated a model called `example_mc_simulation`. As a quick refresher change the plot of the results of that model from `boxplot_density` to `smooth_simple_overlay` by using the `method` argument in the `plot_distributions` function.
 
 ```{r forecasts_plot_distribution, exercise=TRUE}
 
