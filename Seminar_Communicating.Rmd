@@ -81,6 +81,7 @@ distribution_method = 'smooth_simple_overlay')
 
 
 ```
+
 ### Other visualization options
 
 Here we demonstrate a few more various graphical options to visualize uncertainty intervals of outcomes of Monte Carlo simulations. We create a data set of yield distributions of three different farming practices and use the function `mcmc_intervals()` from the `bayesplot` library to plot the data set [@R-bayesplot].

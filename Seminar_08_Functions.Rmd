@@ -42,7 +42,7 @@ valvar <- vv(var_mean = 100,
 plot(valvar)
 ```
 
-Use the `absolute_trend` argument and plot with the base R `plot` function. 
+Use the `absolute_trend` argument and plot with the base R `plot` function. The absolute trend is a raw number added each year, i.e. we add `5` to each time step in the following example. 
 
 ```{r reports-seminar-absolute_trend, exercise=TRUE}
 # reduce var_mean to 50 and make absolute_trend 10. Name the output 'valvar' and plot with base R 
@@ -149,7 +149,7 @@ The arguments for the `gompertz_yield` function include:
 - `var_CV`, which is the coefficient indicating how much variation should be introduced into the time series. If this is one numeric value, then this value is used for all variables. The default is 0, for a time series with no artificially introduced variation. See description of the `vv` function for more details on this.
 - `no_yield_before_first_estimate`, which is the boolean variable indicating whether yields before the time unit indicated by `time_to_first_yield_estimate`should be 0.
 
-The function provides a vector of `n_years` numeric values, describing the simulated yield of the perennial. This starts at 0 and, if the simulation runs for a sufficient number of years, approaches `max_harvest.` If `var_CV>0`, this time series includes artificial variation.
+The function provides a vector of `n_years` numeric values, useful for describing the simulated yield of perennial crops. This starts at 0 and, if the simulation runs for a sufficient number of years, approaches `max_harvest.` If `var_CV>0`, this time series includes artificial variation.
 
 ```{r reports-seminar-gompertz_yield, exercise=TRUE}
 # create a vector where the maximum harvest is 500, which is achieved in 10 years (i.e. 100% by the second yield estimate)
