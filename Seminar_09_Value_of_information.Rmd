@@ -3,66 +3,6 @@
 
 Welcome to the Value of Information seminar for the course **Decision Analysis and Forecasting for Agricultural Development**.Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-In this seminar we will build on what we learned in the [Decision Models](#decision_models) lecture and the [Model programming part 1](#model_programming) seminar to learn more about how to generate useful forecasts for communicating model results. We will implement another Monte Carlo simulation.
-
-In the [Model programming part 2](#model_programming_cont) seminar we generated a model called `example_mc_simulation`. As a quick refresher change the plot of the results of that model from `boxplot_density` to `smooth_simple_overlay` by using the `method` argument in the `plot_distributions` function.
-
-```{r forecasts_plot_distribution, exercise=TRUE}
-
-plot_distributions(mcSimulation_object = example_mc_simulation,
-                   vars = "final_result",
-                   method = "boxplot_density",
-                   old_names = "final_result",
-                   new_names = "Outcome distribution for profits")
-
-```
-
-```{r forecasts_plot_distribution-solution}
-
-plot_distributions(mcSimulation_object = example_mc_simulation,
-                   vars = "final_result",
-                   method = "smooth_simple_overlay",
-                   old_names = "final_result",
-                   new_names = "Outcome distribution for profits")
-
-```
-
-### Making forecasts
-
-First let's look at a case study on agroforestry interventions in Northwest Vietnam [@do_decision_2020].
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FZfACcoX4O0" frameborder="0" allowfullscreen></iframe>
-
-```{r do-forecasts-question-1, echo=FALSE}
-question("How do probabilistic models differ from frequentist or deterministic models?",
-  answer("They contain more variables."),
-  answer("They do not have as broad a range of applicability across different domains of science."),
-  answer("Unlike deterministic models, probabilistic models can accept uncertainty as inputs.", correct = TRUE),
-  answer("Unlike deterministic models, probabilistic models can produce uncertain distributions as outputs.", correct = TRUE),
-  incorrect = "Watch [the talk](https://youtu.be/FZfACcoX4O0) and try again.",
-allow_retry = TRUE
-)
-```
-
-```{r do-forecasts-question-2, echo=FALSE}
-question("What are the steps in the proposed process for rational decision-making?",
-  answer("Gather empirical evidence and data and apply regression tools as part of an exploratory process to look for relationships. Then decide based on any relevant results."),
-  answer("Perform interviews and then decide based on the suggestion of experts."),
-  answer("Pool information, quantify uncertainty, produce assessments, then either measure where information value is high or take decision.", correct = TRUE),
-  incorrect = "Watch [the talk](https://youtu.be/FZfACcoX4O0) and try again.",
-allow_retry = TRUE
-)
-```
-
-```{r do-forecasts-question-3, echo=FALSE}
-question("Why was Projection to Latent Structure (PLS) analysis used in the study?",
-  answer("To generate a p-value for the reliability of the model results."),
-  answer("To perform sensitivity analysis.", correct = TRUE),
-  answer("To assess the sensitivity of the output with the many collinear model inputs using the Varible Importance in the Projection (VIP) score.", correct = TRUE),
-  incorrect = "Watch [the talk](https://youtu.be/FZfACcoX4O0) and try again.",
-allow_retry = TRUE
-)
-```
 
 ### Value of information and value of control
 
