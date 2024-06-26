@@ -1,4 +1,4 @@
-## Seminar 9.1: Value of Information {#voi} 
+## Seminar 9.1: Value of Information {#voi_1} 
 <!-- reference with [Models](#value_of_information_seminar_part2) -->
 
 Welcome to the second part of the Value of Information seminar for the course **Decision Analysis and Forecasting for Agricultural Development**.Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
