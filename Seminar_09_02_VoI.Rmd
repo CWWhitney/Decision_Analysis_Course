@@ -1,0 +1,142 @@
+## Seminar 9.1: Value of Information {#voi} 
+<!-- reference with [Models](#value_of_information_seminar_part2) -->
+
+Welcome to the second part of the Value of Information seminar for the course **Decision Analysis and Forecasting for Agricultural Development**.Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
+
+### Practical VoI examples:
+
+Let's use a modified version of sheep apple agroforestry from Seminar 7 (#model_programming_cont). Just for this class let's presume that the farmer has a grassland where they graze sheep. Intervention: implement apple AF. Let's prepare our input estimates for the system.
+
+```{r input_table_voi_test, exercise=TRUE}
+input_estimates <- data.frame(variable = c("sheep_income", "sheep_cost","apple_income", "apple_cost", "discount_rate"),
+                              lower = c(3000, 1000, 30000, 15000, 10),
+                              median = NA,
+                              upper = c(5000, 2500, 60000, 30000, 10),
+                              distribution = c("posnorm", "posnorm", "posnorm", "posnorm", "const"),
+                              label = c("Income from sheep (euro/year)", "Cost of sheep (euro/year)", "Income from apple (euro/year)", "Cost of apple (euro/year)", "Discount Rate"))
+
+input_estimates
+```
+
+```{r input_table_voi_test-solution}
+input_estimates <- data.frame(variable = c("sheep_income", "sheep_cost","apple_income", "apple_cost", "discount_rate"),
+                              lower = c(3000, 1000, 30000, 15000, 10),
+                              median = NA,
+                              upper = c(5000, 2500, 60000, 30000, 10),
+                              distribution = c("posnorm", "posnorm", "posnorm", "posnorm", "const"),
+                              label = c("Income from sheep (euro/year)", "Cost of sheep (euro/year)", "Income from apple (euro/year)", "Cost of apple (euro/year)", "Discount Rate"))
+
+input_estimates
+```
+
+In the next step, let's build a function to model the system and calculate the NPV of the AF system vs only sheeps. Simulate it using the `mcSimulation` function from the `decisionSupport` package with 5000 'numberOfModelRuns'. Using 'plot_distributions' plot NPV of intervention trade off vs no intervention.
+
+```{r chile_model_voi_test, exercise=TRUE}
+model_function <- function(){
+  
+  # Estimate the income in a normal season
+  AF_income <- sheep_income + apple_income
+  AF_cost <- sheep_cost + apple_cost
+  # Estimate the final results from the model
+  AF_final_result <- AF_income - AF_cost
+  sheep_only <- sheep_income - sheep_cost
+  
+  Tradeoff_benefit <- AF_final_result - sheep_only
+  #Calculating NPV
+  #AF System
+  AF_NPV <- discount(AF_final_result, discount_rate=discount_rate,
+                     calculate_NPV = TRUE)#NVP of AF system
+  NPV_sheep_only <- discount(sheep_only, discount_rate = discount_rate,
+                                  calculate_NPV = TRUE) #NVP of grassland
+  NPV_tradeoff <- discount(Tradeoff_benefit, discount_rate = discount_rate,
+                           calculate_NPV = TRUE)
+  # Generate the list of outputs from the Monte Carlo simulation
+  return(list(NPV_Agroforestry_System = AF_NPV,
+              NPV_Treeless_System = NPV_sheep_only,
+              NPVtrade_off = NPV_tradeoff))
+}
+```
+
+```{r chile_model_voi_test-solution}
+model_function <- function(){
+  
+  # Estimate the income in a normal season
+  AF_income <- sheep_income + apple_income
+  AF_cost <- sheep_cost + apple_cost
+  # Estimate the final results from the model
+  AF_final_result <- AF_income - AF_cost
+  sheep_only <- sheep_income - sheep_cost
+  
+  Tradeoff_benefit <- AF_final_result - sheep_only
+  #Calculating NPV
+  #AF System
+  AF_NPV <- discount(AF_final_result, discount_rate=discount_rate,
+                     calculate_NPV = TRUE)#NVP of AF system
+  NPV_sheep_only <- discount(sheep_only, discount_rate = discount_rate,
+                                  calculate_NPV = TRUE) #NVP of grassland
+  NPV_tradeoff <- discount(Tradeoff_benefit, discount_rate = discount_rate,
+                           calculate_NPV = TRUE)
+  # Generate the list of outputs from the Monte Carlo simulation
+  return(list(NPV_Agroforestry_System = AF_NPV,
+              NPV_Treeless_System = NPV_sheep_only,
+              NPVtrade_off = NPV_tradeoff))
+}
+example_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
+                                      model_function = model_function,
+                                      numberOfModelRuns = 80,
+                                      functionSyntax = "plainNames")
+plot_distributions(mcSimulation_object = example_mc_simulation, 
+                   vars = c("NPVtrade_off", "NPV_Treeless_System"),
+                   method = 'smooth_simple_overlay', 
+                   base_size = 7,
+                   x_axis_name = "Outcome of AF intervention",
+                   scale_x_continuous(labels = function(x) x / 100000),
+                   ggtitle("Net Present Value of the system"),
+                   legend.position="bottom")
+```
+
+Now, let's perform sensitvity analysis using Partial Least Squares (PLS) regression using 'plsr' function. Then, plot the results showing a 'cut_off_line' at 1 and 'threshold' of 0.5.
+
+```{r chile_model_pls_test, exercise=TRUE}
+pls_result_AF <- plsr.mcSimulation(object = example_mc_simulation,
+                                   resultName = names(example_mc_simulation$y)[3], ncomp = 1)
+```
+
+```{r chile_model_pls_test-solution}
+pls_result_AF <- plsr.mcSimulation(object = example_mc_simulation,
+                                   resultName = names(example_mc_simulation$y)[3], ncomp = 1)
+plot_pls(pls_result_AF, input_table = input_estimates, cut_off_line = 1, threshold = 0.5)
+ggsave(
+  filename = "images/PLS_sheep_vs_AppleAF.png",
+  plot = last_plot(),
+  width = 5, 
+  height = 3
+)
+```
+
+Now, let's quantify Value of Information by calculating expected value of perfect information (EVPI).In your R script copy and run the following code.
+
+Here we are saving our input estimates as a csv and then generating the VIP scores for the input variables based on the AF model.
+
+```{r chile_model_evpi_test, exercise=TRUE}
+df <- data.frame(input_estimates)
+write.csv(df, file = "MCResults/input_table.csv", row.names = FALSE)
+decisionSupport(inputFilePath = paste("MCResults/input_table.csv",sep=""),
+                outputPath = paste0("MCResults", "/", sep=""),
+                write_table = TRUE,
+                welfareFunction = model_function,
+                numberOfModelRuns = 5000, #run 10,000 times
+                functionSyntax = "plainNames")
+
+# read the results
+MCall <- read.table(file="MCResults/mcSimulationResults.csv",
+                    header = TRUE,sep=",")
+
+#extract only input variables and tradeoff columns
+mc <- MCall[,c(2:6,9)]
+EVPI <- multi_EVPI(mc,"NPVtrade_off",write_table=TRUE)
+#plot the results
+plot_evpi(EVPI, "NPVtrade_off")
+```
+
+Why is our EVPI result like this?
