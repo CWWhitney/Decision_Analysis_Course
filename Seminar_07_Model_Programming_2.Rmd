@@ -24,7 +24,7 @@ First we generate a model as a function. We use the `decisionSupport` functions 
 
 We have just learned about the processes and methods of generating [Decision Models](#decision_models). Now we can explore some of the packages that we commonly use in `R`. The main package that our team uses for simulations is the `decisionSupport`. In order to use the standard tools for running these models in the R environment you will need to load the `decisionSupport` library. Use the `install.packages` function, i.e. `install.packages("decisionSupport")`. 
 
-```{r}
+```{r library_seminar7, eval=FALSE, include=FALSE}
 library(decisionSupport)
 ```
 
@@ -194,7 +194,7 @@ Listen to this interview on Alex Andorra's podcast 'Learning Bayesian Statistics
 
 Before you start developing the decision model (an R function), open R and download and load the `decisionSupport` package.
 
-```
+```{r libraries_seminar7, eval=FALSE, include=FALSE}
 install.packages("decisionSupport")
 library(decisionSupport)
 ```
