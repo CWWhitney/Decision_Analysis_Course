@@ -66,6 +66,8 @@ make_variables <- function(est,n=1)
      as.numeric(x[1,i]),envir=.GlobalEnv)
 }
 
+# make_variables(as.estimate(input_estimates))
+
 # suppress warnings
 options(warn = - 1)
 
