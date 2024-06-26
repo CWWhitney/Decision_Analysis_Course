@@ -205,22 +205,38 @@ ggsave(filename = "PLS_sheep_vs_AppleAF.png",
 
 ```
 
-Now, let's quantify Value of Information by calculating expected value of perfect information (EVPI).In your R script copy and run the following code.
+Now, let's quantify Value of Information by calculating expected value of perfect information (EVPI). Save the results of your MC simulation to a data frame. 
 
-We can save our input estimates as a csv 
-
-```{r assign_results_voi}
+```{r assign_results_voi, exercise=TRUE}
 # assign the results of x and y to a data frame
 
 df <- data.frame(apple_sheep_mc_simulation$x, apple_sheep_mc_simulation$y[1:3])
 
 ```
 
-Generate the VIP scores for the input variables based on the AF model.
+```{r assign_results_voi-solution}
+# assign the results of x and y to a data frame
 
-```{r apple_sheep_evpi_test}
+df <- data.frame(apple_sheep_mc_simulation$x, apple_sheep_mc_simulation$y[1:3])
 
-#extract only the NPV columns (the last few in the table, starting with "NPV_decision")
+```
+
+Generate the Variable Importance in the Projection (VIP) scores of the PLS for the input variables based on the apple sheep model.
+
+```{r apple_sheep_evpi_test, exercise=TRUE}
+
+# run evpi on the NPVs (the last few in the table, starting with "NPV_decision")
+
+EVPI <- multi_EVPI(mc = df, first_out_var = "NPV_decision")
+
+# plot the EVPI results for the decision
+plot_evpi(EVPIresults = EVPI, decision_vars = "NPV_decision")
+
+```
+
+```{r apple_sheep_evpi_test-solution}
+
+# run evpi on the NPVs (the last few in the table, starting with "NPV_decision")
 
 EVPI <- multi_EVPI(mc = df, first_out_var = "NPV_decision")
 
