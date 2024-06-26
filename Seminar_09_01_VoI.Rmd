@@ -7,6 +7,12 @@ Welcome to the second part of the Value of Information seminar for the course **
 
 Let's use a modified version of sheep apple agroforestry from Seminar 7 (#model_programming_cont). Just for this class let's presume that the farmer has a grassland where they graze sheep. Intervention: implement apple agroforestry. Let's prepare our input estimates for the system.
 
+```{r libraries_voi_part2, eval=FALSE, echo=TRUE}
+library(ggplot2)
+library(decisionSupport)
+```
+
+
 ```{r input_table_voi_test, exercise=TRUE}
 input_estimates <- data.frame(
   variable = c(
@@ -59,7 +65,15 @@ input_estimates <- data.frame(
 input_estimates
 ```
 
-In the next step, let's build a function to model the system and calculate the NPV of the AF system vs only sheeps. Simulate it using the `mcSimulation` function from the `decisionSupport` package with 5000 'numberOfModelRuns'. Using 'plot_distributions' plot NPV of intervention trade off vs no intervention.
+If you want you can write the input estimates into a local file on your machine. 
+
+```{r, eval=FALSE, echo=TRUE}
+# write the results to a .csv file
+df <- data.frame(input_estimates)
+write.csv(df, file = "input_table.csv", row.names = FALSE)
+```
+
+In the next step, let's build a function to model the system and calculate the NPV of the AF system vs only sheep. Simulate it using the `mcSimulation` function from the `decisionSupport` package with 5000 'numberOfModelRuns'. Using 'plot_distributions' plot NPV of intervention trade off vs no intervention.
 
 ```{r apple_sheep_voi_test, exercise=TRUE}
 model_function <- function() {
@@ -68,9 +82,10 @@ model_function <- function() {
   AF_cost <- sheep_cost + apple_cost
   # Estimate the final results from the model
   AF_final_result <- AF_income - AF_cost
+  # baseline with sheep only
   sheep_only <- sheep_income - sheep_cost
-  
-  Tradeoff_benefit <- AF_final_result - sheep_only
+  # should I plant trees in the sheep pastures? 
+  Decision_benefit <- AF_final_result - sheep_only
   #Calculating NPV
   #AF System
   AF_NPV <- discount(AF_final_result,
@@ -81,7 +96,7 @@ model_function <- function() {
                              discount_rate = discount_rate,
                              calculate_NPV = TRUE) #NVP of grassland
   
-  NPV_tradeoff <- discount(Tradeoff_benefit,
+  NPV_decision <- discount(Decision_benefit,
                            discount_rate = discount_rate,
                            calculate_NPV = TRUE)
   # Generate the list of outputs from the Monte Carlo simulation
@@ -89,7 +104,7 @@ model_function <- function() {
     list(
       NPV_Agroforestry_System = AF_NPV,
       NPV_Treeless_System = NPV_sheep_only,
-      NPVtrade_off = NPV_tradeoff
+      NPV_decision = NPV_decision
     )
   )
 }
@@ -104,7 +119,7 @@ model_function <- function() {
   AF_final_result <- AF_income - AF_cost
   sheep_only <- sheep_income - sheep_cost
   
-  Tradeoff_benefit <- AF_final_result - sheep_only
+  Decision_benefit <- AF_final_result - sheep_only
   #Calculating NPV
   #AF System
   AF_NPV <- discount(AF_final_result,
@@ -113,7 +128,7 @@ model_function <- function() {
   NPV_sheep_only <- discount(sheep_only,
                              discount_rate = discount_rate,
                              calculate_NPV = TRUE) #NVP of grassland
-  NPV_tradeoff <- discount(Tradeoff_benefit,
+  NPV_decision <- discount(Decision_benefit,
                            discount_rate = discount_rate,
                            calculate_NPV = TRUE)
   # Generate the list of outputs from the Monte Carlo simulation
@@ -121,11 +136,11 @@ model_function <- function() {
     list(
       NPV_Agroforestry_System = AF_NPV,
       NPV_Treeless_System = NPV_sheep_only,
-      NPVtrade_off = NPV_tradeoff
+      NPV_decision = NPV_decision
     )
   )
 }
-example_mc_simulation <- mcSimulation(
+apple_sheep_mc_simulation <- mcSimulation(
   estimate = as.estimate(input_estimates),
   model_function = model_function,
   numberOfModelRuns = 80,
@@ -133,8 +148,8 @@ example_mc_simulation <- mcSimulation(
 )
 
 plot_distributions(
-  mcSimulation_object = example_mc_simulation,
-  vars = c("NPVtrade_off", "NPV_Treeless_System"),
+  mcSimulation_object = apple_sheep_mc_simulation,
+  vars = c("NPV_decision", "NPV_Treeless_System"),
   method = 'smooth_simple_overlay',
   base_size = 7,
   x_axis_name = "Outcome of AF intervention",
@@ -151,67 +166,68 @@ Now, let's perform sensitivity analysis using Partial Least Squares (PLS) regres
 
 ```{r apple_sheep_pls_test, exercise=TRUE}
 
-pls_result_AF <- plsr.mcSimulation(object = example_mc_simulation,
-                                   resultName = names(example_mc_simulation$y)[3], ncomp = 1)
+pls_result_AF <- plsr.mcSimulation(
+  object = apple_sheep_mc_simulation,
+  resultName = names(apple_sheep_mc_simulation$y)[3],
+  ncomp = 1
+)
 
 ```
 
 ```{r apple_sheep_pls_test-solution}
 
-pls_result_AF <- plsr.mcSimulation(object = example_mc_simulation,
-                                   resultName = names(example_mc_simulation$y)[3], ncomp = 1)
+pls_result_AF <- plsr.mcSimulation(
+  object = apple_sheep_mc_simulation,
+  resultName = names(apple_sheep_mc_simulation$y)[3],
+  ncomp = 1
+)
 
-plot_pls(pls_result_AF, input_table = input_estimates, cut_off_line = 1, threshold = 0.5)
+plot_pls(pls_result_AF,
+  input_table = input_estimates,
+  cut_off_line = 1,
+  threshold = 0.5)
 
 ```
 
 Save it on your machine with `ggsave`.
 
-```{r}
-ggsave(
-  filename = "PLS_sheep_vs_AppleAF.png",
+```{r, eval=FALSE, echo=TRUE}
+
+plot_pls(pls_result_AF,
+  input_table = input_estimates,
+  cut_off_line = 1,
+  threshold = 0.5)
+
+ggsave(filename = "PLS_sheep_vs_AppleAF.png",
   plot = last_plot(),
   width = 5, 
-  height = 3
-)
+  height = 3)
+
 ```
 
 Now, let's quantify Value of Information by calculating expected value of perfect information (EVPI).In your R script copy and run the following code.
 
 We can save our input estimates as a csv 
 
-```
-# assign to a data frame
+```{r assign_results_voi}
+# assign the results of x and y to a data frame
 
-df <- data.frame(input_estimates)
+df <- data.frame(apple_sheep_mc_simulation$x, apple_sheep_mc_simulation$y[1:3])
 
-# write the results to a .csv file
-write.csv(df, file = "MCResults/input_table.csv", row.names = FALSE)
-decisionSupport(inputFilePath = paste("MCResults/input_table.csv",sep=""),
-                outputPath = paste0("MCResults", "/", sep=""),
-                write_table = TRUE,
-                welfareFunction = model_function,
-                numberOfModelRuns = 5000, #run 10,000 times
-                functionSyntax = "plainNames")
-
-# Read the results
-
-MCall <- read.table(file="MCResults/mcSimulationResults.csv",
-                    header = TRUE,sep=",")
 ```
 
 Generate the VIP scores for the input variables based on the AF model.
 
-```{r apple_sheep_evpi_test, exercise=TRUE}
+```{r apple_sheep_evpi_test}
 
-#extract only input variables and trade off columns
+#extract only the NPV columns (the last few in the table, starting with "NPV_decision")
 
-mc <- MCall[,c(2:6,9)]
-EVPI <- multi_EVPI(mc,"NPVtrade_off",write_table=TRUE)
+EVPI <- multi_EVPI(mc = df, first_out_var = "NPV_decision")
 
-#plot the results
-plot_evpi(EVPI, "NPVtrade_off")
+# plot the EVPI results for the decision
+plot_evpi(EVPIresults = EVPI, decision_vars = "NPV_decision")
 
 ```
 
-Why is our EVPI result like this?
+Share your result with us in Slack and explain the result.
+
