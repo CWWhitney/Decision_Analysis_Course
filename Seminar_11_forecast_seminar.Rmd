@@ -9,6 +9,7 @@ Review the process in the [Models](#model_share_seminar) lecture.
 
 We have already built some simple models in the [Decision Models](#decision_models) lecture and the [Model programming](#model_programming) seminar. Now we can explore another simple model with `decisionSupport`. 
 
+![](images/hail_impact_pathway.png)
 <!-- ### Plot the impact pathway -->
 
 <!-- Let's use the `graph.formula` function from the `igraph` library again [@igraph2006]. This time to create the graphical impact pathway of an investment into hail nets. Add another factor called 'Discount' that impacts the Net Present Value (NPV) value. -->

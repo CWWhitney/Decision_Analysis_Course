@@ -1,5 +1,5 @@
-"variable","lower","median","upper","distribution","label","Description"
-"Yield",6000,NA,14000,"posnorm","Yield (kg/ha)","Yield in a sweet cherry farm under normal conditions"
-"Market_price",3,NA,8,"posnorm","Price (USD/kg)","Price of sweet cherry in a normal season"
-"Labor_cost",500,NA,1000,"posnorm","Labor cost (USD/ha)","Labor costs in a normal season"
-"Management_cost",100,NA,2000,"posnorm","Management cost (USD/ha)","Management costs in a normal season"
+variable,lower,median,upper,distribution,label,Description
+Yield,6000,NA,14000,posnorm,Yield (kg/ha),Yield in a sweet cherry farm under normal conditions
+Market_price,3,NA,8,posnorm,Price (USD/kg),Price of sweet cherry in a normal season
+Labor_cost,500,NA,1000,posnorm,Labor cost (USD/ha),Labor costs in a normal season
+Management_cost,100,NA,2000,posnorm,Management cost (USD/ha),Management costs in a normal season
