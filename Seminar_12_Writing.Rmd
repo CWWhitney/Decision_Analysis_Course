@@ -1,7 +1,7 @@
-## Seminar 11: Academic Writing {#writing} 
+## Seminar 12: Academic Writing {#writing} 
 <!-- [Academic writing](#writing) -->
 
-Welcome to the eleventh seminar of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_10]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to the 12th seminar of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_10]%20Decision%20Analysis%20Lecture) or the course tutor.
 
 In this seminar we will build on some of the things we learned in the [Using RMarkdown](#rmarkdown) seminar. We will use [Rmarkdown](https://rmarkdown.rstudio.com/) [@R-rmarkdown] to create a report on our R code. 
 
@@ -15,7 +15,7 @@ Find the RMD file and bib files referenced in the video in the [RMarkdown_templa
 
 - Open an Rmarkdown file
 
-RMarkdown_options.png
+![](images/RMarkdown_options.png)
 
 - Open an Rmarkdown file
 
@@ -48,5 +48,7 @@ The website hosting the raw html file for this course is:
 `http://htmlpreview.github.io/?https://github.com/CWWhitney/Decision_Analysis_Course/blob/main/Index.html`
 
 This works with the `htmlpreview.github.io` by taking adding `http://htmlpreview.github.io/?` to the first part of the link to the html file in an open access github repository `https://github.com/CWWhitney/Decision_Analysis_Course/blob/main/Index.html`.
+
+
 
 

@@ -1,0 +1,67 @@
+## Seminar 12.1: Academic Writing {#writing} 
+<!-- [Academic writing part 2](#citations) -->
+
+Welcome to part 2 of the 12th seminar of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_10]%20Decision%20Analysis%20Lecture) or the course tutor.
+
+To use Zotero for citations in RMarkdown, you'll need to follow these steps:
+
+1. **Install Zotero and the Better BibTeX plugin**:
+    - Download and install Zotero from [zotero.org](https://www.zotero.org/).
+    - Install the Better BibTeX plugin for Zotero from [github.com/retorquere/zotero-better-bibtex](https://github.com/retorquere/zotero-better-bibtex).
+    
+2. **Export your Zotero library to a .bib file**:
+    - Open Zotero and go to the File menu.
+    - Select Export Library and choose the Better BibTeX format.
+    - Save the exported .bib file to your project directory.
+    
+3. **Add the .bib file to your RMarkdown document**:
+    - In your RMarkdown document, specify the path to the .bib file using the `bibliography` field in the YAML header.
+    - Add a `csl` field if you want to use a specific citation style, specifying the path to the .csl file for that style.
+    
+4. **Cite references in your RMarkdown document**:
+    - Use `[@citation_key]` to cite references within the text.
+    
+Here's an example of how to set this up in an RMarkdown document:
+
+
+```
+---
+title: "Your Document Title"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+bibliography: references.bib
+csl: nature.csl  # Optional, specify a citation style
+---
+
+# Introduction
+This is an example of citing a reference [@author2020].
+# Method
+Describe your method here.
+# Results
+Present your results here.
+# Conclusion
+Conclude your document here.
+
+# References
+
+```
+
+1. **Install Zotero and Better BibTeX**:
+    - Ensure both are installed and configured.
+
+2. **Export Library to .bib File**:
+    - Open Zotero.
+    - Select the collection or library you want to export.
+    - Go to `File` > `Export Library`.
+    - Choose `Better BibTeX` and save the file as `references.bib` in your RMarkdown project directory.
+    
+3. **Edit YAML Header in RMarkdown**:
+    - Include the `bibliography` field pointing to your `references.bib` file.
+    - Optionally, include a `csl` field if you want to use a specific citation style.
+
+4. **Cite References in RMarkdown**:
+    - Use `[@citation_key]` to cite references where `citation_key` is the key assigned by Zotero/Better BibTeX.
+    
