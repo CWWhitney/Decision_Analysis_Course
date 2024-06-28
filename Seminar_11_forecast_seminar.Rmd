@@ -12,6 +12,9 @@ We have already built some simple models in the [Decision Models](#decision_mode
 ### Building a model for hail nets
 
 ![](images/hail_impact_pathway.png)
+This model adapted from Rojas et al. (2021) represents the decision of cherry farmers in Chile to adopt hail nets. 
+
+
 <!-- ### Plot the impact pathway -->
 
 <!-- Let's use the `graph.formula` function from the `igraph` library again [@igraph2006]. This time to create the graphical impact pathway of an investment into hail nets. Add another factor called 'Discount' that impacts the Net Present Value (NPV) value. -->
@@ -204,3 +207,7 @@ Listen to the ['Learning Bayesian Statistics'](https://www.learnbayesstats.com) 
 Follow [Michael Betancourt’s Bayesian statistics work](https://betanalpha.github.io/)
 
 <!-- -	Rainforth, Tom. “Automating Inference, Learning, and Design Using Probabilistic Programming.” Doctor of Philosophy, University of Oxford, 2017. -->
+
+### References
+
+Rojas, Gonzalo, Eduardo Fernandez, Cory Whitney, Eike Luedeling, and Italo F. Cuneo. “Adapting Sweet Cherry Orchards to Extreme Weather Events – Decision Analysis in Support of Farmers’ Investments in Central Chile.” Agricultural Systems 187 (February 2021): 103031. https://doi.org/10.1016/j.agsy.2020.103031.
