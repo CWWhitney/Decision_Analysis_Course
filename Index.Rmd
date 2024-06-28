@@ -479,8 +479,8 @@ knitr::write_bib(c(.packages(),
 <!-- ```{r child="Seminar_08_models_seminar.Rmd"} -->
 <!-- ``` -->
 
-<!-- ```{r child="Seminar_09_forecast_seminar.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_11_forecast_seminar.Rmd"}
+```
 
 
 <!-- ```{r child="Seminar_11_Writing.Rmd"} -->

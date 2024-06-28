@@ -1,9 +1,7 @@
-## Seminar 9: Model forecasts {#forecasts_seminar} 
+## Seminar 11: Model forecasts {#forecasts_seminar} 
 <!-- reference with [Model forecasts](#forecasts_seminar) -->
 
-Welcome to ninth seminar of **Decision Analysis and Forecasting for Agricultural Development**.Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_9]%20Decision%20Analysis%20Lecture) or the course tutor.
-
-In our seminar meeting each group will present the decision and proposed impact pathway model that they will be programming for the rest of the course. 
+Welcome to eleventh seminar of **Decision Analysis and Forecasting for Agricultural Development**.Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_9]%20Decision%20Analysis%20Lecture) or the course tutor.
 
 Review the process in the [Models](#model_share_seminar) lecture. 
 
@@ -11,38 +9,38 @@ Review the process in the [Models](#model_share_seminar) lecture.
 
 We have already built some simple models in the [Decision Models](#decision_models) lecture and the [Model programming](#model_programming) seminar. Now we can explore another simple model with `decisionSupport`. 
 
-### Plot the impact pathway
+<!-- ### Plot the impact pathway -->
 
-Let's use the `graph.formula` function from the `igraph` library again [@igraph2006]. This time to create the graphical impact pathway of an investment into hail nets. Add another factor called 'Discount' that impacts the Net Present Value (NPV) value.
+<!-- Let's use the `graph.formula` function from the `igraph` library again [@igraph2006]. This time to create the graphical impact pathway of an investment into hail nets. Add another factor called 'Discount' that impacts the Net Present Value (NPV) value. -->
 
-```{r igraph-example, exercise=TRUE}
-hail_path <- graph.formula(HailNet -+ Yield, 
-                          HailNet -+ Cost, 
-                          HailEvent -+ Yield,
-                          Yield -+ MarketPrice, 
-                          MarketPrice -+ NPV,
-                          Cost -+ NPV)
+<!-- ```{r igraph-example, exercise=TRUE} -->
+<!-- hail_path <- graph.formula(HailNet -+ Yield,  -->
+<!--                           HailNet -+ Cost,  -->
+<!--                           HailEvent -+ Yield, -->
+<!--                           Yield -+ MarketPrice,  -->
+<!--                           MarketPrice -+ NPV, -->
+<!--                           Cost -+ NPV) -->
 
-plot(hail_path)
-```
+<!-- plot(hail_path) -->
+<!-- ``` -->
 
-```{r igraph-example-solution}
-hail_path <- graph.formula(HailNet -+ Yield, 
-                          HailNet -+ Cost, 
-                          HailEvent -+ Yield,
-                          Yield -+ MarketPrice, 
-                          MarketPrice -+ NPV,
-                          Cost -+ NPV,
-                          Discount -+ NPV)
+<!-- ```{r igraph-example-solution} -->
+<!-- hail_path <- graph.formula(HailNet -+ Yield,  -->
+<!--                           HailNet -+ Cost,  -->
+<!--                           HailEvent -+ Yield, -->
+<!--                           Yield -+ MarketPrice,  -->
+<!--                           MarketPrice -+ NPV, -->
+<!--                           Cost -+ NPV, -->
+<!--                           Discount -+ NPV) -->
 
-plot(hail_path)
-```
+<!-- plot(hail_path) -->
+<!-- ``` -->
 
-That was just one of many ways to generate visual impact pathways. To see more options see the [Decision Analysis Overview](#decision_analysis) lecture materials.
+<!-- That was just one of many ways to generate visual impact pathways. To see more options see the [Decision Analysis Overview](#decision_analysis) lecture materials. -->
 
 ### Building the model 
 
-Here we generate an input table to feed the model function. Update this with your new management cost variable in the graphical impact pathway. Call your new variable `"p_hail"`, make the lower bound `0.02` and the upper bound `0.2`, make the distribution `"posnorm"`, make the label `"% chance hail"` and make the description `"Probability of a hail storm"`.
+Here we generate an input table to feed the model function. Update this with a new management cost variable shown in the graphical impact pathway. Call your new variable `"p_hail"`, make the lower bound `0.02` and the upper bound `0.2`, make the distribution `"posnorm"`, make the label `"% chance hail"` and make the description `"Probability of a hail storm"`.
 
 ```{r hail_input_table, exercise=TRUE}
 hail_estimates <- data.frame(variable = c("yield", 
@@ -136,12 +134,13 @@ NPV_no_net <- discount(profit_no_net, discount_rate = 5, calculate_NPV = TRUE)
 NPV_net <- discount(profit_with_net, discount_rate = 5, calculate_NPV = TRUE)
 
 # calculate the overall NPV of the decision (do - don't do)
-NPV_decision <- NPV_net-NPV_no_net
+NPV_decision <- NPV_net - NPV_no_net
 
 return(list(NPV_no_net =  NPV_no_net,
             NPV_net =  NPV_net, 
             NPV_decision = NPV_decision))
 }
+
 ```
 
 We can use the `mcSimulation()` function from the `decisionSupport` package to implement a model [@R-decisionSupport].
