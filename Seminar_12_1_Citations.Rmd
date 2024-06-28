@@ -49,14 +49,13 @@ Conclude your document here.
 
 ```
 
-1. **Install Zotero and Better BibTeX**:
-    - Ensure both are installed and configured.
+1. **Install Zotero**:
+    - Ensure it is installed and configured.
 
 2. **Export Library to .bib File**:
     - Open Zotero.
     - Select the collection or library you want to export.
     - Go to `File` > `Export Library`.
-    - Choose `Better BibTeX` and save the file as `references.bib` in your RMarkdown project directory.
     
 3. **Edit YAML Header in RMarkdown**:
     - Include the `bibliography` field pointing to your `references.bib` file.
