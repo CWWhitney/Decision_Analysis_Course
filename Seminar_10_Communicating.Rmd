@@ -69,10 +69,12 @@ allow_retry = TRUE
 )
 ```
 
+### Rebuild the example_mc_simulation
 
-<!-- Add reminders about this data and these steps later :) 
+Here we build the example_mc_simulation again for use in the following exercises. 
 
-input_estimates <- read.csv("data/input_estimates.csv")
+```{r example_mc_simulation_seminar10, eval=FALSE}
+# input_estimates <- read.csv("data/input_estimates.csv")
 
 model_function <- function(){
   income <- Yield * Market_price
@@ -85,8 +87,7 @@ example_mc_simulation <- decisionSupport::mcSimulation(estimate = decisionSuppor
                                       model_function = model_function,
                                       numberOfModelRuns = 10000,
                                       functionSyntax = "plainNames")
-
--->
+```
 
 ```{r communicating-plot_distribution, exercise=TRUE}
 
