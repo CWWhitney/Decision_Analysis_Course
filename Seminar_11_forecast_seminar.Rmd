@@ -12,6 +12,7 @@ We have already built some simple models in the [Decision Models](#decision_mode
 ### Building a model for hail nets
 
 ![](images/hail_impact_pathway.png)
+
 This model adapted from Rojas et al. (2021) represents the decision of cherry farmers in Chile to adopt hail nets. 
 
 
@@ -167,6 +168,7 @@ plot_distributions(mcSimulation_object = hail_mc_simulation,
                       method = 'smooth_simple_overlay', 
                       base_size = 7)
 ```
+
 #### Value of Information (VoI) analysis
 
 Calculate Value of Information (VoI) analysis with the Expected Value of Perfect Information (EVPI). As we learned in [Lecture 8 on forecasts](#forecasts), EVPI helps us determine if more research will be helpful in understanding the expected change in the value of a decision outcome through reducing uncertainty on a given variable. 
@@ -184,13 +186,11 @@ evpi_hail <- multi_EVPI(mc = mcSimulation_table_hail,
                    first_out_var = "NPV_decision")
 ```
 
-
 We use the function `plot_evpi()` on the results from `multi_EVPI()` to plot the Expected Value of Perfect Information (EVPI). Here we show the results with the standard settings. The length of the bars is equal to EVPI.
 
 ```{r hail-evpi_plot, exercise=TRUE}
 plot_evpi(evpi_hail, decision_vars = "NPV_decision")
 ```
-
 
 ### Next steps
 
