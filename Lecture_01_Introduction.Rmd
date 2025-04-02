@@ -32,7 +32,7 @@ In this course, we will provide an overview of methods we can use to study agric
 - [Decision modeling in R](#model_programming)
 - Group project on decision analysis
 
-See the official pages in the coursebook here [**Decision Analysis and Forecasting for Agricultural Development**](https://www.lf.uni-bonn.de/en/studying/downloads/coursebook2020/module-msc-npw2020).
+See the official pages in the coursebook here [**Decision Analysis and Forecasting for Agricultural Development**](https://www.aei.uni-bonn.de/de/studium/medienpdf/modulhandbuch/mhb-msc-arts.pdf#page=72.08).
 
 After some introduction of the subject matter much of this course will consist of practical application of the [`decisionSupport`](https://cran.r-project.org/web/packages/decisionSupport/index.html) package in the [R](https://www.r-project.org/) programming language [@R-base]. 
 
