@@ -90,9 +90,11 @@ question("Considering the results of the EVPI analysis, farmers should spend mor
 
 The data and scripts for this study are also available online [@fernandez_data_2021].
 
-### Group discussion reading:
+### Group discussion reading: 
 
-- Luedeling, Eike, and Keith Shepherd. “[Decision-Focused Agricultural Research](https://www.thesolutionsjournal.com/article/decision-focused-agricultural-research/).” Solutions 7, no. 5 (2016): 46–54.
+This week you will all read @shepherd_development_2015.
+
+- Shepherd, Keith, Douglas Hubbard, Norman Fenton, Karl Claxton, Eike Luedeling, and Jan de Leeuw. “Development Goals Should Enable Decision-Making.” Nature 523, no. 7559 (2015): 152–54. 
 
 <!-- ### Bonus: Decision analysis case - Calluna production in NRW -->
 

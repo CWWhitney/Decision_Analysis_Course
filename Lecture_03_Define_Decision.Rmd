@@ -136,8 +136,6 @@ allow_retry = TRUE
 
 ### Reading for this lecture
 
+This week you will read @howard_foundations_2015 (Chapter 1. Introduction to Quality Decision Making).
+
 - Howard, Ronald A., and Ali E. Abbas. Foundations of Decision Analysis. NY, NY: Prentice Hall, 2015.
-
-Bonus reading by @shepherd_development_2015.
-
-- Shepherd, Keith, Douglas Hubbard, Norman Fenton, Karl Claxton, Eike Luedeling, and Jan de Leeuw. “Development Goals Should Enable Decision-Making.” Nature 523, no. 7559 (2015): 152–54. 

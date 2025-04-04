@@ -95,11 +95,10 @@ allow_retry = TRUE
 
 ### Group discussion reading: 
 
-Luu et al
-
-
-### Further Reading 
-
--	[Liberating Structures](http://www.liberatingstructures.com/) by Keith McCandless (and others)
+This week you will Reed et al. (2009). 
 
 - Reed, M. S. et al. (2009) ‘Who's in and why? A typology of stakeholder analysis methods for natural resource management’, Journal of Environmental Management, 90(5), pp. 1933–1949. doi: 10.1016/j.jenvman.2009.01.001.
+
+Bonus materials: 
+
+[Liberating Structures](http://www.liberatingstructures.com/) by Keith McCandless (and others). 
