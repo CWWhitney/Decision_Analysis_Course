@@ -50,14 +50,6 @@ source("functions/hail_risk.R")
 source("functions/apple_sheep.R")
 # Burkina model
 source("functions/burkina_model.R")
-
-# brms stuff with Schiffers
-# library(brms, warn.conflicts=F, quietly=T)
-# priors <- c(set_prior("normal(200, 5)", coef = "rasseN"), set_prior("normal(210, 5)", coef = "rasseK"))
-# rasse <- c("K", "K", "K", "N", "N", "N", "N", "N", "N")
-# ll <- c(225, 222, 221, 219, 219, 216, 221, 218, 217)
-# daten <- data.frame(rasse=rasse, ll=ll)
-# legeleistung <- brms::brm(formula = ll ~ rasse -1, data = daten , prior = priors, silent = 2)
 ```
 
 ```{r packages, warning=FALSE, include = FALSE}
@@ -110,9 +102,6 @@ knitr::write_bib(c(.packages(),
 ```
 
 ```{r child="Lecture_07_Forecasts.Rmd"}
-```
-
-```{r child="Lecture_08_Practical_Schiffers.Rmd"}
 ```
 
 ```{r child="Lecture_08_01_Bayesian_Thinking.Rmd"}
