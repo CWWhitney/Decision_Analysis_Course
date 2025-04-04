@@ -86,82 +86,82 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_Schedule.Rmd"}
 ```
 
-```{r child="Lecture_02_Decision_Analysis.Rmd"}
-```
+<!-- ```{r child="Lecture_02_Decision_Analysis.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_03_Define_Decision.Rmd"}
-```
+<!-- ```{r child="Lecture_03_Define_Decision.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_04_Case_Studies.Rmd"}
-```
+<!-- ```{r child="Lecture_04_Case_Studies.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_05_Participatory_Methods.Rmd"}
-```
+<!-- ```{r child="Lecture_05_Participatory_Methods.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_06_Decision_Models.Rmd"}
-```
+<!-- ```{r child="Lecture_06_Decision_Models.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_07_Forecasts.Rmd"}
-```
+<!-- ```{r child="Lecture_07_Forecasts.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_08_01_Bayesian_Thinking.Rmd"}
-```
+<!-- ```{r child="Lecture_08_01_Bayesian_Thinking.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Lecture_09_calibration_lecture.Rmd"}
-```
-
-
-```{r child="Lecture_10_Analyst_Profile.Rmd"}
-```
-
-```{r child="Seminar_01_R_RStudio_1.Rmd"}
-```
-
-```{r child="Seminar_02_R_RStudio_2.Rmd"}
-```
-
-```{r child="Seminar_03_Model_Updates.Rmd"}
-```
+<!-- ```{r child="Lecture_09_calibration_lecture.Rmd"} -->
+<!-- ``` -->
 
 
-```{r child="Seminar_04_RMarkdown.Rmd"}
-```
+<!-- ```{r child="Lecture_10_Analyst_Profile.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Seminar_05_Git_Github.Rmd"}
-```
+<!-- ```{r child="Seminar_01_R_RStudio_1.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Seminar_06_Model_Programming.Rmd"}
-```
+<!-- ```{r child="Seminar_02_R_RStudio_2.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Seminar_07_Model_Programming_2.Rmd"}
-```
+<!-- ```{r child="Seminar_03_Model_Updates.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Seminar_08_Functions.Rmd"}
-```
+
+<!-- ```{r child="Seminar_04_RMarkdown.Rmd"} -->
+<!-- ``` -->
+
+<!-- ```{r child="Seminar_05_Git_Github.Rmd"} -->
+<!-- ``` -->
+
+<!-- ```{r child="Seminar_06_Model_Programming.Rmd"} -->
+<!-- ``` -->
+
+<!-- ```{r child="Seminar_07_Model_Programming_2.Rmd"} -->
+<!-- ``` -->
+
+<!-- ```{r child="Seminar_08_Functions.Rmd"} -->
+<!-- ``` -->
 
 <!-- # ```{r child="Seminar_07_calibration_seminar.Rmd"} -->
 <!-- # ``` -->
 
-```{r child="Seminar_09_Value_of_information.Rmd"}
-```
+<!-- ```{r child="Seminar_09_Value_of_information.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Seminar_09_01_VoI.Rmd"}
-```
+<!-- ```{r child="Seminar_09_01_VoI.Rmd"} -->
+<!-- ``` -->
 
-```{r child="Seminar_10_Communicating.Rmd"}
-```
+<!-- ```{r child="Seminar_10_Communicating.Rmd"} -->
+<!-- ``` -->
 
 <!-- ```{r child="Seminar_08_models_seminar.Rmd"} -->
 <!-- ``` -->
 
-```{r child="Seminar_11_forecast_seminar.Rmd"}
-```
+<!-- ```{r child="Seminar_11_forecast_seminar.Rmd"} -->
+<!-- ``` -->
 
 <!-- ```{r child="Seminar_12_Writing.Rmd"} -->
 <!-- ``` -->
 
-```{r child="Seminar_12_1_Citations.Rmd"}
-```
+<!-- ```{r child="Seminar_12_1_Citations.Rmd"} -->
+<!-- ``` -->
 
 ```{r child="Impressum.Rmd"}
 ```
