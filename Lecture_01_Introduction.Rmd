@@ -78,9 +78,9 @@ The course will be largely based on group work. Please take some time to choose 
 
 -	Identify a decision
 
--	Identify and frame a decision and develop a qualitative model
+-	Frame the decision and develop a qualitative model
 
--	Generate quantitative model from your qualitative model and parameterize
+-	Generate and parameterize a quantitative model 
 
 -	Generate a git repo with code and documentation
 
