@@ -89,8 +89,8 @@ knitr::write_bib(c(.packages(),
 ```{r child="Lecture_02_Decision_Analysis.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_03_Define_Decision.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_03_Define_Decision.Rmd"}
+```
 
 <!-- ```{r child="Lecture_04_Case_Studies.Rmd"} -->
 <!-- ``` -->
