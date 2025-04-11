@@ -6,7 +6,7 @@
 ![](images/decisionSupport_hex_sticker.png){width=1in}
 <!-- Neuman and Morgenstern etc. -->
 
-The following videos cover some of the challenges that researchers and agricultural development experts face when attempting to define decisions. Please watch the videos and answer the questions that follow. 
+<!-- The following videos cover some of the challenges that researchers and agricultural development experts face when attempting to define decisions. Please watch the videos and answer the questions that follow.  -->
 
 <!-- ### Defining Decisions Part 1 -->
 
