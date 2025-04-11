@@ -15,9 +15,9 @@ Another important guideline is to start simple then move on to other steps. This
 
 !['Skateboard, Bike, Car'](images/Model_stages_car_analogy.png)
 
-<!-- ### Group discussion reading: -->
+### Group discussion reading:
 
-<!--  - @do_decision_2020 'Decision analysis of agroforestry options reveals adoption risks for resource-poor farmers'. -->
+ - @do_decision_2020 'Decision analysis of agroforestry options reveals adoption risks for resource-poor farmers'.
 
 ### Bonus: Further reading
 
