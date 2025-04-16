@@ -1,94 +1,93 @@
 ## Lecture 4: Decision Analysis Case Studies {#case_studies}
 <!-- reference with [Decision Analysis Case Studies](#case_studies) -->
 
-Welcome to lecture 4 of **Decision Analysis and Forecasting for Agricultural Development**. In this lecture we will follow three case studies and use the `#lecture-04-case-studies` Slack channel and Zoom meeting to follow up. This will allow us all to have a chance to see your progress, provide feedback. As always, your engagement and sharing is appreciated. It will be encouraging to others to see activity from colleagues. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_2]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to lecture 4 of **Decision Analysis and Forecasting for Agricultural Development**. In this lecture we will talk about case studies and use the `#lecture-04-case-studies` Slack channel and Zoom meeting to follow up. This will allow us all to have a chance to see your progress, provide feedback. As always, your engagement and sharing is appreciated. It will be encouraging to others to see activity from colleagues. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_2]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-Please take a few minutes to watch these short videos and do the associated exercises before our meeting.
+<!-- Please take a few minutes to watch these short videos and do the associated exercises before our meeting. -->
 
-### Introduction
+<!-- ### Introduction -->
 
-The following videos introduce some decision analysis case studies. Please watch the videos and answer the questions that follow. 
+<!-- The following videos introduce some decision analysis case studies. Please watch the videos and answer the questions that follow.  -->
 
-### Decision analysis case - Water for Wajir
+<!-- ### Decision analysis case - Water for Wajir -->
 
-The city of Wajir in Northern Kenya has lacks a reliable supply of clean drinking water and sanitation. To improve the situation, plans are being considered to construct a water pipeline from Habaswein over 100 km away [@luedeling_water_2014; @luedeling_fresh_2015]. Watch the following video to learn more. 
+<!-- The city of Wajir in Northern Kenya has lacks a reliable supply of clean drinking water and sanitation. To improve the situation, plans are being considered to construct a water pipeline from Habaswein over 100 km away [@luedeling_water_2014; @luedeling_fresh_2015]. Watch the following video to learn more.  -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/imQ1Gn-E7wQ" frameborder="0" allowfullscreen></iframe>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/imQ1Gn-E7wQ" frameborder="0" allowfullscreen></iframe> -->
 
-Now try to answer the following questions:
+<!-- Now try to answer the following questions: -->
 
-```{r question-1-Decision-analysis-case-Water-for-Wajir, echo=FALSE}
-question("What was the purpose of the inception workshop?",
-  answer("Elicit information about specific variables"),
-  answer("Secure political buy-in", correct = TRUE),
-  answer("Develop a conceptual model of the decision"),
- answer("Allow stakeholders to state their expectations of the project", correct = TRUE),
-  incorrect = "Watch [the video](https://youtu.be/imQ1Gn-E7wQ) and try again.",
-allow_retry = TRUE
-)
-```
+<!-- ```{r question-1-Decision-analysis-case-Water-for-Wajir, echo=FALSE} -->
+<!-- question("What was the purpose of the inception workshop?", -->
+<!--   answer("Elicit information about specific variables"), -->
+<!--   answer("Secure political buy-in", correct = TRUE), -->
+<!--   answer("Develop a conceptual model of the decision"), -->
+<!--  answer("Allow stakeholders to state their expectations of the project", correct = TRUE), -->
+<!--   incorrect = "Watch [the video](https://youtu.be/imQ1Gn-E7wQ) and try again.", -->
+<!-- allow_retry = TRUE -->
+<!-- ) -->
+<!-- ``` -->
 
-```{r question-2-Decision-analysis-case-Water-for-Wajir, echo=FALSE}
-question("What impacts are likely to arise from the freshwater pipeline?",
-  answer("Improved sanitation and public health in Wajir", correct = TRUE),
-  answer("Irrigated agriculture in Wajir"),
-  answer("Acceleration of economic development in Wajir", correct = TRUE),
- answer("Free water supply for residents of Wajir"),
-  incorrect = "Watch [the video](https://youtu.be/imQ1Gn-E7wQ) and try again.",
-allow_retry = TRUE
-)
-```
+<!-- ```{r question-2-Decision-analysis-case-Water-for-Wajir, echo=FALSE} -->
+<!-- question("What impacts are likely to arise from the freshwater pipeline?", -->
+<!--   answer("Improved sanitation and public health in Wajir", correct = TRUE), -->
+<!--   answer("Irrigated agriculture in Wajir"), -->
+<!--   answer("Acceleration of economic development in Wajir", correct = TRUE), -->
+<!--  answer("Free water supply for residents of Wajir"), -->
+<!--   incorrect = "Watch [the video](https://youtu.be/imQ1Gn-E7wQ) and try again.", -->
+<!-- allow_retry = TRUE -->
+<!-- ) -->
+<!-- ``` -->
 
-```{r question-3-Decision-analysis-case-Water-for-Wajir, echo=FALSE}
-question("What are good strategies in consolidating range estimates by different people?",
-answer("Average lower and upper bounds of intervals across all participants"),
-answer("For outliers, find out if experts understood the question correctly", correct = TRUE),
-answer("Consider which experts have are most knowledgeable on each estimated variable", correct = TRUE),
-answer("Consider each expert's performance in previous estimation exercises", correct = TRUE),
-  incorrect = "Watch [the video](https://youtu.be/imQ1Gn-E7wQ) and try again.",
-allow_retry = TRUE
-)
-```
+<!-- ```{r question-3-Decision-analysis-case-Water-for-Wajir, echo=FALSE} -->
+<!-- question("What are good strategies in consolidating range estimates by different people?", -->
+<!-- answer("Average lower and upper bounds of intervals across all participants"), -->
+<!-- answer("For outliers, find out if experts understood the question correctly", correct = TRUE), -->
+<!-- answer("Consider which experts have are most knowledgeable on each estimated variable", correct = TRUE), -->
+<!-- answer("Consider each expert's performance in previous estimation exercises", correct = TRUE), -->
+<!--   incorrect = "Watch [the video](https://youtu.be/imQ1Gn-E7wQ) and try again.", -->
+<!-- allow_retry = TRUE -->
+<!-- ) -->
+<!-- ``` -->
 
-### Case study - Plastic covers in sweet cherry orchards in Chile
+<!-- ### Case study - Plastic covers in sweet cherry orchards in Chile -->
 
-This video shows the study @rojas_adapting_2021 conducted in Chile for assessing the profitability of implementing plastic covers in sweet cherry orchards to protect the fruits from hazardous weather events.
+<!-- This video shows the study @rojas_adapting_2021 conducted in Chile for assessing the profitability of implementing plastic covers in sweet cherry orchards to protect the fruits from hazardous weather events. -->
 
-<!-- ![]() syntax will also work but not in html -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kpsqzkeg53Y" frameborder="0" allowfullscreen></iframe>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/kpsqzkeg53Y" frameborder="0" allowfullscreen></iframe> -->
 
-```{r question-sweet_cherry-1, echo=FALSE}
-question("How did the decision of implementing covers in sweet cherry orchards emerge in this study?",
-         answer("From a thorough literature review."),
-         answer("Based on the previous knowledge of the researchers."),
-         answer("From farmers' concerns regarding future weather scenarios.", correct = TRUE),
-         answer("From consumers asking for sweet cherries of good quality."),
-         incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.",
-         allow_retry = TRUE)
-```
+<!-- ```{r question-sweet_cherry-1, echo=FALSE} -->
+<!-- question("How did the decision of implementing covers in sweet cherry orchards emerge in this study?", -->
+<!--          answer("From a thorough literature review."), -->
+<!--          answer("Based on the previous knowledge of the researchers."), -->
+<!--          answer("From farmers' concerns regarding future weather scenarios.", correct = TRUE), -->
+<!--          answer("From consumers asking for sweet cherries of good quality."), -->
+<!--          incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.", -->
+<!--          allow_retry = TRUE) -->
+<!-- ``` -->
 
-Based on the question above, think about and write down two to three positive and negative implications of using the method we used to define the decision.
+<!-- Based on the question above, think about and write down two to three positive and negative implications of using the method we used to define the decision. -->
 
-```{r question-sweet_cherry-2, echo=FALSE}
-question("Based on the Net Present Value, what would be the best recommendation for farmers in northern Chile?",
-         answer("Farmers should implement covers to improve yields."),
-         answer("NPV values suggest that implementing covers in northern Chile may be not necessary.", correct = TRUE),
-         answer("The results do not allow making a clear recomendation."),
-         incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.",
-         allow_retry = TRUE)
-```
+<!-- ```{r question-sweet_cherry-2, echo=FALSE} -->
+<!-- question("Based on the Net Present Value, what would be the best recommendation for farmers in northern Chile?", -->
+<!--          answer("Farmers should implement covers to improve yields."), -->
+<!--          answer("NPV values suggest that implementing covers in northern Chile may be not necessary.", correct = TRUE), -->
+<!--          answer("The results do not allow making a clear recomendation."), -->
+<!--          incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.", -->
+<!--          allow_retry = TRUE) -->
+<!-- ``` -->
 
-```{r questio-sweet_cherry-3, echo=FALSE}
-question("Considering the results of the EVPI analysis, farmers should spend more resources to gather additional information on:",
-         answer("Yield"),
-         answer("Market price"),
-         answer("Yield lost to low firmness", correct = TRUE),
-         incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.",
-         allow_retry = TRUE)
-```
+<!-- ```{r questio-sweet_cherry-3, echo=FALSE} -->
+<!-- question("Considering the results of the EVPI analysis, farmers should spend more resources to gather additional information on:", -->
+<!--          answer("Yield"), -->
+<!--          answer("Market price"), -->
+<!--          answer("Yield lost to low firmness", correct = TRUE), -->
+<!--          incorrect = "Watch [the video](https://youtu.be/kpsqzkeg53Y) and try again.", -->
+<!--          allow_retry = TRUE) -->
+<!-- ``` -->
 
-The data and scripts for this study are also available online [@fernandez_data_2021].
+<!-- The data and scripts for this study are also available online [@fernandez_data_2021]. -->
 
 ### Group discussion reading: 
 
