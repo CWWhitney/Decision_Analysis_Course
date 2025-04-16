@@ -13,6 +13,7 @@ runtime: shiny_prerendered
 ---
 
 ![](images/decisionSupport_hex_sticker.png){width=1in}
+<!-- ![]() syntax will also work but not for html --> 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -92,8 +93,8 @@ knitr::write_bib(c(.packages(),
 ```{r child="Lecture_03_Define_Decision.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_04_Case_Studies.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_04_Case_Studies.Rmd"}
+```
 
 <!-- ```{r child="Lecture_05_Participatory_Methods.Rmd"} -->
 <!-- ``` -->
