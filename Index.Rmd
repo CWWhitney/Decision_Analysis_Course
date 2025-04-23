@@ -96,8 +96,8 @@ knitr::write_bib(c(.packages(),
 ```{r child="Lecture_04_Case_Studies.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_05_Participatory_Methods.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_05_Participatory_Methods.Rmd"}
+```
 
 <!-- ```{r child="Lecture_06_Decision_Models.Rmd"} -->
 <!-- ``` -->
