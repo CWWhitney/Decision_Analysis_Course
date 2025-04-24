@@ -53,7 +53,21 @@ allow_retry = TRUE
 <!-- ) -->
 <!-- ``` -->
 
-### Bonus: Plot the stakeholder analysis in R
+### Group discussion reading: 
+
+This week you will Reed et al. (2009) ‘Who's in and why?'.
+
+- Reed, M. S. et al. (2009) ‘Who's in and why? A typology of stakeholder analysis methods for natural resource management’, Journal of Environmental Management, 90(5), pp. 1933–1949. doi: 10.1016/j.jenvman.2009.01.001.
+
+Optional additional Reading: 
+
+Luu, Thi Thu Giang, Eike Luedeling, Cory Whitney, and Lisa Biber-Freudenberger. “Stakeholder Engagement in Agro-Climate Service Planning.” Climate Services 33 (January 2024): 100432. https://doi.org/10.1016/j.cliser.2023.100432.
+
+### Bonus materials: 
+
+[Liberating Structures](http://www.liberatingstructures.com/) by Keith McCandless (and others). 
+
+### Plot the stakeholder analysis in R
 
 Plot stakeholders' experience, availability and expertise in decision analysis with the `ggplot2` `ggrepel` `ggthemes` libraries [@R-ggplot2; @R-ggrepel; @R-ggthemes]. Use the stakeholder data set from our git repository. To run this on your machine, save [this raw csv file](https://raw.githubusercontent.com/CWWhitney/Decision_Analysis_Course/main/data/stakeholder.csv) as `.csv` to your local `.RProj` directory. Then use `stakeholder<-read.csv("stakeholder.csv")` to load the data to your R environment and save it as `stakeholder`.
 
@@ -91,17 +105,3 @@ ggplot(data = stakeholder, aes(x = Experience,
 ```
 
 Learn more about using names and [overlapped values](https://ggrepel.slowkow.com/articles/examples.html).
-
-### Group discussion reading: 
-
-This week you will Reed et al. (2009) ‘Who's in and why?'.
-
-- Reed, M. S. et al. (2009) ‘Who's in and why? A typology of stakeholder analysis methods for natural resource management’, Journal of Environmental Management, 90(5), pp. 1933–1949. doi: 10.1016/j.jenvman.2009.01.001.
-
-Optional additional Reading: 
-
-Luu, Thi Thu Giang, Eike Luedeling, Cory Whitney, and Lisa Biber-Freudenberger. “Stakeholder Engagement in Agro-Climate Service Planning.” Climate Services 33 (January 2024): 100432. https://doi.org/10.1016/j.cliser.2023.100432.
-
-Bonus materials: 
-
-[Liberating Structures](http://www.liberatingstructures.com/) by Keith McCandless (and others). 
