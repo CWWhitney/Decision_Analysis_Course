@@ -99,8 +99,8 @@ knitr::write_bib(c(.packages(),
 ```{r child="Lecture_05_Participatory_Methods.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_06_Decision_Models.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_06_Decision_Models.Rmd"}
+```
 
 <!-- ```{r child="Lecture_07_Forecasts.Rmd"} -->
 <!-- ``` -->
