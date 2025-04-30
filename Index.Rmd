@@ -102,8 +102,8 @@ knitr::write_bib(c(.packages(),
 ```{r child="Lecture_06_Decision_Models.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_07_Forecasts.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_07_Forecasts.Rmd"}
+```
 
 <!-- ```{r child="Lecture_08_01_Bayesian_Thinking.Rmd"} -->
 <!-- ``` -->
