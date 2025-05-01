@@ -1,7 +1,9 @@
 ## Lecture 7: Using Models to Create Forecasts {#forecasts}
 <!-- reference with [Forecasts](#forecasts) -->
 
-Welcome to lecture 7 of **Decision Analysis and Forecasting for Agricultural Development**. We will walk through brief examples and offer the scripts. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_3]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to lecture 7 of **Decision Analysis and Forecasting for Agricultural Development**. We will walk through brief examples and offer the scripts. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_7]%20Decision%20Analysis%20Lecture), [Dr. Prajna Kasargodu Anebagilu](mailto:pkasargo@uni-bonn.de?subject=[Lecture_7]%20Decision%20Analysis%20Lecture) or the course tutor.
+
+In this class, you will develop a Keeney-style matrix for your decision problem. You will also develop an impact pathway model for your project work. 
 
 ### Group discussion reading: 
 
