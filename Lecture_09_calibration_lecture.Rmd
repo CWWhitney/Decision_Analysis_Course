@@ -3,65 +3,65 @@
 
 Welcome to lecture 9 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_4]%Calibrating%Experts%20Lecture) or the course tutor.
 
-The following videos tell you something about a method which is frequently used in our group to get reliable values for the input tables from our stakeholders. Please watch the videos and answer the questions that follow. 
+<!-- The following videos tell you something about a method which is frequently used in our group to get reliable values for the input tables from our stakeholders. Please watch the videos and answer the questions that follow.  -->
 
-### What is calibration training?
+<!-- ### What is calibration training? -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DYAv-LBZaIU" frameborder="0" allowfullscreen></iframe>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/DYAv-LBZaIU" frameborder="0" allowfullscreen></iframe> -->
 
-```{r question-explaining-calibration-training-part-01-01, echo=FALSE}
-question("What is the intention of decision analysts in measuring things?",
-  answer("They want to get paid for it."),
-  answer("They want to get precise information."),
-  answer("They follow what the research project leader tells them to do."),
- answer("They want to reduce their uncertainty.", correct = TRUE),
- answer("They are inspired by Douglas Hubbard to try and measure everything."), 
-  incorrect = "Watch [the video](https://youtu.be/DYAv-LBZaIU) especially the part
- 4:30-5:30 and try again.",
-allow_retry = TRUE
-)
-```
+<!-- ```{r question-explaining-calibration-training-part-01-01, echo=FALSE} -->
+<!-- question("What is the intention of decision analysts in measuring things?", -->
+<!--   answer("They want to get paid for it."), -->
+<!--   answer("They want to get precise information."), -->
+<!--   answer("They follow what the research project leader tells them to do."), -->
+<!--  answer("They want to reduce their uncertainty.", correct = TRUE), -->
+<!--  answer("They are inspired by Douglas Hubbard to try and measure everything."),  -->
+<!--   incorrect = "Watch [the video](https://youtu.be/DYAv-LBZaIU) especially the part -->
+<!--  4:30-5:30 and try again.", -->
+<!-- allow_retry = TRUE -->
+<!-- ) -->
+<!-- ``` -->
 
 
-```{r question-explaining-calibration-training-part-01-02, echo=FALSE}
-question("What is calibration?",
-answer("Calibration is a measuring process.", correct = TRUE),
-answer("Calibration is a test of measuring devices to make sure they are measuring accurately."),
-answer("Calibration tells us which measuring device not to use."),
-answer("Calibration tells us the deviation of a measuring device.", correct = TRUE),
-answer("Calibration helps our experts to get a feeling about their uncertainty.", correct = TRUE),
-  incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) especially the part
-12:35-14:15 and try again.",
-allow_retry = TRUE
-)
-```
+<!-- ```{r question-explaining-calibration-training-part-01-02, echo=FALSE} -->
+<!-- question("What is calibration?", -->
+<!-- answer("Calibration is a measuring process.", correct = TRUE), -->
+<!-- answer("Calibration is a test of measuring devices to make sure they are measuring accurately."), -->
+<!-- answer("Calibration tells us which measuring device not to use."), -->
+<!-- answer("Calibration tells us the deviation of a measuring device.", correct = TRUE), -->
+<!-- answer("Calibration helps our experts to get a feeling about their uncertainty.", correct = TRUE), -->
+<!--   incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) especially the part -->
+<!-- 12:35-14:15 and try again.", -->
+<!-- allow_retry = TRUE -->
+<!-- ) -->
+<!-- ``` -->
 
-### Why do we apply calibration training?
+<!-- ### Why do we apply calibration training? -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JqOX3cHa8AI" title="Calibration Training Part 2" frameborder="0" allowfullscreen></iframe>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/JqOX3cHa8AI" title="Calibration Training Part 2" frameborder="0" allowfullscreen></iframe> -->
 
-```{r question-explaining-calibration-training-part-02-01, echo=FALSE}
-question("Why do we apply the calibration training process with experts?",
-answer("To tell them more about the desired field of expertise."),
-answer("To train them about their own biases.", correct = TRUE),
-answer("To get to know them better."),
-answer("To teach them procedures how to improve the estimation performance.", correct = TRUE),
-answer("To let them interact with a wheel of fortune."),
-answer("To slow down their answering behaviour and reduce the impact of the affective system.", correct = TRUE),
-  incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.",
-allow_retry = TRUE
-)
-```
+<!-- ```{r question-explaining-calibration-training-part-02-01, echo=FALSE} -->
+<!-- question("Why do we apply the calibration training process with experts?", -->
+<!-- answer("To tell them more about the desired field of expertise."), -->
+<!-- answer("To train them about their own biases.", correct = TRUE), -->
+<!-- answer("To get to know them better."), -->
+<!-- answer("To teach them procedures how to improve the estimation performance.", correct = TRUE), -->
+<!-- answer("To let them interact with a wheel of fortune."), -->
+<!-- answer("To slow down their answering behaviour and reduce the impact of the affective system.", correct = TRUE), -->
+<!--   incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.", -->
+<!-- allow_retry = TRUE -->
+<!-- ) -->
+<!-- ``` -->
 
-```{r question-explaining-calibration-training-part-02-02, echo=FALSE}
-question("What is the meaning of 'Anchoring'?",
-answer("Achoring is the influence of multicolored wheels on estimates."),
-answer("Anchoring is specifically about ships and is unrelated to the calibration topic."),
-answer("Anchoring is a kind of bias that may influence you to give estimates around a value you have seen or heard, but is not necessarily related to the variable you are estimating.", correct = TRUE),
-  incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.",
-allow_retry = TRUE
-)
-```
+<!-- ```{r question-explaining-calibration-training-part-02-02, echo=FALSE} -->
+<!-- question("What is the meaning of 'Anchoring'?", -->
+<!-- answer("Achoring is the influence of multicolored wheels on estimates."), -->
+<!-- answer("Anchoring is specifically about ships and is unrelated to the calibration topic."), -->
+<!-- answer("Anchoring is a kind of bias that may influence you to give estimates around a value you have seen or heard, but is not necessarily related to the variable you are estimating.", correct = TRUE), -->
+<!--   incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.", -->
+<!-- allow_retry = TRUE -->
+<!-- ) -->
+<!-- ``` -->
 
 
 ### Group discussion reading: 
