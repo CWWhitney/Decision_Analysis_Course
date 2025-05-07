@@ -105,11 +105,11 @@ knitr::write_bib(c(.packages(),
 ```{r child="Lecture_07_Forecasts.Rmd"}
 ```
 
-<!-- ```{r child="Lecture_08_01_Bayesian_Thinking.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_08_Bayesian_Thinking.Rmd"}
+```
 
-<!-- ```{r child="Lecture_09_calibration_lecture.Rmd"} -->
-<!-- ``` -->
+```{r child="Lecture_09_calibration_lecture.Rmd"}
+```
 
 
 <!-- ```{r child="Lecture_10_Analyst_Profile.Rmd"} -->
