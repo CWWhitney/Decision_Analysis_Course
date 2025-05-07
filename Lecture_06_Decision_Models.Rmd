@@ -9,7 +9,7 @@ The `decisionSupport` package implements this as a Monte Carlo simulation, which
 
 In this portion of the course we hope to introduce you to the methods and inspire you to follow a few important guidelines in the process of model building. One of the key aspects of model building has to do with making a solid business case for the model before programming. 
 
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/bViPWX8_G4A" frameborder="0" allowfullscreen></iframe> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bViPWX8_G4A" frameborder="0" allowfullscreen></iframe>
 
 Visit the [Decision Modeling for Agroecology](https://agtools.app/decision_modeling_tutorial/#section-introduction) tutorial to play with some of the R programming options and generate a simple Monte Carlo simulation.
 
