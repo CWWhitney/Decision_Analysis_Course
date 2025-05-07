@@ -6,90 +6,90 @@
 ![](images/decisionSupport_hex_sticker.png){width=1in}
 <!-- Neuman and Morgenstern etc. -->
 
-<!-- The following videos cover some of the challenges that researchers and agricultural development experts face when attempting to define decisions. Please watch the videos and answer the questions that follow.  -->
+The following videos cover some of the challenges that researchers and agricultural development experts face when attempting to define decisions. Please watch the videos and answer the questions that follow.
 
-<!-- ### Defining Decisions Part 1 -->
+### Defining Decisions Part 1
 
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/pPIs7MwgMe0" frameborder="0" allowfullscreen></iframe> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pPIs7MwgMe0" frameborder="0" allowfullscreen></iframe>
 
-<!-- ```{r question-define-decision-part-01-01, echo=FALSE} -->
-<!-- question("Who do you think came up with these topics?", -->
-<!--   answer("Local government."), -->
-<!--   answer("Development NGO."), -->
-<!--   answer("Researchers.", correct = TRUE), -->
-<!--  answer("Farmers."), -->
-<!--   incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.", -->
-<!-- allow_retry = TRUE -->
-<!-- ) -->
-<!-- ``` -->
+```{r question-define-decision-part-01-01, echo=FALSE}
+question("Who do you think came up with these topics?",
+  answer("Local government."),
+  answer("Development NGO."),
+  answer("Researchers.", correct = TRUE),
+ answer("Farmers."),
+  incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.",
+allow_retry = TRUE
+)
+```
 
-<!-- ```{r question-define-decision-part-01-02, echo=FALSE} -->
-<!-- question("What is missing?", -->
-<!-- answer("Decision-maker", correct = TRUE), -->
-<!-- answer("Concrete options", correct = TRUE), -->
-<!-- answer("Relevant issue in agricultural development"), -->
-<!-- answer("Clear context", correct = TRUE), -->
-<!--   incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.", -->
-<!-- allow_retry = TRUE -->
-<!-- ) -->
-<!-- ``` -->
+```{r question-define-decision-part-01-02, echo=FALSE}
+question("What is missing?",
+answer("Decision-maker", correct = TRUE),
+answer("Concrete options", correct = TRUE),
+answer("Relevant issue in agricultural development"),
+answer("Clear context", correct = TRUE),
+  incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.",
+allow_retry = TRUE
+)
+```
 
-<!-- ### Defining Decisions Part 2 -->
-
-
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/4vlwELJwHYg" frameborder="0" allowfullscreen></iframe> -->
-
-<!-- Think about the following questions and jot down your thoughts. -->
-
-<!-- - **Does decision analysis make sense without involving a decision-maker?** -->
-<!-- - **What can this achieve, and what shouldn't we expect from it?** -->
-
-<!-- ### Defining Decisions Part 3 -->
+### Defining Decisions Part 2
 
 
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/5ZTd73gcL-0" frameborder="0" allowfullscreen></iframe> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4vlwELJwHYg" frameborder="0" allowfullscreen></iframe>
 
-<!-- ```{r question-define-decision-part-03-01, echo=FALSE} -->
-<!-- question("Which aspects of research should you pay attention to, if you want to maximize the *credibility* of your research?", -->
-<!-- answer("Relationship with stakeholders"), -->
-<!-- answer("Robust statistics", correct = TRUE), -->
-<!-- answer("Inclusive, participatory research"), -->
-<!-- answer("Clear experimental design", correct = TRUE), -->
-<!-- answer("Alignment with policies and plans"), -->
-<!-- answer("Choices actually considered by local actors"), -->
-<!--   incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.", -->
-<!-- allow_retry = TRUE -->
-<!-- ) -->
-<!-- ``` -->
+Think about the following questions and jot down your thoughts.
 
-<!-- ```{r question-define-decision-part-03-02, echo=FALSE} -->
-<!-- question("Which aspects of research should you pay attention to, if you want to maximize the *salience* of your research?", -->
-<!-- answer("Relationship with stakeholders"), -->
-<!-- answer("Robust statistics"), -->
-<!-- answer("Inclusive, participatory research", correct = TRUE), -->
-<!-- answer("Clear experimental design"), -->
-<!-- answer("Alignment with policies and plans", correct = TRUE), -->
-<!-- answer("Choices actually considered by local actors", correct = TRUE), -->
-<!--   incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.", -->
-<!-- allow_retry = TRUE -->
-<!-- ) -->
-<!-- ``` -->
+- **Does decision analysis make sense without involving a decision-maker?**
+- **What can this achieve, and what shouldn't we expect from it?**
 
-<!-- ```{r question-define-decision-part-03-03, echo=FALSE} -->
-<!-- question("Which aspects of research should you pay attention to, if you want to maximize the *legitimacy* of your research?", -->
-<!-- answer("Relationship with stakeholders", correct = TRUE), -->
-<!-- answer("Robust statistics"), -->
-<!-- answer("Inclusive, participatory research"), -->
-<!-- answer("Involvement of local leaders", correct = TRUE), -->
-<!-- answer("Clear experimental design"), -->
-<!-- answer("Alignment with policies and plans"), -->
-<!-- answer("Choices actually considered by local actors"), -->
-<!--   incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.", -->
-<!-- allow_retry = TRUE -->
-<!-- ) -->
-<!-- ``` -->
+### Defining Decisions Part 3
 
-<!-- Think of challenges you may encounter when trying to do *credible*, *salient* and *legitimate* research (all of which decision analysts should aim to achieve). -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5ZTd73gcL-0" frameborder="0" allowfullscreen></iframe>
+
+```{r question-define-decision-part-03-01, echo=FALSE}
+question("Which aspects of research should you pay attention to, if you want to maximize the *credibility* of your research?",
+answer("Relationship with stakeholders"),
+answer("Robust statistics", correct = TRUE),
+answer("Inclusive, participatory research"),
+answer("Clear experimental design", correct = TRUE),
+answer("Alignment with policies and plans"),
+answer("Choices actually considered by local actors"),
+  incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.",
+allow_retry = TRUE
+)
+```
+
+```{r question-define-decision-part-03-02, echo=FALSE}
+question("Which aspects of research should you pay attention to, if you want to maximize the *salience* of your research?",
+answer("Relationship with stakeholders"),
+answer("Robust statistics"),
+answer("Inclusive, participatory research", correct = TRUE),
+answer("Clear experimental design"),
+answer("Alignment with policies and plans", correct = TRUE),
+answer("Choices actually considered by local actors", correct = TRUE),
+  incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.",
+allow_retry = TRUE
+)
+```
+
+```{r question-define-decision-part-03-03, echo=FALSE}
+question("Which aspects of research should you pay attention to, if you want to maximize the *legitimacy* of your research?",
+answer("Relationship with stakeholders", correct = TRUE),
+answer("Robust statistics"),
+answer("Inclusive, participatory research"),
+answer("Involvement of local leaders", correct = TRUE),
+answer("Clear experimental design"),
+answer("Alignment with policies and plans"),
+answer("Choices actually considered by local actors"),
+  incorrect = "Watch [the video](https://youtu.be/pPIs7MwgMe0) and try again.",
+allow_retry = TRUE
+)
+```
+
+Think of challenges you may encounter when trying to do *credible*, *salient* and *legitimate* research (all of which decision analysts should aim to achieve).
 
 ### Quality Decision Making
 
