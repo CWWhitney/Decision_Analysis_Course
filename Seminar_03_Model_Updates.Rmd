@@ -1,10 +1,14 @@
 ## Seminar 3: Model Updates
 
-Participants shared conceptual models and recieved feedback. 
+Welcome to Seminar 3 of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Lecture_6]%20Decision%20Analysis%20Lecture) or the course tutor.
 
-See Slack
+In this seminar your group will share the graphical model of your decision problem and give and receive feedback from the rest of the groups. Ideally you will share a clearly directed graph with nodes and arrows that represents the 'theory of change' or the general impact pathway of the decision. It should reflect the expected relationship between the decision options and the outcomes of interest (i.e. improved seed effect on yield).
+
+See our dedicated Slack channel for more details.
 
 #### Useful graphical model tools
+
+In case you need them, here are a few really handy tools for putting together graphical models: 
 
 [draw.io](https://app.diagrams.net/)
 
