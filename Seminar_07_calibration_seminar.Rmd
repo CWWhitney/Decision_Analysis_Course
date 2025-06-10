@@ -1,9 +1,9 @@
 ## Seminar 7: Calibration training  {#calibration_seminar} 
 <!-- reference with [Calibration training](#calibration_seminar) -->
 
-Welcome to the sixth seminar of **Decision Analysis and Forecasting for Agricultural Development**. This week we will be going through the materials that were mentioned in the [Calibrating experts lecture](#calibration_lecture).
+Welcome to the 7th seminar of **Decision Analysis and Forecasting for Agricultural Development**. This week we will be going through the materials that were mentioned in the [Calibrating experts lecture](#calibration_lecture).
 
-Your work for this this seminar is to review materials from Lecture 7 on the methods of calibration and prepare to be subjected to the calibration process.
+Your work for this this seminar is to bring a laptop or mobile phone to the seminar with which you have an internet connection in the lecture hall. You will go through the training or your own device.
 
 After this session please consider the inputs that will be necessary for your own model and prepare the input table and formulate questions for eliciting calibrated estimates from your colleagues and/or any experts that you have identified for your team's model.
 
@@ -11,7 +11,7 @@ After this session please consider the inputs that will be necessary for your ow
 
 Sign in to [GuidedTrack calibration training](https://www.openphilanthropy.org/calibration) to get your confidence intervals results.
 
-Sign in to the [Prediction Book](https://predictionbook.com/) to *'Find out just how sure you should be, and get better at being only as sure as the facts justify'*.
+Sign in to the [Fatebook](https://fatebook.io/) to *'Track your predictions, make better decisions'*. You can find a calibration training under Learn/Calibration Training
 
 ### Group discussion - food for thought
 
