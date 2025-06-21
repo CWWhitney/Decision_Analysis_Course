@@ -5,7 +5,9 @@ Welcome to the second part of the Value of Information seminar for the course **
 
 ### Practical Value of Information example:
 
-Let's use a modified version of sheep apple agroforestry from Seminar 7 (#model_programming_cont). Just for this class let's presume that the farmer has a grassland where they graze sheep. Intervention: implement apple agroforestry. Let's prepare our input estimates for the system.
+Let's use a modified version of sheep apple agroforestry from Seminar 7 (#model_programming_cont). Just for this class let's presume that the farmer has a grassland where they graze sheep. Intervention: implement apple agroforestry. Let's prepare our input estimates for the system. 
+
+Change the lower bounds of "Income from sheep (euro/year)", "Cost of sheep (euro/year)", "Income from apple (euro/year)", and "Cost of apple (euro/year)", so that we can see how EVPI helps us explore the need for follow-up when we have uncertainty. Hint: lower = c(30, 10, 30, 15, 10)
 
 ```{r libraries_voi_part2, eval=FALSE, echo=TRUE}
 library(ggplot2)
@@ -48,7 +50,7 @@ input_estimates <- data.frame(
     "apple_cost",
     "discount_rate"
   ),
-  lower = c(3000, 1000, 30000, 15000, 10),
+  lower = c(30, 10, 30, 15, 10),
   median = NA,
   upper = c(5000, 2500, 60000, 30000, 10),
   distribution = c("posnorm", "posnorm", "posnorm", "posnorm", "const"),
@@ -162,48 +164,48 @@ plot_distributions(
 )
 ```
 
-Now, let's perform sensitivity analysis using Partial Least Squares (PLS) regression using 'plsr' function. Plot the results showing a `cut_off_line` at 1 and `threshold` of 0.5. 
+<!-- Now, let's perform sensitivity analysis using Partial Least Squares (PLS) regression using 'plsr' function. Plot the results showing a `cut_off_line` at 1 and `threshold` of 0.5.  -->
 
-```{r apple_sheep_pls_test, exercise=TRUE}
+<!-- ```{r apple_sheep_pls_test, exercise=TRUE} -->
 
-pls_result_AF <- plsr.mcSimulation(
-  object = apple_sheep_mc_simulation,
-  resultName = names(apple_sheep_mc_simulation$y)[3],
-  ncomp = 1
-)
+<!-- pls_result_AF <- plsr.mcSimulation( -->
+<!--   object = apple_sheep_mc_simulation, -->
+<!--   resultName = names(apple_sheep_mc_simulation$y)[3], -->
+<!--   ncomp = 1 -->
+<!-- ) -->
 
-```
+<!-- ``` -->
 
-```{r apple_sheep_pls_test-solution}
+<!-- ```{r apple_sheep_pls_test-solution} -->
 
-pls_result_AF <- plsr.mcSimulation(
-  object = apple_sheep_mc_simulation,
-  resultName = names(apple_sheep_mc_simulation$y)[3],
-  ncomp = 1
-)
+<!-- pls_result_AF <- plsr.mcSimulation( -->
+<!--   object = apple_sheep_mc_simulation, -->
+<!--   resultName = names(apple_sheep_mc_simulation$y)[3], -->
+<!--   ncomp = 1 -->
+<!-- ) -->
 
-plot_pls(pls_result_AF,
-  input_table = input_estimates,
-  cut_off_line = 1,
-  threshold = 0.5)
+<!-- plot_pls(pls_result_AF, -->
+<!--   input_table = input_estimates, -->
+<!--   cut_off_line = 1, -->
+<!--   threshold = 0.5) -->
 
-```
+<!-- ``` -->
 
-Save it on your machine with `ggsave`.
+<!-- Save it on your machine with `ggsave`. -->
 
-```{r, eval=FALSE, echo=TRUE}
+<!-- ```{r, eval=FALSE, echo=TRUE} -->
 
-plot_pls(pls_result_AF,
-  input_table = input_estimates,
-  cut_off_line = 1,
-  threshold = 0.5)
+<!-- plot_pls(pls_result_AF, -->
+<!--   input_table = input_estimates, -->
+<!--   cut_off_line = 1, -->
+<!--   threshold = 0.5) -->
 
-ggsave(filename = "PLS_sheep_vs_AppleAF.png",
-  plot = last_plot(),
-  width = 5, 
-  height = 3)
+<!-- ggsave(filename = "PLS_sheep_vs_AppleAF.png", -->
+<!--   plot = last_plot(), -->
+<!--   width = 5,  -->
+<!--   height = 3) -->
 
-```
+<!-- ``` -->
 
 Now, let's quantify Value of Information by calculating expected value of perfect information (EVPI). Save the results of your MC simulation to a data frame. 
 
@@ -221,27 +223,23 @@ df <- data.frame(apple_sheep_mc_simulation$x, apple_sheep_mc_simulation$y[1:3])
 
 ```
 
-Generate the Variable Importance in the Projection (VIP) scores of the PLS for the input variables based on the apple sheep model.
+Generate the Variable Importance in the Projection (VIP) scores of the PLS for the input variables based on the apple sheep model. Check `names(df)` to see the list of variables and run `evpi` on the NPVs (the last few in the table, starting with `"NPV_Agroforestry_System"`). 
 
 ```{r apple_sheep_evpi_test, exercise=TRUE}
 
-# run evpi on the NPVs (the last few in the table, starting with "NPV_decision")
-
-EVPI <- multi_EVPI(mc = df, first_out_var = "NPV_decision")
+EVPI <- multi_EVPI(mc = df, first_out_var = "NPV_Agroforestry_System")
 
 # plot the EVPI results for the decision
-plot_evpi(EVPIresults = EVPI, decision_vars = "NPV_decision")
+plot_evpi(EVPIresults = EVPI, decision_vars = "NPV_Agroforestry_System")
 
 ```
 
 ```{r apple_sheep_evpi_test-solution}
 
-# run evpi on the NPVs (the last few in the table, starting with "NPV_decision")
-
-EVPI <- multi_EVPI(mc = df, first_out_var = "NPV_decision")
+EVPI <- multi_EVPI(mc = df, first_out_var = "NPV_Agroforestry_System")
 
 # plot the EVPI results for the decision
-plot_evpi(EVPIresults = EVPI, decision_vars = "NPV_decision")
+plot_evpi(EVPIresults = EVPI, decision_vars = "NPV_Agroforestry_System")
 
 ```
 
