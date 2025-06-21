@@ -7,7 +7,7 @@ Welcome to the second part of the Value of Information seminar for the course **
 
 Let's use a modified version of sheep apple agroforestry from the model programming seminar (#model_programming). Just for this class let's presume that the farmer has a grassland where they graze sheep. 
 
-![](images/MC_apples_sheep.png)
+![](images/MC_apples_sheep.png){width=3in}
 
 We will use the `ggplot2` and `decisionSupport` libraries.
 
@@ -80,7 +80,7 @@ df <- data.frame(input_estimates)
 write.csv(df, file = "input_table.csv", row.names = FALSE)
 ```
 
-In the next step, let's build a function to model the system and calculate the NPV of the AF system vs only sheep. Simulate it using the `mcSimulation` function from the `decisionSupport` package with 5000 'numberOfModelRuns'. Using 'plot_distributions' plot NPV of intervention trade off vs no intervention.
+In the next step, let's build a function to model the system and calculate the NPV of the AF system vs only sheep. Simulate it using the `mcSimulation` function from the `decisionSupport` package with 5000 'numberOfModelRuns'. 
 
 ```{r apple_sheep_voi_test, exercise=TRUE}
 model_function <- function() {
@@ -153,10 +153,30 @@ apple_sheep_mc_simulation <- mcSimulation(
   numberOfModelRuns = 80,
   functionSyntax = "plainNames"
 )
+```
 
+Using `plot_distributions` change the plot of this NPV from a raw comparison of the MC results intervention `NPV_Agroforestry_System` vs no intervention `NPV_Treeless_System` to a plot of the decision `NPV_decision`.
+
+```{r apple_sheep_npv_plot, exercise=TRUE}
 plot_distributions(
   mcSimulation_object = apple_sheep_mc_simulation,
-  vars = c("NPV_decision", "NPV_Treeless_System"),
+  vars = c("NPV_Agroforestry_System", "NPV_Treeless_System"),
+  method = 'smooth_simple_overlay',
+  base_size = 7,
+  x_axis_name = "Outcome of AF intervention",
+  scale_x_continuous(
+    labels = function(x)
+      x / 100000
+  ),
+  ggtitle("Net Present Value of the system"),
+  legend.position = "bottom"
+)
+```
+
+```{r apple_sheep_npv_plot-solution}
+plot_distributions(
+  mcSimulation_object = apple_sheep_mc_simulation,
+  vars = c("NPV_decision"),
   method = 'smooth_simple_overlay',
   base_size = 7,
   x_axis_name = "Outcome of AF intervention",
