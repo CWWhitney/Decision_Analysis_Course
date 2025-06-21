@@ -1,0 +1,6 @@
+"variable","lower","median","upper","distribution","label"
+"sheep_income",30,NA,5000,"posnorm","Income from sheep (euro/year)"
+"sheep_cost",10,NA,2500,"posnorm","Cost of sheep (euro/year)"
+"apple_income",30,NA,60000,"posnorm","Income from apple (euro/year)"
+"apple_cost",15,NA,30000,"posnorm","Cost of apple (euro/year)"
+"discount_rate",10,NA,10,"const","Discount Rate"
