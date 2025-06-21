@@ -5,17 +5,20 @@ Welcome to the second part of the Value of Information seminar for the course **
 
 ### Practical Value of Information example:
 
-Let's use a modified version of sheep apple agroforestry from Seminar 7 (#model_programming_cont). Just for this class let's presume that the farmer has a grassland where they graze sheep. Intervention: implement apple agroforestry. Let's prepare our input estimates for the system. 
+Let's use a modified version of sheep apple agroforestry from the model programming seminar (#model_programming). Just for this class let's presume that the farmer has a grassland where they graze sheep. 
 
 ![](images/MC_apples_sheep.png)
 
-Change the lower bounds of "Income from sheep (euro/year)", "Cost of sheep (euro/year)", "Income from apple (euro/year)", and "Cost of apple (euro/year)", so that we can see how EVPI helps us explore the need for follow-up when we have uncertainty. Hint: lower = c(30, 10, 30, 15, 10)
+We will use the `ggplot2` and `decisionSupport` libraries.
 
 ```{r libraries_voi_part2, eval=FALSE, echo=TRUE}
 library(ggplot2)
 library(decisionSupport)
 ```
 
+Intervention: implement apple agroforestry. Let's prepare our input estimates for the system. 
+
+Change the lower bounds of "Income from sheep (euro/year)", "Cost of sheep (euro/year)", "Income from apple (euro/year)", and "Cost of apple (euro/year)", so that we can see how EVPI helps us explore the need for follow-up when we have uncertainty. Hint: lower = c(30, 10, 30, 15, 10)
 
 ```{r input_table_voi_test, exercise=TRUE}
 input_estimates <- data.frame(
