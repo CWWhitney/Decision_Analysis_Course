@@ -1,11 +1,13 @@
 ## Seminar 9.1: Value of Information {#voi_1} 
-<!-- reference with [Models](#value_of_information_seminar_part2) -->
+<!-- reference with [Models](#voi_1) -->
 
 Welcome to the second part of the Value of Information seminar for the course **Decision Analysis and Forecasting for Agricultural Development**.Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_4]%20Decision%20Analysis%20Lecture) or the course tutor.
 
 ### Practical Value of Information example:
 
 Let's use a modified version of sheep apple agroforestry from Seminar 7 (#model_programming_cont). Just for this class let's presume that the farmer has a grassland where they graze sheep. Intervention: implement apple agroforestry. Let's prepare our input estimates for the system. 
+
+![](images/MC_apples_sheep.png)
 
 Change the lower bounds of "Income from sheep (euro/year)", "Cost of sheep (euro/year)", "Income from apple (euro/year)", and "Cost of apple (euro/year)", so that we can see how EVPI helps us explore the need for follow-up when we have uncertainty. Hint: lower = c(30, 10, 30, 15, 10)
 
@@ -223,7 +225,9 @@ df <- data.frame(apple_sheep_mc_simulation$x, apple_sheep_mc_simulation$y[1:3])
 
 ```
 
-Generate the Variable Importance in the Projection (VIP) scores of the PLS for the input variables based on the apple sheep model. Check `names(df)` to see the list of variables and run `evpi` on the NPVs (the last few in the table, starting with `"NPV_Agroforestry_System"`). 
+<!-- Generate the Variable Importance in the Projection (VIP) scores of the PLS for the input variables based on the apple sheep model.  -->
+
+Check `names(df)` to see the list of variables and run `evpi` on the NPVs (the last few in the table, starting with `"NPV_Agroforestry_System"`). 
 
 ```{r apple_sheep_evpi_test, exercise=TRUE}
 
