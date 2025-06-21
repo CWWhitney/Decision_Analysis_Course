@@ -142,14 +142,14 @@ knitr::write_bib(c(.packages(),
 ```{r child="Seminar_08_Functions.Rmd"}
 ```
 
-<!-- ```{r child="Seminar_09_Value_of_information.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_09_Value_of_information.Rmd"}
+```
 
-<!-- ```{r child="Seminar_09_01_VoI.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_09_01_VoI.Rmd"}
+```
 
-<!-- ```{r child="Seminar_10_Communicating.Rmd"} -->
-<!-- ``` -->
+```{r child="Seminar_10_Communicating.Rmd"}
+```
 
 <!-- ```{r child="Seminar_08_models_seminar.Rmd"} -->
 <!-- ``` -->
