@@ -257,7 +257,7 @@ Check `names(df)` to see the list of variables and run `evpi` on the NPVs (the l
 EVPI <- multi_EVPI(mc = df, first_out_var = "NPV_Agroforestry_System")
 
 # plot the EVPI results for the decision
-plot_evpi(EVPIresults = EVPI, decision_vars = "NPV_Agroforestry_System")
+plot_evpi(EVPIresults = EVPI, decision_vars = "NPV_decision")
 
 ```
 
@@ -266,7 +266,7 @@ plot_evpi(EVPIresults = EVPI, decision_vars = "NPV_Agroforestry_System")
 EVPI <- multi_EVPI(mc = df, first_out_var = "NPV_Agroforestry_System")
 
 # plot the EVPI results for the decision
-plot_evpi(EVPIresults = EVPI, decision_vars = "NPV_Agroforestry_System")
+plot_evpi(EVPIresults = EVPI, decision_vars = "NPV_decision")
 
 ```
 
