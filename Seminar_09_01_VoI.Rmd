@@ -115,6 +115,13 @@ model_function <- function() {
     )
   )
 }
+
+apple_sheep_mc_simulation <- mcSimulation(
+  estimate = as.estimate(input_estimates),
+  model_function = model_function,
+  numberOfModelRuns = 5,
+  functionSyntax = "plainNames"
+)
 ```
 
 ```{r apple_sheep_voi_test-solution}
@@ -147,10 +154,11 @@ model_function <- function() {
     )
   )
 }
+
 apple_sheep_mc_simulation <- mcSimulation(
   estimate = as.estimate(input_estimates),
   model_function = model_function,
-  numberOfModelRuns = 80,
+  numberOfModelRuns = 5000,
   functionSyntax = "plainNames"
 )
 ```
