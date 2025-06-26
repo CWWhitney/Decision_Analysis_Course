@@ -2,7 +2,6 @@
 
 input_estimates <- read.csv("data/input_estimates.csv")
 
-
 # create the model function
 model_function <- function(){
   income <- Yield * Market_price
