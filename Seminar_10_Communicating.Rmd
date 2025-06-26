@@ -10,28 +10,6 @@ In the [Model programming part 2](#model_programming_cont) seminar we generated 
 
 In this seminar we will build on what we learned in the [Decision Models](#decision_models) lecture and the [Model programming part 1](#model_programming) seminar to learn more about how to generate useful forecasts for communicating model results. We will implement another Monte Carlo simulation.
 
-In the [Model programming part 2](#model_programming_cont) seminar we generated a model called `example_mc_simulation`. As a quick refresher change the plot of the results of that model from `boxplot_density` to `smooth_simple_overlay` by using the `method` argument in the `plot_distributions` function.
-
-```{r forecasts_plot_distribution, exercise=TRUE}
-
-plot_distributions(mcSimulation_object = example_mc_simulation,
-                   vars = "final_result",
-                   method = "boxplot_density",
-                   old_names = "final_result",
-                   new_names = "Outcome distribution for profits")
-
-```
-
-```{r forecasts_plot_distribution-solution}
-
-plot_distributions(mcSimulation_object = example_mc_simulation,
-                   vars = "final_result",
-                   method = "smooth_simple_overlay",
-                   old_names = "final_result",
-                   new_names = "Outcome distribution for profits")
-
-```
-
 ### Making forecasts
 
 First let's look at a case study on agroforestry interventions in Northwest Vietnam [@do_decision_2020].
@@ -69,9 +47,9 @@ allow_retry = TRUE
 )
 ```
 
-### Rebuild the example_mc_simulation
+### Rebuild the `example_mc_simulation`
 
-Here we build the example_mc_simulation again for use in the following exercises. 
+In the [Model programming part 2](#model_programming_cont) seminar we generated a model called `example_mc_simulation`. Here is that model again but with `numberOfModelRuns` set to 10,000.
 
 ```{r example_mc_simulation_seminar10, eval=FALSE}
 # input_estimates <- read.csv("data/input_estimates.csv")
@@ -89,17 +67,9 @@ example_mc_simulation <- decisionSupport::mcSimulation(estimate = decisionSuppor
                                       functionSyntax = "plainNames")
 ```
 
-```{r communicating-plot_distribution, exercise=TRUE}
+As a quick refresher change the plot of the results of that model from `boxplot_density` to `smooth_simple_overlay` by using the `method` argument in the `plot_distributions` function.
 
-plot_distributions(mcSimulation_object = example_mc_simulation,
-                   vars = "final_result",
-                   method = "hist_simple_overlay",
-                   old_names = "final_result",
-                   new_names = "Outcome distribution for profits")
-
-```
-
-```{r communicating-plot_distribution-solution}
+```{r forecasts_plot_distribution, exercise=TRUE}
 
 plot_distributions(mcSimulation_object = example_mc_simulation,
                    vars = "final_result",
@@ -108,6 +78,31 @@ plot_distributions(mcSimulation_object = example_mc_simulation,
                    new_names = "Outcome distribution for profits")
 
 ```
+
+```{r forecasts_plot_distribution-solution}
+
+plot_distributions(mcSimulation_object = example_mc_simulation,
+                   vars = "final_result",
+                   method = "smooth_simple_overlay",
+                   old_names = "final_result",
+                   new_names = "Outcome distribution for profits")
+
+```
+
+We stored the `final_result` of our `model_function` in the `$y` data.frame of `example_mc_simulation`. Call it with `example_mc_simulation$y$final_result` and use the `quantile` function to see relevant statistics about the distribution.
+
+```{r testing_quantiles, exercise=TRUE}
+# use the quantile 'probs' argument to return the 30th and 70th percentiles
+quantile(example_mc_simulation$y$final_result)
+
+```
+
+```{r testing_quantiles-solution}
+# use the quantile 'probs' argument to return the 30th and 70th percentiles
+quantile(example_mc_simulation$y$final_result, probs = c(0.30,0.70))
+
+```
+
 
 ### Plot cashflow
 
@@ -208,7 +203,7 @@ plot_cashflow(mcSimulation_object = predictionProfit1,
 
 ### Plot many results together
 
-We can use the `compound_figure` function to create a simple compound figure of model results and analyses of a binary decision (do or do not do). The figure includes the distribution of the expected outcome, the expected cashflow, as well as the variable importance and the value of information. 
+We can use the `compound_figure` function to create a simple compound figure of model results and analyses of a binary decision (do or do not do). The figure includes the distribution of the expected outcome, the expected cashflow, as well as the variable importance and the value of information. Change the outcome distribution to a boxplot.
 
 ```{r communicating-compound_figure, exercise=TRUE}
 
@@ -241,6 +236,39 @@ distribution_method = 'smooth_simple_overlay')
 
 
 ```
+
+```{r communicating-compound_figure-solution}
+
+# Create the estimate object:
+
+cost_benefit_table <- data.frame(label = c("Revenue", "Costs"),
+                                  variable = c("revenue", "costs"),
+                                  distribution = c("norm", "norm"),
+                                  lower = c(100,  500),
+                                  median = c(NA, NA),
+                                  upper = c(10000, 5000))
+
+# (a) Define the model function without name for the return value:
+
+profit1 <- function() {
+  Decision <- revenue - costs
+  cashflow <- rnorm(rep(revenue, 20))
+  return(list(Revenues = revenue,
+              Costs = costs, 
+              cashflow = cashflow, 
+              Decision = Decision))
+}
+
+compound_figure(model = profit1, 
+input_table = cost_benefit_table, 
+decision_var_name = "Decision",
+cashflow_var_name = "cashflow",
+model_runs = 1e2, 
+distribution_method = 'boxplot')
+
+
+```
+
 
 ### Other visualization options
 
