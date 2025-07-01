@@ -13,37 +13,7 @@ We have already built some simple models in the [Decision Models](#decision_mode
 
 ![](images/hail_impact_pathway.png)
 
-This model adapted from Rojas et al. (2021) represents the decision of cherry farmers in Chile to adopt hail nets. 
-
-
-<!-- ### Plot the impact pathway -->
-
-<!-- Let's use the `graph.formula` function from the `igraph` library again [@igraph2006]. This time to create the graphical impact pathway of an investment into hail nets. Add another factor called 'Discount' that impacts the Net Present Value (NPV) value. -->
-
-<!-- ```{r igraph-example, exercise=TRUE} -->
-<!-- hail_path <- graph.formula(HailNet -+ Yield,  -->
-<!--                           HailNet -+ Cost,  -->
-<!--                           HailEvent -+ Yield, -->
-<!--                           Yield -+ MarketPrice,  -->
-<!--                           MarketPrice -+ NPV, -->
-<!--                           Cost -+ NPV) -->
-
-<!-- plot(hail_path) -->
-<!-- ``` -->
-
-<!-- ```{r igraph-example-solution} -->
-<!-- hail_path <- graph.formula(HailNet -+ Yield,  -->
-<!--                           HailNet -+ Cost,  -->
-<!--                           HailEvent -+ Yield, -->
-<!--                           Yield -+ MarketPrice,  -->
-<!--                           MarketPrice -+ NPV, -->
-<!--                           Cost -+ NPV, -->
-<!--                           Discount -+ NPV) -->
-
-<!-- plot(hail_path) -->
-<!-- ``` -->
-
-<!-- That was just one of many ways to generate visual impact pathways. To see more options see the [Decision Analysis Overview](#decision_analysis) lecture materials. -->
+This model adapted from Rojas et al. (2021) represents the decision of cherry farmers in Chile to adopt hail nets (see bonus materials to build this in `igraph`). 
 
 Here we generate an input table to feed the hail model function. Update this with a new management cost variable shown in the graphical impact pathway. Call your new variable `"p_hail"`, make the lower bound `0.02` and the upper bound `0.2`, make the distribution `"posnorm"`, make the label `"% chance hail"` and make the description `"Probability of a hail storm"`.
 
@@ -211,3 +181,32 @@ Follow [Michael Betancourt’s Bayesian statistics work](https://betanalpha.gith
 ### References
 
 Rojas, Gonzalo, Eduardo Fernandez, Cory Whitney, Eike Luedeling, and Italo F. Cuneo. “Adapting Sweet Cherry Orchards to Extreme Weather Events – Decision Analysis in Support of Farmers’ Investments in Central Chile.” Agricultural Systems 187 (February 2021): 103031. https://doi.org/10.1016/j.agsy.2020.103031.
+
+### Bonus Materials - Plot the impact pathway
+
+Let's use the `graph.formula` function from the `igraph` library again [@igraph2006]. This time to create the graphical impact pathway of an investment into hail nets. Add another factor called 'Discount' that impacts the Net Present Value (NPV) value.
+
+```{r igraph-example, exercise=TRUE}
+hail_path <- graph.formula(HailNet -+ Yield,
+                          HailNet -+ Cost,
+                          HailEvent -+ Yield,
+                          Yield -+ MarketPrice,
+                          MarketPrice -+ NPV,
+                          Cost -+ NPV)
+
+plot(hail_path)
+```
+
+```{r igraph-example-solution}
+hail_path <- graph.formula(HailNet -+ Yield,
+                          HailNet -+ Cost,
+                          HailEvent -+ Yield,
+                          Yield -+ MarketPrice,
+                          MarketPrice -+ NPV,
+                          Cost -+ NPV,
+                          Discount -+ NPV)
+
+plot(hail_path)
+```
+
+That was just one of many ways to generate visual impact pathways. To see more options see the [Decision Analysis Overview](#decision_analysis) lecture materials.
