@@ -1,7 +1,7 @@
-## Seminar 12: Academic Writing {#writing} 
+## Seminar 12 part 1: Academic Writing {#writing} 
 <!-- [Academic writing](#writing) -->
 
-Welcome to the 12th seminar of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_10]%20Decision%20Analysis%20Lecture) or the course tutor.
+Welcome to the first part of the 12th seminar of **Decision Analysis and Forecasting for Agricultural Development**. Feel free to bring up any questions or concerns in the Slack or to [Dr. Cory Whitney](mailto:cory.whitney@uni-bonn.de?subject=[Seminar_10]%20Decision%20Analysis%20Lecture) or the course tutor.
 
 In this seminar we will build on some of the things we learned in the [Using RMarkdown](#rmarkdown) seminar. We will use [Rmarkdown](https://rmarkdown.rstudio.com/) [@R-rmarkdown] to create a report on our R code. 
 
