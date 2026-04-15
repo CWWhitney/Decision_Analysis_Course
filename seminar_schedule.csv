@@ -1,7 +1,7 @@
 Week ,Date,Materials,Assignment
-1,"Friday, Apr 17, 2026",[Using R and RStudio](#r_rstudio),Install R and Rstudio
-2,"Friday, Apr 24, 2026",[Using R and RStudio continued](#rstudio_continued),Share R scripts (part 1)
-3,"Friday, May 08, 2026",[Group Work Overview](#group_work_overview),Share R scripts (part 2)
+1,"Friday, Apr 17, 2026",[Group Work Overview](#group_work_overview), Group decision framing
+2,"Friday, Apr 24, 2026",[Using R and RStudio](#r_rstudio),Install R and Rstudio
+3,"Friday, May 08, 2026",[Using R and RStudio continued](#rstudio_continued),Share R scripts (part 1)
 4,"Friday, May 15, 2026",[Using RMarkdown](#rmarkdown),Share Rmarkdown file
 5,"Friday, May 22, 2026",[Using git and Github](#github_git),Host your Rproj in a Github repo
 6,"Friday, June 05, 2026",[Model Programming](#model_programming),Share R scripts (part 3)
