@@ -1,9 +1,9 @@
-## Lecture 5: Participatory Methods For Stakeholder Mapping {#participatory_methods}
+## Lecture 5: Stakeholder Engagement in Decision Analysis {#participatory_methods}
 <!-- [Participatory methods](#participatory_methods) -->
 
 ### Participatory methods
 
-The following video outlines some of the tools that can be used in participatory modeling. Watch the video and answer the questions that follow. 
+The following video outlines some of the tools that can be used in participatory modeling. Feel free to watch the video and answer the questions that follow. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/X2ZjG6o7u3o" frameborder="0" allowfullscreen></iframe>
 
