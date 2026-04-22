@@ -25,9 +25,9 @@ Future question: Why might it be useful to think about 'the fox and the hedgehog
 
 The following video covers some definitions, methods and tools and a case study related to stakeholder management in decision analysis. Please watch the videos and answer the questions that follow. These will be helpful in determining which tools/techniques you might use to identify stakeholders in your decision analysis process.
 
-THis will also work, but not in html ![](https://youtu.be/Xax-JxlmQf0)
+<!-- THis will also work, but not in html ![](https://youtu.be/Xax-JxlmQf0) -->
 
-Note that the youtube link needs to begin with https://www.youtube.com/embed/
+<!-- Note that the youtube link needs to begin with https://www.youtube.com/embed/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Xax-JxlmQf0" frameborder="0" allowfullscreen></iframe>
 
