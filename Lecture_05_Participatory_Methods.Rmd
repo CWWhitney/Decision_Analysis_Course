@@ -29,7 +29,7 @@ The following video covers some definitions, methods and tools and a case study 
 
 <!-- Note that the youtube link needs to begin with https://www.youtube.com/embed/ -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-LJq7dIUcGk?si=rYiAcTZF5oy4VmcA" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mEMPEE9ZDp4?si=htK5FQKT0twLjdWe" frameborder="0" allowfullscreen></iframe>
 
 ```{r question-stakeholder-management-01, echo=FALSE}
 question("Which of these entities do you think could be a stakeholder?",
