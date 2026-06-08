@@ -1,22 +1,21 @@
 ## Seminar 7: Calibration training  {#calibration_seminar} 
 <!-- reference with [Calibration training](#calibration_seminar) -->
 
-Welcome to the 7th seminar of **Decision Analysis and Forecasting for Agricultural Development**. This week we will be going through the materials that were mentioned in the [Calibrating experts lecture](#calibration_lecture).
+Welcome to the 7th seminar of **Decision Analysis and Forecasting for Agricultural Development**. This week you will take part in a calibration training an learn how to make reliable expert estimates.
 
 Your work for this this seminar is to bring a laptop or mobile phone to the seminar with which you have an internet connection in the lecture hall. You will go through the training or your own device.
 
 After this session please consider the inputs that will be necessary for your own model and prepare the input table and formulate questions for eliciting calibrated estimates from your colleagues and/or any experts that you have identified for your team's model.
 
-### Further tools
-
-Sign in to [GuidedTrack calibration training](https://www.openphilanthropy.org/calibration) to get your confidence intervals results.
-
-Sign in to the [Fatebook](https://fatebook.io/) to *'Track your predictions, make better decisions'*. You can find a calibration training under Learn/Calibration Training
 
 ### Group discussion - food for thought
 
 1. What do you think about the idea of taking estimates as values for the impact models?
 
-2. What do you think about the method of calibration training as presented? Do you have suggestions how to change or improve it?
+2. How did you feel during the training? What are your personal learnings from today's seminar?
 
-3. Can you think of further cognitive biases and how to deal with them?
+3. What do you think about the method of calibration training as presented? Do you have suggestions how to change or improve it?
+
+### After the class
+
+If you want to continue calibration training after the seminar visit [our app](https://agtools.app/calibration_app/).
