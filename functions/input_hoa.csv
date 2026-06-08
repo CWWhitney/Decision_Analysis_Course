@@ -1,0 +1,30 @@
+variable,lower ,median,upper,distribution,label
+discount_rate,10,,30,posnorm,Discount rate for reducing future cost and benefit to their present values (%)
+establis_cost,30,,50,posnorm,Cost for setting up agroforestry system (million VND/ha)
+main_cost_stage1,15,,30,posnorm,Annual cost to maintain agroforestry system (million VND/ha/year)
+main_cost_stage2,20,,40,posnorm,Annual cost to maintain agroforestry system (million VND/ha/year)
+main_cost_stage3,30,,60,posnorm,Annual cost to maintain agroforestry system (million VND/ha/year)
+CV_cost,5,,10,posnorm,Variation in maintenance cost (%)
+mono_cost,10,,20,posnorm,Annual cost of maize monoculture system (million VND/ha/year)
+num_of_fruit,240,,240,const,Number of longan trees per ha (trees/ha)
+max_fruit_harvest,30,,80,posnorm,The peak yield of longan tree (kg/tree)
+time_first_fruit_est,5,,5,const,The year when the first yield estimates of longan is provided 
+first_fruit_est_per,10,,30,posnorm,Percentage of the yield that is attained in the year given by time_first_tree_est compare to the yield at peak production
+time_sec_fruit_est,7,,7,const,The year when the second yield estimates of longan is provided
+sec_fruit_est_per,50,,60,posnorm,Percentage of  yield that is attained in the year given by time_sec_tree_est compare to the yield at peak production
+CV_fruit_yield,20,,30,posnorm,Variation in longan fruit yield (%)
+yield_fruit_risk,0.5,,0.7,posnorm,Yield of longan fruit reduced given risk event compare to the yield in the normal year
+fruit_price,0.004,,0.01,unif,Price for selling longan fruits (million VND/kg)
+max_AFmaize,5000,,7000,posnorm,The maximum yield of maize in AF system(kg/ha)
+min_AFmaize,3000,,5000,posnorm,The minimum yield of maize in AF system (kg/ha)
+decay_rate_AF,0.05,,0.1,posnorm,The annual decrease rate of maize  yield in AF system (%)
+max_monomaize,5000,,8000,posnorm,The maximum yield of maize in AF system(kg/ha)
+decay_rate_mono,0.005,,0.02,posnorm,The annual decrease rate of maize yield in monoculture system (%)
+CV_maize_yield,5,,25,posnorm,Variation in maize yield (%)
+maize_price,0.004,,0.012,posnorm,Maize price (million VND/kg)
+CV_maize_price,5,,10,posnorm,Variation in maize price (%)
+yield_maize_risk,0.2,,0.8,posnorm,Yield of maize reduced given risk compare to the yield in the normal year
+grass_profit,0.2,,6,unif,Annual benefit from grass (million VND)
+CV_grass_profit,5,,30,posnorm,Variation in grass benefit (%)
+fruit_risk,0.1,,0.4,tnorm_0_1,Chance for fruit drop occur in a given year
+maize_risk,0.05,,0.3,tnorm_0_1,Chance for risk factor that affect maize yield happen
