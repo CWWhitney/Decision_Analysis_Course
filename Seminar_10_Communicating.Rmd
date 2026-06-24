@@ -49,10 +49,40 @@ allow_retry = TRUE
 
 ### Rebuild the `example_mc_simulation`
 
-In the [Model programming part 2](#model_programming_cont) seminar we generated a model called `example_mc_simulation`. Here is that model again but with `numberOfModelRuns` set to 10,000.
+In the [Model programming part 2](#model_programming_cont) seminar we generated a model. Here is the input table to feed the model function. Update this to include the management cost variable in the graphical impact pathway above. Call your new variable `"Management_cost"`, make the lower bound `100` and the upper bound `2000`, make the distribution `"posnorm"`, make the label `"Management cost (USD/ha)"` and make the description `"Management costs in a normal season"`.
+
+```{r input_table_markets, exercise=TRUE}
+input_estimates <- data.frame(variable = c("Yield", "Market_price", "Labor_cost"),
+                    lower = c(6000, 3, 500),
+                    median = NA,
+                    upper = c(14000, 8, 1000),
+                    distribution = c("posnorm", "posnorm", "posnorm"),
+                    label = c("Yield (kg/ha)", "Price (USD/kg)", "Labor cost (USD/ha)"),
+                    Description = c("Yield in a sweet cherry farm under normal conditions",
+                                    "Price of sweet cherry in a normal season",
+                                    "Labor costs in a normal season"))
+
+input_estimates
+```
+
+```{r input_table_markets-solution}
+input_estimates <- data.frame(variable = c("Yield", "Market_price", "Labor_cost", "Management_cost"),
+                    lower = c(6000, 3, 500, 100),
+                    median = NA,
+                    upper = c(14000, 8, 1000, 2000),
+                    distribution = c("posnorm", "posnorm", "posnorm", "posnorm"),
+                    label = c("Yield (kg/ha)", "Price (USD/kg)", "Labor cost (USD/ha)", "Management cost (USD/ha)"),
+                    Description = c("Yield in a sweet cherry farm under normal conditions",
+                                    "Price of sweet cherry in a normal season",
+                                    "Labor costs in a normal season", 
+                                    "Management costs in a normal season"))
+
+input_estimates
+```
+
+The model from the [Model programming part 2](#model_programming_cont) seminar was called `example_mc_simulation`. Here is that model again but with `numberOfModelRuns` set to 10,000.
 
 ```{r example_mc_simulation_seminar10, eval=FALSE}
-# input_estimates <- read.csv("data/input_estimates.csv")
 
 model_function <- function(){
   income <- Yield * Market_price
